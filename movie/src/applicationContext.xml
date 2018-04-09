@@ -38,8 +38,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="packagesToScan">
 			<list>
-				<value>com.frontend.entity</value>
-				<value>com.backend.entity</value>
+				<value>com.front.movie.entity</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
