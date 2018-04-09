@@ -15,7 +15,7 @@
 		">
 
 	<!-- 自动扫描且只扫描@Controller -->
-	<context:component-scan base-package="com.frontend.controller,com.backend.controller" >
+	<context:component-scan base-package="com.front.user.controller,com.front.movie.controller" >
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
