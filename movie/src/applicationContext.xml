@@ -38,6 +38,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="packagesToScan">
 			<list>
+				<value>com.front.user.entity</value>
 				<value>com.front.movie.entity</value>
 			</list>
 		</property>

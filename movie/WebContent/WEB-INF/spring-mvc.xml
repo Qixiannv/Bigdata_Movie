@@ -15,23 +15,15 @@
 		">
 
 	<!-- 自动扫描且只扫描@Controller -->
-	<context:component-scan base-package="com.front.movie.controller" >
+	<context:component-scan base-package="com.front.user.controller,com.front.movie.controller" >
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
 	<!-- 基于注解驱动的SpringMVC -->
 	<mvc:annotation-driven />
 	<!-- 将无法mapping到Controller的path交给default servlet handler处理 -->
-	<mvc:resources mapping="/js/**" location="/js/"/>  
-    <mvc:resources mapping="/css/**" location="/css/"/>  
-    <mvc:resources mapping="/images/**" location="/images/"/>
-	<mvc:resources mapping="/fonts/**" location="/fonts/"/>
 	<mvc:default-servlet-handler />
-	<!-- 
-	<mvc:view-controller path="/" view-name="redirect:/show/indexshow" />
-	 --> 
-	
-	
+	<mvc:view-controller path="/" view-name="redirect:/indexshow" />
 	<!-- 定义JSP文件的位置 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -1,11 +1,9 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
 <title>我的影视空间</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -587,7 +585,7 @@ $('#myModal').modal('no');
 					<iframe src="https://www.youtube.com/embed/VdafjyFK3ko" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="review-info">
-								<h6 class="span88">红海行动</h6>
+								<h6 class="span88">电影名称</h6>
 								<p class="dirctr"><a href="">主演： </a>张译，杜江，黄景瑜</p>								
 								<p class="ratingview">专家评价:</p>
 								<div class="rating">
