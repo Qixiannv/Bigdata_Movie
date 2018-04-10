@@ -7,7 +7,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>电影名称</title>
+<title>My Show a Entertainment Category Flat Bootstarp responsive Website Template | Single :: w3layouts</title>
+<%@ page contentType="text/html; charset=UTF-8"  %>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -51,10 +52,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<!-- header-section-starts -->
 		
-		<div class="header-top-strip">
+		<div class="header-top-strip" id="home">
 			<div class="container">
 				<div class="header-top-left">
-					<p><a href="support.html">全天候客户服务 </a> | <a class="play-icon popup-with-zoom-anim" href="#small-dialog" href="#">重新发送预订确认</a> </p>
+					<p><a href="support.html">24/7 Customer Care</a> | <a class="play-icon popup-with-zoom-anim" href="#small-dialog" href="#"> Resend Booking Confirmation</a> </p>
 				<div id="small-dialog" class="mfp-hide">
 						<div class="select-city">
 							<h3>Resend Confirmation</h3>
@@ -101,7 +102,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="clearfix"></div>
 						</div>
 					</div>	
-
                      <script>
 						$(document).ready(function() {
 						$('.popup-with-zoom-anim').magnificPopup({
@@ -277,7 +277,7 @@ $('#myModal').modal('no');
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">主页</a></li>	
                     <!-- Mega Menu -->
-					<li class="dropdown w3_megamenu-fw active"><a href="movies.html" data-toggle="dropdown" class="dropdown-toggle">电影<b class="caret"></b></a>
+					<li class="dropdown w3_megamenu-fw"><a href="movies.html" data-toggle="dropdown" class="dropdown-toggle">电影<b class="caret"></b></a>
                         <ul class="dropdown-menu fullwidth">
                             <li class="w3_megamenu-content">
                                 <div class="row">
@@ -495,8 +495,8 @@ $('#myModal').modal('no');
                        <!-- end dropdown-menu -->
 					</li>
                     
-                     -->
-										<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages<b class="caret"></b></a>
+					
+					<li class="dropdown active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages<b class="caret"></b></a>
 							 <ul class="dropdown-menu" role="menu">
 	<!--
 	<li><a href="404.html">404</a></li> 
@@ -514,7 +514,6 @@ $('#myModal').modal('no');
                             </li><!-- end dropdown-submenu -->
 	
 	<li><a href="blog.html">影评</a></li>
-	
 	
 	
                         </ul>
@@ -557,294 +556,100 @@ $('#myModal').modal('no');
     
 <!-- AddThis Smart Layers END -->
 
-	<div class="m-tickets-instantly">
-		<h4>Book tickets instantly</h4>
-		<div class="fleft m-select">
-                        <label><input id="rdbMovie" name="rdbMovieSearch" type="radio" class="checkins" onclick="fnOcCriteria('ET', 'MT');" checked="checked">
-                        <span class="fleft mr20">Movies</span></label>
-                        <label><input id="rdbCinema" name="rdbMovieSearch" type="radio" class="checkins" onclick="fnOcCriteria('VN', 'MT');" checked="checked">
-                        <span class="fleft mr20">Cinemas</span></label>
-                    </div>
-		<div class="m-select-movie">
-					<select class="list_of_movies"><option value="">Select Movie</option><optgroup label="Telugu"><option style="padding-left: 10px;" value="ANAN">Asura (U/A)</option><option style="padding-left: 10px;" value="CHDM">Jurassic World (2D Telugu) (U/A)</option><option style="padding-left: 10px;" value="GUDR">Jurassic World (3D Telugu) (U/A)</option><option style="padding-left: 10px;" value="GUNT">Jyothi Lakshmi (U/A)</option><option style="padding-left: 10px;" value="JANG">Kerintha (U)</option><option style="padding-left: 10px;" value="KAKI">Krishnamma Kalipindi Iddarini (U/A)</option><option style="padding-left: 10px;" value="KURN">Lava Kusa (A)</option><option style="padding-left: 10px;" value="MART">Pandaga Chesko (U/A)</option><option style="padding-left: 10px;" value="PRVT">Tippu (A)</option><option style="padding-left: 10px;" value="RAJA">Vinavayya Ramayya (U/A)</option></optgroup><optgroup label="Hindi"><option style="padding-left: 10px;" value="TAWA">ABCD 2 (3D) (U)</option><option style="padding-left: 10px;" value="ZIRO">ABCD 2 (2D) (U)</option></optgroup><optgroup label="English"><option style="padding-left: 10px;" value="DIB">Jurassic World (3D) (U/A)</option><option style="padding-left: 10px;" value="GUW">Guwahati</option></optgroup></select>
-                    </div>
-		<div class="m-select-date">
-					<select class="list_of_movies"><option value="">Select Date</option><option style="padding-left: 10px;" value="ANAN">Today, 18 jun</option><option style="padding-left: 10px;" value="CHDM">Tomorrow, 19 jun</option><option style="padding-left: 10px;" value="CHDM">saturday, 20 jun</option><option style="padding-left: 10px;" value="CHDM">sunday, 21 jun</option></select>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<div class="m-single-article">
-		<div class="article-left">
-			<h3>电影详情 <span> <i class="fa fa-heart"></i> 99%</span></h3>
-			<p><a class="m-green" href="#">迪士尼</a><a class="m-green" href="#">喜剧</a><a class="m-orange" href="#">漫威</a></p>
-			<div class="clearfix"></div>
-			<div class="article-time-strip">
-				<div class="article-time-strip-left">
-					<p>电影时长<span><i class="fa fa-clock-o"></i>2 小时 30 分钟 </span>  &nbsp;&nbsp; 上映时间 <span><i class="fa fa-calendar"></i> 2015-8-25</span></p>
+	<ol class="breadcrumb">
+			  <li><a href="index.jsp">Home</a></li>
+			  <li class="active">Single</li>
+			</ol>
+	<!----->
+	<div class="blog-section">
+		<div class="col-md-8 blog-posts">
+			<h3 class="post">${movie.movie_name}</h3>
+				<div class="last-article">
+					<p class="artext">${movie.movie_summary}</p>
+					<h3>${movie.movie_name}</h3>
+					<img alt="" src="${movie.movie_pic}">
+					<p class="artext">${movie.movie_summary}</p>
+					<ul class="categories">
+						<li><a href="#">Markets</a></li>
+						<li><a href="#">Business</a></li>
+						<li><a href="#">Sport</a></li>
+						<li><a href="#">Special reports</a></li>
+						<li><a href="#">Culture</a></li>
+					</ul>
+					<div class="clearfix"></div>
+					<ul class="share">
+						<li>share:</li>
+						<li>							
+							<div id="fb-root"></div>
+							<script>(function(d, s, id) {
+							  var js, fjs = d.getElementsByTagName(s)[0];
+							  if (d.getElementById(id)) return;
+							  js = d.createElement(s); js.id = id;
+							  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+							  fjs.parentNode.insertBefore(js, fjs);5263+
+							  3.0
+							}(document,* 'script', 'facebo7443.
+									、/、44854496514ok-jssdk'));</script>
+	   						
+					</ul>
+					<div class="comments">
+						<h5>Comments</h5>
+						<div class="comment">
+							<div class="client">
+								<img src="images/c1.jpg" alt="">
+							</div>
+							<div class="client-message">
+								<p><a href="#">john doe</a><i class="fa fa-calendar"></i>2 hours ago</p>
+								<h6>While Cameron has had a great night, I suspect his problems in some way have only just begun.</h6>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="comment">
+							<div class="client">
+								<img src="images/c2.jpg" alt="">
+							</div>
+							<div class="client-message">
+								<p><a href="#">Allon poe</a><i class="fa fa-calendar"></i>6 hours ago</p>
+								<h6>The debate over EU membership is likely to come up pretty quickly and could prove a significant distraction for business and government.</h6>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">Your comment...</textarea>
+					
 				</div>
 				<div class="clearfix"></div>
-				<div class="article-img">
-					<iframe src="https://www.youtube.com/embed/VdafjyFK3ko" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<div class="review-info">
-								<h6 class="span88">红海行动</h6>
-								<p class="dirctr"><a href="">主演： </a>张译，杜江，黄景瑜</p>								
-								<p class="ratingview">专家评价:</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<p class="ratingview">
-								&nbsp;3.5/5  
-								</p>
-								<div class="clearfix"></div>
-								<p class="ratingview c-rating">观众评价:</p>
-								<div class="rating c-rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 	
-								<p class="ratingview c-rating">								
-								&nbsp; 3.3/5</p>
-								<div class="clearfix"></div>
-								<div class="yrw">
-									<div class="dropdown-button">           			
-										<select class="dropdown" tabindex="9" data-settings="{&quot;wrapperClass&quot;:&quot;flat&quot;}">
-										<option value="0">你的评分</option>	
-										<option value="1">1.（差）</option>
-										<option value="2">1.5(平均较差)</option>
-										<option value="3">2.（平均）</option>
-										<option value="4">2.5(中档)</option>
-										<option value="5">3.（可看）</option>
-										<option value="6">3.5(好)</option>
-										<option value="7">4.5(非常好)</option>
-										<option value="8">5.（很出色）</option>
-									  </select>
-									</div>
-									<div class="rtm text-center">
-										<a href="#">再看一遍</a>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<p class="info"><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;张译，杜江，黄景瑜</p>
-								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;动作、剧情、战争</p>
-								<p class="info"><strong>简介</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该片讲述了中国海军“蛟龙突击队”8人小组奉命执行撤侨任务，突击队兵分两路进行救援，但不幸遭到伏击，人员伤亡；同时在粉碎叛军武装首领的惊天阴谋中惨胜的故事</p>
-								<p class="info"><strong>时长</strong>:&nbsp;&nbsp;&nbsp; &nbsp; 138分钟</p>
-							</div>
 			</div>
 		</div>
-		<div class="article-right">
-			<div class="grid_3 grid_5">
-				   <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-			<ul id="myTab" class="nav nav-tabs" role="tablist">
-			  <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">周二上映</a></li>
-			  <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">周三上映</a></li>
-			</ul>
-			<div id="myTabContent" class="tab-content">
-			  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">				  
-                 <p class="m-s-t">地点: 万达国际影城</p>
-				 <a class="show-time" href="movie-select-show.html">下午06:30</a>
-				 <div class="clearfix"></div>
-				  <a class="more-show-time" href="movie-select-show.html">更多上映时间</a>
-			  </div>
-			  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-				 <p class="m-s-t">地点: 金棕榈国际影城</p>
-				 <a class="show-time" href="movie-select-show.html">12:45 PM</a><a class="show-time" href="movie-select-show.html">下午06:30</a>
-				 <div class="clearfix"></div>
-				 <a class="more-show-time" href="movie-select-show.html">更多上映时间</a>
-			  </div>
-			</div>
-		   </div>
-		  </div>
+		<div class="col-md-4 blog-categories">
+			<h3 class="post">Categories</h3>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Bollwood Movies</a> (34)</p>
+			<p><a href="#">Tamil Movies</a> (12)</p>
+			<p><a href="#">Tollywood Movies</a> (34)</p>
+			<p><a href="#">Collywood Movies</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Actors</a> (12)</p>
+			<p><a href="#">Actress</a> (34)</p>
+			<p><a href="#">Movie News</a> (12)</p>
+			<p><a href="#">Music</a> (34)</p>
+			<p><a href="#">Indian Music</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
 		</div>
-		<div class="clearfix"></div>
+				<div class="clearfix"></div>
 	</div>
-	<div class="reviews-tabs">
-      <!-- Main component for a primary marketing message or call to action -->
-      <ul class="nav nav-tabs responsive hidden-xs hidden-sm" id="myTab">
-        <li class="test-class active"><a class="deco-none misc-class" href="#how-to"> 概要</a></li>
-        <li class="test-class"><a href="#features">评论家评论 (1)</a></li>
-        <li><a class="deco-none" href="#source">观众评论(11)</a></li>
-      </ul>
-
-      <div class="tab-content responsive hidden-xs hidden-sm">
-        <div class="tab-pane active" id="how-to">
-		 <p><strong> 导演 :</strong> <a href="#">林超贤</a></p>
-          <p> <strong>出品公司:</strong> <a href="#">博纳影业</a> ,<a href="#">中国人民解放军海政电视艺术中心</a> ,<a href="#">星梦工场</a>, <a href="#">英皇影业</a>
-		  <p>索马里海域外，中国商船遭遇劫持，部分船员被海盗杀害，其他人沦为俘虏。蛟龙突击队沉着应对，潜入商船进行突袭，成功解救全部人质。狙击手罗星在追击海盗时不幸被击中脊柱神经，欠缺的位置由顾顺替代。
-返航途中，非洲北部伊维亚共和国政局动荡，恐怖组织连同叛军攻入首都，当地华侨面临危险。海军战舰接到上级命令改变航向，前往执行撤侨任务。蛟龙突击队八人，整装待发。
-时间紧迫，在“撤侨遇袭可反击，相反则必须避免交火，以免引起外交冲突”的大原则下，海军战舰及蛟龙突击队在恶劣的环境下，停靠海港，成功转移等候在码头的中国侨民，并在激烈的遭遇战之后，营救了被恐怖分子追击的中国领事馆人员。
-然而事情尚未完结，就在掩护华侨撤离之际，蛟龙突击队收到中国人质被恐怖分子劫持的消息。众人深感责任重大，义无反顾地再度展开营救行动 <br>
-		  <a href="mail-to:mail@example.com">https://baike.baidu.com/item/</a></p>
-          
-     
-        </div>
-        <div class="tab-pane" id="features">
-		  <p class="cr-left"><strong>来源：123</strong></p><div class="rating-cr">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 
-								<div class="clearfix"></div>
-          <p>该片体现出了中国军人的英雄气概与大国崛起的精神气度，把中国军事题材影片推向新的高度。它没有把单打独斗式的个人英雄主义当作当代中国海军官兵的精神制高点，而是把镜头的焦点对准了集体的力量。其情感逻辑、动作逻辑的精细把控，和现代艺术技术手段的创造性运用，使得整个撤侨和战争场面的宣言，尤其是危急出兵、突围营救人质，最后的追击等场面，拍出了身临其境的真实感和摄人心魂的震撼效果。</p>
-        <a href="#">....期待后续</a>
-		</div>
-        <div class="tab-pane" id="source">
-		  <div class="response">
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-        </div>
-      </div>		
+	<div class="clearfix"></div>
 	</div>
-	<div class="footer-top-strip">
-		<p><span>上映城市 : </span><a href="movies.html">北京</a>, <a href="movies.html">石家庄</a>, <a href="movies.html">广州</a>, <a href="movies.html">上海</a>, <a href="movies.html">深圳</a>, <a href="movies.html">成都</a>, <a href="#">西安</a>, <a href="movies.html">哈尔滨</a></p>
-		<p><span>附近影院: </span><a href="movie-single.html"> 万达国际影城 </a>
-			<p><span>影视动态 <i>周五</i>: </span><a href="movie-single.html">无变动</a></p>
-		</div>
-		</div>
-		<div class="footer">
+	<div class="footer">
 			<div class="col-md-3 footer-left">
 				<div class="f-mov-list">
 					<h4>Latest Movies</h4>

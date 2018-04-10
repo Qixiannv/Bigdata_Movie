@@ -1,12 +1,9 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>电影名称</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
@@ -255,7 +252,7 @@ $('#myModal').modal('no');
 		  <div class="main-content">
 			<div class="header">
 				<div class="logo">
-					<a href="index.html"><h1>My Show</h1></a>
+					<a href="index.jsp"><h1>My Show</h1></a>
 				</div>
 				<div class="search">
 					<div class="search2">
@@ -270,12 +267,12 @@ $('#myModal').modal('no');
 	<div class="bootstrap_container">
             <nav class="navbar navbar-default w3_megamenu" role="navigation">
                 <div class="navbar-header">
-          			<button type="button" data-toggle="collapse" data-target="#defaultmenu" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand"><i class="fa fa-home"></i></a>
+          			<button type="button" data-toggle="collapse" data-target="#defaultmenu" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.jsp" class="navbar-brand"><i class="fa fa-home"></i></a>
 				</div><!-- end navbar-header -->
         
             <div id="defaultmenu" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">主页</a></li>	
+                    <li><a href="index.jsp">主页</a></li>	
                     <!-- Mega Menu -->
 					<li class="dropdown w3_megamenu-fw active"><a href="movies.html" data-toggle="dropdown" class="dropdown-toggle">电影<b class="caret"></b></a>
                         <ul class="dropdown-menu fullwidth">
@@ -668,8 +665,6 @@ $('#myModal').modal('no');
       <!-- Main component for a primary marketing message or call to action -->
       <ul class="nav nav-tabs responsive hidden-xs hidden-sm" id="myTab">
         <li class="test-class active"><a class="deco-none misc-class" href="#how-to"> 概要</a></li>
-        <li class="test-class"><a href="#features">评论家评论 (1)</a></li>
-        <li><a class="deco-none" href="#source">观众评论(11)</a></li>
       </ul>
 
       <div class="tab-content responsive hidden-xs hidden-sm">
@@ -684,158 +679,8 @@ $('#myModal').modal('no');
           
      
         </div>
-        <div class="tab-pane" id="features">
-		  <p class="cr-left"><strong>来源：123</strong></p><div class="rating-cr">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 
-								<div class="clearfix"></div>
-          <p>该片体现出了中国军人的英雄气概与大国崛起的精神气度，把中国军事题材影片推向新的高度。它没有把单打独斗式的个人英雄主义当作当代中国海军官兵的精神制高点，而是把镜头的焦点对准了集体的力量。其情感逻辑、动作逻辑的精细把控，和现代艺术技术手段的创造性运用，使得整个撤侨和战争场面的宣言，尤其是危急出兵、突围营救人质，最后的追击等场面，拍出了身临其境的真实感和摄人心魂的震撼效果。</p>
-        <a href="#">....期待后续</a>
-		</div>
-        <div class="tab-pane" id="source">
-		  <div class="response">
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div><div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">用户名</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>《红海行动》其击中人心的不只是影片的“燃”，更有现实的“真”。片中的一个情节，为了解救他国人质和不使“黄饼”落入恐怖分子之手，特战队员付出了两死一伤的沉重代价，是人民军队忠诚使命的一个缩影。</p>
-								<ul>
-									<li>2018-2-23</li>
-									<li><a href="single.html">回复</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-        </div>
+        
+        
       </div>		
 	</div>
 	<div class="footer-top-strip">

@@ -714,7 +714,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<h3 class="title">Now Showing</h3>
 												<ul class="mov_list">
 													<li>99%</li>
-													<li><a href="movie-single.html">Baahubali (Telugu)
+													<li><a href="movie-single.jsp">Baahubali (Telugu)
 															(U/A)</a></li>
 												</ul>
 												<ul class="mov_list">
