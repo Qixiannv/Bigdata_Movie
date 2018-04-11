@@ -1,0 +1,16 @@
+2018.4.9
+movie.controller包下新增MovieIndexShowController
+movie.entity包下新增Movie
+movie.service包下新增MoviesIndexShowServiceImpl
+movie.dao包下新增MovieSearchAllDaoImpl
+
+2018.4.10
+新增:
+movie.entity包下新增MovieComment
+movie.service包下新增MovieCommentServiceImpl
+movie.service包下新增MovieServiceImpl
+movie.dao包下新增MovieDaoImpl
+movie.dao包下新增MovieCommentImpl
+删除:
+movie.service包下删除MoviesIndexShowServiceImpl
+movie.dao包下删除MovieSearchAllDaoImpl
