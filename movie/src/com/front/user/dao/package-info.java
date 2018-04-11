@@ -5,4 +5,4 @@
  * @author l
  *
  */
-package com.front.uesr.dao;
+package com.front.user.dao;
