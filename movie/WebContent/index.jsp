@@ -556,12 +556,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<!-- Tab panes -->
 										<div class="tab-content">
 											<div class="tab-pane active" id="Login">
-												<form role="form" class="form-horizontal">
+												<form role="form" class="form-horizontal" action="UserLoginController" method="post">
 													<div class="form-group">
 														<label for="email" class="col-sm-2 control-label">
-															Email</label>
+															Username</label>
 														<div class="col-sm-10">
-															<input type="email" class="form-control" id="email1"
+															<input type="text" class="form-control" id="username" name="username"
 																placeholder="Email" />
 														</div>
 													</div>
@@ -570,7 +570,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 															class="col-sm-2 control-label"> Password</label>
 														<div class="col-sm-10">
 															<input type="password" class="form-control"
-																id="exampleInputPassword1" placeholder="password" />
+																id="password" name="password" placeholder="password" />
 														</div>
 													</div>
 													<div class="row">
@@ -584,7 +584,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												</form>
 											</div>
 											<div class="tab-pane" id="Registration">
-												<form role="form" class="form-horizontal">
+												<form role="form" class="form-horizontal" action="UserRegisterController" method="post">
 													<div class="form-group">
 														<label for="email" class="col-sm-2 control-label">
 															姓名</label>
@@ -597,8 +597,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																	</select>
 																</div>
 																<div class="col-md-9">
-																	<input type="text" class="form-control"
-																		placeholder="Name" />
+																	<input type="text" id="username"
+																		name="username"  />
 																</div>
 															</div>
 														</div>
@@ -607,31 +607,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<label for="email" class="col-sm-2 control-label">
 															Email</label>
 														<div class="col-sm-10">
-															<input type="email" class="form-control" id="email"
-																placeholder="Email" />
+															<input type="text" id="email" name="email"
+																 />
 														</div>
 													</div>
 													<div class="form-group">
 														<label for="mobile" class="col-sm-2 control-label">
 															Mobile</label>
 														<div class="col-sm-10">
-															<input type="email" class="form-control" id="mobile"
-																placeholder="Mobile" />
+															<input type="text" id="phone"  name="phone"
+																 />
 														</div>
 													</div>
 													<div class="form-group">
 														<label for="password" class="col-sm-2 control-label">
 															Password</label>
 														<div class="col-sm-10">
-															<input type="password" class="form-control" id="password"
-																placeholder="Password" />
+															<input type="password" id="password"  name="password"
+																 />
 														</div>
 													</div>
 													<div class="row">
 														<div class="col-sm-2"></div>
 														<div class="col-sm-10">
-															<button type="button" class="btn btn-primary btn-sm">
-																保存 & 继续</button>
+															<input type="submit" value="注册">
 															<button type="button" class="btn btn-default btn-sm">
 																关闭</button>
 														</div>
