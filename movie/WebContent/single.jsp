@@ -4,11 +4,11 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <title>My Show a Entertainment Category Flat Bootstarp responsive Website Template | Single :: w3layouts</title>
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -275,9 +275,9 @@ $('#myModal').modal('no');
         
             <div id="defaultmenu" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">÷˜“≥</a></li>	
+                    <li><a href="index.jsp">‰∏ªÈ°µ</a></li>	
                     <!-- Mega Menu -->
-					<li class="dropdown w3_megamenu-fw"><a href="movies.html" data-toggle="dropdown" class="dropdown-toggle">µÁ”∞<b class="caret"></b></a>
+					<li class="dropdown w3_megamenu-fw"><a href="movies.html" data-toggle="dropdown" class="dropdown-toggle">ÁîµÂΩ±<b class="caret"></b></a>
                         <ul class="dropdown-menu fullwidth">
                             <li class="w3_megamenu-content">
                                 <div class="row">
@@ -496,7 +496,7 @@ $('#myModal').modal('no');
 					</li>
                     
 					
-					<li class="dropdown active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages<b class="caret"></b></a>
+					<li class="dropdown active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">È°µÈù¢<b class="caret"></b></a>
 							 <ul class="dropdown-menu" role="menu">
 	<!--
 	<li><a href="404.html">404</a></li> 
@@ -513,7 +513,7 @@ $('#myModal').modal('no');
 								</ul><!-- end dropdown-menu -->
                             </li><!-- end dropdown-submenu -->
 	
-	<li><a href="blog.html">”∞∆¿</a></li>
+	<li><a href="blog.html">ÂΩ±ËØÑ</a></li>
 	
 	
                         </ul>
@@ -615,8 +615,10 @@ $('#myModal').modal('no');
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">Your comment...</textarea>
-					
+						<form action = "/movie/leave_comment?movie_id=${movie.movie_id}&user_id=${user.user_id}" method = "get">
+							<textarea type="text" name = "comment" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">Your comment...</textarea>
+							<input type = "submit" value="submit">
+						</form>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -629,7 +631,7 @@ $('#myModal').modal('no');
 			<p><a href="#">Tamil Movies</a> (12)</p>
 			<p><a href="#">Tollywood Movies</a> (34)</p>
 			<p><a href="#">Collywood Movies</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Celebrity Interviews</a> (348)</p>
 			<p><a href="#">Actors</a> (12)</p>
 			<p><a href="#">Actress</a> (34)</p>
 			<p><a href="#">Movie News</a> (12)</p>

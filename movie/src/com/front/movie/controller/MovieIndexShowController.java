@@ -19,4 +19,6 @@ public class MovieIndexShowController {
 		this.msi.searchAllMovie(request);
 		return "/index";
 	}
+	
+	
 }
