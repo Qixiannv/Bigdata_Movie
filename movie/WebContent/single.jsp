@@ -615,8 +615,10 @@ $('#myModal').modal('no');
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<form action = "/movie/leave_comment?movie_id=${movie.movie_id}&user_id=${user.user_id}" method = "get">
-							<textarea type="text" name = "comment" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">Your comment...</textarea>
+						<form action = "/movie/leave_comment" method = "get">
+							<input type = "text" style="display:none" name = "user_id" value = 1>
+							<input type = "text" style="display:none" name = "movie_id" value = 2>
+							<textarea type="text" name = "comment_text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">Your comment...</textarea>
 							<input type = "submit" value="submit">
 						</form>
 				</div>
