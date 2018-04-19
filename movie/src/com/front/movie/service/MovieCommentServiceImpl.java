@@ -18,21 +18,25 @@ public class MovieCommentServiceImpl {
 	@Resource
 	private MovieCommentDaoImpl mcdt;
 	
-	//根据主键查movieComment
-	public void findMovieCommentById(HttpServletRequest request,int id) {
-		MovieComment mc =this.mcdt.findMovieCommentById(id);
+	//根据评论id查movieComment
+	public void findMovieCommentById(HttpServletRequest request,int commentid) {
+		MovieComment mc =this.mcdt.findMovieCommentById(commentid);
 		request.setAttribute("moviecomment", mc);
 	}
 	
-	//根据userid查
+	//根据userID查
 	public void findMovieCommentByUserId(HttpServletRequest request,int userId) {
 		List<MovieComment> list =this.mcdt.findMovieCommentByUserId(userId);
 		request.setAttribute("moviecommentlist", list);
 	}
-	//根据movieid查
+	//根据movieId查
 	public void findMovieCommentByMovieId(HttpServletRequest request,int movieId) {
 		List<MovieComment> list =this.mcdt.findMovieCommentByMovieId(movieId);
 		request.setAttribute("moviecommentlist", list);
 	}
 	
+	//插入一条电影评论
+	public int saveMovieComment(MovieComment mc) {
+		return this.mcdt.savaMovieComment(mc);
+	}
 }

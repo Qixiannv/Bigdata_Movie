@@ -33,4 +33,10 @@ public class MovieCommentDaoImpl {
 		query.setParameter(0, movieId);
 		return query.list();
 	}
+	
+	//插入一条电影评论
+	public int savaMovieComment(MovieComment mc) {
+		this.sessionFactory.getCurrentSession().save(mc);
+		return mc.getComment_id();
+	}
 }

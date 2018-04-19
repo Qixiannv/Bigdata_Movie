@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="autocomplete.js"></script>
+  <script type="text/javascript">
+  </script>
+  <style type="text/css">
+  *{
+    margin: 0px;
+      padding:0px;}
+    /*
+    设置顶部导航栏的背景色 宽度 高度
+    */
+    #head{
+      background-color: black;
+      width: 100%;
+      height:55px;
+    }
+    /*
+    设置顶部导航栏内容的总宽度和总高度
+    */
+    #head-top{
+      width: 80%;
+      margin:auto;
+      height:55px;
+    }
+    #head-top div{
+      float: left;
+    }
+    /*
+    logo的样式
+    */
+    #logo{
+      margin-right: 32px;
+    }
+    /*
+    搜索框的样式
+    */
+    .searchbox{
+      width: 470px;
+      height: 55px;
+      line-height: 55px;
+    }
+    .searchbox form{
+      height: 55px;
+    }
+    .searchdef{
+      width:470px;
+      height: 55px;
+      line-height: 55px;
+    }
+    .searchdef .in{
+      width:auto;
+      height: 55px;
+    }
+    .searchdef .out{
+      width:auto;
+      height: 55px;
+    }
+    .navTopTxt{
+      width:350px;
+      height: 32px;
+      border-color: black;
+    }
+    .navTopBtn{
+      width:70px;
+      height:36px;
+        }
+    .user-login{
+      line-height: 55px;
+      margin-right: 10px;
+    }
+    .user-signin{
+      line-height: 55px;
+    }
+    /*
+    最顶部导航栏超链接的样式
+    */
+    .user-signin a{
+      text-decoration:none;
+      color: white;
+    }
+    .user-login a{
+      text-decoration:none;
+      color: white;
+    }
+    .user-login a:visited,.user-signin a:visited{  
+    color:white;  
+    }  
+    .user-login a:hover,.user-signin a:hover{  
+    color: green;  
+    }  
+    </style>
+</head>
+<body>
+<div id="head">
+  <div id="head-top">
+    <div id="logo">
+      <a href="index.html"><img src="logo.png"></a>
+    </div>
+    <div class="searchbox">
+      <form >
+        <div class="searchdef">
+          <span class="in">
+             <input type="input" value="" name="" class="navTopTxt"> 
+          </span>
+          <span class="out">
+            <button type="submit" value="" name="" class="navTopBtn">搜全网</button>   
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="user-login">
+        <a href="">登录</a> 
+    </div>
+    <div class="user-signin">
+      <a href="">注册</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

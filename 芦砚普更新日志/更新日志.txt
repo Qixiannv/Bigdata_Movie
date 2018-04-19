@@ -1,4 +1,4 @@
-2018.4.9
+﻿2018.4.9
 movie.controller包下新增MovieIndexShowController
 movie.entity包下新增Movie
 movie.service包下新增MoviesIndexShowServiceImpl
@@ -14,3 +14,9 @@ movie.dao包下新增MovieCommentImpl
 删除:
 movie.service包下删除MoviesIndexShowServiceImpl
 movie.dao包下删除MovieSearchAllDaoImpl
+
+
+2018.4.17
+新增
+MovieCommentServiceImpl类下新增savaMovieComment(MovieComment)
+MovieCommentDaoImpl类下新增savaMovieComment(MovieComment)
