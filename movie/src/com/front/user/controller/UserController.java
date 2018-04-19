@@ -27,6 +27,6 @@ public class UserController {
 	
 	@RequestMapping("/UserLoginController")
 	public String Userlogin(String username,String password,HttpServletRequest request,HttpSession session){
-		return this.userRegisterImp.UserLogin(username, password,request,session);
+		return this.userRegisterImp.UserLogin(username,password,request,session);
 	}
 }

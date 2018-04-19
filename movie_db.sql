@@ -1,16 +1,13 @@
 /*
  Navicat Premium Data Transfer
-
  Source Server         : movie
  Source Server Type    : MySQL
  Source Server Version : 50615
  Source Host           : localhost:3306
  Source Schema         : movie_db
-
  Target Server Type    : MySQL
  Target Server Version : 50615
  File Encoding         : 65001
-
  Date: 06/04/2018 17:29:19
 */
 

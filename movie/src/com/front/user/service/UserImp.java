@@ -23,7 +23,7 @@ public class UserImp {
 		try{
 		User u=this.userRegisterDaoImp.Userlogin(username);
 			if(password.equals(u.getPassword())){
-				session.setAttribute("user_id", u.getUser_id());
+				session.setAttribute("user", u);
 				return "index";
 			}else{
 				return "cuowu";

@@ -17,7 +17,7 @@ public class UserDaoImp {
 	}
 	
 	public User Userlogin(String username)throws Exception{
-		String hql="from User where name="+username;
+		String hql="from User where username="+username;
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		User u=(User)query.uniqueResult();
 		return u;

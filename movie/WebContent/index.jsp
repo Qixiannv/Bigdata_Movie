@@ -81,14 +81,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- header-section-starts -->
 	<div class="header-top-strip">
 		<div class="container">
+	        <!--top的左侧选项-->
 			<div class="header-top-left">
 				<p>
-					<a href="support.html">24/7 Customer Care</a> | <a
-						class="play-icon popup-with-zoom-anim" href="#small-dialog"
-						href="#"> Resend Booking Confirmation</a>
+					<a href="#">全天候客户服务 </a> |
+					<a href="#">重新发送预订确认</a>
 				</p>
-				<div id="small-dialog" class="mfp-hide">
-					<div class="select-city">
+				
+				<!-- 重新发送预定的详细信息 是否需要？ -->
+				<!-- div id="small-dialog" class="mfp-hide">
+					<div class="select-city"> class="play-icon popup-with-zoom-anim"
 						<h3>Resend Confirmation</h3>
 						<p>Lorem Ipsum is simply dummy text of the printing and
 							typesetting industry</p>
@@ -104,15 +106,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="clearfix"></div>
 					</div>
-				</div>
+				</div-->
 			</div>
+			
+			<!--包括选择城市和登录注册小界面 -->
 			<div class="header-top-right">
 				<div class="modal fade">
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"
-									aria-label="Close">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 								<h4 class="modal-title">Modal title</h4>
@@ -123,8 +126,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default"
 									data-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Save
-									changes</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
 							</div>
 						</div>
 						<!-- /.modal-content -->
@@ -133,8 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!-- /.modal -->
 				<!-- Button trigger modal  -->
-				<a class="play-icon popup-with-zoom-anim" href="#small-dialog1">Select
-					a Region</a>
+				<a class="play-icon popup-with-zoom-anim" href="#small-dialog1">Select a Region</a>
 				<!---pop-up-box---->
 				<link href="css/popuo-box.css" rel="stylesheet" type="text/css"
 					media="all" />
@@ -142,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!---//pop-up-box---->
 				<div id="small-dialog1" class="mfp-hide">
 					<div class="select-city">
-						<h3>Select Your City</h3>
+							<h3>Select Your City</h3>
 						<select class="list_of_cities"><option value="">Select Your City</option>
 							<optgroup label="Andhra Pradesh">
 								<option style="padding-left: 10px;" value="ANAN">Anantapur</option>
@@ -532,57 +533,61 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					});
 				</script>
-				<!-- Large modal -->
-				<button class="btn btn-primary" data-toggle="modal"
-					data-target="#myModal">Login</button>
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-					aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				
+			    <a href="index-loading.jsp">
+			    	<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">   
+						<c:if test="${! empty  user.user_id }" >				           
+                			 ${user.username }               
+                		</c:if>
+                		<c:if test="${empty  user.user_id }" >				           
+                			<td>未登录</td>              
+                		</c:if>
+                	</button>
+                </a>
+				<!-- 弹出的登录注册的小页面>				
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"
-									aria-hidden="true">&times;</button>
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 								<h4 class="modal-title" id="myModalLabel">立即登录</h4>
 							</div>
 							<div class="modal-body">
 								<div class="row">
 									<div class="col-md-8"
 										style="border-right: 1px dotted #C2C2C2; padding-right: 30px;">
-										<!-- Nav tabs -->
+										<!-- Nav tabs>
 										<ul class="nav nav-tabs">
-											<li class="active"><a href="#Login" data-toggle="tab">登录</a></li>
+											<li class="active"><a href="./index?username" data-toggle="tab">登录</a></li>
 											<li><a href="#Registration" data-toggle="tab">注册</a></li>
 										</ul>
-										<!-- Tab panes -->
+										<!--登录 >
 										<div class="tab-content">
 											<div class="tab-pane active" id="Login">
-												<form role="form" class="form-horizontal" action="UserLoginController" method="post">
+												<form role="form" class="form-horizontal" action="./UserLoginController" method="post">
 													<div class="form-group">
-														<label for="email" class="col-sm-2 control-label">
-															Username</label>
+														<label for="email" class="col-sm-2 control-label">用户名</label>
 														<div class="col-sm-10">
-															<input type="text" class="form-control" id="username" name="username"
-																placeholder="Email" />
+															<input type="text" class="form-control" id="username" name="username" placeholder="Email" />
 														</div>
 													</div>
 													<div class="form-group">
-														<label for="exampleInputPassword1"
-															class="col-sm-2 control-label"> Password</label>
+														<label for="exampleInputPassword1" class="col-sm-2 control-label"> 密码</label>
 														<div class="col-sm-10">
-															<input type="password" class="form-control"
-																id="password" name="password" placeholder="password" />
+															<input type="password" class="form-control" id="password" name="password" placeholder="password" />
 														</div>
 													</div>
 													<div class="row">
 														<div class="col-sm-2"></div>
 														<div class="col-sm-10">
-															<button type="submit" class="btn btn-primary btn-sm">
-																登录</button>
+														    <input type="submit" value="登录">
+															<!--button type="submit" class="btn btn-primary btn-sm">登录</button>
 															<a href="javascript:;">忘记密码?</a>
 														</div>
 													</div>
 												</form>
 											</div>
+											<!-- 注册 >
 											<div class="tab-pane" id="Registration">
 												<form role="form" class="form-horizontal" action="UserRegisterController" method="post">
 													<div class="form-group">
@@ -631,8 +636,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<div class="col-sm-2"></div>
 														<div class="col-sm-10">
 															<input type="submit" value="注册">
-															<button type="button" class="btn btn-default btn-sm">
-																关闭</button>
 														</div>
 													</div>
 												</form>
@@ -657,19 +660,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</div>
-				</div>
+				</div-->
+				
 				<script>
 					$('#myModal').modal('show');
 				</script>
 			</div>
+			
 			<div class="clearfix"></div>
 		</div>
 	</div>
+	
 	<div class="container">
 		<div class="main-content">
 			<div class="header">
 				<div class="logo">
-					<a href="index.html"><h1>My Show</h1></a>
+					<a href="#"><h1>My Show</h1></a>
 				</div>
 				<div class="search">
 					<div class="search2">
@@ -686,23 +692,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="bootstrap_container">
 				<nav class="navbar navbar-default w3_megamenu" role="navigation">
 					<div class="navbar-header">
-						<button type="button" data-toggle="collapse"
-							data-target="#defaultmenu" class="navbar-toggle">
-							<span class="icon-bar"></span><span class="icon-bar"></span><span
-								class="icon-bar"></span>
+						<button type="button" data-toggle="collapse" data-target="#defaultmenu" class="navbar-toggle">
+							<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 						</button>
-						<a href="index.html" class="navbar-brand"><i
-							class="fa fa-home"></i></a>
+						<a href="#" class="navbar-brand"><i class="fa fa-home"></i></a>
 					</div>
 					<!-- end navbar-header -->
 
 					<div id="defaultmenu" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">主页</a></li>
+							<li class="active"><a href="#">主页</a></li>
 							<!-- Mega Menu -->
-							<li class="dropdown w3_megamenu-fw"><a href="movies.html"
-								data-toggle="dropdown" class="dropdown-toggle">电影<b
-									class="caret"></b></a>
+							<li class="dropdown w3_megamenu-fw">
+							<a href="./movice-single?userid=${u.id }"  data-toggle="dropdown" class="dropdown-toggle">
+						           电影<b class="caret"></b>
+							</a>
 								<ul class="dropdown-menu fullwidth">
 									<li class="w3_megamenu-content">
 										<div class="row">
