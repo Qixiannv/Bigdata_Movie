@@ -1,8 +1,9 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=0292d1e0df63938ebb1a884165d475eb4d5d4dce
 eclipse.preferences.version=1
-<<<<<<< HEAD
 encoding//WebContent/index-loading.jsp=UTF-8
-=======
 encoding//WebContent/single.jsp=UTF-8
->>>>>>> 0292d1e0df63938ebb1a884165d475eb4d5d4dce
 encoding//WebContent/test.jsp=UTF-8
 encoding//src/com/front/movie/service/MovieCommentServiceImpl.java=UTF-8
+encoding/<project>=UTF-8

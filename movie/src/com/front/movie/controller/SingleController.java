@@ -30,8 +30,9 @@ public class SingleController {
 	
 	//跳转页面
 	@GetMapping("/gotosingle")
-	public String ShowMovieSingle(HttpServletRequest request,@PathVariable("id") int id) {
+	public String ShowMovieSingle(HttpServletRequest request,@RequestParam("id") int id) {
 		this.msi.findMovieById(request, id);
+		//System.out.println(id);
 		return "/single";
 		}
 	

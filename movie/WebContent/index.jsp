@@ -1097,43 +1097,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h4>本周耻辱柱</h4>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=2">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=3">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=6">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=7">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=8">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=9">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="/movie/gotosingle?id=10">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 							</div>
 
@@ -1205,7 +1205,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="tab_img">
 										<li>
 											<div class="view view-first">
-												<a href="movie-select-show.html"> <img
+												<a href="/movie/gotosingle?id=1"> <img
 													src="images/pic-1.jpg" class="img-responsive" alt="" /></a>
 												<div class="info1"></div>
 												<div class="mask"></div>
@@ -1223,7 +1223,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="movie-select-show.html"><img
+												<a href="/movie/gotosingle?id=1"><img
 													src="images/pic-2.jpg" class="img-responsive" alt="" /></a>
 												<div class="info1"></div>
 												<div class="mask"></div>
@@ -1241,7 +1241,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="movie-select-show.html"><img
+												<a href="/movie/gotosingle?id=1"><img
 													src="images/pic-10.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
@@ -1284,7 +1284,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="movie-select-show.html"> <img
+												<a href="/movie/gotosingle?id=1"> <img
 													src="images/pic-3.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
@@ -1303,7 +1303,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li class="last">
 											<div class="view view-first">
-												<a href="movie-select-show.html"><img
+												<a href="/movie/gotosingle?id=1"><img
 													src="images/pic-9.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
@@ -1327,7 +1327,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="tab_img">
 										<li>
 											<div class="view view-first">
-												<a href="movie-select-show.html"> <img
+												<a href="/movie/gotosingle?id=1"> <img
 													src="images/pic-4.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
@@ -1346,7 +1346,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="movie-select-show.html"> <img
+												<a href="/movie/gotosingle?id=1"> <img
 													src="images/pic-12.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
@@ -1365,7 +1365,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li class="last">
 											<div class="view view-first">
-												<a href="movie-select-show.html"><img
+												<a href="/movie/gotosingle?id=1"><img
 													src="images/pic-5.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
@@ -1389,7 +1389,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="tab_img">
 										<li>
 											<div class="view view-first">
-												<a href="movie-select-show.html"> <img
+												<a href="/movie/gotosingle?id=1"> <img
 													src="images/pic-6.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
@@ -1401,7 +1401,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="movie-select-show.html"> <img
+												<a href="/movie/gotosingle?id=1"> <img
 													src="images/pic-1.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
@@ -1413,7 +1413,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="movie-select-show.html"> <img
+												<a href="/movie/gotosingle?id=1"> <img
 													src="images/pic-9.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
@@ -1437,7 +1437,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
-									<a href="movies.html"><img src="images/f4.jpg" alt="" /></a>
+									<a href="/movie/gotosingle?id=1"><img src="images/f4.jpg" alt="" /></a>
 								</div>
 								<div class="f-movie-name">
 									<a href="movies.html">片名一</a>
