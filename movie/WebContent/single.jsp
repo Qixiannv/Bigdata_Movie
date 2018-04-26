@@ -5,6 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -595,6 +596,18 @@ $('#myModal').modal('no');
 					</ul>
 					<div class="comments">
 						<h5>Comments</h5>
+						<c:forEach items="${comments}" var=c>
+							<div class="comment">
+							<div class="client">
+								<img src="images/c1.jpg" alt="">
+							</div>
+							<div class="client-message">
+								<p><a href="#">john doe</a><i class="fa fa-calendar"></i>2 hours ago</p>
+								<h6>While Cameron has had a great night, I suspect his problems in some way have only just begun.</h6>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						</c:forEach>
 						<div class="comment">
 							<div class="client">
 								<img src="images/c1.jpg" alt="">
@@ -743,7 +756,7 @@ $('#myModal').modal('no');
 						<li><a href="movies.html">Adventure</a></li>
 						<li><a href="movies.html">Classic</a></li>
 						<li><a href="movies.html">Crime</a></li>
-						<li><a href="movies.html">Drama</a></li>
+						<li><a href="movies.html">Drama</a></li>14
 						<li><a href="movies.html">Family </a></li>
 						<li><a href="movies.html">Fantasy</a></li>
 						<li><a href="movies.html">Musical</a></li>

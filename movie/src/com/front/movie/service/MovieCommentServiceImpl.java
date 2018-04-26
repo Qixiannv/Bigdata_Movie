@@ -30,9 +30,10 @@ public class MovieCommentServiceImpl {
 		request.setAttribute("moviecommentlist", list);
 	}
 	//根据movieId查
-	public void findMovieCommentByMovieId(HttpServletRequest request,int movieId) {
+	public List<MovieComment> findMovieCommentByMovieId(HttpServletRequest request,int movieId) {
 		List<MovieComment> list =this.mcdt.findMovieCommentByMovieId(movieId);
 		request.setAttribute("moviecommentlist", list);
+		return list;
 	}
 	
 	//插入一条电影评论
