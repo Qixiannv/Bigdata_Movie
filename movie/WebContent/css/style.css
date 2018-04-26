@@ -158,6 +158,94 @@ div#OR {
 	    font-family: 'Open Sans', sans-serif;
 }
 /*-- mega-menu --*/
+
+
+/*--personal--*/
+.face{
+	border: outset;
+	border-width: 1px;
+	border-color: white;
+	margin: 20px 0px;
+	padding: 10px 10px;
+
+}
+.facepic{
+	margin-left: 15px;
+
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    
+}
+.faceinfor{
+    position: absolute;
+    left: 360px;
+    top: 320px;
+    padding-right: 106px;
+    margin-bottom: 16px;
+    display: block;
+
+}
+.facename{
+	font-family: sans-serif;
+    font-size: 30px;
+    color: #1a1a1a;
+    -webkit-tap-highlight-color: : rgba(26,26,26,0);
+}
+.facespecial{
+	font-size: 20px;
+	font-family: "楷体";
+	color: #5f9ea0;
+}
+.faceton{
+	position:relative;
+	top: 60px;
+	left: 80px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #8590a6;
+    text-align: center;
+    cursor: pointer;
+    background-color: none;
+    border: 1px solid;
+    border-radius: 3px;
+    text-rendering: auto;
+
+}
+.facea{
+	color: #0000ff;
+}
+
+.myfoot{
+	margin-top: 40px;
+}
+.myfoot h3{
+	font-size: 30px;
+	font-weight: bolder;
+}
+.footul{
+	display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.face-file{
+	margin-top: 15px;
+	float: right;
+
+}
+
+
+/*--personal end--*/
 .navbar-default .navbar-nav > li > a {
 	color: #fff;
     font-weight: 600;
