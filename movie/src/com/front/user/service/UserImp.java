@@ -13,12 +13,12 @@ import com.front.user.entity.User;
 public class UserImp {
 	@Resource
 	private UserDaoImp userRegisterDaoImp;
-	
+	/*注册*/
 	public String RegisterUser(User u)throws Exception{
 		this.userRegisterDaoImp.UserRegister(u);
 		return "index";
 	}
-	
+	/*登录*/
 	public String UserLogin(String username,String password,HttpServletRequest request,HttpSession session){
 		try{
 		User u=this.userRegisterDaoImp.Userlogin(username);
@@ -33,5 +33,9 @@ public class UserImp {
 			e.printStackTrace();
 			return "cuowu";
 		}
+	}
+	/*根据user_id查询出user*/
+	public User UserSelect(int user_id)throws Exception{
+		return this.UserSelect(user_id);
 	}
 }
