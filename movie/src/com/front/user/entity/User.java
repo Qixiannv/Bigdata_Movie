@@ -6,11 +6,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
+
+import com.front.movie.entity.MovieComment;
 
 @Entity
 @Table(name="user")
@@ -24,7 +27,7 @@ public class User {
 	private String password;
 	private Date birthday;
 	private String avatar;
-	
+	private MovieComment moviecomment;
 	
 	@Id
 	@GeneratedValue(generator="user_id")
@@ -78,6 +81,13 @@ public class User {
 	}
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
+	}
+	@OneToOne(mappedBy="user")
+	public MovieComment getMoviecomment() {
+		return moviecomment;
+	}
+	public void setMoviecomment(MovieComment moviecomment) {
+		this.moviecomment = moviecomment;
 	}
 	
 	

@@ -16,7 +16,7 @@ public class MovieIndexShowController {
 	//主页轮播图
 	@GetMapping("/indexshow")
 	public String IndexShow(HttpServletRequest request) {
-		this.msi.searchAllMovie(request);
+		request.setAttribute("movielist", this.msi.searchAllMovie());
 		return "/index";
 	}
 }

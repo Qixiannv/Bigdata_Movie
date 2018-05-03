@@ -20,8 +20,7 @@ public class MovieSingleController {
 	//跳转页面
 		@GetMapping("/moviesingle")
 		public String ShowMovieSingle(HttpServletRequest request,@RequestParam("id") int id) {
-			this.msi.findMovieById(request, id);
-			Movie m = (Movie) request.getAttribute("movie");
+			request.setAttribute("movie",this.msi.findMovieById(id));
 			return "movie-single";
 			}
 }

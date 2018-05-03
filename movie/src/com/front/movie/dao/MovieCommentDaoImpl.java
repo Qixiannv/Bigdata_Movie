@@ -21,19 +21,6 @@ public class MovieCommentDaoImpl {
 		return this.sessionFactory.getCurrentSession().get(MovieComment.class, new Integer(id));
 	}
 	
-	//根据用户id找到movieComment
-	public List<MovieComment> findMovieCommentByUserId(int userId){
-		Query<MovieComment> query =this.sessionFactory.getCurrentSession().createQuery("from MovieComment where user_id=?");
-		query.setParameter(0, userId);
-		return query.list();
-	}
-	//根据电影id找到movieComment
-	public List<MovieComment> findMovieCommentByMovieId(int movieId){
-		Query<MovieComment> query =this.sessionFactory.getCurrentSession().createQuery("from MovieComment where movie_id=?");
-		query.setParameter(0, movieId);
-		return query.list();
-	}
-	
 	//插入一条电影评论
 	public int savaMovieComment(MovieComment mc) {
 		this.sessionFactory.getCurrentSession().save(mc);

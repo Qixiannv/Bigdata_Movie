@@ -1,14 +1,17 @@
 /*
  Navicat Premium Data Transfer
+
  Source Server         : movie
  Source Server Type    : MySQL
  Source Server Version : 50615
  Source Host           : localhost:3306
  Source Schema         : movie_db
+
  Target Server Type    : MySQL
  Target Server Version : 50615
  File Encoding         : 65001
- Date: 06/04/2018 17:29:19
+
+ Date: 03/05/2018 15:38:44
 */
 
 SET NAMES utf8mb4;
@@ -40,8 +43,8 @@ CREATE TABLE `friend`  (
   PRIMARY KEY (`friend_id`) USING BTREE,
   INDEX `userid_1`(`userid_1`) USING BTREE,
   INDEX `userid_2`(`userid_2`) USING BTREE,
-  CONSTRAINT `friend_fk1` FOREIGN KEY (`userid_2`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `friend_fk` FOREIGN KEY (`userid_1`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+  CONSTRAINT `friend_fk` FOREIGN KEY (`userid_1`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `friend_fk1` FOREIGN KEY (`userid_2`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
@@ -50,14 +53,22 @@ CREATE TABLE `friend`  (
 DROP TABLE IF EXISTS `movie`;
 CREATE TABLE `movie`  (
   `movie_id` int(11) NOT NULL AUTO_INCREMENT,
-  `movie_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `movie_summary` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `movie_pic` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `movie_type` int(11) NOT NULL,
-  PRIMARY KEY (`movie_id`) USING BTREE,
-  INDEX `movie_type`(`movie_type`) USING BTREE,
-  CONSTRAINT `movie_fk` FOREIGN KEY (`movie_type`) REFERENCES `type` (`type_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  `movie_name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `movie_summary` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `movie_pic` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `movie_type` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`movie_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of movie
+-- ----------------------------
+INSERT INTO `movie` VALUES (1, NULL, '这里显示电影简评', 'images/r1.jpg', 1);
+INSERT INTO `movie` VALUES (2, NULL, '这里显示电影简评', 'images/r2.jpg', 1);
+INSERT INTO `movie` VALUES (3, NULL, '这里显示电影简评', 'images/r3.jpg', 1);
+INSERT INTO `movie` VALUES (4, NULL, '这里显示电影简评', 'images/r4.jpg', 1);
+INSERT INTO `movie` VALUES (5, NULL, '这里显示电影简评', 'images/r5.jpg', 1);
+INSERT INTO `movie` VALUES (6, NULL, NULL, 'images/r6.jpg', 1);
 
 -- ----------------------------
 -- Table structure for movie_comment
@@ -68,13 +79,13 @@ CREATE TABLE `movie_comment`  (
   `user_id` int(11) NULL DEFAULT NULL,
   `movie_id` int(11) NULL DEFAULT NULL,
   `comment_text` varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `comment_time` date NULL DEFAULT NULL,
+  `comment_time` timestamp(0) NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`comment_id`) USING BTREE,
   INDEX `user_id`(`user_id`) USING BTREE,
   INDEX `movie_id`(`movie_id`) USING BTREE,
-  CONSTRAINT `movie_comment_fk1` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  CONSTRAINT `movie_comment_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+  CONSTRAINT `movie_comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `movie_comment_ibfk_2` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Table structure for type
@@ -96,10 +107,10 @@ CREATE TABLE `user`  (
   `phone` int(11) NOT NULL,
   `username` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `password` tinyint(15) NOT NULL,
-  `birthday` date NULL DEFAULT NULL,
+  `birthday` timestamp(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0),
   `avatar` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `gender` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 SET FOREIGN_KEY_CHECKS = 1;

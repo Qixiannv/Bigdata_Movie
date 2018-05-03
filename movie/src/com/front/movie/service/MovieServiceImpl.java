@@ -19,14 +19,12 @@ public class MovieServiceImpl {
 	private MovieDaoImpl mdi;
 	
 	//根据movie_id找movie
-	public void findMovieById(HttpServletRequest request,int id) {
-		Movie movie=this.mdi.findMovieById(id);
-		request.setAttribute("movie", movie);
+	public Movie findMovieById(int id) {
+		return this.mdi.findMovieById(id);
 	}
 	
 	//找所有的movie
-	public void searchAllMovie(HttpServletRequest request) {
-		List<Movie> list=this.mdi.searchAllMovie();
-		request.setAttribute("movielist", list);
+	public List<Movie>  searchAllMovie() {
+		 return this.mdi.searchAllMovie();
 	}
 }

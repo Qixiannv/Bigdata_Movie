@@ -1,10 +1,16 @@
 package com.front.movie.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.criteria.Order;
 
 import org.hibernate.annotations.GenericGenerator;
 @Entity
@@ -21,6 +27,7 @@ public class Movie {
 	
 	private int movie_type;
 	
+	private Set movieSet=new HashSet<MovieComment>();
 	public Movie() {}
 	public Movie(String movie_name, String movie_summary, String movie_pic, int movie_type) {
 		super();
@@ -70,6 +77,14 @@ public class Movie {
 	}
 	public void setMovie_type(int movie_type) {
 		this.movie_type = movie_type;
+	}
+	@OneToMany(mappedBy="movie", targetEntity=MovieComment.class,
+			cascade=CascadeType.ALL)
+	public Set getMovieSet() {
+		return movieSet;
+	}
+	public void setMovieSet(Set movieSet) {
+		this.movieSet = movieSet;
 	}
 	
 }

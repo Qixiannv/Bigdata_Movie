@@ -1,13 +1,9 @@
 package com.front.movie.service;
 
-import java.util.List;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.front.movie.dao.MovieCommentDaoImpl;
 import com.front.movie.entity.MovieComment;
 
@@ -19,21 +15,9 @@ public class MovieCommentServiceImpl {
 	private MovieCommentDaoImpl mcdt;
 	
 	//根据评论id查movieComment
-	public void findMovieCommentById(HttpServletRequest request,int commentid) {
+	public MovieComment findMovieCommentById(int commentid) {
 		MovieComment mc =this.mcdt.findMovieCommentById(commentid);
-		request.setAttribute("moviecomment", mc);
-	}
-	
-	//根据userID查
-	public void findMovieCommentByUserId(HttpServletRequest request,int userId) {
-		List<MovieComment> list =this.mcdt.findMovieCommentByUserId(userId);
-		request.setAttribute("moviecommentlist", list);
-	}
-	//根据movieId查
-	public List<MovieComment> findMovieCommentByMovieId(HttpServletRequest request,int movieId) {
-		List<MovieComment> list =this.mcdt.findMovieCommentByMovieId(movieId);
-		request.setAttribute("moviecommentlist", list);
-		return list;
+		return mc;
 	}
 	
 	//插入一条电影评论
