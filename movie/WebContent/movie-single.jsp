@@ -574,7 +574,7 @@ $('#myModal').modal('no');
 	</div>
 	<div class="m-single-article">
 		<div class="article-left">
-			<h3>${movie.getMovie_name()} } <span> <i class="fa fa-heart"></i> 99%</span></h3>
+			<h3>${movie.getMovie_name() } <span> <i class="fa fa-heart"></i> 99%</span></h3>
 			<p><a class="m-green" href="#">标签位置</a></p>
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
@@ -583,11 +583,11 @@ $('#myModal').modal('no');
 				</div>
 				<div class="clearfix"></div>
 				<div class="article-img">
-					<img href="${movie.getMovie_pic()} }">
+					<img href="${movie.getMovie_pic() } }">
 				</div>
 				<div class="review-info">
-								<h6 class="span88">红海行动</h6>
-								<p class="dirctr"><a href="">主演： </a>张译，杜江，黄景瑜</p>								
+								<h6 class="span88">${movie.getMovie_name() }</h6>
+								<p class="dirctr"><a href="">主演： </a>没有演员字段</p>								
 								<p class="ratingview">专家评价:</p>
 								<div class="rating">
 									<span>☆</span>
@@ -630,9 +630,9 @@ $('#myModal').modal('no');
 									</div>
 									<div class="clearfix"></div>
 								</div>
-								<p class="info"><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;张译，杜江，黄景瑜</p>
-								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;动作、剧情、战争</p>
-								<p class="info"><strong>简介</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该片讲述了中国海军“蛟龙突击队”8人小组奉命执行撤侨任务，突击队兵分两路进行救援，但不幸遭到伏击，人员伤亡；同时在粉碎叛军武装首领的惊天阴谋中惨胜的故事</p>
+								<p class="info"><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;没有字段</p>
+								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;</p>
+								<p class="info"><strong>简介</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${movie.getMovie_summary() }</p>
 								<p class="info"><strong>时长</strong>:&nbsp;&nbsp;&nbsp; &nbsp; 138分钟</p>
 							</div>
 			</div>
