@@ -1528,7 +1528,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>77%</li>
-						<li><a href="movie-single.html">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored ="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -555,7 +557,7 @@ $('#myModal').modal('no');
 <!-- AddThis Smart Layers END -->
 
 	<div class="m-tickets-instantly">
-		<h4>Book tickets instantly</h4>
+		<h4>立即预定电影票</h4>
 		<div class="fleft m-select">
                         <label><input id="rdbMovie" name="rdbMovieSearch" type="radio" class="checkins" onclick="fnOcCriteria('ET', 'MT');" checked="checked">
                         <span class="fleft mr20">Movies</span></label>
@@ -572,8 +574,8 @@ $('#myModal').modal('no');
 	</div>
 	<div class="m-single-article">
 		<div class="article-left">
-			<h3>电影详情 <span> <i class="fa fa-heart"></i> 99%</span></h3>
-			<p><a class="m-green" href="#">迪士尼</a><a class="m-green" href="#">喜剧</a><a class="m-orange" href="#">漫威</a></p>
+			<h3>${movie.getMovie_name()} } <span> <i class="fa fa-heart"></i> 99%</span></h3>
+			<p><a class="m-green" href="#">标签位置</a></p>
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
 				<div class="article-time-strip-left">
@@ -581,7 +583,7 @@ $('#myModal').modal('no');
 				</div>
 				<div class="clearfix"></div>
 				<div class="article-img">
-					<iframe src="https://www.youtube.com/embed/VdafjyFK3ko" frameborder="0" allowfullscreen></iframe>
+					<img href="${movie.getMovie_pic()} }">
 				</div>
 				<div class="review-info">
 								<h6 class="span88">红海行动</h6>
@@ -671,10 +673,7 @@ $('#myModal').modal('no');
         <div class="tab-pane active" id="how-to">
 		 <p><strong> 导演 :</strong> <a href="#">林超贤</a></p>
           <p> <strong>出品公司:</strong> <a href="#">博纳影业</a> ,<a href="#">中国人民解放军海政电视艺术中心</a> ,<a href="#">星梦工场</a>, <a href="#">英皇影业</a>
-		  <p>索马里海域外，中国商船遭遇劫持，部分船员被海盗杀害，其他人沦为俘虏。蛟龙突击队沉着应对，潜入商船进行突袭，成功解救全部人质。狙击手罗星在追击海盗时不幸被击中脊柱神经，欠缺的位置由顾顺替代。
-返航途中，非洲北部伊维亚共和国政局动荡，恐怖组织连同叛军攻入首都，当地华侨面临危险。海军战舰接到上级命令改变航向，前往执行撤侨任务。蛟龙突击队八人，整装待发。
-时间紧迫，在“撤侨遇袭可反击，相反则必须避免交火，以免引起外交冲突”的大原则下，海军战舰及蛟龙突击队在恶劣的环境下，停靠海港，成功转移等候在码头的中国侨民，并在激烈的遭遇战之后，营救了被恐怖分子追击的中国领事馆人员。
-然而事情尚未完结，就在掩护华侨撤离之际，蛟龙突击队收到中国人质被恐怖分子劫持的消息。众人深感责任重大，义无反顾地再度展开营救行动 <br>
+		  <p>${movie.getMovie_summary() } <br>
 		  <a href="mail-to:mail@example.com">https://baike.baidu.com/item/</a></p>
           
      
