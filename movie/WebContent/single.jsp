@@ -596,18 +596,7 @@ $('#myModal').modal('no');
 					</ul>
 					<div class="comments">
 						<h5>Comments</h5>
-						<c:forEach items="${comments}" var=c>
-							<div class="comment">
-							<div class="client">
-								<img src="images/c1.jpg" alt="">
-							</div>
-							<div class="client-message">
-								<p><a href="#">john doe</a><i class="fa fa-calendar"></i>2 hours ago</p>
-								<h6>While Cameron has had a great night, I suspect his problems in some way have only just begun.</h6>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						</c:forEach>
+						
 						<div class="comment">
 							<div class="client">
 								<img src="images/c1.jpg" alt="">

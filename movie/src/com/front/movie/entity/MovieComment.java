@@ -23,6 +23,7 @@ public class MovieComment {
 	private String comment_text;
 	private String comment_time;
 	private Movie movie;
+	
 	@Id
 	@GeneratedValue(generator="moviecommentid")
 	@GenericGenerator(name="moviecommentid",strategy="native")
