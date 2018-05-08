@@ -37,24 +37,12 @@ public class SingleController {
 	//跳转页面
 	@GetMapping("/gotosingle")
 	public String ShowMovieSingle(HttpServletRequest request,@RequestParam("id") int id) {
-		this.msi.findMovieById(id);
-		//System.out.println(id);
-		return "redirect:/showcommment?id="+id;
+		Movie movie = this.msi.findMovieById(id);
+		request.setAttribute("movie", movie);
+		
+		return "single";
 		}
 	
-	@GetMapping("/showcomment")
-	public String ShowComment(HttpServletRequest request,@RequestParam("movie_id") int movie_id) throws Exception {
-//		List<MovieComment> list = this.mcsi.findMovieCommentByMovieId(request, movie_id);
-//		List<FullComment> clist = new ArrayList<FullComment>();
-//		for(MovieComment mc : list) {
-//			User u = this.ui.UserSelect(mc.getUser_id());
-//			FullComment fc = new FullComment();
-//			fc.setMc(mc);
-//			fc.setUser(u);
-//			clist.add(fc);
-//		}
-		return "/single";
-	}
 	
 	@GetMapping("/leave_comment")
 	public String LeaveComment(HttpServletRequest request,@RequestParam("movie_id") int movie_id,@RequestParam("user_id") int user_id,

@@ -597,6 +597,20 @@ $('#myModal').modal('no');
 					<div class="comments">
 						<h5>Comments</h5>
 						
+						<c:forEach items=${movie.movieSet } var = p>
+							<div class="comment">
+							<div class="client">
+								<img src="${p.user.avatar}" alt="">
+							</div>
+							<div class="client-message">
+								<p><a href="#">${p.user.username }</a><i class="fa fa-calendar"></i>${p.comment_time }</p>
+								<h6>${p.comment_text }</h6>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+							
+						</c:forEach>
+						
 						<div class="comment">
 							<div class="client">
 								<img src="images/c1.jpg" alt="">
