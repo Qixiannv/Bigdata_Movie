@@ -589,7 +589,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</div>
 											<!-- 注册 -->
 											<div class="tab-pane" id="Registration">
-												<form role="form" class="form-horizontal" action="./UserRegisterController" method="post">
+												<form role="form" class="form-horizontal" action="/movie/UserRegisterController" method="post">
 													<div class="form-group">
 														<label for="email" class="col-sm-2 control-label">
 															姓名</label>
