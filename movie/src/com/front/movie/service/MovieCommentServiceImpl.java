@@ -1,6 +1,8 @@
 package com.front.movie.service;
 
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,7 +21,9 @@ public class MovieCommentServiceImpl {
 		MovieComment mc =this.mcdt.findMovieCommentById(commentid);
 		return mc;
 	}
-	
+	public List<MovieComment> findMovieCommentByMovieId(int movieid) {
+		return this.mcdt.findMovieCommentByMovieId(movieid);
+	} 
 	//插入一条电影评论
 	public int saveMovieComment(MovieComment mc) {
 		return this.mcdt.savaMovieComment(mc);

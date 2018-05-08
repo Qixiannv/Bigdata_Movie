@@ -20,7 +20,12 @@ public class MovieCommentDaoImpl {
 	public MovieComment findMovieCommentById(int id) {
 		return this.sessionFactory.getCurrentSession().get(MovieComment.class, new Integer(id));
 	}
-	
+	//根据主键找到movieComment
+	public List<MovieComment> findMovieCommentByMovieId(int movieid) {
+		 Query query = this.sessionFactory.getCurrentSession().createQuery("from MovieComment where movie_id =?");
+		 query.setParameter(0, movieid);
+		 return query.list();
+	}
 	//插入一条电影评论
 	public int savaMovieComment(MovieComment mc) {
 		this.sessionFactory.getCurrentSession().save(mc);
