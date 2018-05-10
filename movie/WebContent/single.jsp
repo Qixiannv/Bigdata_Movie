@@ -5,7 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -597,14 +597,14 @@ $('#myModal').modal('no');
 					<div class="comments">
 						<h5>Comments</h5>
 						
-						<c:forEach items=${movie.movieSet } var = p>
+						<c:forEach items="${movie.movieSet}" var = "p">
 							<div class="comment">
 							<div class="client">
 								<img src="${p.user.avatar}" alt="">
 							</div>
 							<div class="client-message">
-								<p><a href="#">${p.user.username }</a><i class="fa fa-calendar"></i>${p.comment_time }</p>
-								<h6>${p.comment_text }</h6>
+								<p><a href="#">${p.user.username}</a><i class="fa fa-calendar"></i>${p.comment_time}</p>
+								<h6>${p.comment_text}</h6>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -632,8 +632,8 @@ $('#myModal').modal('no');
 							<div class="clearfix"></div>
 						</div>
 						<form action = "/movie/leave_comment" method = "get">
-							<input type = "text" style="display:none" name = "user_id" value = 1>
-							<input type = "text" style="display:none" name = "movie_id" value = 2>
+							<input type = "text" style="display:none" name = "user_id" value = "${user.user_id}">
+							<input type = "text" style="display:none" name = "movie_id" value = "${movie.movie_id}">
 							<textarea type="text" name = "comment_text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">Your comment...</textarea>
 							<input type = "submit" value="submit">
 						</form>
