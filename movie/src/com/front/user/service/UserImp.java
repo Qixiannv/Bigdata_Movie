@@ -38,4 +38,8 @@ public class UserImp {
 	public User UserSelect(int user_id)throws Exception{
 		return this.UserSelect(user_id);
 	}
+	
+	public void UserChange(User u)throws Exception{
+		this.userRegisterDaoImp.UserChange(u);
+	}
 }

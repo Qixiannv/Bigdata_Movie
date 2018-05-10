@@ -2,9 +2,12 @@ package com.front.user.dao;
 
 import javax.annotation.Resource;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.front.user.entity.User;
 @Repository
@@ -34,4 +37,19 @@ public class UserDaoImp {
 		
 		return u;
 	}
+	public void UserChange(User u)throws Exception{
+		 Session session = sessionFactory.getCurrentSession(); 
+         session.beginTransaction();  
+         String hql = ("update User u set u.username=?,u.email=?,u.password=?,u.phone=?");    
+         Query query = session.createQuery(hql);  
+         query.setParameter(0, u.getUsername());  
+         query.setParameter(1, u.getEmail());  
+         query.setParameter(2, u.getPassword());  
+         query.setParameter(3, u.getPhone());
+         query.executeUpdate(); 
+         session.getTransaction().commit();    
+		
+	}
+
+	
 }
