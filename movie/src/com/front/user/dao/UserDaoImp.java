@@ -20,7 +20,7 @@ public class UserDaoImp {
 	}
 	/*用户登录*/
 	public User Userlogin(String username)throws Exception{
-		String hql="from User where username="+username;
+		String hql="from User where username='"+username+"'";
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		User u=(User)query.uniqueResult();
 		return u;
