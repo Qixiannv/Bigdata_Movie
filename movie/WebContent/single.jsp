@@ -611,29 +611,10 @@ $('#myModal').modal('no');
 							
 						</c:forEach>
 						
-						<div class="comment">
-							<div class="client">
-								<img src="images/c1.jpg" alt="">
-							</div>
-							<div class="client-message">
-								<p><a href="#">john doe</a><i class="fa fa-calendar"></i>2 hours ago</p>
-								<h6>While Cameron has had a great night, I suspect his problems in some way have only just begun.</h6>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="comment">
-							<div class="client">
-								<img src="images/c2.jpg" alt="">
-							</div>
-							<div class="client-message">
-								<p><a href="#">Allon poe</a><i class="fa fa-calendar"></i>6 hours ago</p>
-								<h6>The debate over EU membership is likely to come up pretty quickly and could prove a significant distraction for business and government.</h6>
-							</div>
-							<div class="clearfix"></div>
-						</div>
+						
 						<form action = "/movie/leave_comment" method = "get">
-							<input type = "text" style="display:none" name = "user_id" value = "${user.user_id}">
-							<input type = "text" style="display:none" name = "movie_id" value = "${movie.movie_id}">
+							<input type = "text" style="display:none" name = "user_id" value = "1">
+							<input type = "text" style="display:none" name = "movie_id" value = "1">
 							<textarea type="text" name = "comment_text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">Your comment...</textarea>
 							<input type = "submit" value="submit">
 						</form>
