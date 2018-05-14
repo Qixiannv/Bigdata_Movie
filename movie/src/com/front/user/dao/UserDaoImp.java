@@ -14,13 +14,26 @@ import com.front.user.entity.User;
 public class UserDaoImp {
 	@Resource
 	private SessionFactory sessionFactory;
-	/*用户注册 */
+	//
+		/**
+		 * 用户注册
+		 * @author 昝双鹏
+		 * @param User u
+		 * @return 
+		 */
 	public void UserRegister(User u)throws Exception{
 		this.sessionFactory.getCurrentSession().save(u);
 	}
-	/*用户登录*/
-	public User Userlogin(String username)throws Exception{
-		String hql="from User where username='"+username+"'";
+	//
+			/**
+			 * 用户登录
+			 * @param username 用户名
+			 * @return
+			 * @throws Exception  错误
+			 * @return user u  用户u
+			 */
+	public User Userlogin(String email)throws Exception{
+		String hql="from User where email='"+email+"'";
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		User u=(User)query.uniqueResult();
 		return u;
@@ -29,7 +42,13 @@ public class UserDaoImp {
 	
 	
 	/*根据user_id查询出user*/
-	public User UserSelect(int user_id)throws Exception{
+	/**
+	 * 根据user_id查询出user
+	 * @param user_id   id 
+	 * @return user u    u 
+	 * @throws Exception
+	 */
+	public User UserSelect(Integer user_id)throws Exception{
 		String hql="from User where user_id="+user_id;
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		User u=(User)query.uniqueResult();
@@ -37,15 +56,21 @@ public class UserDaoImp {
 		
 		return u;
 	}
+	/**
+	 * 更改用户信息
+	 * @param u 用户u
+	 * @throws Exception
+	 */
 	public void UserChange(User u)throws Exception{
-		 Session session = sessionFactory.getCurrentSession(); 
+		 Session session = sessionFactory.getCurrentSession();
+		 System.out.println(u.getEmail());
          session.beginTransaction();  
-         String hql = ("update User u set u.username=?,u.email=?,u.password=?,u.phone=?");    
+         String hql = ("update User u set u.username=?,u.password=?,u.phone=? where u.user_id=?");    
          Query query = session.createQuery(hql);  
-         query.setParameter(0, u.getUsername());  
-         query.setParameter(1, u.getEmail());  
-         query.setParameter(2, u.getPassword());  
-         query.setParameter(3, u.getPhone());
+         query.setParameter(0, u.getUsername());   
+         query.setParameter(1, u.getPassword());  
+         query.setParameter(2, u.getPhone());
+         query.setParameter(3, u.getUser_id());
          query.executeUpdate(); 
          session.getTransaction().commit();    
 		

@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.front.user.dao.UserDaoImp;
 import com.front.user.entity.User;
@@ -13,17 +14,30 @@ import com.front.user.entity.User;
 public class UserImp {
 	@Resource
 	private UserDaoImp userRegisterDaoImp;
-	/*注册*/
+	/**
+	 * 用户注册
+	 * @param u
+	 * @return 主页
+	 * @throws Exception
+	 */
 	public String RegisterUser(User u)throws Exception{
 		this.userRegisterDaoImp.UserRegister(u);
 		return "index";
 	}
-	/*登录*/
-	public String UserLogin(String username,String password,HttpServletRequest request,HttpSession session){
+	/**
+	 * 用户登录 同时把user 放进session 中
+	 * @param email   邮箱
+	 * @param password   密码
+	 * @param request   
+	 * @param session  
+	 * @return 注册或者错误呀界面
+	 */
+	public String UserLogin(String email,String password,HttpServletRequest request,HttpSession session){
 		try{
-		User u=this.userRegisterDaoImp.Userlogin(username);
+		User u=this.userRegisterDaoImp.Userlogin(email);
 			if(password.equals(u.getPassword())){
 				session.setAttribute("user", u);
+				
 				return "index";
 			}else{
 				return "cuowu";
@@ -34,11 +48,20 @@ public class UserImp {
 			return "cuowu";
 		}
 	}
-	/*根据user_id查询出user*/
-	public User UserSelect(int user_id)throws Exception{
-		return this.UserSelect(user_id);
+	/**
+	 * 根据user_id 查询出user
+	 * @param user_id   用户ID
+	 * @return
+	 * @throws Exception
+	 */
+	public User UserSelect(Integer user_id)throws Exception{
+		return this.userRegisterDaoImp.UserSelect(user_id);
 	}
-	
+	/**
+	 * 更改用户信息
+	 * @param u
+	 * @throws Exception
+	 */
 	public void UserChange(User u)throws Exception{
 		this.userRegisterDaoImp.UserChange(u);
 	}

@@ -566,9 +566,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<div class="tab-pane active" id="Login">
 												<form role="form" class="form-horizontal" action="./UserLoginController" method="post">
 													<div class="form-group">
-														<label for="email" class="col-sm-2 control-label">用户名</label>
+														<label for="email" class="col-sm-2 control-label">Email</label>
 														<div class="col-sm-10">
-															<input type="text" class="form-control" id="username" name="username" placeholder="Email" />
+															<input type="text" class="form-control" id="email" name="email" placeholder="email" />
 														</div>
 													</div>
 													<div class="form-group">

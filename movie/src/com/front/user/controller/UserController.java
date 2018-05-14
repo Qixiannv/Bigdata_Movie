@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,17 +21,29 @@ public class UserController {
 	
 	@Resource
 	private UserImp userRegisterImp;
-	
+	/**
+	 * 用户注册跳转 
+	 * @param u   
+	 * @return 在service中
+	 * @throws Exception
+	 * 
+	 */
 	@RequestMapping("/UserRegisterController")
 	public String UserRegister(User u)throws Exception{
-		System.out.println("111111");
 		return this.userRegisterImp.RegisterUser(u);
 		
 	}
-	
+	/**
+	 * 用户登录跳转
+	 * @param email  邮箱
+	 * @param password   密码
+	 * @param request
+	 * @param session
+	 * @return 在service中
+	 */
 	@RequestMapping("/UserLoginController")
-	public String Userlogin(String username,String password,HttpServletRequest request,HttpSession session){
-		return this.userRegisterImp.UserLogin(username,password,request,session);
+	public String Userlogin(String email,String password,HttpServletRequest request,HttpSession session){
+	return this.userRegisterImp.UserLogin(email,password,request,session);
 	}
 	
 	public String UserChange(MultipartFile uploadFile,HttpSession session,User u)throws Exception{
@@ -47,4 +60,18 @@ public class UserController {
 		}
 		return "";
 	}
+	/**
+	 *更改用户信息跳转
+	 * @param session
+	 * @param u 用户 u
+	 * @return 
+	 * @throws Exception
+	 */
+	@RequestMapping("/ChangeController")
+	public String Change(HttpSession session,User u)throws Exception{
+		this.userRegisterImp.UserChange(u);
+		return "";
+	}
+	
+	
 }
