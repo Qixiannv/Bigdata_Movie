@@ -7,11 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="UserRegisterController" method="post">
-	<input type="text" id="username" name="username" >
-	<input type="text" id="password" name="password">
+	<form action="test" method="post">
 	<input type="submit" value="tijiao">
 	
 	</form>
+	
 </body>
 </html>
