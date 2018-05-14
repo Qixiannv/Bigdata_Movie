@@ -33,7 +33,13 @@ public class SingleController {
 	@Resource
 	private UserImp ui;
 	
-	
+	/**
+	 * 根据电影id，从数据库中差找并展示在前端
+	 * @author 闫相垠
+	 * @param request request
+	 * @param id 电影id
+	 * @return 
+	 */
 	//跳转页面
 	@GetMapping("/gotosingle")
 	public String ShowMovieSingle(HttpServletRequest request,@RequestParam("id") int id) {
@@ -43,7 +49,16 @@ public class SingleController {
 		return "single";
 		}
 	
-	
+	/**
+	 * 将电影评论存放金进数据库
+	 * @author 闫相垠
+	 * @param request request
+	 * @param movie_id 电影id
+	 * @param user_id 用户id
+	 * @param comment_text 电影评论
+	 * @return
+	 * @throws Exception
+	 */
 	@GetMapping("/leave_comment")
 	public String LeaveComment(HttpServletRequest request,@RequestParam("movie_id") int movie_id,@RequestParam("user_id") int user_id,
 			@RequestParam("comment_text") String comment_text) throws Exception {
