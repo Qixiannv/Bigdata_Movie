@@ -23,7 +23,7 @@ public class UserController {
 	private UserImp userRegisterImp;
 	/**
 	 * 用户注册跳转 
-	 * @param u
+	 * @param u   
 	 * @return 在service中
 	 * @throws Exception
 	 * 
@@ -35,8 +35,8 @@ public class UserController {
 	}
 	/**
 	 * 用户登录跳转
-	 * @param email
-	 * @param password
+	 * @param email  邮箱
+	 * @param password   密码
 	 * @param request
 	 * @param session
 	 * @return 在service中
@@ -63,7 +63,7 @@ public class UserController {
 	/**
 	 *更改用户信息跳转
 	 * @param session
-	 * @param u
+	 * @param u 用户 u
 	 * @return 
 	 * @throws Exception
 	 */

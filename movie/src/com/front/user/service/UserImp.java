@@ -26,10 +26,10 @@ public class UserImp {
 	}
 	/**
 	 * 用户登录 同时把user 放进session 中
-	 * @param email
-	 * @param password
-	 * @param request
-	 * @param session
+	 * @param email   邮箱
+	 * @param password   密码
+	 * @param request   
+	 * @param session  
 	 * @return 注册或者错误呀界面
 	 */
 	public String UserLogin(String email,String password,HttpServletRequest request,HttpSession session){
@@ -50,7 +50,7 @@ public class UserImp {
 	}
 	/**
 	 * 根据user_id 查询出user
-	 * @param user_id
+	 * @param user_id   用户ID
 	 * @return
 	 * @throws Exception
 	 */

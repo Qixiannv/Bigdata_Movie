@@ -27,10 +27,10 @@ public class UserDaoImp {
 	//
 			/**
 			 * 用户登录
-			 * @param username
+			 * @param username 用户名
 			 * @return
-			 * @throws Exception
-			 * @return user u 
+			 * @throws Exception  错误
+			 * @return user u  用户u
 			 */
 	public User Userlogin(String email)throws Exception{
 		String hql="from User where email='"+email+"'";
@@ -44,8 +44,8 @@ public class UserDaoImp {
 	/*根据user_id查询出user*/
 	/**
 	 * 根据user_id查询出user
-	 * @param user_id
-	 * @return user u
+	 * @param user_id   id 
+	 * @return user u    u 
 	 * @throws Exception
 	 */
 	public User UserSelect(Integer user_id)throws Exception{
@@ -58,7 +58,7 @@ public class UserDaoImp {
 	}
 	/**
 	 * 更改用户信息
-	 * @param u
+	 * @param u 用户u
 	 * @throws Exception
 	 */
 	public void UserChange(User u)throws Exception{
