@@ -69,7 +69,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>	
 				</div>
-				<div class="header-top-right">
+				
+				<script>
+					var i=documeng.getElementByClassName("header-top-right");
+					if (${user }==null) {     
+					   i.style.display = ""; 
+					   document.write("欢迎您，"+${user.getUsername() })
+					}
+					else{     
+					   i.style.display = "none";     
+					}     
+				</script>
+				
+					<!-- 登录注册改变位置 -->
+				<div class="header-top-right" display="">
 				<div class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -243,10 +256,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
+
+
 <script>
 $('#myModal').modal('no');
 </script>
 </div>
+<!-- 登录注册结束 -->
 				<div class="clearfix"></div>
 			</div>
 		</div>
