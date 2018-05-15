@@ -551,49 +551,7 @@ $('#myModal').modal('no');
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
 
-				<div class="article-time-strip-left">
-					<span>最新动态：INSIDIOUS &nbsp;&nbsp; </span>发布时间 :&nbsp;<span><i class="fa fa-calendar"></i>2018年4月11日</span></p>
-				</div>
-				<div class="clearfix"></div>
-				<div class="article-img">
-					<img src="images/r5.jpg">
-				</div>
-				<div class="review-info">
-								<h6 class="span88"></h6>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
-								<p class="ratingview">网友评分：</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<p class="ratingview">
-								&nbsp;3.5/5  
-								</p>
-								<div class="clearfix"></div>
-								<p class="ratingview c-rating"> 我的评分：</p>
-								<div class="rating c-rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 	
-								<p class="ratingview c-rating">								
-								 3.3/5</p>
-								<div class="clearfix"></div>
-								<div class="yrw">
-
-									<div class="rtm text-center">
-										<a href="#">查看我的影评</a>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								
-							</div>
-			</div>
+				
 		</div>
 		<div class="article-right">
 			<div class="grid_3 grid_5">
@@ -617,17 +575,7 @@ $('#myModal').modal('no');
 				 <div class="clearfix"></div>
 				 <a class="more-show-time" href="movie-select-show.html">查看更多</a>
 			  </div>
-					<div class="myfoot">
-			  			<h3>足迹</h3>
-						<ul class="footul">
-							<li><a href="#">2018年3月11日</a></li>
-							<li><a href="#">2018年2月15日</a></li>
-							<li><a href="#">2017年12月25日</a></li>
-							<li><a href="#">2017年11月27日</a></li>
-							<li><a href="#">2017年4月1日</a></li>
-							<li><a href="#">2016年8月7日</a></li>
-						</ul>
-					</div>
+					
 			
 			</div>
 			
