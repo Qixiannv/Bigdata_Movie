@@ -23,10 +23,11 @@ USE `movie_db`;
 #
 
 CREATE TABLE `actor` (
-  `actor_id` int(11) DEFAULT NULL,
+  `actor_id` int(11) NOT NULL,
   `actor_name` varchar(20) DEFAULT NULL,
   `actor_pic` varchar(30) DEFAULT NULL,
-  `actor_summary` varchar(200) DEFAULT NULL
+  `actor_summary` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`actor_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 #

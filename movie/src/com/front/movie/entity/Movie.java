@@ -1,5 +1,6 @@
 package com.front.movie.entity;
 
+import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -27,9 +28,14 @@ public class Movie {
 	
 	private int movie_type;
 	
+	private Date date;
+	private int time;
+	private int rate;
+	
+	
 	private Set movieSet=new HashSet<MovieComment>();
 	public Movie() {}
-	public Movie(String movie_name, String movie_summary, String movie_pic, int movie_type) {
+	public Movie(String movie_timename, String movie_summary, String movie_pic, int movie_type) {
 		super();
 		this.movie_name = movie_name;
 		this.movie_summary = movie_summary;
@@ -85,6 +91,31 @@ public class Movie {
 	}
 	public void setMovieSet(Set movieSet) {
 		this.movieSet = movieSet;
+	}
+	@Column(name="date")
+	public Date getDate() {
+		return date;
+	}
+	
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	@Column(name="time")
+	public int getTime() {
+		return time;
+	}
+	
+	public void setTime(int time) {
+		this.time = time;
+	}
+	
+	@Column(name="rate")
+	public int getRate() {
+		return rate;
+	}
+	
+	public void setRate(int rate) {
+		this.rate = rate;
 	}
 	
 }
