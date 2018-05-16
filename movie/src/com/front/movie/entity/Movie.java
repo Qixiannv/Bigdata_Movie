@@ -26,21 +26,24 @@ public class Movie {
 	
 	private String movie_pic;
 	
-	private int movie_type;
+	private Integer movie_type;
 	
 	private Date date;
-	private int time;
-	private int rate;
+	private Integer time;
+	private Float rate;
 	
 	
 	private Set movieSet=new HashSet<MovieComment>();
 	public Movie() {}
-	public Movie(String movie_timename, String movie_summary, String movie_pic, int movie_type) {
+	public Movie(String movie_timename, String movie_summary, String movie_pic, Integer movie_type,Date date,Integer time,Float rate) {
 		super();
 		this.movie_name = movie_name;
 		this.movie_summary = movie_summary;
 		this.movie_pic = movie_pic;
 		this.movie_type = movie_type;
+		this.date = date;
+		this.time = time;
+		this.rate = rate;
 	}
 	
 	@Id
@@ -78,10 +81,10 @@ public class Movie {
 	}
 	
 	@Column(name="movie_type")
-	public int getMovie_type() {
+	public Integer getMovie_type() {
 		return movie_type;
 	}
-	public void setMovie_type(int movie_type) {
+	public void setMovie_type(Integer movie_type) {
 		this.movie_type = movie_type;
 	}
 	@OneToMany(mappedBy="movie", targetEntity=MovieComment.class,
@@ -101,20 +104,20 @@ public class Movie {
 		this.date = date;
 	}
 	@Column(name="time")
-	public int getTime() {
+	public Integer getTime() {
 		return time;
 	}
 	
-	public void setTime(int time) {
+	public void setTime(Integer time) {
 		this.time = time;
 	}
 	
 	@Column(name="rate")
-	public int getRate() {
+	public Float getRate() {
 		return rate;
 	}
 	
-	public void setRate(int rate) {
+	public void setRate(Float rate) {
 		this.rate = rate;
 	}
 	

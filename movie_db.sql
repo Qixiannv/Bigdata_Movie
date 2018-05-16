@@ -112,7 +112,7 @@ CREATE TABLE `movie` (
   `movie_type` int(11) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `time` int(5) DEFAULT NULL,
-  `rate` int(4) DEFAULT NULL,
+  `rate` float(9,3) DEFAULT NULL,
   PRIMARY KEY (`movie_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
@@ -131,7 +131,7 @@ CREATE TABLE `movie_comment` (
   KEY `movie_id` (`movie_id`) USING BTREE,
   CONSTRAINT `movie_comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `movie_comment_ibfk_2` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 #
 # Data for the `user` table  (LIMIT 0,500)
@@ -150,7 +150,7 @@ COMMIT;
 #
 
 INSERT INTO `movie` (`movie_id`, `movie_name`, `movie_summary`, `movie_pic`, `movie_type`, `date`, `time`, `rate`) VALUES 
-  (1,NULL,'这里显示电影简评','images/r1.jpg',1,NULL,NULL,NULL),
+  (1,'大饼张嘎','这里显示电影简评','images/r1.jpg',1,NULL,NULL,NULL),
   (2,NULL,'这里显示电影简评','images/r2.jpg',1,NULL,NULL,NULL),
   (3,NULL,'这里显示电影简评','images/r3.jpg',1,NULL,NULL,NULL),
   (4,NULL,'这里显示电影简评','images/r4.jpg',1,NULL,NULL,NULL),
@@ -165,7 +165,10 @@ COMMIT;
 INSERT INTO `movie_comment` (`comment_id`, `user_id`, `movie_id`, `comment_text`, `comment_time`) VALUES 
   (1,NULL,1,'aaa','2018-05-14 08:41:01'),
   (2,NULL,1,'good','2018-05-14 08:45:31'),
-  (3,1,1,'娃娃','2018-05-14 09:22:04');
+  (3,1,1,'娃娃','2018-05-14 09:22:04'),
+  (4,1,1,'111','2018-05-15 16:33:20'),
+  (5,1,1,'我','2018-05-15 16:44:34'),
+  (6,1,1,'啊','2018-05-16 08:38:56');
 COMMIT;
 
 
