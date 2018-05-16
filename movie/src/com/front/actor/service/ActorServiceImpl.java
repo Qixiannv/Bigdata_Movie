@@ -27,7 +27,7 @@ public class ActorServiceImpl {
 	 * @param actor_id 演员id
 	 * @return Actor 找到的演员
 	 */ 
-	public Actor findMovieById(Integer actor_id) {
+	public Actor findActorById(Integer actor_id) {
 		return this.adi.findActorById(actor_id);
 	}
 	

@@ -2,16 +2,23 @@ package com.front.actor.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.front.user.entity.User;
 
+
+@Entity
+@Table(name="actor_comment")
 public class ActorComment {
 
 	private Integer ActorComment_id;
@@ -26,10 +33,22 @@ public class ActorComment {
 	public Integer getActorComment_id() {
 		return ActorComment_id;
 	}
+	
+	public ActorComment() {
+		
+	}
+
+	public ActorComment(Integer actorComment_id, User user, Actor actor, String comment_text) {
+		super();
+		ActorComment_id = actorComment_id;
+		this.user = user;
+		this.actor = actor;
+		this.comment_text = comment_text;
+	}
 	public void setActorComment_id(Integer actorComment_id) {
 		ActorComment_id = actorComment_id;
 	}
-	@ManyToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
 	public User getUser() {
 		return user;
@@ -37,7 +56,7 @@ public class ActorComment {
 	public void setUser(User user) {
 		this.user = user;
 	}
-	@OneToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="actor_id")
 	public Actor getActor() {
 		return actor;

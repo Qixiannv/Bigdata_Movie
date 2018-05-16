@@ -218,21 +218,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<div class="blog-section">
 		<div class="col-md-8 blog-posts">
-			<h3 class="post">莱昂纳多·迪卡普里奥</h3>
+			<h3 class="post">${actor.actor_name}</h3>
 				<div class="last-article">
-					<p class="artext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;莱昂纳多·迪卡普里奥（Leonardo DiCaprio），1974年11月11日出生于美国加利福尼亚州洛杉矶，美国影视演员、制作人。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-1990年，16岁的他参加了电视剧《成长的烦恼》的拍摄。1993年，他凭借《不一样的天空》中的表演获得了第66届奥斯卡金像奖最佳男配角奖和第51届美国电影电视金球奖最佳男配角的提名 。1995年，拍摄电影《罗密欧与朱丽叶》，荣膺第47届柏林国际电影节最佳男主角。1997年，莱昂纳多主演了《泰坦尼克号》。2002年，莱昂纳多出演了史蒂文斯皮尔伯格导演的《逍遥法外》，并因此获得了金球奖男主角的提名。2004年，和马丁西科塞斯合作的《飞行家》为莱昂迎来一个美国金球奖最佳男演员奖。2006年，凭借《无间道风云》和《血钻》获得金球奖最佳男主角的双提名。2010，他出演了《盗梦空间》。2013年，他主演了电影《了不起的盖茨比》。2014年1月，他凭借《华尔街之狼》中的表演获得了金球奖最佳男主角奖；9月17日，被联合国授予联合国“和平使者”，关注气候变化  。2015年，莱昂纳多·迪卡普里奥收入2900万美元，居福布斯全球演员富豪榜排名第13位。 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-2016年，凭借电影《荒野猎人》获得第73届金球奖最佳男主角奖和第88届奥斯卡金像奖最佳男主角奖</p>
-					<h3>《泰坦尼克号》剧照</h3>
-					<img src="images/li3.jpg">
-					<p class="artext">1997年，莱昂纳多主演了《泰坦尼克号》。影片获11项奥斯卡大奖，打破了美国和世界各地的票房记录。莱昂纳多也因在此片中的表演而成了“世纪末的票房炸弹”。</p>
+					<p class="artext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${actor.actor_summary}</p>
+					<h3></h3>
+					<img src="${actor.actor_pic}">
+					<p class="artext"></p>
 					<ul class="categories">
-						<li><a href="#">演员</a></li>
-						<li><a href="#">环保主义者</a></li>
-						<li><a href="#">联合国气候变化和平大使</a></li>
-						<li><a href="#">奥斯卡</a></li>
-						<li><a href="#">最佳男主角</a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
 					</ul>
 					<div class="clearfix"></div>
 					<ul class="share">
@@ -273,8 +270,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">你的评论</textarea>
-					
+						<form action = "/movie/actor_comment" method = "get">
+							<input type = "text" style="display:none" name = "actor_id" value = "1">
+							<input type = "text" style="display:none" name = "user_id" value = "1">
+							<textarea type="text" name = "comment_text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">Your comment...</textarea>
+							<input type = "submit" value="submit">
+						</form>
 				</div>
 				<div class="clearfix"></div>
 			</div>

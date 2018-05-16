@@ -54,5 +54,7 @@ public class ActorDaoImpl {
 		ac.setComment_text(comment_text);
 		ac.setUser(user);
 		
+		this.sessionFactory.openSession().save(ac);
+		
 	}
 }

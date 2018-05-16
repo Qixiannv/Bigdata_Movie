@@ -67,6 +67,7 @@ public class SingleController {
 		 mc.setUser(this.ui.UserSelect(user_id));
 		 mc.setMovie(this.msi.findMovieById(movie_id));
 		 this.mcsi.saveMovieComment(mc);
+		 
 		return "redirect:/gotosingle?id="+movie_id;
 	}
 	

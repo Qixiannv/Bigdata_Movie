@@ -5,15 +5,21 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.front.movie.entity.Movie;
 import com.front.movie.entity.MovieComment;
 
+@Entity
+@Table(name="actor")
 public class Actor {
 	private Integer actor_id;
 	private String actor_name;
@@ -21,7 +27,6 @@ public class Actor {
 	private String actor_summary;
 	
 	private Set ActorCommentSet = new HashSet<ActorComment>();
-	private Set MovieSet = new HashSet<Movie>();
 	
 	
 	@Id
@@ -29,6 +34,18 @@ public class Actor {
 	@GenericGenerator(name="aid",strategy="native")
 	public Integer getActor_id() {
 		return actor_id;
+	}
+	
+	public Actor() {
+		
+	}
+
+	public Actor(Integer actor_id, String actor_name, String actor_pic, String actor_summary) {
+		super();
+		this.actor_id = actor_id;
+		this.actor_name = actor_name;
+		this.actor_pic = actor_pic;
+		this.actor_summary = actor_summary;
 	}
 	public void setActor_id(Integer actor_id) {
 		this.actor_id = actor_id;
@@ -55,7 +72,7 @@ public class Actor {
 	public void setActor_summary(String actor_summary) {
 		this.actor_summary = actor_summary;
 	}
-	@OneToMany(mappedBy="actor", targetEntity=MovieComment.class,
+	@OneToMany(mappedBy="actor", targetEntity=ActorComment.class,
 			cascade=CascadeType.ALL)
 	public Set getActorCommentSet() {
 		return ActorCommentSet;
