@@ -73,6 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<!-- header-section-starts -->
 	<div class="header-top-strip">
+	<!-- 顶层登录 -->
 		<div class="container">
 	        <!--top的左侧选项-->
 			<div class="header-top-left">
@@ -301,7 +302,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</li>
 						
 							<li class="dropdown w3_megamenu-fw">
-							<a href="single.jsp"> 演员</a>
+							<a href="actors.jsp"> 演员</a>
 							</li>
 							
 						</ul>
@@ -951,14 +952,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 
 	<div class="clearfix"></div>
-	</div>
+	
+	<!--以下是  页面底部-->
 	<div class="copy-rights text-center">
 		<p>
 			© 2018 My Show | Design by  <a
 				href="#">七仙女</a>
 		</p>
 	</div>
-	</div>
+	
 	<script type="text/javascript">
 						$(document).ready(function() {
 							/*
@@ -977,6 +979,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<a href="#home" class="scroll" id="toTop" style="display: block;">
 		<span id="toTopHover" style="opacity: 1;"> </span>
 	</a>
-
+	<!--以上是  页面底部-->
+	
 </body>
 </html>
