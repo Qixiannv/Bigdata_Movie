@@ -17,9 +17,9 @@ import org.hibernate.annotations.GenericGenerator;
 @DynamicInsert(true)
 @DynamicUpdate(true)
 public class User {
-	private Integer user_id;
+	private int user_id;
 	private String email;
-	private Integer phone;
+	private int phone;
 	private String username;
 	private String password;
 	private Date birthday;
@@ -31,10 +31,10 @@ public class User {
 	@Id
 	@GeneratedValue(generator="user_id")
 	@GenericGenerator(name="user_id",strategy="native")
-	public Integer getUser_id() {
+	public int getUser_id() {
 		return user_id;
 	}
-	public void setUser_id(Integer user_id) {
+	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
 	@Column(name="email")
@@ -45,10 +45,10 @@ public class User {
 		this.email = email;
 	}
 	@Column(name="phone")
-	public Integer getPhone() {
+	public int getPhone() {
 		return phone;
 	}
-	public void setPhone(Integer phone) {
+	public void setPhone(int phone) {
 		this.phone = phone;
 	}
 	@Column(name="username")
