@@ -624,28 +624,31 @@ $('#myModal').modal('no');
 		</div>
 		<div class="col-md-4 blog-categories">
 			<h3 class="post">Categories</h3>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Bollwood Movies</a> (34)</p>
-			<p><a href="#">Tamil Movies</a> (12)</p>
-			<p><a href="#">Tollywood Movies</a> (34)</p>
-			<p><a href="#">Collywood Movies</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (348)</p>
-			<p><a href="#">Actors</a> (12)</p>
-			<p><a href="#">Actress</a> (34)</p>
-			<p><a href="#">Movie News</a> (12)</p>
-			<p><a href="#">Music</a> (34)</p>
-			<p><a href="#">Indian Music</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">莱昂纳多</a></p>
+			<img src="images/li3.jpg"width="70"height="100"></div>
+		</div>
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">莱昂纳多</a></p>
+			<img src="images/li3.jpg"width="70"height="100"></div>
+		</div>
+
+
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">莱昂纳多</a></p>
+			<img src="images/li3.jpg"width="70"height="100"></div>
+		</div>
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">莱昂纳多</a></p>
+			<img src="images/li3.jpg"width="70"height="100"></div>
+		</div>
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">莱昂纳多</a></p>
+			<img src="images/li3.jpg"width="70"height="100"></div>
+		</div>
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">莱昂纳多</a></p>
+			<img src="images/li3.jpg"width="70"height="100"></div>
 		</div>
 				<div class="clearfix"></div>
 	</div>

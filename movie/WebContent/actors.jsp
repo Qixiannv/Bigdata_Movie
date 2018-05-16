@@ -626,29 +626,28 @@ $('#myModal').modal('no');
 			</div>
 		</div>
 		<div class="col-md-4 blog-categories">
-			<h3 class="post">相关新闻</h3>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Bollwood Movies</a> (34)</p>
-			<p><a href="#">Tamil Movies</a> (12)</p>
-			<p><a href="#">Tollywood Movies</a> (34)</p>
-			<p><a href="#">Collywood Movies</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Actors</a> (12)</p>
-			<p><a href="#">Actress</a> (34)</p>
-			<p><a href="#">Movie News</a> (12)</p>
-			<p><a href="#">Music</a> (34)</p>
-			<p><a href="#">Indian Music</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
-			<p><a href="#">Celebrity Interviews</a> (34)</p>
-			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<h3 class="post">参演电影</h3>
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">不一样的天空</a></p>
+			<img src="images/lee1.jpg"width="70"height="100"></div>
+
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">罗密欧与朱丽叶</a></p>
+			<img src="images/lee2.jpg"width="70"height="100"></div>			
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">不一样的天空</a></p>
+			<img src="images/lee1.jpg"width="70"height="100"></div>
+
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">罗密欧与朱丽叶</a></p>
+			<img src="images/lee2.jpg"width="70"height="100"></div>			
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">不一样的天空</a></p>
+			<img src="images/lee1.jpg"width="70"height="100"></div>
+
+			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+			<p><a href="#">罗密欧与朱丽叶</a></p>
+			<img src="images/lee2.jpg"width="70"height="100"></div>
 		</div>
 				<div class="clearfix"></div>
 	</div>
