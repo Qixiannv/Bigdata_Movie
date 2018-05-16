@@ -17,22 +17,24 @@ import org.hibernate.annotations.GenericGenerator;
 @DynamicInsert(true)
 @DynamicUpdate(true)
 public class User {
-	private int user_id;
+	private Integer user_id;
 	private String email;
-	private int phone;
+	private Integer phone;
 	private String username;
 	private String password;
 	private Date birthday;
 	private String avatar;
+	
 	private String gender;
+	private String signature;
 	
 	@Id
 	@GeneratedValue(generator="user_id")
 	@GenericGenerator(name="user_id",strategy="native")
-	public int getUser_id() {
+	public Integer getUser_id() {
 		return user_id;
 	}
-	public void setUser_id(int user_id) {
+	public void setUser_id(Integer user_id) {
 		this.user_id = user_id;
 	}
 	@Column(name="email")
@@ -43,10 +45,10 @@ public class User {
 		this.email = email;
 	}
 	@Column(name="phone")
-	public int getPhone() {
+	public Integer getPhone() {
 		return phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(Integer phone) {
 		this.phone = phone;
 	}
 	@Column(name="username")
@@ -85,6 +87,13 @@ public class User {
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	@Column(name="signature")
+	public String getSignature() {
+		return signature;
+	}
+	public void setSignature(String signature) {
+		this.signature = signature;
 	}
 	
 	
