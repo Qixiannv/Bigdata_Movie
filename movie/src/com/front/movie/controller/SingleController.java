@@ -50,7 +50,7 @@ public class SingleController {
 		}
 	
 	/**
-	 * 将电影评论存放金进数据库
+	 * 将电影评论存放进数据库
 	 * @author 闫相垠
 	 * @param request request
 	 * @param movie_id 电影id

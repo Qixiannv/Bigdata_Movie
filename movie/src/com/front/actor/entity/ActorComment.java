@@ -1,4 +1,4 @@
-package com.front.movie.entity;
+package com.front.actor.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

@@ -1,4 +1,4 @@
-package com.front.movie.entity;
+package com.front.actor.entity;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,13 +11,17 @@ import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.front.movie.entity.Movie;
+import com.front.movie.entity.MovieComment;
+
 public class Actor {
 	private Integer actor_id;
 	private String actor_name;
 	private String actor_pic;
 	private String actor_summary;
 	
-	private Set ActorCommentSet=new HashSet<ActorComment>();
+	private Set ActorCommentSet = new HashSet<ActorComment>();
+	private Set MovieSet = new HashSet<Movie>();
 	
 	
 	@Id
