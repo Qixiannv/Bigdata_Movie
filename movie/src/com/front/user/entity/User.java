@@ -24,7 +24,9 @@ public class User {
 	private String password;
 	private Date birthday;
 	private String avatar;
+	
 	private String gender;
+	private String signature;
 	
 	@Id
 	@GeneratedValue(generator="user_id")
@@ -85,6 +87,13 @@ public class User {
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	@Column(name="signature")
+	public String getSignature() {
+		return signature;
+	}
+	public void setSignature(String signature) {
+		this.signature = signature;
 	}
 	
 	

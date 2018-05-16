@@ -1,7 +1,15 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Show a Entertainment Category Flat Bootstarp responsive Website Template | Movies single_page :: w3layouts</title>
+<title>My Show a Entertainment Category Flat Bootstarp responsive Website Template | Single :: w3layouts</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -24,7 +32,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
 <link rel="stylesheet" href="css/font-awesome.min.css" />
 <link rel="stylesheet" href="css/menu.css" />
-
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
 <!---- start-smoth-scrolling---->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
@@ -41,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 	<!-- header-section-starts -->
 		
-		<div class="header-top-strip">
+		<div class="header-top-strip" id="home">
 			<div class="container">
 				<div class="header-top-left">
 					<p><a href="support.html">24/7 Customer Care</a> | <a class="play-icon popup-with-zoom-anim" href="#small-dialog" href="#"> Resend Booking Confirmation</a> </p>
@@ -87,10 +99,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div id="small-dialog1" class="mfp-hide">
 						<div class="select-city">
 							<h3>Select Your City</h3>
+							<select class="list_of_cities"><option value="">Select Your City</option><optgroup label="Andhra Pradesh"><option style="padding-left: 10px;" value="ANAN">Anantapur</option><option style="padding-left: 10px;" value="CHDM">Chinnamandem</option><option style="padding-left: 10px;" value="GUDR">Gudur</option><option style="padding-left: 10px;" value="GUNT">Guntur</option><option style="padding-left: 10px;" value="JANG">Jangareddy Gudem</option><option style="padding-left: 10px;" value="KAKI">Kakinada</option><option style="padding-left: 10px;" value="KURN">Kurnool</option><option style="padding-left: 10px;" value="MART">Martur</option><option style="padding-left: 10px;" value="PRVT">Parvathipuram</option><option style="padding-left: 10px;" value="RAJA">Rajahmundry</option><option style="padding-left: 10px;" value="TENA">Tenali</option><option style="padding-left: 10px;" value="TIRU">Tirupati</option><option style="padding-left: 10px;" value="VIJA">Vijayawada</option><option style="padding-left: 10px;" value="VIZA">Vizag</option><option style="padding-left: 10px;" value="VIZI">Vizianagaram</option></optgroup><optgroup label="Arunachal Pradesh"><option style="padding-left: 10px;" value="TAWA">Tawang</option><option style="padding-left: 10px;" value="ZIRO">Ziro</option></optgroup><optgroup label="Assam"><option style="padding-left: 10px;" value="DIB">Dibrugarh</option><option style="padding-left: 10px;" value="GUW">Guwahati</option><option style="padding-left: 10px;" value="JORT">Jorhat</option><option style="padding-left: 10px;" value="SIL">Silchar</option><option style="padding-left: 10px;" value="TINS">Tinsukia</option></optgroup><optgroup label="Bihar"><option style="padding-left: 10px;" value="HAJI">Hajipur</option><option style="padding-left: 10px;" value="PATN">Patna</option></optgroup><optgroup label="Chhattisgarh"><option style="padding-left: 10px;" value="BHILAI">Bhilai</option><option style="padding-left: 10px;" value="BILA">Bilaspur</option><option style="padding-left: 10px;" value="CHAM">Champa</option><option style="padding-left: 10px;" value="DHMT">Dhamtari</option><option style="padding-left: 10px;" value="DURG">Durg</option><option style="padding-left: 10px;" value="JAGD">Jagdalpur</option><option style="padding-left: 10px;" value="KAWA">Kawardha</option><option style="padding-left: 10px;" value="KNGN">Kondagaon</option><option style="padding-left: 10px;" value="KRBA">Korba</option><option style="padding-left: 10px;" value="RAIG">Raigarh</option><option style="padding-left: 10px;" value="RAIPUR">Raipur</option><option style="padding-left: 10px;" value="TNO">Tilda Neora</option></optgroup><optgroup label="Croatia"><option style="padding-left: 10px;" value="DBRV">Dubrovnik</option></optgroup><optgroup label="Goa"><option style="padding-left: 10px;" value="GOA">Goa</option></optgroup><optgroup label="Gujarat"><option style="padding-left: 10px;" value="ADPR">Adipur</option><option style="padding-left: 10px;" value="AHD">Ahmedabad</option><option style="padding-left: 10px;" value="AND">Anand</option><option style="padding-left: 10px;" value="ANKL">Ankleshwar</option><option style="padding-left: 10px;" value="BHAR">Bharuch</option><option style="padding-left: 10px;" value="BHNG">Bhavnagar</option><option style="padding-left: 10px;" value="DAMA">Daman</option><option style="padding-left: 10px;" value="GDHAM">Gandhidham</option><option style="padding-left: 10px;" value="GNAGAR">Gandhinagar</option><option style="padding-left: 10px;" value="HIMM">Himmatnagar</option><option style="padding-left: 10px;" value="IDAR">Idar</option><option style="padding-left: 10px;" value="JAM">Jamnagar</option><option style="padding-left: 10px;" value="JETP">Jetpur</option><option style="padding-left: 10px;" value="JUGH">Junagadh</option><option style="padding-left: 10px;" value="KTCH">Kutch</option><option style="padding-left: 10px;" value="NADI">Nadiad</option><option style="padding-left: 10px;" value="NVSR">Navsari</option><option style="padding-left: 10px;" value="PALN">Palanpur</option><option style="padding-left: 10px;" value="PATA">Patan</option><option style="padding-left: 10px;" value="RAJK">Rajkot</option><option style="padding-left: 10px;" value="SANA">Sanand</option><option style="padding-left: 10px;" value="SILV">Silvassa</option><option style="padding-left: 10px;" value="SURT">Surat</option><option style="padding-left: 10px;" value="VAD">Vadodara</option><option style="padding-left: 10px;" value="VLSD">Valsad</option><option style="padding-left: 10px;" value="VAPI">Vapi</option></optgroup><optgroup label="Haryana"><option style="padding-left: 10px;" value="AMB">Ambala</option><option style="padding-left: 10px;" value="DHRA">Dharuhera</option><option style="padding-left: 10px;" value="FARI">Faridabad</option><option style="padding-left: 10px;" value="HISR">Hisar</option><option style="padding-left: 10px;" value="JHAJ">Jhajjar</option><option style="padding-left: 10px;" value="JIND">Jind</option><option style="padding-left: 10px;" value="KAIT">Kaithal</option><option style="padding-left: 10px;" value="KARN">Karnal</option><option style="padding-left: 10px;" value="KUND">Kundli</option><option style="padding-left: 10px;" value="KURU">Kurukshetra</option><option style="padding-left: 10px;" value="PNCH">Panchkula</option><option style="padding-left: 10px;" value="PAN">Panipat</option><option style="padding-left: 10px;" value="REWA">Rewari</option><option style="padding-left: 10px;" value="ROH">Rohtak</option><option style="padding-left: 10px;" value="SISA">Sirsa</option><option style="padding-left: 10px;" value="RAIH">Sonipat</option><option style="padding-left: 10px;" value="YAMU">Yamunanagar</option></optgroup><optgroup label="Himachal Pradesh"><option style="padding-left: 10px;" value="BADD">Baddi</option><option style="padding-left: 10px;" value="DMSL">Dharamsala</option><option style="padding-left: 10px;" value="HAMI">Hamirpur (HP)</option><option style="padding-left: 10px;" value="KANG">Kangra</option><option style="padding-left: 10px;" value="KULU">Kullu</option><option style="padding-left: 10px;" value="MANA">Manali</option><option style="padding-left: 10px;" value="SMLA">Shimla</option><option style="padding-left: 10px;" value="SCO">Solan</option></optgroup><optgroup label="Jammu and Kashmir"><option style="padding-left: 10px;" value="JAMM">Jammu</option><option style="padding-left: 10px;" value="KATH">Kathua</option><option style="padding-left: 10px;" value="KATR">Katra</option><option style="padding-left: 10px;" value="LEHA">Ladakh</option></optgroup><optgroup label="Jharkhand"><option style="padding-left: 10px;" value="BOKA">Bokaro</option><option style="padding-left: 10px;" value="DOGH">Deoghar</option><option style="padding-left: 10px;" value="DHAN">Dhanbad(Jharkhand)</option><option style="padding-left: 10px;" value="JMDP">Jamshedpur</option><option style="padding-left: 10px;" value="RANC">Ranchi</option></optgroup><optgroup label="Karnataka"><option style="padding-left: 10px;" value="BELG">Belgaum</option><option style="padding-left: 10px;" value="BANG">Bengaluru</option><option style="padding-left: 10px;" value="BIDR">Bidar</option><option style="padding-left: 10px;" value="COOR">Coorg</option><option style="padding-left: 10px;" value="DAVA">Davangere</option><option style="padding-left: 10px;" value="GULB">Gulbarga</option><option style="padding-left: 10px;" value="HUBL">Hubli</option><option style="padding-left: 10px;" value="KWAR">Karwar</option><option style="padding-left: 10px;" value="MLR">Mangalore</option><option style="padding-left: 10px;" value="MANI">Manipal</option><option style="padding-left: 10px;" value="MYS">Mysore</option><option style="padding-left: 10px;" value="TUMK">Tumkur</option><option style="padding-left: 10px;" value="UDUP">Udupi</option></optgroup><optgroup label="Kerala"><option style="padding-left: 10px;" value="99">Alappuzha</option><option style="padding-left: 10px;" value="ANHL">Anchal</option><option style="padding-left: 10px;" value="ANGA">Angamaly</option><option style="padding-left: 10px;" value="ERNK">Ernakulam</option><option style="padding-left: 10px;" value="KANN">Kannur</option><option style="padding-left: 10px;" value="KARG">Karunagapally</option><option style="padding-left: 10px;" value="KOCH">Kochi</option><option style="padding-left: 10px;" value="KOLM">Kollam</option><option style="padding-left: 10px;" value="KTYM">Kottayam</option><option style="padding-left: 10px;" value="MVLR">Mavellikara</option><option style="padding-left: 10px;" value="THAL">Thalayolaparambu</option><option style="padding-left: 10px;" value="THSR">Thrissur</option><option style="padding-left: 10px;" value="TRIV">Trivandrum</option></optgroup><optgroup label="Madhya Pradesh"><option style="padding-left: 10px;" value="BLGT">Balaghat</option><option style="padding-left: 10px;" value="BETU">Betul</option><option style="padding-left: 10px;" value="BHOP">Bhopal</option><option style="padding-left: 10px;" value="CHIN">Chhindwara</option><option style="padding-left: 10px;" value="DEWAS">Dewas</option><option style="padding-left: 10px;" value="GWAL">Gwalior</option><option style="padding-left: 10px;" value="HRDA">Harda</option><option style="padding-left: 10px;" value="IND">Indore</option><option style="padding-left: 10px;" value="JABL">Jabalpur</option><option style="padding-left: 10px;" value="KHDW">Khandwa</option><option style="padding-left: 10px;" value="NMCH">Neemuch</option><option style="padding-left: 10px;" value="RATL">Ratlam</option><option style="padding-left: 10px;" value="SAMP">Sagar</option><option style="padding-left: 10px;" value="SARN">Sarni</option><option style="padding-left: 10px;" value="SEHO">Sehore</option><option style="padding-left: 10px;" value="SEON">Seoni</option><option style="padding-left: 10px;" value="SHIV">Shivpuri</option><option style="padding-left: 10px;" value="UJJN">Ujjain</option></optgroup><optgroup label="Maharashtra"><option style="padding-left: 10px;" value="AHMED">Ahmednagar</option><option style="padding-left: 10px;" value="AKOL">Akola</option><option style="padding-left: 10px;" value="ALBG">Alibaug</option><option style="padding-left: 10px;" value="AMRA">Amravati</option><option style="padding-left: 10px;" value="AURA">Aurangabad</option><option style="padding-left: 10px;" value="BARA">Baramati</option><option style="padding-left: 10px;" value="BEED">Beed</option><option style="padding-left: 10px;" value="BHIW">Bhiwandi</option><option style="padding-left: 10px;" value="BOIS">Boisar</option><option style="padding-left: 10px;" value="BULD">Buldana</option><option style="padding-left: 10px;" value="CHAN">Chandrapur</option><option style="padding-left: 10px;" value="DHLE">Dhule</option><option style="padding-left: 10px;" value="DHUL">Dhulia</option><option style="padding-left: 10px;" value="INDA">Indapur</option><option style="padding-left: 10px;" value="JALG">Jalgaon</option><option style="padding-left: 10px;" value="KHED">Khed</option><option style="padding-left: 10px;" value="KHOP">Khopoli</option><option style="padding-left: 10px;" value="KOLH">Kolhapur</option><option style="padding-left: 10px;" value="LAT">Latur</option><option style="padding-left: 10px;" value="LAVA">Lavasa</option><option style="padding-left: 10px;" value="LNVL">Lonavala</option><option style="padding-left: 10px;" value="MHAD">Mahad</option><option style="padding-left: 10px;" value="MALE">Malegaon</option><option style="padding-left: 10px;" value="MUMBAI">Mumbai</option><option style="padding-left: 10px;" value="NAGP">Nagpur</option><option style="padding-left: 10px;" value="NAND">Nanded</option><option style="padding-left: 10px;" value="NASK">Nashik</option><option style="padding-left: 10px;" value="PALG">Palghar</option><option style="padding-left: 10px;" value="PANC">Panchgani</option><option style="padding-left: 10px;" value="PARB">Parbhani</option><option style="padding-left: 10px;" value="PEN">Pen</option><option style="padding-left: 10px;" value="PHAL">Phaltan</option><option style="padding-left: 10px;" value="PIMP">Pimpri</option><option style="padding-left: 10px;" value="PUNE">Pune</option><option style="padding-left: 10px;" value="RAI">Raigad</option><option style="padding-left: 10px;" value="SANG">Sangli</option><option style="padding-left: 10px;" value="SATA">Satara</option><option style="padding-left: 10px;" value="SOLA">Solapur</option><option style="padding-left: 10px;" value="TMB">Tembhode</option><option style="padding-left: 10px;" value="UDGR">Udgir</option><option style="padding-left: 10px;" value="WARD">Wardha</option></optgroup><optgroup label="Meghalaya"><option style="padding-left: 10px;" value="RNG">Rongjeng</option><option style="padding-left: 10px;" value="SHLG">Shillong</option></optgroup><optgroup label="Nagaland"><option style="padding-left: 10px;" value="DMPR">Dimapur</option></optgroup><optgroup label="NCR"><option style="padding-left: 10px;" value="NCR">National Capital Region (NCR)</option></optgroup><optgroup label="Orissa"><option style="padding-left: 10px;" value="BLSR">Balasore</option><option style="padding-left: 10px;" value="BHUB">Bhubaneshwar</option><option style="padding-left: 10px;" value="PURI">Puri</option><option style="padding-left: 10px;" value="SAMB">Sambalpur</option></optgroup><optgroup label="Punjab"><option style="padding-left: 10px;" value="ABOR">Abohar</option><option style="padding-left: 10px;" value="AHMG">Ahmedgarh</option><option style="padding-left: 10px;" value="AMRI">Amritsar</option><option style="padding-left: 10px;" value="BNGA">Banga</option><option style="padding-left: 10px;" value="BAR">Barnala</option><option style="padding-left: 10px;" value="BHAT">Bathinda</option><option style="padding-left: 10px;" value="CHD">Chandigarh</option><option style="padding-left: 10px;" value="HOSH">Hoshiarpur</option><option style="padding-left: 10px;" value="JALA">Jalandhar</option><option style="padding-left: 10px;" value="KHAN">Khanna</option><option style="padding-left: 10px;" value="KOTK">Kotkapura</option><option style="padding-left: 10px;" value="LUDH">Ludhiana</option><option style="padding-left: 10px;" value="MNSA">Mansa</option><option style="padding-left: 10px;" value="MOGA">Moga</option><option style="padding-left: 10px;" value="MOHL">Mohali</option><option style="padding-left: 10px;" value="NAVN">Nawanshahr</option><option style="padding-left: 10px;" value="PATH">Pathankot</option><option style="padding-left: 10px;" value="PATI">Patiala</option><option style="padding-left: 10px;" value="PATR">Patran</option><option style="padding-left: 10px;" value="RUPN">Rupnagar</option><option style="padding-left: 10px;" value="SANR">Sangrur</option><option style="padding-left: 10px;" value="ZIRK">Zirakpur</option></optgroup><optgroup label="Rajasthan"><option style="padding-left: 10px;" value="ABRD">Abu Road</option><option style="padding-left: 10px;" value="AJMER">Ajmer</option><option style="padding-left: 10px;" value="ALSR">Alsisar (Rajasthan)</option><option style="padding-left: 10px;" value="ALWR">Alwar</option><option style="padding-left: 10px;" value="BANS">Banswara</option><option style="padding-left: 10px;" value="BEAW">Beawar</option><option style="padding-left: 10px;" value="BHIL">Bhilwara</option><option style="padding-left: 10px;" value="BHWD">Bhiwadi</option><option style="padding-left: 10px;" value="BIK">Bikaner</option><option style="padding-left: 10px;" value="DAUS">Dausa</option><option style="padding-left: 10px;" value="JAIP">Jaipur</option><option style="padding-left: 10px;" value="JSMR">Jaisalmer</option><option style="padding-left: 10px;" value="JODH">Jodhpur</option><option style="padding-left: 10px;" value="KISH">Kishangarh</option><option style="padding-left: 10px;" value="KOTA">Kota</option><option style="padding-left: 10px;" value="NEEM">Neemrana</option><option style="padding-left: 10px;" value="SIKR">Sikar</option><option style="padding-left: 10px;" value="SRIG">Sri Ganganagar</option><option style="padding-left: 10px;" value="UDAI">Udaipur</option></optgroup><optgroup label="Singapore"><option style="padding-left: 10px;" value="SING">Singapore</option></optgroup><optgroup label="Tamil Nadu"><option style="padding-left: 10px;" value="ARIY">Ariyalur</option><option style="padding-left: 10px;" value="ARNI">Arni</option><option style="padding-left: 10px;" value="ARUP">Aruppukottai</option><option style="padding-left: 10px;" value="CHEN">Chennai</option><option style="padding-left: 10px;" value="COIM">Coimbatore</option><option style="padding-left: 10px;" value="CUDD">Cuddalore</option><option style="padding-left: 10px;" value="DHAR">Dharapuram</option><option style="padding-left: 10px;" value="DMPI">Dharmapuri</option><option style="padding-left: 10px;" value="DIND">Dindigul</option><option style="padding-left: 10px;" value="EROD">Erode</option><option style="padding-left: 10px;" value="KNPM">Kanchipuram</option><option style="padding-left: 10px;" value="KUMB">Kumbakonam</option><option style="padding-left: 10px;" value="MADU">Madurai</option><option style="padding-left: 10px;" value="MTPM">Mettuppalayam</option><option style="padding-left: 10px;" value="OOTY">Ooty</option><option style="padding-left: 10px;" value="POND">Pondicherry</option><option style="padding-left: 10px;" value="PUDH">Pudhukottai</option><option style="padding-left: 10px;" value="SALM">Salem</option><option style="padding-left: 10px;" value="SIV">Sivakasi</option><option style="padding-left: 10px;" value="TAJO">Tanjore</option><option style="padding-left: 10px;" value="TENK">Tenkasi</option><option style="padding-left: 10px;" value="TIRV">Tirunelveli</option><option style="padding-left: 10px;" value="TIRP">Tirupur</option><option style="padding-left: 10px;" value="TRIC">Trichy</option><option style="padding-left: 10px;" value="VELL">Vellore</option></optgroup><optgroup label="Telangana"><option style="padding-left: 10px;" value="ADIL">Adilabad</option><option style="padding-left: 10px;" value="AMAN">Amangal</option><option style="padding-left: 10px;" value="HYD">Hyderabad</option><option style="padding-left: 10px;" value="KARIM">Karimnagar</option><option style="padding-left: 10px;" value="KHAM">Khammam</option><option style="padding-left: 10px;" value="MRGD">Miryalaguda</option><option style="padding-left: 10px;" value="NIZA">Nizamabad</option><option style="padding-left: 10px;" value="PEDA">Peddapalli</option><option style="padding-left: 10px;" value="POCH">Pochampally</option><option style="padding-left: 10px;" value="SDDP">Siddipet</option><option style="padding-left: 10px;" value="SURY">Suryapet</option><option style="padding-left: 10px;" value="UPPA">Uppal</option><option style="padding-left: 10px;" value="WAR">Warangal</option></optgroup><optgroup label="Tripura "><option style="padding-left: 10px;" value="AGAR">Agartala</option></optgroup><optgroup label="Uttar Pradesh"><option style="padding-left: 10px;" value="AGRA">Agra</option><option style="padding-left: 10px;" value="ALI">Aligarh</option><option style="padding-left: 10px;" value="ALLH">Allahabad</option><option style="padding-left: 10px;" value="BARE">Bareilly</option><option style="padding-left: 10px;" value="BIJ">Bijnor</option><option style="padding-left: 10px;" value="GHAR">Ghazipur</option><option style="padding-left: 10px;" value="GRKP">Gorakhpur</option><option style="padding-left: 10px;" value="KANP">Kanpur</option><option style="padding-left: 10px;" value="LUCK">Lucknow</option><option style="padding-left: 10px;" value="MATH">Mathura</option><option style="padding-left: 10px;" value="MERT">Meerut</option><option style="padding-left: 10px;" value="MORA">Moradabad</option><option style="padding-left: 10px;" value="MUZ">Muzaffarnagar</option><option style="padding-left: 10px;" value="RENU">Renukoot</option><option style="padding-left: 10px;" value="SAHA">Saharanpur</option><option style="padding-left: 10px;" value="VAR">Varanasi</option></optgroup><optgroup label="Uttarakhand"><option style="padding-left: 10px;" value="DEH">Dehradun</option><option style="padding-left: 10px;" value="HRDR">Haridwar</option><option style="padding-left: 10px;" value="MSS">Mussoorie</option><option style="padding-left: 10px;" value="NAIN">Nainital</option><option style="padding-left: 10px;" value="RAMN">Ramnagar</option><option style="padding-left: 10px;" value="RKES">Rishikesh</option><option style="padding-left: 10px;" value="ROOR">Roorkee</option><option style="padding-left: 10px;" value="RUDP">Rudrapur</option></optgroup><optgroup label="West Bengal"><option style="padding-left: 10px;" value="ASANSOL">Asansol</option><option style="padding-left: 10px;" value="BEHA">Berhampore</option><option style="padding-left: 10px;" value="BLPR">Bolpur</option><option style="padding-left: 10px;" value="BURD">Burdwan</option><option style="padding-left: 10px;" value="COBE">Cooch Behar</option><option style="padding-left: 10px;" value="DARJ">Darjeeling</option><option style="padding-left: 10px;" value="DURGA">Durgapur</option><option style="padding-left: 10px;" value="HALD">Haldia</option><option style="padding-left: 10px;" value="HOOG">Hooghly</option><option style="padding-left: 10px;" value="HWRH">Howrah</option><option style="padding-left: 10px;" value="JPG">Jalpaiguri</option><option style="padding-left: 10px;" value="KOLK">Kolkata</option><option style="padding-left: 10px;" value="RANA">Ranaghat</option><option style="padding-left: 10px;" value="SILI">Siliguri</option></optgroup></select>
 							<div class="clearfix"></div>
 						</div>
 					</div>	
-
                      <script>
 						$(document).ready(function() {
 						$('.popup-with-zoom-anim').magnificPopup({
@@ -246,7 +258,14 @@ $('#myModal').modal('no');
 				<div class="logo">
 					<a href="index.html"><h1>My Show</h1></a>
 				</div>
-
+				<div class="search">
+					<div class="search2">
+					  <form>
+						<i class="fa fa-search"></i>
+						 <input type="text" value="Search for a movie, play, event, sport or more" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search for a movie, play, event, sport or more';}"/>
+					  </form>
+					</div>
+				</div>
 				<div class="clearfix"></div>
 			</div>
 	<div class="bootstrap_container">
@@ -257,9 +276,9 @@ $('#myModal').modal('no');
         
             <div id="defaultmenu" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">Home</a></li>	
+                    <li><a href="index.html">主页</a></li>	
                     <!-- Mega Menu -->
-					<li class="dropdown w3_megamenu-fw active"><a href="movies.html" data-toggle="dropdown" class="dropdown-toggle">Movies<b class="caret"></b></a>
+					<li class="dropdown w3_megamenu-fw"><a href="movies.html" data-toggle="dropdown" class="dropdown-toggle">电影<b class="caret"></b></a>
                         <ul class="dropdown-menu fullwidth">
                             <li class="w3_megamenu-content">
                                 <div class="row">
@@ -332,7 +351,8 @@ $('#myModal').modal('no');
 							</li>
                         </ul>
                     </li>
-					<li class="dropdown w3_megamenu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Events<b class="caret"></b></a>
+                    <!-- 
+                    <li class="dropdown w3_megamenu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Events<b class="caret"></b></a>
                         <ul class="dropdown-menu half">
                             <li class="w3_megamenu-content withdesc">
                                 <div class="row">
@@ -475,12 +495,13 @@ $('#myModal').modal('no');
                         </ul>
                        <!-- end dropdown-menu -->
 					</li>
-					<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages<b class="caret"></b></a>
+                    
+					
+					<li class="dropdown active"><a href="#" data-toggle="dropdown" class="dropdown-toggle">演员<b class="caret"></b></a>
 							 <ul class="dropdown-menu" role="menu">
-
+	<!--
+	<li><a href="404.html">404</a></li> 
 	<li><a href="about.html">About</a></li>
-	<li><a href="blog.html">Blog</a></li>
-	<li><a href="404.html">404</a></li>
 	<li><a href="contact.html">Contact us</a></li>
 	<li><a href="faq.html">FAQs</a></li>
 	<li><a href="about.html">Current Openings</a></li>
@@ -492,6 +513,10 @@ $('#myModal').modal('no');
 	<li><a href="press.html">Press Coverage</a></li>
 								</ul><!-- end dropdown-menu -->
                             </li><!-- end dropdown-submenu -->
+	
+	<li><a href="blog.html">影评</a></li>
+	
+	
                         </ul>
                        <!-- end dropdown-menu -->
 					</li><!-- end standard drop down -->
@@ -532,282 +557,104 @@ $('#myModal').modal('no');
     
 <!-- AddThis Smart Layers END -->
 
-		<div class="clearfix"></div>
-	</div>
-	<div class="m-single-article">
-	<div class="face">
-		<img class="facepic"src="images/c1.jpg" width="160" height="160">
-		<div class="faceinfor">
-			<span class="facename">用户名</span><br/>
-			<span class="facespecial">这里是签名………………………………………………………………</span>
-			<button class="faceton"><a class="facea" href="infor.html">编辑个人资料</a></button>
-		</div>
-	</div>
-		<div class="article-left">
-			<h3>我的标签<span> <i class="fa fa-heart"></i> </span></h3>
-			<p><a class="m-green" href="#">奇幻</a><a class="m-green" href="#">文艺</a><a class="m-orange" href="#">美剧</a></p>
-			<div class="clearfix"></div>
-			<div class="article-time-strip">
+	<ol class="breadcrumb">
+			  <li><a href="index.html">Home</a></li>
+			  <li class="active">Single</li>
+			</ol>
 
-				<div class="article-time-strip-left">
-					<span>最新动态：INSIDIOUS &nbsp;&nbsp; </span>发布时间 :&nbsp;<span><i class="fa fa-calendar"></i>2018年4月11日</span></p>
+	<div class="blog-section">
+		<div class="col-md-8 blog-posts">
+			<h3 class="post">莱昂纳多·迪卡普里奥</h3>
+				<div class="last-article">
+					<p class="artext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;莱昂纳多·迪卡普里奥（Leonardo DiCaprio），1974年11月11日出生于美国加利福尼亚州洛杉矶，美国影视演员、制作人。<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1990年，16岁的他参加了电视剧《成长的烦恼》的拍摄。1993年，他凭借《不一样的天空》中的表演获得了第66届奥斯卡金像奖最佳男配角奖和第51届美国电影电视金球奖最佳男配角的提名 。1995年，拍摄电影《罗密欧与朱丽叶》，荣膺第47届柏林国际电影节最佳男主角。1997年，莱昂纳多主演了《泰坦尼克号》。2002年，莱昂纳多出演了史蒂文斯皮尔伯格导演的《逍遥法外》，并因此获得了金球奖男主角的提名。2004年，和马丁西科塞斯合作的《飞行家》为莱昂迎来一个美国金球奖最佳男演员奖。2006年，凭借《无间道风云》和《血钻》获得金球奖最佳男主角的双提名。2010，他出演了《盗梦空间》。2013年，他主演了电影《了不起的盖茨比》。2014年1月，他凭借《华尔街之狼》中的表演获得了金球奖最佳男主角奖；9月17日，被联合国授予联合国“和平使者”，关注气候变化  。2015年，莱昂纳多·迪卡普里奥收入2900万美元，居福布斯全球演员富豪榜排名第13位。 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2016年，凭借电影《荒野猎人》获得第73届金球奖最佳男主角奖和第88届奥斯卡金像奖最佳男主角奖</p>
+					<h3>《泰坦尼克号》剧照</h3>
+					<img src="images/li3.jpg">
+					<p class="artext">1997年，莱昂纳多主演了《泰坦尼克号》。影片获11项奥斯卡大奖，打破了美国和世界各地的票房记录。莱昂纳多也因在此片中的表演而成了“世纪末的票房炸弹”。</p>
+					<ul class="categories">
+						<li><a href="#">演员</a></li>
+						<li><a href="#">环保主义者</a></li>
+						<li><a href="#">联合国气候变化和平大使</a></li>
+						<li><a href="#">奥斯卡</a></li>
+						<li><a href="#">最佳男主角</a></li>
+					</ul>
+					<div class="clearfix"></div>
+					<ul class="share">
+						<li></li>
+						<li>							
+							<div id="fb-root"></div>
+							<script>(function(d, s, id) {
+							  var js, fjs = d.getElementsByTagName(s)[0];
+							  if (d.getElementById(id)) return;
+							  js = d.createElement(s); js.id = id;
+							  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+							  fjs.parentNode.insertBefore(js, fjs);
+							}(document, 'script', 'facebook-jssdk'));</script>
+	   						
+	   						<div class="fb-like" data-href="https://www.facebook.com/w3layouts" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
+						<li><a href="https://twitter.com/w3layouts" class="twitter-share-button" data-dnt="true"></a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+					</ul>
+					<div class="comments">
+						<h5>评论</h5>
+						<div class="comment">
+							<div class="client">
+								<img src="images/c1.jpg" alt="">
+							</div>
+							<div class="client-message">
+								<p><a href="#">john doe</a><i class="fa fa-calendar"></i>2 hours ago</p>
+								<h6>莱昂纳多保持着前进的动力，他做到了角色在情感和心理上的真实化表演，无论它是如何的丑陋，幼稚或是令人费解。</h6>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="comment">
+							<div class="client">
+								<img src="images/c2.jpg" alt="">
+							</div>
+							<div class="client-message">
+								<p><a href="#">Allon poe</a><i class="fa fa-calendar"></i>6 hours ago</p>
+								<h6>莱昂纳多作为一个演员，颜值真的无可挑剔，且电影的豆瓣评分均分超过7.5分，这对一个演员而言已经很了不起了。</h6>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">你的评论</textarea>
+					
 				</div>
 				<div class="clearfix"></div>
-				<div class="article-img">
-					<img src="images/r5.jpg">
-				</div>
-				<div class="review-info">
-								<h6 class="span88"></h6>
-								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
-								<p class="ratingview">网友评分：</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<p class="ratingview">
-								&nbsp;3.5/5  
-								</p>
-								<div class="clearfix"></div>
-								<p class="ratingview c-rating"> 我的评分：</p>
-								<div class="rating c-rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 	
-								<p class="ratingview c-rating">								
-								 3.3/5</p>
-								<div class="clearfix"></div>
-								<div class="yrw">
-
-									<div class="rtm text-center">
-										<a href="#">查看我的影评</a>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								
-							</div>
 			</div>
 		</div>
-		<div class="article-right">
-			<div class="grid_3 grid_5">
-				   <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-			<ul id="myTab" class="nav nav-tabs" role="tablist">
-			  <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">关注：10</a></li>
-			  <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">粉丝:21</a></li>
-			</ul>
-			<div id="myTabContent" class="tab-content">
-			  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">				  
-                 
-				 <a class="show-time" href="movie-select-show.html">杨幂</a>
-				 <a class="show-time" href="movie-select-show.html">刘亦菲</a>
-				 <a class="show-time" href="movie-select-show.html">胡一天</a>
-				 <div class="clearfix"></div>
-				  <a class="more-show-time" href="movie-select-show.html">查看更多</a>
-			  </div>
-			  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
-				 
-				 <a class="show-time" href="movie-select-show.html">夏雨来</a><a class="show-time" href="movie-select-show.html">来去之间</a>
-				 <div class="clearfix"></div>
-				 <a class="more-show-time" href="movie-select-show.html">查看更多</a>
-			  </div>
-					<div class="myfoot">
-			  			<h3>足迹</h3>
-						<ul class="footul">
-							<li><a href="#">2018年3月11日</a></li>
-							<li><a href="#">2018年2月15日</a></li>
-							<li><a href="#">2017年12月25日</a></li>
-							<li><a href="#">2017年11月27日</a></li>
-							<li><a href="#">2017年4月1日</a></li>
-							<li><a href="#">2016年8月7日</a></li>
-						</ul>
-					</div>
-			
-			</div>
-			
-
-		   </div>
-		  </div>
+		<div class="col-md-4 blog-categories">
+			<h3 class="post">相关新闻</h3>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Bollwood Movies</a> (34)</p>
+			<p><a href="#">Tamil Movies</a> (12)</p>
+			<p><a href="#">Tollywood Movies</a> (34)</p>
+			<p><a href="#">Collywood Movies</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Actors</a> (12)</p>
+			<p><a href="#">Actress</a> (34)</p>
+			<p><a href="#">Movie News</a> (12)</p>
+			<p><a href="#">Music</a> (34)</p>
+			<p><a href="#">Indian Music</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
+			<p><a href="#">Celebrity Interviews</a> (34)</p>
+			<p><a href="#">Lorem Ipsum</a> (12)</p>
 		</div>
-		<div class="clearfix"></div>
+				<div class="clearfix"></div>
 	</div>
-	<div class="reviews-tabs">
-      <!-- Main component for a primary marketing message or call to action -->
-      <ul class="nav nav-tabs responsive hidden-xs hidden-sm" id="myTab">
-        <li class="test-class active"><a class="deco-none misc-class" href="#how-to"> 我的影评大数据</a></li>
-        <li class="test-class"><a href="#features">影评</a></li>
-        <li><a class="deco-none" href="#source">演员评价</a></li>
-      </ul>
-
-      <div class="tab-content responsive hidden-xs hidden-sm">
-        <div class="tab-pane active" id="how-to">
-		 <p><strong> 最喜欢的剧 :</strong> <a href="#">请以你的名字呼唤我</a></p>
-          <p> <strong>喜欢的演员:</strong> <a href="#">Timothée Chalamet</a> ,<a href="#">Lorem ipsum</a> ,<a href="#">Lorem ipsum</a>, <a href="#">Lorem ipsum</a>, <a href="#">Lorem ipsum</a>, <a href="#">Lorem ipsum</a></p>
-		  <p>我的标签
-		  <a href="">自由</a>&nbsp;<a href="">爱情</a>&nbsp;<a href="">奇幻</a>&nbsp;</p>
-          
-     
-        </div>
-        <div class="tab-pane" id="features">
-		  <p class="cr-left"><strong>INSIDIOUS</strong></p><div class="rating-cr">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 
-								<div class="clearfix"></div>
-          <p>这里是简短影评 这里是简短影评 这里是简短影评 这里是简短影评 这里是简短影评 这里是简短影评</p>
-        <a href="#">....<< </a>
-	
-
-		  <p class="cr-left"><strong>请以你的名字呼唤我</strong></p><div class="rating-cr">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 
-								<div class="clearfix"></div>
-          <p>这里是简短影评 这里是简短影评 这里是简短影评 这里是简短影评 这里是简短影评 这里是简短影评</p>
-        <a href="#">....<< </a>
-		</div>
-        <div class="tab-pane" id="source">
-		  <div class="response">
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">刘诗诗</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>刘诗诗是一个敬业、谦虚的演员。伴随着《步步惊心》的播出，刘诗诗赢来事业飘红、人气暴涨。然而没有任何一个人能够随随便便成功，在拍摄《步步惊心》时她很努力，整部剧她有600多场戏，几乎每天都有她的戏，她是剧组最早起最晚收工最辛苦的人。于作品来说，刘诗诗诠释的若曦非常尊重原著</p>
-								<ul>
-									<li>2017年5月14日</li>
-									<li><a href="single.html">查看</a></li>
-								</ul>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">Username</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<ul>
-									<li>MARCH 25, 2014</li>
-									<li><a href="single.html">Reply</a></li>
-								</ul>		
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">Username</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<ul>
-									<li>MARCH 25, 2014</li>
-									<li><a href="single.html">Reply</a></li>
-								</ul>		
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">Username</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<ul>
-									<li>MARCH 25, 2014</li>
-									<li><a href="single.html">Reply</a></li>
-								</ul>		
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">Username</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<ul>
-									<li>MARCH 25, 2014</li>
-									<li><a href="single.html">Reply</a></li>
-								</ul>		
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">Username</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<ul>
-									<li>MARCH 25, 2014</li>
-									<li><a href="single.html">Reply</a></li>
-								</ul>		
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt="">
-								</a>
-								<h5><a href="#">Username</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<ul>
-									<li>MARCH 25, 2014</li>
-									<li><a href="single.html">Reply</a></li>
-								</ul>		
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-        </div>
-      </div>		
+	<div class="clearfix"></div>
 	</div>
-	<div class="footer-top-strip">
-		<p><span>Showing in cities : </span><a href="movies.html">Bengaluru</a>, <a href="movies.html">Hyderabad</a>, <a href="movies.html">Khammam</a>, <a href="movies.html">Kurnool</a>, <a href="movies.html">Nizamabad</a>, <a href="movies.html">Vijayawada</a>, <a href="#">Vizag</a>, <a href="movies.html">Vizianagaram</a>, <a href="movies.html">Warangal</a></p>
-		<p><span>Cinemas Nearby : </span><a href="movie-single.html"> INOX: Jyoti Mall, Kurnool </a>|
-			<p><span>Next Change <i>(Friday, 19 Jun) </i>: </span><a href="movie-single.html">Disney's ABCD 2 (3D) (U)</a>, <a href="movie-single.html"> 2 Premi Premache</a> , <a href="movie-single.html">Dekh Ke (Bhojpuri)</a> , <a href="movie-single.html">Disney's ABCD 2 (2D) (U)</a>, <a href="movie-single.html">Dekh Ke (Bhojpuri)</a></p>
-			<p><span>Coming Soon :</span><a href="movie-single.html"> 2 Premi Premache</a>, <a href="movie-single.html">Acharam, Dekh Ke (Bhojpuri)</a>, <a href="movie-single.html">Entourage</a>, <a href="movie-single.html">Kuttram Kadithal</a></p>
-		</div>
-		</div>
-		<div class="footer">
+	<div class="footer">
 			<div class="col-md-3 footer-left">
 				<div class="f-mov-list">
 					<h4>Latest Movies</h4>
