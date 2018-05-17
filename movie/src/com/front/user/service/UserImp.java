@@ -65,4 +65,7 @@ public class UserImp {
 	public void UserChange(User u)throws Exception{
 		this.userRegisterDaoImp.UserChange(u);
 	}
+	public void AvatarUpdate(String a,int user_id)throws Exception{
+		this.userRegisterDaoImp.avatarUpdate(a, user_id);
+	}
 }

@@ -1,15 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+	pageEncoding="UTF-8"%>
+<%  
+String path = request.getContextPath();  
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";  
+%>  
+  
+<base href="<%=basePath%>"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>My Show a Entertainment Category Flat Bootstarp responsive Website Template | Movies single_page :: w3layouts</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.css" rel='stylesheet' type='{basePath }text/css' />
 <!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="{basePath }text/css" media="all" />
 <!-- Custom Theme files -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{basePath }js/jquery.min.js"></script>
+<script src="{basePath }js/bootstrap.min.js"></script>
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,19 +24,19 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
-<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='{basePath }text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='{basePath }ext/css'>
 <!-- start menu -->
-<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/megamenu.css" rel="stylesheet" type="{basePath }text/css" media="all" />
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
-<link rel="stylesheet" href="css/font-awesome.min.css" />
-<link rel="stylesheet" href="css/menu.css" />
+<link rel="stylesheet" href="{basePath }css/font-awesome.min.css" />
+<link rel="stylesheet" href="{basePath }css/menu.css" />
 
 <!---- start-smoth-scrolling---->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="{basePath }js/move-top.js"></script>
+<script type="text/javascript" src="{basePath }js/easing.js"></script>
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		
@@ -538,9 +545,9 @@ $('#myModal').modal('no');
 	</div>
 	<div class="m-single-article">
 	<div class="face">
-		<img class="facepic"src="${user.avatar}" width="160" height="160">
+		<img class="facepic"src="<%=request.getContextPath()%>${imgCut}" width="160" height="160">
 		<div class="faceinfor">
-			<span class="facename">${user.username}</span><br/>
+			<span class="facename">用户名</span><br/>
 			<span class="facespecial">这里是签名………………………………………………………………</span>
 			<button class="faceton"><a class="facea" href="information.html">编辑个人资料</a></button>
 		</div>
@@ -551,7 +558,49 @@ $('#myModal').modal('no');
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
 
-				
+				<div class="article-time-strip-left">
+					<span>最新动态：INSIDIOUS &nbsp;&nbsp; </span>发布时间 :&nbsp;<span><i class="fa fa-calendar"></i>2018年4月11日</span></p>
+				</div>
+				<div class="clearfix"></div>
+				<div class="article-img">
+					<img src="images/r5.jpg">
+				</div>
+				<div class="review-info">
+								<h6 class="span88"></h6>
+								<p class="dirctr"><a href="">Reagan Gavin Rasquinha, </a>TNN, Mar 12, 2015, 12.47PM IST</p>								
+								<p class="ratingview">网友评分：</p>
+								<div class="rating">
+									<span>☆</span>
+									<span>☆</span>
+									<span>☆</span>
+									<span>☆</span>
+									<span>☆</span>
+								</div>
+								<p class="ratingview">
+								&nbsp;3.5/5  
+								</p>
+								<div class="clearfix"></div>
+								<p class="ratingview c-rating"> 我的评分：</p>
+								<div class="rating c-rating">
+									<span>☆</span>
+									<span>☆</span>
+									<span>☆</span>
+									<span>☆</span>
+									<span>☆</span>
+								</div> 	
+								<p class="ratingview c-rating">								
+								 3.3/5</p>
+								<div class="clearfix"></div>
+								<div class="yrw">
+
+									<div class="rtm text-center">
+										<a href="#">查看我的影评</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								
+							</div>
+			</div>
 		</div>
 		<div class="article-right">
 			<div class="grid_3 grid_5">
@@ -575,7 +624,17 @@ $('#myModal').modal('no');
 				 <div class="clearfix"></div>
 				 <a class="more-show-time" href="movie-select-show.html">查看更多</a>
 			  </div>
-					
+					<div class="myfoot">
+			  			<h3>足迹</h3>
+						<ul class="footul">
+							<li><a href="#">2018年3月11日</a></li>
+							<li><a href="#">2018年2月15日</a></li>
+							<li><a href="#">2017年12月25日</a></li>
+							<li><a href="#">2017年11月27日</a></li>
+							<li><a href="#">2017年4月1日</a></li>
+							<li><a href="#">2016年8月7日</a></li>
+						</ul>
+					</div>
 			
 			</div>
 			

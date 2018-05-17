@@ -75,6 +75,17 @@ public class UserDaoImp {
          session.getTransaction().commit();    
 		
 	}
+	public void avatarUpdate(String a,int user_id)throws Exception{
+		Session session = sessionFactory.getCurrentSession();
+		 session.beginTransaction();  
+		 String hql = ("update User u set u.avatar=? where u.user_id=?");
+		 Query query = session.createQuery(hql);  
+		 query.setParameter(0,a);
+		 query.setParameter(1, user_id);
+		 query.executeUpdate(); 
+         session.getTransaction().commit();    
+	}
+
 
 	
 }
