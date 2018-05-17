@@ -56,7 +56,7 @@ public class UploadImgController {
                 System.out.println("==========imageCutEnd=============");
               User u=(User)request.getSession().getAttribute("user");
               int user_id=u.getUser_id();
-              this.userRegisterImp.AvatarUpdate("E:\\upload\\"+ saveName+"_src.jpg", user_id);
+              this.userRegisterImp.AvatarUpdate("E:\\upload\\"+ saveName+"_cut.jpg", user_id);
                 
                 
                 request.getSession().setAttribute("imgSrc", resourcePath+ saveName+"_src.jpg");//成功之后显示用
