@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>电影详情页</title>
+<title>电影评论页</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />

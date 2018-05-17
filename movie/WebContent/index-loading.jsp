@@ -398,43 +398,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h4>本周耻辱柱</h4>
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.2</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.3</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.4</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.5</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.6</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.7</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.8</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.9</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 								<ul class="mov_list">
 									<li>NO.10</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./moviesingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
 								</ul>
 							</div>
 
@@ -466,12 +466,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="tab_img">
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=2"> <img
+												<a href="./moviesingle?id=2"> <img
 													src="images/pic-1.jpg" class="img-responsive" alt="" /></a>
 												<div class="info1"></div>
 												<div class="mask"></div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=2">查看详情</a>
+													<a href="./moviesingle?id=2">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>97</h5>
 														<p>
@@ -484,12 +484,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=2"><img
+												<a href="./moviesingle?id=2"><img
 													src="images/pic-2.jpg" class="img-responsive" alt="" /></a>
 												<div class="info1"></div>
 												<div class="mask"></div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=2">查看详情</a>
+													<a href="./moviesingle?id=2">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>98</h5>
 														<p>
@@ -502,13 +502,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=2"><img
+												<a href="./moviesingle?id=2"><img
 													src="images/pic-10.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=2">查看详情</a>
+													<a href="./moviesingle?id=2">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>100</h5>
 														<p>
@@ -526,13 +526,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="tab_img">
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"><img
+												<a href="./moviesingle?id=1"><img
 													src="images/pic-8.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./moviesingle?id=1">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>92</h5>
 														<p>
@@ -545,13 +545,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"> <img
+												<a href="./moviesingle?id=1"> <img
 													src="images/pic-3.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./moviesingle?id=1">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>100</h5>
 														<p>
@@ -564,13 +564,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li class="last">
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"><img
+												<a href="./moviesingle?id=1"><img
 													src="images/pic-9.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./moviesingle?id=1">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>74</h5>
 														<p>
@@ -588,13 +588,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="tab_img">
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"> <img
+												<a href="./moviesingle?id=1"> <img
 													src="images/pic-4.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./moviesingle?id=1">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>88</h5>
 														<p>
@@ -607,13 +607,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"> <img
+												<a href="./moviesingle?id=1"> <img
 													src="images/pic-12.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./moviesingle?id=1">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>100</h5>
 														<p>
@@ -626,13 +626,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</li>
 										<li class="last">
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"><img
+												<a href="./moviesingle?id=1"><img
 													src="images/pic-5.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./moviesingle?id=1">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>90</h5>
 														<p>
@@ -650,37 +650,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="tab_img">
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"> <img
+												<a href="./moviesingle?id=1"> <img
 													src="images/pic-6.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./moviesingle?id=1">查看详情</a>
 												</div>
 											</div>
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"> <img
+												<a href="./moviesingle?id=1"> <img
 													src="images/pic-1.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./moviesingle?id=1">查看详情</a>
 												</div>
 											</div>
 										</li>
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"> <img
+												<a href="./moviesingle?id=1"> <img
 													src="images/pic-9.jpg" class="img-responsive" alt="" /></a>
 												<div class="mask">
 													<div class="info1"></div>
 												</div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./moviesingle?id=1">查看详情</a>
 												</div>
 											</div>
 										</li>
