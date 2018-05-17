@@ -86,16 +86,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<!-- 顶部右侧登录区域  -->
 				<a href="#">欢迎登录：</a>	
-			    <a href="index-loading.jsp">
-			    	<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">   
+			    	  <button class="btn btn-primary" data-toggle="modal" >  	
+						<a href="movie-personal.jsp">
 						<c:if test="${! empty  user.user_id }" >				           
                 			 ${user.username }               
                 		</c:if>
-                		<c:if test="${empty  user.user_id }" >				           
+                		</a>	
+                		<a href="index-loading.jsp">
+               	    	<c:if test="${empty  user.user_id }" >				           
                 			<td>未登录</td>              
                 		</c:if>
+                		</a>
                 	</button>
-                </a>
                 
                 <!-- 以下删除 -->
 				
@@ -295,6 +297,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-4 blog-categories">
 			<h3 class="post">参演电影</h3>
+			
 			
 			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
 			<p><a href="./gotosingle?id=6">不一样的天空</a></p>
