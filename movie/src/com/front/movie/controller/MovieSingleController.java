@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.front.actor.service.ActorServiceImpl;
 import com.front.movie.entity.Movie;
 import com.front.movie.service.MovieServiceImpl;
 
@@ -15,6 +16,8 @@ import com.front.movie.service.MovieServiceImpl;
 public class MovieSingleController {
 	@Resource
 	private MovieServiceImpl msi;
+	@Resource
+	private ActorServiceImpl asi;
 
 	
 	//跳转页面
@@ -29,6 +32,7 @@ public class MovieSingleController {
 			//通过调用movieServiceImpl中的方法在request里添加查询的电影
 			request.setAttribute("movie",this.msi.findMovieById(id));
 			//返回跳转标识
+			
 			return "movie-single";
 			}
 }
