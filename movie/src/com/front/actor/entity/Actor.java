@@ -8,6 +8,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -26,7 +29,7 @@ public class Actor {
 	private String actor_pic;
 	private String actor_summary;
 	
-	private Set ActorCommentSet = new HashSet<ActorComment>();
+	private Set actorCommentSet = new HashSet<ActorComment>();
 	
 	
 	@Id
@@ -36,6 +39,8 @@ public class Actor {
 		return actor_id;
 	}
 	
+	
+
 	public Actor() {
 		
 	}
@@ -75,9 +80,10 @@ public class Actor {
 	@OneToMany(mappedBy="actor", targetEntity=ActorComment.class,
 			cascade=CascadeType.ALL)
 	public Set getActorCommentSet() {
-		return ActorCommentSet;
+		return actorCommentSet;
 	}
 	public void setActorCommentSet(Set actorCommentSet) {
-		ActorCommentSet = actorCommentSet;
+		this.actorCommentSet = actorCommentSet;
 	}
+	
 }

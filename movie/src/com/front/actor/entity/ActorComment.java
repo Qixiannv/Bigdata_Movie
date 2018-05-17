@@ -21,9 +21,11 @@ import com.front.user.entity.User;
 @Table(name="actor_comment")
 public class ActorComment {
 
-	private Integer ActorComment_id;
+	private Integer actorComment_id;
 	private User user;
 	private Actor actor;
+	private String comment_time;
+	
 	
 	private String comment_text;
 	
@@ -31,7 +33,7 @@ public class ActorComment {
 	@GeneratedValue(generator="acid")
 	@GenericGenerator(name="acid",strategy="native")
 	public Integer getActorComment_id() {
-		return ActorComment_id;
+		return actorComment_id;
 	}
 	
 	public ActorComment() {
@@ -40,13 +42,13 @@ public class ActorComment {
 
 	public ActorComment(Integer actorComment_id, User user, Actor actor, String comment_text) {
 		super();
-		ActorComment_id = actorComment_id;
+		actorComment_id = actorComment_id;
 		this.user = user;
 		this.actor = actor;
 		this.comment_text = comment_text;
 	}
 	public void setActorComment_id(Integer actorComment_id) {
-		ActorComment_id = actorComment_id;
+		actorComment_id = actorComment_id;
 	}
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
@@ -71,5 +73,13 @@ public class ActorComment {
 	}
 	public void setComment_text(String comment_text) {
 		this.comment_text = comment_text;
+	}
+	@Column(name = "comment_time")
+	public String getComment_time() {
+		return comment_time;
+	}
+
+	public void setComment_time(String comment_time) {
+		this.comment_time = comment_time;
 	}
 }

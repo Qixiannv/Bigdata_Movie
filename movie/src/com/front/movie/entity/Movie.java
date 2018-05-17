@@ -9,10 +9,14 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.criteria.Order;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.front.actor.entity.Actor;
@@ -35,9 +39,9 @@ public class Movie {
 	private Float rate;
 	
 	
-	private Set movieSet = new HashSet<MovieComment>();
+	private Set moviecCommentSet = new HashSet<MovieComment>();
 	public Movie() {}
-	public Movie(String movie_timename, String movie_summary, String movie_pic, Integer movie_type,Date date,Integer time,Float rate) {
+	public Movie(String movie_name, String movie_summary, String movie_pic, Integer movie_type,Date date,Integer time,Float rate) {
 		super();
 		this.movie_name = movie_name;
 		this.movie_summary = movie_summary;
@@ -91,11 +95,11 @@ public class Movie {
 	}
 	@OneToMany(mappedBy="movie", targetEntity=MovieComment.class,
 			cascade=CascadeType.ALL)
-	public Set getMovieSet() {
-		return movieSet;
+	public Set getMovieCommentSet() {
+		return moviecCommentSet;
 	}
-	public void setMovieSet(Set movieSet) {
-		this.movieSet = movieSet;
+	public void setMovieCommentSet(Set movieSet) {
+		this.moviecCommentSet = movieSet;
 	}
 	@Column(name="date")
 	public Date getDate() {
@@ -122,5 +126,6 @@ public class Movie {
 	public void setRate(Float rate) {
 		this.rate = rate;
 	}
+	
 	
 }

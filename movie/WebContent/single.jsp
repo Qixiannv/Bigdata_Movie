@@ -253,7 +253,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="comments">
 						<h5>评论</h5>
 						
-						<c:forEach items="${movie.movieSet}" var = "p">
+						<c:forEach items="${movie.movieCommentSet}" var = "p">
 							<div class="comment">
 							<div class="client">
 								<img src="${p.user.avatar}" alt="">

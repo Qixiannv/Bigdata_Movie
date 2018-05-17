@@ -23,35 +23,12 @@ USE `movie_db`;
 #
 
 CREATE TABLE `actor` (
-  `actor_id` int(11) NOT NULL,
+  `actor_id` int(11) NOT NULL AUTO_INCREMENT,
   `actor_name` varchar(20) DEFAULT NULL,
   `actor_pic` varchar(30) DEFAULT NULL,
   `actor_summary` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`actor_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-#
-# Structure for the `actor_comment` table : 
-#
-
-CREATE TABLE `actor_comment` (
-  `actor_comment_id` int(11) NOT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `actor_id` int(11) DEFAULT NULL,
-  `comment_text` varchar(200) DEFAULT NULL,
-  `comment_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`actor_comment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-#
-# Structure for the `type` table : 
-#
-
-CREATE TABLE `type` (
-  `type_id` int(11) NOT NULL,
-  `type_name` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`type_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 #
 # Structure for the `user` table : 
@@ -69,6 +46,33 @@ CREATE TABLE `user` (
   `signature` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`user_id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+#
+# Structure for the `actor_comment` table : 
+#
+
+CREATE TABLE `actor_comment` (
+  `actorcomment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `actor_id` int(11) DEFAULT NULL,
+  `comment_text` varchar(200) DEFAULT NULL,
+  `comment_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`actorcomment_id`),
+  KEY `user_id` (`user_id`),
+  KEY `actor_id` (`actor_id`),
+  CONSTRAINT `actor_comment_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
+  CONSTRAINT `actor_comment_fk1` FOREIGN KEY (`actor_id`) REFERENCES `actor` (`actor_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+
+#
+# Structure for the `type` table : 
+#
+
+CREATE TABLE `type` (
+  `type_id` int(11) NOT NULL,
+  `type_name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`type_id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 #
 # Structure for the `favor` table : 
@@ -131,7 +135,15 @@ CREATE TABLE `movie_comment` (
   KEY `movie_id` (`movie_id`) USING BTREE,
   CONSTRAINT `movie_comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `movie_comment_ibfk_2` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+#
+# Data for the `actor` table  (LIMIT 0,500)
+#
+
+INSERT INTO `actor` (`actor_id`, `actor_name`, `actor_pic`, `actor_summary`) VALUES 
+  (1,'新垣结衣','images/gakki.jpg','waifu');
+COMMIT;
 
 #
 # Data for the `user` table  (LIMIT 0,500)
@@ -143,6 +155,27 @@ INSERT INTO `user` (`user_id`, `email`, `phone`, `username`, `password`, `birthd
   (3,'222',222,'111','222',NULL,NULL,NULL,NULL),
   (4,'123',1,'烧烧烧','111',NULL,NULL,NULL,NULL),
   (5,'123',233,'爆炸','333',NULL,NULL,NULL,NULL);
+COMMIT;
+
+#
+# Data for the `actor_comment` table  (LIMIT 0,500)
+#
+
+INSERT INTO `actor_comment` (`actorcomment_id`, `user_id`, `actor_id`, `comment_text`, `comment_time`) VALUES 
+  (13,1,1,'啊','2018-05-17 08:44:16'),
+  (14,1,1,'很好','2018-05-17 08:45:20'),
+  (15,1,1,'很好','2018-05-17 08:46:52'),
+  (16,1,1,'啊','2018-05-17 08:55:02'),
+  (17,1,1,'AA','2018-05-17 08:57:28'),
+  (18,1,1,'去','2018-05-17 09:06:50'),
+  (19,1,1,'啊','2018-05-17 09:46:54'),
+  (20,1,1,'1','2018-05-17 09:49:48'),
+  (21,1,1,'啊','2018-05-17 09:57:27'),
+  (22,1,1,'很好','2018-05-17 09:59:45'),
+  (23,1,1,'啊','2018-05-17 10:01:04'),
+  (24,1,1,'12','2018-05-17 10:03:56'),
+  (25,1,1,'啊','2018-05-17 10:04:24'),
+  (26,1,1,'啊','2018-05-17 10:05:58');
 COMMIT;
 
 #
@@ -168,7 +201,18 @@ INSERT INTO `movie_comment` (`comment_id`, `user_id`, `movie_id`, `comment_text`
   (3,1,1,'娃娃','2018-05-14 09:22:04'),
   (4,1,1,'111','2018-05-15 16:33:20'),
   (5,1,1,'我','2018-05-15 16:44:34'),
-  (6,1,1,'啊','2018-05-16 08:38:56');
+  (6,1,1,'啊','2018-05-16 08:38:56'),
+  (7,1,1,'可以','2018-05-16 09:14:13'),
+  (8,1,1,'好好好','2018-05-16 11:14:39'),
+  (9,1,1,'去','2018-05-16 14:38:33'),
+  (10,1,1,'啊','2018-05-16 14:47:17'),
+  (11,1,1,'啊','2018-05-16 14:51:45'),
+  (12,1,1,'a1','2018-05-16 15:08:27'),
+  (13,1,1,'啊','2018-05-16 16:13:03'),
+  (14,1,1,'AA','2018-05-16 17:00:02'),
+  (15,1,1,'去','2018-05-17 08:56:05'),
+  (16,1,1,'啊','2018-05-17 09:14:21'),
+  (17,1,1,'啊','2018-05-17 09:37:50');
 COMMIT;
 
 

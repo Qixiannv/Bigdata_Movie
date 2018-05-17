@@ -222,7 +222,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="last-article">
 					<p class="artext">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${actor.actor_summary}</p>
 					<h3></h3>
-					<img src="${actor.actor_pic}">
+					<img src="${actor.actor_pic}" style="width:300px;height:458px;">>
 					<p class="artext"></p>
 					<ul class="categories">
 						<li><a href="#"></a></li>
@@ -250,6 +250,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 					<div class="comments">
 						<h5>评论</h5>
+						<c:forEach items = "${actor.actorCommentSet}" var = "a">
+							<div class="comment">
+							<div class="client">
+								<img src="${a.user.avatar}" alt="">
+							</div>
+							<div class="client-message">
+								<p><a href="#">${a.user.username}</a><i class="fa fa-calendar"></i>${a.comment_time}</p>
+								<h6>${a.comment_text}</h6>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						</c:forEach>
+						
 						<div class="comment">
 							<div class="client">
 								<img src="images/c1.jpg" alt="">
@@ -282,6 +295,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-4 blog-categories">
 			<h3 class="post">参演电影</h3>
+			
 			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
 			<p><a href="./gotosingle?id=6">不一样的天空</a></p>
 			<img src="images/lee1.jpg"width="70"height="100"></div>
