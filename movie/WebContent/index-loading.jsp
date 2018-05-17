@@ -700,84 +700,84 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
-									<a href="./gotosingle?id=3"><img src="images/f4.jpg" alt="" /></a>
+									<a href="./moviesingle?id=3"><img src="images/f4.jpg" alt="" /></a>
 								</div>
 								<div class="f-movie-name">
 									<a>片名一</a>
 									<p>全国</p>
 								</div>
 								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=3">查看详情</a>
+									<a href="./moviesingle?id=3">查看详情</a>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
-									<a href="./gotosingle?id=3"><img src="images/f5.jpg" alt="" /></a>
+									<a href="./moviesingle?id=3"><img src="images/f5.jpg" alt="" /></a>
 								</div>
 								<div class="f-movie-name">
 									<a>片名二</a>
 									<p>全国</p>
 								</div>
 								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=3">查看详情</a>
+									<a href="./moviesingle?id=3">查看详情</a>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
-									<a href="./gotosingle?id=3"><img src="images/f6.jpg" alt="" /></a>
+									<a href="./moviesingle?id=3"><img src="images/f6.jpg" alt="" /></a>
 								</div>
 								<div class="f-movie-name">
 									<a >片名三</a>
 									<p>全国</p>
 								</div>
 								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=3">查看详情</a>
+									<a href="./moviesingle?id=3">查看详情</a>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
-									<a href="./gotosingle?id=1"><img src="images/f1.jpg" alt=""></a>
+									<a href="./moviesingle?id=1"><img src="images/f1.jpg" alt=""></a>
 								</div>
 								<div class="f-movie-name">
 									<a>片名四</a>
 									<p>全国</p>
 								</div>
 								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=1">查看详情</a>
+									<a href="./moviesingle?id=1">查看详情</a>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
-									<a href="./gotosingle?id=1"><img src="images/f2.jpg" alt=""></a>
+									<a href="./moviesingle?id=1"><img src="images/f2.jpg" alt=""></a>
 								</div>
 								<div class="f-movie-name">
 									<a>片名五</a>
 									<p>全国</p>
 								</div>
 								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=1">查看详情</a>
+									<a href="./moviesingle?id=1">查看详情</a>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
-									<a href="./gotosingle?id=1"><img src="images/f3.jpg" alt=""></a>
+									<a href="./moviesingle?id=1"><img src="images/f3.jpg" alt=""></a>
 								</div>
 								<div class="f-movie-name">
 									<a>片名六</a>
 									<p>全国</p>
 								</div>
 								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=1">查看详情</a>
+									<a href="./moviesingle?id=1">查看详情</a>
 								</div>
 							</div>
 						</li>
@@ -793,52 +793,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>77%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>80%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>69%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>65%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>83%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>87%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>71%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>81%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>80%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>89%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					
 				</div>
@@ -890,43 +890,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h5>佳片推荐</h5>
 					<ul class="mov_list">
 						<li>NO.1</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li>NO.2</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li>NO.3</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li>NO.4</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li>NO.5</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li>NO.6</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li>NO.7</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li>NO.8</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li>NO.9</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 					<ul class="mov_list">
 						<li>NO.10</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./moviesingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
 					</ul>
 				</div>
 			</div>

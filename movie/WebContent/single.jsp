@@ -154,11 +154,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<a href="index.jsp" >主页</a>
 							</li>
 							
-							<li class="active"><a href="#">电影</a></li>
-						
 							<li class="dropdown w3_megamenu-fw">
-							<a href="blog.jsp"> 影评</a>
+							<a href="blog.jsp"> 电影</a>
 							</li>
+							
+							<li class="active"><a href="#">影评</a></li>
 						
 							<li class="dropdown w3_megamenu-fw">
 							<a href="actors.jsp"> 演员</a>
@@ -212,7 +212,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    <!--面包屑标签  -->
 	<ol class="breadcrumb">
 			  <li><a href="index.jsp">首页</a></li>
-			  <li class="active">电影详情</li>
+			  <li class="active">影评详情</li>
 	</ol>
 	
 	<!--内容（数据库读取） -->
