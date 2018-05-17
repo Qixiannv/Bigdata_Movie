@@ -1,22 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%  
-String path = request.getContextPath();  
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";  
-%>  
-  
-<base href="<%=basePath%>"> 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>My Show a Entertainment Category Flat Bootstarp responsive Website Template | Movies single_page :: w3layouts</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='{basePath }text/css' />
+<link href="css/bootstrap.css" rel='stylesheet' type=' text/css' />
 <!-- Custom Theme files -->
-<link href="css/style.css" rel="stylesheet" type="{basePath }text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type=" text/css" media="all" />
 <!-- Custom Theme files -->
-<script src="{basePath }js/jquery.min.js"></script>
-<script src="{basePath }js/bootstrap.min.js"></script>
+<script src=" js/jquery.min.js"></script>
+<script src=" js/bootstrap.min.js"></script>
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -24,19 +19,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--webfont-->
-<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='{basePath }text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='{basePath }ext/css'>
+<link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type=' text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type=' ext/css'>
 <!-- start menu -->
-<link href="css/megamenu.css" rel="stylesheet" type="{basePath }text/css" media="all" />
+<link href="css/megamenu.css" rel="stylesheet" type=" text/css" media="all" />
 <script type="text/javascript" src="js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
-<link rel="stylesheet" href="{basePath }css/font-awesome.min.css" />
-<link rel="stylesheet" href="{basePath }css/menu.css" />
+<link rel="stylesheet" href=" css/font-awesome.min.css" />
+<link rel="stylesheet" href=" css/menu.css" />
 
 <!---- start-smoth-scrolling---->
-<script type="text/javascript" src="{basePath }js/move-top.js"></script>
-<script type="text/javascript" src="{basePath }js/easing.js"></script>
+<script type="text/javascript" src=" js/move-top.js"></script>
+<script type="text/javascript" src=" js/easing.js"></script>
 <script type="text/javascript">
 			jQuery(document).ready(function($) {
 				$(".scroll").click(function(event){		

@@ -15,7 +15,6 @@ import com.front.user.entity.User;
 import com.front.user.service.UserImp;
 
 @Controller
-@RequestMapping("/UploadDemo")
 public class UploadImgController {
 	
 	@Resource

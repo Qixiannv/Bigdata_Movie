@@ -598,7 +598,7 @@ $('#myModal').modal('no');
                     <div class="col-md-4">
                         <div class="row text-center sign-with">
                           
-                               <form name="form" action="<%=request.getContextPath()%>/UploadDemo/uploadHeadImage" class="form-horizontal" method="post" enctype="multipart/form-data">
+                               <form name="form" action="<%=request.getContextPath()%>/uploadHeadImage" class="form-horizontal" method="post" enctype="multipart/form-data">
 		<div class="modal-body text-center">
 			<div class="zxx_main_con">
 				<div class="zxx_test_list">
