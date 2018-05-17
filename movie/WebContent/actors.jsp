@@ -296,6 +296,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-4 blog-categories">
 			<h3 class="post">参演电影</h3>
 			
+			
 			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
 			<p><a href="./gotosingle?id=6">不一样的天空</a></p>
 			<img src="images/lee1.jpg"width="70"height="100"></div>

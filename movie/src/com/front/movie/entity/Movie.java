@@ -7,6 +7,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -37,7 +38,6 @@ public class Movie {
 	private Date date;
 	private Integer time;
 	private Float rate;
-	
 	
 	private Set moviecCommentSet = new HashSet<MovieComment>();
 	public Movie() {}
@@ -126,6 +126,9 @@ public class Movie {
 	public void setRate(Float rate) {
 		this.rate = rate;
 	}
+
+	
+	
 	
 	
 }
