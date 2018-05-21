@@ -3,9 +3,9 @@ package com.front.actor.dao;
 import java.util.List;
 
 import javax.annotation.Resource;
-import javax.persistence.Query;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
 import com.front.actor.entity.Actor;
@@ -57,4 +57,14 @@ public class ActorDaoImpl {
 		this.sessionFactory.openSession().save(ac);
 		
 	}
+	
+	/**
+	 * 查询所有演员
+	 * @author 闫相垠
+	 * @return List<Actor> 演员列表
+	 */
+	public List<Actor> findAllActors(){
+		Query<Actor> q = this.sessionFactory.getCurrentSession().createQuery("from Actor");
+		return q.list();
+	} 
 }

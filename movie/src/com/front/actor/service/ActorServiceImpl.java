@@ -56,4 +56,14 @@ public class ActorServiceImpl {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * 查询所有演员
+	 * @author 闫相垠
+	 * @return List<Actor> 演员列表
+	 */
+	public List<Actor> findActors(){
+		List<Actor> la = this.adi.findAllActors();
+		return la;
+	}
 }

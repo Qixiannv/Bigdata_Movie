@@ -1,5 +1,7 @@
 package com.front.actor.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
@@ -46,6 +48,20 @@ public class ActorController {
 		this.asi.saveActorComment(comment_text, actor_id, user_id);
 		
 		return "redirect:/gotoactor?actor_id="+actor_id;
+	}
+	
+	/**
+	 * 展示演员列表
+	 * @author 闫相垠
+	 * @param request request
+	 * @return
+	 */
+	@GetMapping("/show_actor")
+	public String showAllActors(HttpServletRequest request) {
+		List<Actor> la = this.asi.findActors();
+		request.setAttribute("actorlist", la);
+		
+		return "test";
 	}
 	
 }
