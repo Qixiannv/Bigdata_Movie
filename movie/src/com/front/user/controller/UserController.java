@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.front.user.entity.User;
@@ -70,8 +71,12 @@ public class UserController {
 	@RequestMapping("/ChangeController")
 	public String Change(HttpSession session,User u)throws Exception{
 		this.userRegisterImp.UserChange(u);
-		return "";
+		return "movie-personal";
 	}
-	
+	@RequestMapping(value = "/SignatureUpdate",method = RequestMethod.POST)
+	public String SignatureUpdate(String s,int user_id)throws Exception{
+		this.userRegisterImp.SignatureUpdate(s, user_id);
+		return "movie-personal";
+	}
 	
 }

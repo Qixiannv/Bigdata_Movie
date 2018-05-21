@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page isELIgnored ="false" %>
+<%@ page import="com.front.user.entity.User" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -219,11 +221,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="face">
 		<img class="facepic"src="<%=request.getContextPath()%>${imgCut}" width="160" height="160">
 		<div class="faceinfor" style="width:700px">
-			<span class="facename">用户名</span><br/>
+			<span class="facename">${user.username }</span><br/>
 			<div  style="width:700px">
-				<textarea class="form-control" name="comments" id="comments1" rows="5" placeholder="你的签名。。。" style="width:500px;float:left"></textarea>
+				<form action="SignatureUpdate" method="post">
+				<textarea class="form-control" name="signature"  rows="5"  style="width:500px;float:left"></textarea>
 			    <button class="faceton" style="width:200px;float:right;  position: relative;left: 30px;top:10px"><a class="facea" href="infor.jsp" >编辑个人资料</a></button>
-			    <input type="submit" value="提交签名信息" id="submit1" class="btn btn-primary small" style="width:200px;float:right;position: relative;left: 30px;top:30px"">		
+			    <input type="hidden" name="user_id" value="${user.user_id}" />	
+			    <input type="submit" value="提交签名信息" class="btn btn-primary small" style="width:200px;float:right;position: relative;left: 30px;top:30px"">
+			    	
+				</form>
 			</div>
 			
 		</div>
