@@ -314,7 +314,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="reviews-tabs">
       <!-- Main component for a primary marketing message or call to action -->
       <ul class="nav nav-tabs responsive hidden-xs hidden-sm" id="myTab">
-        <li class="test-class active"><a class="deco-none misc-class" href="./gotosingle?id=5""> 概要</a></li>
+        <li class="test-class active"><a class="deco-none misc-class" href=""> 概要</a></li>
+        <li class="test-class active"><a class="deco-none misc-class" href="./gotosingle?id=5">评论</a></li>
       </ul>
 
       <div class="tab-content responsive hidden-xs hidden-sm">
