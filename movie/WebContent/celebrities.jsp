@@ -562,7 +562,7 @@ $('#myModal').modal('no');
 							<a href="#"><img src="${a.actor_pic}" title="actor"></a>
 						</div>
 					<div class="person-details">
-						<a href="#">${a.actor_name}</a>
+						<a href=>${a.actor_name}</a>
 						<p>${a.actor_summary}</p>
 					</div>
 					<div class="clearfix"></div>
