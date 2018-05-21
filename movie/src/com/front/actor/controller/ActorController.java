@@ -61,7 +61,7 @@ public class ActorController {
 		List<Actor> la = this.asi.findActors();
 		request.setAttribute("actorlist", la);
 		
-		return "test";
+		return "celebrities";
 	}
 	
 }
