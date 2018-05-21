@@ -26,7 +26,7 @@ public class ActorController {
 	 * @return String 路径
 	 */
 	@GetMapping("/gotoactor")
-	public String showActorSingle(HttpServletRequest request,@RequestParam("actor_id") int actor_id) {
+	public String showActorSingle(HttpServletRequest request,@RequestParam("actor_id") Integer actor_id) {
 		Actor actor = this.asi.findActorById(actor_id);
 		request.setAttribute("actor", actor);
 		

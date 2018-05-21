@@ -559,10 +559,10 @@ $('#myModal').modal('no');
 				<c:forEach items = "${actorlist}" var = "a">
 					<div class="person-grid">
 						<div class="person-img">
-							<a href="#"><img src="${a.actor_pic}" title="actor"></a>
+							<a href="gotoactor?actor_id=${a.actor_id}"><img src="${a.actor_pic}" title="actor"></a>
 						</div>
 					<div class="person-details">
-						<a href=>${a.actor_name}</a>
+						<a href="gotoactor?actor_id=+${a.actor_id}">${a.actor_name}</a>
 						<p>${a.actor_summary}</p>
 					</div>
 					<div class="clearfix"></div>
