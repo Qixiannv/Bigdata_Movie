@@ -463,16 +463,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>77%</li>
-						<li><a href="./gotosingle?movie_id=${p.movie_id }">${p.movie_name }</a></li>
+						<li><a href="./gotosingle?id=${p.movie_id }">${p.movie_name }</a></li>
 					</ul>
 					</c:forEach>
 				</div>
 				<div class="our-blog">
 					<h5>演员推荐</h5>
-					<c:forEach items="${catorlist }" var="p">
+					<c:forEach items="${actorlist }" var="p">
 					<ul class="mov_list">
 						<li>NO.1</li>
-						<li><a href="${p.cator_pic }">${p.cator_name }</a></li>
+						<li><a href="./gotoactor?actor_id=${p.actor_id }">${p.actor_name }</a></li>
 					</ul>
 				</c:forEach>
 				</div>
@@ -482,7 +482,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<c:forEach items="${movielist }" var="p">
 					<ul class="mov_list">
 						<li>NO.1</li>
-						<li><a href="./gotosingle?movie_id=${p.movie_id }">${p.movie_name }</a></li>
+						<li><a href="./gotosingle?id=${p.movie_id }">${p.movie_name }</a></li>
 					</ul>
 					</c:forEach>
 				</div>
