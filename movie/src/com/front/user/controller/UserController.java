@@ -71,11 +71,18 @@ public class UserController {
 	@RequestMapping("/ChangeController")
 	public String Change(HttpSession session,User u)throws Exception{
 		this.userRegisterImp.UserChange(u);
+        int user_id=u.getUser_id();
+        User user=this.userRegisterImp.UserSelect(user_id);
+		session.setAttribute("user", user);
 		return "movie-personal";
 	}
 	@RequestMapping(value = "/SignatureUpdate",method = RequestMethod.POST)
-	public String SignatureUpdate(String s,int user_id)throws Exception{
-		this.userRegisterImp.SignatureUpdate(s, user_id);
+	public String SignatureUpdate(String signature,HttpSession session,HttpServletRequest request)throws Exception{
+		User u=(User)request.getSession().getAttribute("user");
+        int user_id=u.getUser_id();
+		this.userRegisterImp.SignatureUpdate(signature, user_id);
+		User user=this.userRegisterImp.UserSelect(user_id);
+		session.setAttribute("user", user);
 		return "movie-personal";
 	}
 	

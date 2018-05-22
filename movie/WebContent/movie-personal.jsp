@@ -224,10 +224,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<span class="facename">${user.username }</span><br/>
 			<div  style="width:700px">
 				<form action="SignatureUpdate" method="post">
-				<textarea class="form-control" name="signature"  rows="5"  style="width:500px;float:left"></textarea>
+				<textarea class="form-control" name="signature" placeholder="${user.signature } " rows="5"  style="width:500px;float:left"></textarea>
 			    <button class="faceton" style="width:200px;float:right;  position: relative;left: 30px;top:10px"><a class="facea" href="infor.jsp" >编辑个人资料</a></button>
-			    <input type="hidden" name="user_id" value="${user.user_id}" />	
-			    <input type="submit" value="提交签名信息" class="btn btn-primary small" style="width:200px;float:right;position: relative;left: 30px;top:30px"">
+			    <input type="submit" value="提交签名信息" class="btn btn-primary small" style="width:200px;float:right;position: relative;left: 30px;top:30px">
 			    	
 				</form>
 			</div>
