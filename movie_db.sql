@@ -28,7 +28,7 @@ CREATE TABLE `actor` (
   `actor_pic` varchar(30) DEFAULT NULL,
   `actor_summary` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`actor_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 #
 # Structure for the `user` table : 
@@ -62,7 +62,38 @@ CREATE TABLE `actor_comment` (
   KEY `actor_id` (`actor_id`),
   CONSTRAINT `actor_comment_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `actor_comment_fk1` FOREIGN KEY (`actor_id`) REFERENCES `actor` (`actor_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+
+#
+# Structure for the `movie` table : 
+#
+
+CREATE TABLE `movie` (
+  `movie_id` int(11) NOT NULL AUTO_INCREMENT,
+  `movie_name` varchar(20) DEFAULT NULL,
+  `movie_summary` varchar(300) DEFAULT NULL,
+  `movie_pic` varchar(40) DEFAULT NULL,
+  `movie_type` int(11) DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `time` int(5) DEFAULT NULL,
+  `rate` float(9,3) DEFAULT NULL,
+  PRIMARY KEY (`movie_id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+#
+# Structure for the `actor_movie` table : 
+#
+
+CREATE TABLE `actor_movie` (
+  `ac_id` int(11) NOT NULL AUTO_INCREMENT,
+  `actor_id` int(11) NOT NULL,
+  `movie_id` int(11) NOT NULL,
+  PRIMARY KEY (`ac_id`),
+  KEY `actor_id` (`actor_id`),
+  KEY `movie_id` (`movie_id`),
+  CONSTRAINT `actor_movie_fk` FOREIGN KEY (`actor_id`) REFERENCES `actor` (`actor_id`),
+  CONSTRAINT `actor_movie_fk1` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 #
 # Structure for the `type` table : 
@@ -105,22 +136,6 @@ CREATE TABLE `friend` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 #
-# Structure for the `movie` table : 
-#
-
-CREATE TABLE `movie` (
-  `movie_id` int(11) NOT NULL AUTO_INCREMENT,
-  `movie_name` varchar(20) DEFAULT NULL,
-  `movie_summary` varchar(300) DEFAULT NULL,
-  `movie_pic` varchar(40) DEFAULT NULL,
-  `movie_type` int(11) DEFAULT NULL,
-  `date` date DEFAULT NULL,
-  `time` int(5) DEFAULT NULL,
-  `rate` float(9,3) DEFAULT NULL,
-  PRIMARY KEY (`movie_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
-
-#
 # Structure for the `movie_comment` table : 
 #
 
@@ -135,14 +150,16 @@ CREATE TABLE `movie_comment` (
   KEY `movie_id` (`movie_id`) USING BTREE,
   CONSTRAINT `movie_comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `movie_comment_ibfk_2` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 #
 # Data for the `actor` table  (LIMIT 0,500)
 #
 
 INSERT INTO `actor` (`actor_id`, `actor_name`, `actor_pic`, `actor_summary`) VALUES 
-  (1,'新垣结衣','images/gakki.jpg','waifu');
+  (1,'新垣结衣','images/gakki.jpg','waifu'),
+  (2,'渣渣辉','images/zhazhahui.jpg','是兄弟就来砍我'),
+  (3,'吴京','images/wujing.jpg','爱慕拆妮子');
 COMMIT;
 
 #
@@ -175,7 +192,16 @@ INSERT INTO `actor_comment` (`actorcomment_id`, `user_id`, `actor_id`, `comment_
   (23,1,1,'啊','2018-05-17 10:01:04'),
   (24,1,1,'12','2018-05-17 10:03:56'),
   (25,1,1,'啊','2018-05-17 10:04:24'),
-  (26,1,1,'啊','2018-05-17 10:05:58');
+  (26,1,1,'啊','2018-05-17 10:05:58'),
+  (27,1,1,'啊','2018-05-17 10:33:52'),
+  (28,1,1,'啊','2018-05-17 14:53:16'),
+  (29,1,1,'啊','2018-05-17 15:00:34'),
+  (30,1,1,'去','2018-05-17 15:41:09'),
+  (31,1,1,'啊','2018-05-17 15:41:38'),
+  (32,1,1,'1','2018-05-17 15:43:07'),
+  (33,1,1,'这种','2018-05-17 15:45:03'),
+  (34,1,1,'啊','2018-05-21 10:04:55'),
+  (35,1,1,'q1','2018-05-21 10:12:21');
 COMMIT;
 
 #
@@ -183,12 +209,20 @@ COMMIT;
 #
 
 INSERT INTO `movie` (`movie_id`, `movie_name`, `movie_summary`, `movie_pic`, `movie_type`, `date`, `time`, `rate`) VALUES 
-  (1,'大饼张嘎','这里显示电影简评','images/r1.jpg',1,NULL,NULL,NULL),
-  (2,NULL,'这里显示电影简评','images/r2.jpg',1,NULL,NULL,NULL),
-  (3,NULL,'这里显示电影简评','images/r3.jpg',1,NULL,NULL,NULL),
-  (4,NULL,'这里显示电影简评','images/r4.jpg',1,NULL,NULL,NULL),
-  (5,NULL,'这里显示电影简评','images/r5.jpg',1,NULL,NULL,NULL),
-  (6,NULL,NULL,'images/r6.jpg',1,NULL,NULL,NULL);
+  (1,'大饼张嘎','反映人民艰苦抗战精神的电影','images/r1.jpg',1,NULL,200,4.000),
+  (2,'建国大娘','北京黑芝麻胡同里的张建国大娘一家的悲欢离合','images/r2.jpg',1,NULL,145,7.000),
+  (3,'自杀小队：希特勒传','从入党到入土','images/r3.jpg',1,NULL,345,8.000),
+  (4,'莎士比亚谢顶之谜','英国著名作家莎士比亚，导致他谢顶的原因一直众说纷纭','images/r4.jpg',1,NULL,321,1.000),
+  (5,'一起来看刘伯承','贵族学校中的爱情故事，以及刘伯承先生对此的看法','images/r5.jpg',1,NULL,123,10.000);
+COMMIT;
+
+#
+# Data for the `actor_movie` table  (LIMIT 0,500)
+#
+
+INSERT INTO `actor_movie` (`ac_id`, `actor_id`, `movie_id`) VALUES 
+  (1,1,1),
+  (2,1,2);
 COMMIT;
 
 #
@@ -212,7 +246,10 @@ INSERT INTO `movie_comment` (`comment_id`, `user_id`, `movie_id`, `comment_text`
   (14,1,1,'AA','2018-05-16 17:00:02'),
   (15,1,1,'去','2018-05-17 08:56:05'),
   (16,1,1,'啊','2018-05-17 09:14:21'),
-  (17,1,1,'啊','2018-05-17 09:37:50');
+  (17,1,1,'啊','2018-05-17 09:37:50'),
+  (18,1,1,'13','2018-05-17 15:45:42'),
+  (19,1,1,'很好','2018-05-21 08:55:51'),
+  (20,1,1,'aa1','2018-05-22 14:30:44');
 COMMIT;
 
 
