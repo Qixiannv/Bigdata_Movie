@@ -276,46 +276,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							data-example-id="togglable-tabs">
 							<div id="1" margin:20px>
 								<h4>本周耻辱柱</h4>
+								<c:forEach items="${movielist }" var="p">
 								<ul class="mov_list">
 									<li>NO.1</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
+									<li><a href="./gotosingle?id=${p.movie_id}">${p.movie_name}</a></li>
 								</ul>
-								<ul class="mov_list">
-									<li>NO.2</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
-								</ul>
-								<ul class="mov_list">
-									<li>NO.3</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
-								</ul>
-								<ul class="mov_list">
-									<li>NO.4</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
-								</ul>
-								<ul class="mov_list">
-									<li>NO.5</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
-								</ul>
-								<ul class="mov_list">
-									<li>NO.6</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
-								</ul>
-								<ul class="mov_list">
-									<li>NO.7</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
-								</ul>
-								<ul class="mov_list">
-									<li>NO.8</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
-								</ul>
-								<ul class="mov_list">
-									<li>NO.9</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
-								</ul>
-								<ul class="mov_list">
-									<li>NO.10</li>
-									<li><a href="./gotosingle?id=1">侏罗纪世界（3D）（U / A）</a></li>
-								</ul>
+								</c:forEach>
 							</div>
 
 						</div>
@@ -344,14 +310,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="resp-tabs-container">
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 									<ul class="tab_img">
+									<c:forEach items="${movielist }" var="p">
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=2"> <img
-													src="images/pic-1.jpg" class="img-responsive" alt="" /></a>
+												<a href="./gotosingle?id=${p.movie_id }"> <img
+													src="${p.movie_pic}" class="img-responsive" alt="" /></a>
 												<div class="info1"></div>
 												<div class="mask"></div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=2">查看详情</a>
+													<a href="./gotosingle?movie_id=${p.movie_id }">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>97</h5>
 														<p>
@@ -362,57 +329,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												</div>
 											</div>
 										</li>
-										<li>
-											<div class="view view-first">
-												<a href="./gotosingle?id=2"><img
-													src="images/pic-2.jpg" class="img-responsive" alt="" /></a>
-												<div class="info1"></div>
-												<div class="mask"></div>
-												<div class="tab_desc">
-													<a href="./gotosingle?id=2">查看详情</a>
-													<div class="percentage-w-t-s">
-														<h5>98</h5>
-														<p>
-															% <br> 想看
-														</p>
-														<div class="clearfix"></div>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="view view-first">
-												<a href="./gotosingle?id=2"><img
-													src="images/pic-10.jpg" class="img-responsive" alt="" /></a>
-												<div class="mask">
-													<div class="info1"></div>
-												</div>
-												<div class="tab_desc">
-													<a href="./gotosingle?id=2">查看详情</a>
-													<div class="percentage-w-t-s">
-														<h5>100</h5>
-														<p>
-															% <br> 想看
-														</p>
-														<div class="clearfix"></div>
-													</div>
-												</div>
-											</div>
-										</li>
+										</c:forEach>
 										<div class="clearfix"></div>
 									</ul>
 								</div>
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 									<ul class="tab_img">
+										<c:forEach items="${movielist }" var="p">
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"><img
-													src="images/pic-8.jpg" class="img-responsive" alt="" /></a>
-												<div class="mask">
-													<div class="info1"></div>
-												</div>
+												<a href="./gotosingle?id=${p.movie_id }"> <img
+													src="${p.movie_pic}" class="img-responsive" alt="" /></a>
+												<div class="info1"></div>
+												<div class="mask"></div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./gotosingle?movie_id=${p.movie_id }">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>92</h5>
 														<p>
@@ -423,58 +354,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												</div>
 											</div>
 										</li>
-										<li>
-											<div class="view view-first">
-												<a href="./gotosingle?id=1"> <img
-													src="images/pic-3.jpg" class="img-responsive" alt="" /></a>
-												<div class="mask">
-													<div class="info1"></div>
-												</div>
-												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
-													<div class="percentage-w-t-s">
-														<h5>100</h5>
-														<p>
-															% <br> 想看
-														</p>
-														<div class="clearfix"></div>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="last">
-											<div class="view view-first">
-												<a href="./gotosingle?id=1"><img
-													src="images/pic-9.jpg" class="img-responsive" alt="" /></a>
-												<div class="mask">
-													<div class="info1"></div>
-												</div>
-												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
-													<div class="percentage-w-t-s">
-														<h5>74</h5>
-														<p>
-															% <br> 想看
-														</p>
-														<div class="clearfix"></div>
-													</div>
-												</div>
-											</div>
-										</li>
+									</c:forEach>
 										<div class="clearfix"></div>
 									</ul>
 								</div>
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
 									<ul class="tab_img">
+									<c:forEach items="${movielist }" var="p">
 										<li>
 											<div class="view view-first">
-												<a href="./gotosingle?id=1"> <img
-													src="images/pic-4.jpg" class="img-responsive" alt="" /></a>
-												<div class="mask">
-													<div class="info1"></div>
-												</div>
+												<a href="./gotosingle?id=${p.movie_id }"> <img
+													src="${p.movie_pic}" class="img-responsive" alt="" /></a>
+												<div class="info1"></div>
+												<div class="mask"></div>
 												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
+													<a href="./gotosingle?movie_id=${p.movie_id }">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>88</h5>
 														<p>
@@ -485,44 +379,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												</div>
 											</div>
 										</li>
-										<li>
-											<div class="view view-first">
-												<a href="./gotosingle?id=1"> <img
-													src="images/pic-12.jpg" class="img-responsive" alt="" /></a>
-												<div class="mask">
-													<div class="info1"></div>
-												</div>
-												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
-													<div class="percentage-w-t-s">
-														<h5>100</h5>
-														<p>
-															% <br> 想看
-														</p>
-														<div class="clearfix"></div>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li class="last">
-											<div class="view view-first">
-												<a href="./gotosingle?id=1"><img
-													src="images/pic-5.jpg" class="img-responsive" alt="" /></a>
-												<div class="mask">
-													<div class="info1"></div>
-												</div>
-												<div class="tab_desc">
-													<a href="./gotosingle?id=1">查看详情</a>
-													<div class="percentage-w-t-s">
-														<h5>90</h5>
-														<p>
-															% <br> 想看
-														</p>
-														<div class="clearfix"></div>
-													</div>
-												</div>
-											</div>
-										</li>
+										</c:forEach>
 										<div class="clearfix"></div>
 									</ul>
 								</div>
@@ -577,90 +434,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="featured">
 					<h4>精选</h4>
 					<ul>
+					<c:forEach items="${movielist }" var="p">
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
-									<a href="./gotosingle?id=3"><img src="images/f4.jpg" alt="" /></a>
+									<a href="./gotosingle?id=${p.movie_id }"><img src="${p.movie_pic }" alt="" /></a>
 								</div>
 								<div class="f-movie-name">
-									<a>片名一</a>
+									<a>${p.movie_name }</a>
 									<p>全国</p>
 								</div>
 								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=3">查看详情</a>
+									<a href="./gotosingle?id=${p.movie_id }">查看详情</a>
 								</div>
 							</div>
 						</li>
-						<li>
-							<div class="f-movie">
-								<div class="f-movie-img">
-									<a href="./gotosingle?id=3"><img src="images/f5.jpg" alt="" /></a>
-								</div>
-								<div class="f-movie-name">
-									<a>片名二</a>
-									<p>全国</p>
-								</div>
-								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=3">查看详情</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="f-movie">
-								<div class="f-movie-img">
-									<a href="./gotosingle?id=3"><img src="images/f6.jpg" alt="" /></a>
-								</div>
-								<div class="f-movie-name">
-									<a >片名三</a>
-									<p>全国</p>
-								</div>
-								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=3">查看详情</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="f-movie">
-								<div class="f-movie-img">
-									<a href="./gotosingle?id=1"><img src="images/f1.jpg" alt=""></a>
-								</div>
-								<div class="f-movie-name">
-									<a>片名四</a>
-									<p>全国</p>
-								</div>
-								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=1">查看详情</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="f-movie">
-								<div class="f-movie-img">
-									<a href="./gotosingle?id=1"><img src="images/f2.jpg" alt=""></a>
-								</div>
-								<div class="f-movie-name">
-									<a>片名五</a>
-									<p>全国</p>
-								</div>
-								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=1">查看详情</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="f-movie">
-								<div class="f-movie-img">
-									<a href="./gotosingle?id=1"><img src="images/f3.jpg" alt=""></a>
-								</div>
-								<div class="f-movie-name">
-									<a>片名六</a>
-									<p>全国</p>
-								</div>
-								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=1">查看详情</a>
-								</div>
-							</div>
-						</li>
+						</c:forEach>
 						<div class="clearfix"></div>
 					</ul>
 				</div>
@@ -670,144 +459,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="right-side-bar">
 				<div class="top-movies-in-india">
 					<h4>本周热映</h4>
+					<c:forEach items="${movielist }" var="p">
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>77%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./gotosingle?movie_id=${p.movie_id }">${p.movie_name }</a></li>
 					</ul>
-					<ul class="mov_list">
-						<li><i class="fa fa-star"></i></li>
-						<li>80%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li><i class="fa fa-star"></i></li>
-						<li>69%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li><i class="fa fa-star"></i></li>
-						<li>65%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li><i class="fa fa-star"></i></li>
-						<li>83%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li><i class="fa fa-star"></i></li>
-						<li>87%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li><i class="fa fa-star"></i></li>
-						<li>71%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li><i class="fa fa-star"></i></li>
-						<li>81%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li><i class="fa fa-star"></i></li>
-						<li>80%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li><i class="fa fa-star"></i></li>
-						<li>89%</li>
-						<li><a href="./gotosingle?id=4">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					
+					</c:forEach>
 				</div>
 				<div class="our-blog">
 					<h5>演员推荐</h5>
+					<c:forEach items="${catorlist }" var="p">
 					<ul class="mov_list">
 						<li>NO.1</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
+						<li><a href="${p.cator_pic }">${p.cator_name }</a></li>
 					</ul>
-					<ul class="mov_list">
-						<li>NO.2</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.3</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.4</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.5</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.6</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.7</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.8</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.9</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.10</li>
-						<li><a href="actors.jsp">莱昂纳多</a></li>
-					</ul>
+				</c:forEach>
 				</div>
 				
 				<div class="our-blog">
 					<h5>佳片推荐</h5>
+					<c:forEach items="${movielist }" var="p">
 					<ul class="mov_list">
 						<li>NO.1</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
+						<li><a href="./gotosingle?movie_id=${p.movie_id }">${p.movie_name }</a></li>
 					</ul>
-					<ul class="mov_list">
-						<li>NO.2</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.3</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.4</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.5</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.6</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.7</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.8</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.9</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
-					<ul class="mov_list">
-						<li>NO.10</li>
-						<li><a href="./gotosingle?id=5">侏罗纪世界（3D）（U / A）</a></li>
-					</ul>
+					</c:forEach>
 				</div>
 			</div>
 			<div class="clearfix"></div>
