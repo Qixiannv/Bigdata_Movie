@@ -112,18 +112,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- 顶部右侧登录区域  -->
 				<a href="#">欢迎登录：</a>	
 			    		<c:if test="${! empty  user.user_id }" >
-						 <button class="btn btn-primary" data-toggle="modal" >  		           
-                			 <a href="movie-personal.jsp">
-                			 ${user.username }   
-                			 </a>  
-                		 </button>        
+						 <a href="movie-personal.jsp">
+						 <button class="btn btn-primary" data-toggle="modal" >  		            
+                			<td style="font-weight:900;font-size: 100%;color:white;"> ${user.username }  <td> 	 
+                		 </button>  
+                	     </a>      
                 		</c:if>              		
                	    	<c:if test="${empty  user.user_id }" >	
-               	    	 <button class="btn btn-primary" data-toggle="modal" onclick="displayDate()">  
-               	    	    <a>			           
-                			<td>未登录</td> 
-                			</a>  
-                		 </button>           
+               	    	 <button class="btn btn-primary" data-toggle="modal" onclick="displayDate()">  		           
+                			<td  style="font-weight:900;font-size: 100%;color:white;">未登录</td> 	
+                		 </button>         
                 		</c:if>
                 		<!-- 弹出的登录注册的小页面-->				
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -302,7 +300,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</li>
 							
 							<li class="dropdown w3_megamenu-fw">
-							<a href="charts/">影评</a>
+							<a href="charts/">排行榜</a>
 							</li>
 						
 							<li class="dropdown w3_megamenu-fw">
