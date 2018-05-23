@@ -281,7 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<p class="info" ><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;没有字段</p>
 								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;</p>
 								<p class="info"><strong>简介</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${movie.getMovie_summary() }</p>
-								<p class="info"><strong>时长</strong>:&nbsp;&nbsp;&nbsp; &nbsp; 138分钟</p>
+								<p class="info"><strong>时长</strong>:&nbsp;&nbsp;&nbsp; &nbsp; ${movie.time}分钟</p>
 							</div>
 			</div>
 		</div>
@@ -315,7 +315,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <!-- Main component for a primary marketing message or call to action -->
       <ul class="nav nav-tabs responsive hidden-xs hidden-sm" id="myTab">
         <li class="test-class active"><a class="deco-none misc-class" href=""> 概要</a></li>
-        <li class="test-class active"><a class="deco-none misc-class" href="./gotosingle?id=5">评论</a></li>
+        <li class="test-class active"><a class="deco-none misc-class" href="./gotosingle?id=${movie.movie_id}">评论</a></li>
       </ul>
 
       <div class="tab-content responsive hidden-xs hidden-sm">

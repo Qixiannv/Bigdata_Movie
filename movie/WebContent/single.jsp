@@ -271,8 +271,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 						
 						<form action = "/movie/leave_comment" method = "get">
-							<input type = "text" style="display:none" name = "user_id" value = "1">
-							<input type = "text" style="display:none" name = "movie_id" value = "1">
+							<input type = "text" style="display:none" name = "user_id" value = "${user.user_id}">
+							<input type = "text" style="display:none" name = "movie_id" value = "${movie.movie_id}">
 							<textarea type="text" name = "comment_text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">输入你想要提交的内容。。。</textarea>
 							<input type = "submit" value="提交">
 						</form>
