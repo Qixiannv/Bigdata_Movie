@@ -111,18 +111,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<!-- 顶部右侧登录区域  -->
 				<a href="#">欢迎登录：</a>	
-			    	  <button class="btn btn-primary" data-toggle="modal" >  	
-						<a href="movie-personal.jsp">
-						<c:if test="${! empty  user.user_id }" >				           
-                			 ${user.username }               
+			    	  <c:if test="${! empty  user.user_id }" >
+						 <button class="btn btn-primary" data-toggle="modal" >  		           
+                			 <a href="movie-personal.jsp">
+                			 ${user.username }   
+                			 </a>  
+                		 </button>        
+                		</c:if>              		
+               	    	<c:if test="${empty  user.user_id }" >	
+               	    	 <button class="btn btn-primary" data-toggle="modal" onclick="displayDate()">  
+               	    	    <a>			           
+                			<td>未登录</td> 
+                			</a>  
+                		 </button>           
                 		</c:if>
-                		</a>	
-                		<a href="index-loading.jsp">
-               	    	<c:if test="${empty  user.user_id }" >				           
-                			<td>未登录</td>              
-                		</c:if>
-                		</a>
-                	</button>
+                		
                 
                 <!-- 以下删除 -->
 				<!-- 弹出的登录注册的小页面-->				
@@ -244,7 +247,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!-- 以上删除 -->	
 				<script>
+				function displayDate()
+				{
 					$('#myModal').modal('show');
+				}	
 				</script>
 			</div>
 		
