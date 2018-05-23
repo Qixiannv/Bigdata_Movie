@@ -443,6 +443,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					api = $.Jcrop('#cutimg', {
 					    setSelect: [ 20, 20, 200, 200 ],
 					    aspectRatio: 1,
+					    boxWidth:400,
 					    onSelect: updateCoords,
 					    onChange:updateCoords
 					});
