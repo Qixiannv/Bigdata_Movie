@@ -7,6 +7,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import com.front.actor.service.ActorServiceImpl;
+import com.front.movie.service.MovieServiceImpl;
 import com.front.user.dao.UserDaoImp;
 import com.front.user.entity.User;
 
@@ -14,14 +16,22 @@ import com.front.user.entity.User;
 public class UserImp {
 	@Resource
 	private UserDaoImp userRegisterDaoImp;
+	
+	@Resource
+	private MovieServiceImpl msi;
+	@Resource
+	private ActorServiceImpl asi;
 	/**
 	 * 用户注册
 	 * @param u
 	 * @return 主页
 	 * @throws Exception
 	 */
-	public String RegisterUser(User u)throws Exception{
+	public String RegisterUser(User u,HttpSession session,HttpServletRequest request)throws Exception{
 		this.userRegisterDaoImp.UserRegister(u);
+		session.setAttribute("user", u);
+		request.setAttribute("movielist", this.msi.searchAllMovie());
+		request.setAttribute("actorlist", this.asi.findActors());
 		return "index";
 	}
 	/**
@@ -37,7 +47,8 @@ public class UserImp {
 		User u=this.userRegisterDaoImp.Userlogin(email);
 			if(password.equals(u.getPassword())){
 				session.setAttribute("user", u);
-				
+				request.setAttribute("movielist", this.msi.searchAllMovie());
+				request.setAttribute("actorlist", this.asi.findActors());
 				return "index";
 			}else{
 				return "cuowu";

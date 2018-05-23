@@ -30,8 +30,8 @@ public class UserController {
 	 * 
 	 */
 	@RequestMapping("/UserRegisterController")
-	public String UserRegister(User u)throws Exception{
-		return this.userRegisterImp.RegisterUser(u);
+	public String UserRegister(User u,HttpSession session,HttpServletRequest request)throws Exception{
+		return this.userRegisterImp.RegisterUser(u,session,request);
 		
 	}
 	/**
