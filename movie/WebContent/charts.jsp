@@ -8,13 +8,34 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+
+<%
+
+    String path = request.getRequestURI();
+
+    String basePath = request.getScheme() + "://"
+
+            + request.getServerName() + ":" + request.getServerPort()
+
+            + path;
+
+%>
+
+<base href="<%=basePath%>">
+
 <html>
 <head>
-<title>My Show a Entertainment Category Flat Bootstarp responsive Website Template | Celebrities :: w3layouts</title>
+
+
+
+
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- Custom Theme files -->
+<title>My Show a Entertainment Category Flat Bootstarp responsive Website Template | Celebrities :: w3layouts</title>
+
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- Custom Theme files -->
@@ -556,15 +577,15 @@ $('#myModal').modal('no');
 	</ol>
 		<div class="featured">
 					<ul style="position: relative;left: 25px;top:-50px">
-					<c:forEach items="${movie }" var="m">
+					<c:forEach items="${movie }" var="m" varStatus="status">
 						<li>
 							<div class="f-movie">
-								<h4>[NO.1]</h4>
+								<h4>[NO.${status.index+1 }</h4>
 								<div class="f-movie-img">
 									<a href="./moviesingle?id=${m.getMovie_id() }"><img src="${m.getMovie_pic() }" alt="${m.getMovie_name() }" /></a>
 								</div>
 								<div class="f-movie-name">
-									<a>片名一</a>
+									<a>${m.getMovie_name() }</a>
 									<p>评分：${m.getRate() }</p>
 								</div>
 								<div class="f-buy-tickets">
