@@ -298,15 +298,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="active"><a href="#">主页</a></li>
 							
 							<li class="dropdown w3_megamenu-fw">
-							<a href="movie-single.jsp" >电影</a>
+							<a href="movielist" >电影</a>
 							</li>
 							
 							<li class="dropdown w3_megamenu-fw">
-							<a href="blog.jsp"> 影评</a>
+							<a href="blog.jsp">影评</a>
 							</li>
 						
 							<li class="dropdown w3_megamenu-fw">
-							<a href="actors.jsp"> 演员</a>
+							<a href="show_actor"> 演员</a>
 							</li>
 							
 						</ul>
