@@ -86,24 +86,142 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<!-- 顶部右侧登录区域  -->
 				<a href="#">欢迎登录：</a>	
-			    	  <button class="btn btn-primary" data-toggle="modal" >  	
-						<a href="movie-personal.jsp">
-						<c:if test="${! empty  user.user_id }" >				           
-                			 ${user.username }               
+			    	  	<c:if test="${! empty  user.user_id }" >
+						 <button class="btn btn-primary" data-toggle="modal" >  		           
+                			 <a href="movie-personal.jsp">
+                			 ${user.username }   
+                			 </a>  
+                		 </button>        
+                		</c:if>              		
+               	    	<c:if test="${empty  user.user_id }" >	
+               	    	 <button class="btn btn-primary" data-toggle="modal" onclick="displayDate()">  
+               	    	    <a>			           
+                			<td>未登录</td> 
+                			</a>  
+                		 </button>           
                 		</c:if>
-                		</a>	
-                		<a href="index-loading.jsp">
-               	    	<c:if test="${empty  user.user_id }" >				           
-                			<td>未登录</td>              
-                		</c:if>
-                		</a>
-                	</button>
-                
-                <!-- 以下删除 -->
-			
-				<!-- 以上删除 -->	
-				<script>
+                		<!-- 弹出的登录注册的小页面-->				
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								<h4 class="modal-title" id="myModalLabel">立即登录</h4>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-8"
+										style="border-right: 1px dotted #C2C2C2; padding-right: 30px;">
+										<!-- Nav tabs -->
+										<ul class="nav nav-tabs">
+											<li class="active"><a href="#Login" data-toggle="tab">登录</a></li>
+											<li><a href="#Registration" data-toggle="tab">注册</a></li>
+										</ul>
+										<!--登录 -->
+										<div class="tab-content">
+											<div class="tab-pane active" id="Login">
+												<form role="form" class="form-horizontal" action="./UserLoginController" method="post">
+													<div class="form-group">
+														<label for="email" class="col-sm-2 control-label">Email</label>
+														<div class="col-sm-10">
+															<input type="text" class="form-control" id="email" name="email" placeholder="email" />
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="exampleInputPassword1" class="col-sm-2 control-label"> 密码</label>
+														<div class="col-sm-10">
+															<input type="password" class="form-control" id="password" name="password" placeholder="password" />
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-2"></div>
+														<div class="col-sm-10">
+														    <input type="submit" value="登录">
+															<!--button type="submit" class="btn btn-primary btn-sm">登录</button-->
+															<a href="javascript:;">忘记密码?</a>
+														</div>
+													</div>
+												</form>
+											</div>
+											<!-- 注册 -->
+											<div class="tab-pane" id="Registration">
+												<form role="form" class="form-horizontal" action="/movie/UserRegisterController" method="post">
+													<div class="form-group">
+														<label for="email" class="col-sm-2 control-label">
+															姓名</label>
+														<div class="col-sm-10">
+															<div class="row">
+																<div class="col-md-3">
+																	<select class="form-control">
+																		<option>男</option>
+																		<option>女</option>
+																	</select>
+																</div>
+																<div class="col-md-9">
+																	<input type="text" id="username"
+																		name="username"  />
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="email" class="col-sm-2 control-label">
+															Email</label>
+														<div class="col-sm-10">
+															<input type="text" id="email" name="email"
+																 />
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="mobile" class="col-sm-2 control-label">
+															Mobile</label>
+														<div class="col-sm-10">
+															<input type="text" id="phone"  name="phone"
+																 />
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="password" class="col-sm-2 control-label">
+															Password</label>
+														<div class="col-sm-10">
+															<input type="password" id="password"  name="password"
+																 />
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-2"></div>
+														<div class="col-sm-10">
+															<input type="submit" value="注册">
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div id="OR" class="hidden-xs">OR</div>
+									</div>
+									<div class="col-md-4">
+										<div class="row text-center sign-with">
+											<div class="col-md-12">
+												<h3 class="other-nw">其他登录方式</h3>
+											</div>
+											<div class="col-md-12">
+												<div class="btn-group btn-group-justified">
+													<a href="#" class="btn btn-primary">手机登录</a> <a href="#"
+														class="btn btn-danger"> QQ</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					<script>
+				function displayDate()
+				{
 					$('#myModal').modal('show');
+				}	
 				</script>
 			</div>
 		
@@ -152,20 +270,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div id="defaultmenu" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
 						
+							<li class="dropdown w3_megamenu-fw"><a href="indexshow">主页</a></li>
+							
 							<li class="dropdown w3_megamenu-fw">
-							<a href="movie-single.jsp" >主页</a>
+							<a href="movielist" >电影</a>
 							</li>
 							
 							<li class="dropdown w3_megamenu-fw">
-							<a href="movie-single.jsp" >电影</a>
-							</li>
-							
-							<li class="dropdown w3_megamenu-fw">
-							<a href="blog.jsp"> 影评</a>
+							<a href="charts/">影评</a>
 							</li>
 						
 							<li class="dropdown w3_megamenu-fw">
-							<a href="actors.jsp"> 演员</a>
+							<a href="show_actor"> 演员</a>
 							</li>
 							
 						</ul>

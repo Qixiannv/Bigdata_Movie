@@ -295,14 +295,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div id="defaultmenu" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
 						
-							<li class="active"><a href="#">主页</a></li>
+							<li class="active"><a href="indexshow">主页</a></li>
 							
 							<li class="dropdown w3_megamenu-fw">
 							<a href="movielist" >电影</a>
 							</li>
 							
 							<li class="dropdown w3_megamenu-fw">
-							<a href="blog.jsp">影评</a>
+							<a href="charts/">影评</a>
 							</li>
 						
 							<li class="dropdown w3_megamenu-fw">

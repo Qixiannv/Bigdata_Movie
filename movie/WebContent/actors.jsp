@@ -214,7 +214,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- 面包屑标签-->
 
 	<ol class="breadcrumb">
-			  <li><a href="index.html">首页</a></li>
+			  <li><a href="indexshow">首页</a></li>
 			  <li class="active">演员介绍</li>
 	</ol>
 
