@@ -559,10 +559,10 @@ $('#myModal').modal('no');
 				<c:forEach items = "${movies}" var = "m">
 					<div class="person-grid"style="width: 1080px;">
 					<div class="person-img"style="padding-left: 40px;padding-top: 15px;">
-						<a href="gotosingle?id=${m.movie_id}"><img src="${m.movie_pic}" title="actor"style="width: 130px;height: 165px"></a>
+						<a href="moviesingle?id=${m.movie_id}"><img src="${m.movie_pic}" title="actor"style="width: 130px;height: 165px"></a>
 					</div>
 					<div class="person-details"style="width: 780px;">
-						<a href="gotosingle?id=${m.movie_id}">${m.movie_name}</a>
+						<a href="moviesingle?id=${m.movie_id}">${m.movie_name}</a>
 							<p class="info"><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;张译，杜江，黄景瑜</p>
 								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;动作、剧情、战争</p>
 								<p class="info"><strong>简介</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${m.movie_summary}</p>
