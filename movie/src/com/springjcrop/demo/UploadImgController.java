@@ -4,6 +4,7 @@ import java.io.File;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +23,7 @@ public class UploadImgController {
 	
 	@RequestMapping(value = "/uploadHeadImage",method = RequestMethod.POST)
     public String uploadHeadImage(
-            HttpServletRequest request,
+            HttpServletRequest request,HttpSession session,
             @RequestParam(value = "x") String x,
             @RequestParam(value = "y") String y,
             @RequestParam(value = "h") String h,
@@ -63,6 +64,10 @@ public class UploadImgController {
                 request.getSession().setAttribute("imgCut",resourcePath + saveName+"_cut.jpg");//成功之后显示用
             }
         }
+        User u=(User)request.getSession().getAttribute("user");
+        int user_id=u.getUser_id();
+        User user=this.userRegisterImp.UserSelect(user_id);
+		session.setAttribute("user", user);
         return "movie-personal";
     }
 
