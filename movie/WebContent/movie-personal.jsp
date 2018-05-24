@@ -337,14 +337,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="faceinfor" style="width:700px">
 			<span class="facename">${user.username }</span><br/>
 			<div  style="width:700px">
-				<form action="SignatureUpdate" method="post">
-				<textarea id="mytext"  class="form-control" name="signature" placeholder="${user.signature } " rows="5"  style="width:500px;float:left;"></textarea>
+			  <div style="width:500px;height:114px;float:left;font-weight:900;font-size:30px;font-family:KaiTi;color:#191970">
+			   ${user.signature } 
+			  </div>
+			   <!-- textarea  class="form-control" name="signature" placeholder="${user.signature } " rows="5"  style="width:500px;float:left;opacity:0"></textarea-->
+			   
+			   <div class="modal fade" id="mytext" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+					<form action="SignatureUpdate" method="post" >
+						<textarea  class="form-control" name="signature" placeholder="${user.signature } " rows="5"  style="width:500px;float:left;margin:auto 0;"></textarea>
+					    <button  class="faceton" style="width:200px;float:right;position: relative;top:30px">
+			                                确认</button>
+					</form>
+					</div>
+				</div>
+			   
 			    <button class="faceton"   style="width:200px;float:right;  position: relative;left: 30px;top:10px"><a class="facea" href="infor.jsp" >编辑个人资料</a></button>
 			    <button   onclick="displayText()" class="faceton" style="width:200px;float:right;position: relative;left: 30px;top:30px">
-			          提交签名信息</button>
-				</form>
+			          修改签名信息</button>
+				
 			</div>
-			
+			<script>
+				function displayText()
+				{
+					$('#mytext').modal('show');
+				}	
+				</script>
 		</div>
 	</div>
 		<div class="article-left">
