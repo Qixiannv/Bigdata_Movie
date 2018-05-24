@@ -333,7 +333,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<div class="m-single-article">
 	<div class="face">
-		<img class="facepic"src="<%=request.getContextPath()%>${imgCut}" width="160" height="160">
+		<img class="facepic"src="${user.avatar}" width="160" height="160">
 		<div class="faceinfor" style="width:700px">
 			<span class="facename">${user.username }</span><br/>
 			<div  style="width:700px">
