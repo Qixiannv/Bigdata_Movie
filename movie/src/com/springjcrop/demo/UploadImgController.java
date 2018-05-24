@@ -31,7 +31,7 @@ public class UploadImgController {
     ) throws Exception{
         System.out.println("==========Start=============");
         String realPath = request.getSession().getServletContext().getRealPath("/");
-        String resourcePath = "\\upload\\";
+        String resourcePath = "\\images\\";
         if(imageFile!=null){
             if(FileUploadUtil.allowUpload(imageFile.getContentType())){
                 String fileName = FileUploadUtil.rename(imageFile.getOriginalFilename());
@@ -56,7 +56,7 @@ public class UploadImgController {
                 System.out.println("==========imageCutEnd=============");
               User u=(User)request.getSession().getAttribute("user");
               int user_id=u.getUser_id();
-              this.userRegisterImp.AvatarUpdate(dir+ saveName+"_cut.jpg", user_id);
+              this.userRegisterImp.AvatarUpdate("images/"+ saveName+"_cut.jpg", user_id);
                 
                 
                 request.getSession().setAttribute("imgSrc", resourcePath+ saveName+"_src.jpg");//成功之后显示用
