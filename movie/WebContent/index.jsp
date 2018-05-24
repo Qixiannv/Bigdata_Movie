@@ -116,7 +116,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						 <button class="btn btn-primary" data-toggle="modal" >  		            
                 			<td style="font-weight:900;font-size: 100%;color:white;"> ${user.username }  <td> 	 
                 		 </button>  
-                	     </a>      
+                	     </a>
+                	     <a href = "remove_user">注销</a>      
                 		</c:if>              		
                	    	<c:if test="${empty  user.user_id }" >	
                	    	 <button class="btn btn-primary" data-toggle="modal" onclick="displayDate()">  		           
