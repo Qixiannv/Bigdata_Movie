@@ -372,7 +372,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<c:forEach items = "${actor.actorCommentSet}" var = "a">
 							<div class="comment">
 							<div class="client">
-								<img src="${a.user.avatar}" alt="">
+								<img src="${a.user.avatar}" alt="" style = "width : 80px;height : 80px">
 							</div>
 							<div class="client-message">
 								<p><a href="#">${a.user.username}</a><i class="fa fa-calendar"></i>${a.comment_time}</p>
@@ -382,29 +382,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						</c:forEach>
 						
-						<div class="comment">
-							<div class="client">
-								<img src="images/c1.jpg" alt="">
-							</div>
-							<div class="client-message">
-								<p><a href="#">john doe</a><i class="fa fa-calendar"></i>2 hours ago</p>
-								<h6>莱昂纳多保持着前进的动力，他做到了角色在情感和心理上的真实化表演，无论它是如何的丑陋，幼稚或是令人费解。</h6>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="comment">
-							<div class="client">
-								<img src="images/c2.jpg" alt="">
-							</div>
-							<div class="client-message">
-								<p><a href="#">Allon poe</a><i class="fa fa-calendar"></i>6 hours ago</p>
-								<h6>莱昂纳多作为一个演员，颜值真的无可挑剔，且电影的豆瓣评分均分超过7.5分，这对一个演员而言已经很了不起了。</h6>
-							</div>
-							<div class="clearfix"></div>
-						</div>
+						
 						<form action = "/movie/actor_comment" method = "get">
-							<input type = "text" style="display:none" name = "actor_id" value = "1">
-							<input type = "text" style="display:none" name = "user_id" value = "1">
+							<input type = "text" style="display:none" name = "actor_id" value = "${actor.actor_id}">
+							<input type = "text" style="display:none" name = "user_id" value = "${user.user_id}">
 							<textarea type="text" name = "comment_text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">Your comment...</textarea>
 							<input type = "submit" value="submit">
 						</form>

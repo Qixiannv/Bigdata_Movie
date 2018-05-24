@@ -376,7 +376,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<c:forEach items="${movie.movieCommentSet}" var = "p">
 							<div class="comment">
 							<div class="client">
-								<img src="${p.user.avatar}" alt="">
+								<img src="${p.user.avatar}" alt="" style = "width : 80px;height : 80px">
 							</div>
 							<div class="client-message">
 								<p><a href="#">${p.user.username}</a><i class="fa fa-calendar"></i>${p.comment_time}</p>
