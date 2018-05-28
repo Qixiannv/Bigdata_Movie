@@ -264,13 +264,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- 搜索功能？ -->
 				<div class="search">
 					<div class="search2">
-						<form>
+						<form action = "search_movie">
 							<i class="fa fa-search"></i> 
 							<input type="text"
 								   value="你可以查询电影、演员等"
+								   name = "name";
 								   onfocus="this.value = '';"
 								   onblur="if (this.value == '') {this.value = 'Search for a movie, play, event, sport or more';}" 
 						    />
+						    <input type="submit" value="搜索">
 						</form>
 					</div>
 				</div>
@@ -399,7 +401,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h4>本周耻辱柱</h4>
 								<c:forEach items="${movielist }" var="p">
 								<ul class="mov_list">
-									<li>NO.1</li>
+									<li></li>
 									<li><a href="./gotosingle?id=${p.movie_id}">${p.movie_name}</a></li>
 								</ul>
 								</c:forEach>
@@ -635,6 +637,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<div class="copy-rights text-center">
 		<p>
+			唯一指定邮箱：248207330@qq.com
 			© 2018 My Show | Design by  <a
 				href="#">七仙女</a>
 		</p>

@@ -431,8 +431,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 	<div class="copy-rights text-center">
 		<p>
+		    
 			© 2018 My Show | Design by  <a
 				href="#">七仙女</a>
+				
 		</p>
 	</div>
 	
