@@ -18,7 +18,7 @@ public class MovieSearchController {
 		
 		request.setAttribute("searchresult", this.mssi.movieSearch(name));
 		
-		return "test";
+		return "select-movie";
 	}
 	
 }
