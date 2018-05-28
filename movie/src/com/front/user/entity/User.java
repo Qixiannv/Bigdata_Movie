@@ -1,16 +1,23 @@
 package com.front.user.entity;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
+
+import com.front.movie.entity.MovieComment;
+import com.front.movie.entity.MovieType;
 
 @Entity
 @Table(name="user")
@@ -28,6 +35,15 @@ public class User {
 	private String gender;
 	private String signature;
 	
+	private Set type = new HashSet<MovieType>();
+	@OneToMany(mappedBy="user", targetEntity=MovieComment.class,
+			cascade=CascadeType.ALL)
+	public Set getType() {
+		return type;
+	}
+	public void setType(Set type) {
+		this.type = type;
+	}
 	@Id
 	@GeneratedValue(generator="user_id")
 	@GenericGenerator(name="user_id",strategy="native")
