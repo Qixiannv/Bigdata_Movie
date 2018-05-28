@@ -21,6 +21,7 @@ import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.front.movie.entity.Movie;
+import com.front.movie.entity.MovieAndActor;
 import com.front.movie.entity.MovieComment;
 
 @Entity
@@ -31,6 +32,7 @@ public class Actor {
 	private String actor_pic;
 	private String actor_summary;
 	
+	private Set actor_movieSet = new HashSet<MovieAndActor>();
 	private Set actorCommentSet = new HashSet<ActorComment>();
 	
 
@@ -47,13 +49,20 @@ public class Actor {
 		
 	}
 
-	public Actor(Integer actor_id, String actor_name, String actor_pic, String actor_summary) {
+	
+	public Actor(Integer actor_id, String actor_name, String actor_pic, String actor_summary, Set actor_movieSet,
+			Set actorCommentSet) {
 		super();
 		this.actor_id = actor_id;
 		this.actor_name = actor_name;
 		this.actor_pic = actor_pic;
 		this.actor_summary = actor_summary;
+		this.actor_movieSet = actor_movieSet;
+		this.actorCommentSet = actorCommentSet;
 	}
+
+
+
 	public void setActor_id(Integer actor_id) {
 		this.actor_id = actor_id;
 	}
@@ -88,5 +97,19 @@ public class Actor {
 		this.actorCommentSet = actorCommentSet;
 	}
 
+
+	@OneToMany(mappedBy="actor", targetEntity=MovieAndActor.class,
+			cascade=CascadeType.ALL)
+	public Set getActor_movieSet() {
+		return actor_movieSet;
+	}
+
+
+
+	public void setActor_movieSet(Set actor_movieSet) {
+		this.actor_movieSet = actor_movieSet;
+	}
+
+	
 
 }

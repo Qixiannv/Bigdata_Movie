@@ -272,7 +272,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								   onfocus="this.value = '';"
 								   onblur="if (this.value == '') {this.value = 'Search for a movie, play, event, sport or more';}" 
 						    />
-						    <input type="submit" value="搜索">
+						    <input type="submit" value="搜索"/>
 						</form>
 					</div>
 				</div>

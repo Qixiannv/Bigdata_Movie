@@ -34,6 +34,8 @@ public class Movie {
 	
 	private Integer movie_type;
 	
+	private Set actor_movieSet = new HashSet<MovieAndActor>();
+	
 	private Date date;
 	private Integer time;
 	private Float rate;
@@ -41,17 +43,24 @@ public class Movie {
 	
 	private Set moviecCommentSet = new HashSet<MovieComment>();
 	public Movie() {}
-	public Movie(String movie_name, String movie_summary, String movie_pic, Integer movie_type,Date date,Integer time,Float rate) {
+	
+	
+	public Movie(int movie_id, String movie_name, String movie_summary, String movie_pic, Integer movie_type,
+			Set actor_movieSet, Date date, Integer time, Float rate, Set moviecCommentSet) {
 		super();
+		this.movie_id = movie_id;
 		this.movie_name = movie_name;
 		this.movie_summary = movie_summary;
 		this.movie_pic = movie_pic;
 		this.movie_type = movie_type;
+		this.actor_movieSet = actor_movieSet;
 		this.date = date;
 		this.time = time;
 		this.rate = rate;
+		this.moviecCommentSet = moviecCommentSet;
 	}
-	
+
+
 	@Id
 	@GeneratedValue(generator="mid")
 	@GenericGenerator(name="mid",strategy="native")
@@ -125,6 +134,14 @@ public class Movie {
 	
 	public void setRate(Float rate) {
 		this.rate = rate;
+	}
+	@OneToMany(mappedBy="movie", targetEntity=MovieAndActor.class,
+			cascade=CascadeType.ALL)
+	public Set getActor_movieSet() {
+		return actor_movieSet;
+	}
+	public void setActor_movieSet(Set actor_movieSet) {
+		this.actor_movieSet = actor_movieSet;
 	}
 
 	

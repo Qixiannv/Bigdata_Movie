@@ -397,28 +397,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-4 blog-categories">
 			<h3 class="post">参演电影</h3>
 			
+			<c:forEach items = "${actor.actor_movieSet}" var = "a">
+				<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+					<p><a href="./gotosingle?id=${a.movie.movie_id}">${a.movie.movie_name}</a></p>
+					<img src="${a.movie.movie_pic}"width="70"height="100">
+				</div>
+			</c:forEach>
 			
-			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
-			<p><a href="./gotosingle?id=6">不一样的天空</a></p>
-			<img src="images/lee1.jpg"width="70"height="100"></div>
-
-			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
-			<p><a href="./gotosingle?id=6">罗密欧与朱丽叶</a></p>
-			<img src="images/lee2.jpg"width="70"height="100"></div>			
-			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
-			<p><a href="./gotosingle?id=6">不一样的天空</a></p>
-			<img src="images/lee1.jpg"width="70"height="100"></div>
-
-			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
-			<p><a href="./gotosingle?id=6">罗密欧与朱丽叶</a></p>
-			<img src="images/lee2.jpg"width="70"height="100"></div>			
-			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
-			<p><a href="./gotosingle?id=6">不一样的天空</a></p>
-			<img src="images/lee1.jpg"width="70"height="100"></div>
-
-			<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
-			<p><a href="./gotosingle?id=6">罗密欧与朱丽叶</a></p>
-			<img src="images/lee2.jpg"width="70"height="100"></div>
+			
 		</div>
 				<div class="clearfix"></div>
 	</div>
