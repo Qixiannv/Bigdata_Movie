@@ -39,6 +39,7 @@ public class Movie {
 	private Integer time;
 	private Float rate;
 	
+	
 	private Set moviecCommentSet = new HashSet<MovieComment>();
 	public Movie() {}
 	public Movie(String movie_name, String movie_summary, String movie_pic, Integer movie_type,Date date,Integer time,Float rate) {
