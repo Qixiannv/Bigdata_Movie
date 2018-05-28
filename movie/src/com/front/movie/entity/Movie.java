@@ -40,15 +40,6 @@ public class Movie {
 	private Integer time;
 	private Float rate;
 	
-	private Set type = new HashSet<MovieType>();
-	@OneToMany(mappedBy="movie", targetEntity=MovieComment.class,
-			cascade=CascadeType.ALL)
-	public Set getType() {
-		return type;
-	}
-	public void setType(Set type) {
-		this.type = type;
-	}
 	
 	private Set moviecCommentSet = new HashSet<MovieComment>();
 	public Movie() {}
