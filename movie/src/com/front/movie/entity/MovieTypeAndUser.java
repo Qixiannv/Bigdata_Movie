@@ -27,14 +27,14 @@ public class MovieTypeAndUser {
 	}
 
 	@Id
-	@GeneratedValue(generator="mid")
-	@GenericGenerator(name="mid",strategy="native")
+	@GeneratedValue(generator="uid")
+	@GenericGenerator(name="uid",strategy="native")
 	@Column(name="tu_id")
 	public Integer getTu_id() {
 		return tu_id;
 	}
 
-	public void setTm_id(Integer tu_id) {
+	public void setTu_id(Integer tu_id) {
 		this.tu_id = tu_id;
 	}
 
