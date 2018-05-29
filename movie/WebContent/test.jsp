@@ -8,12 +8,11 @@
 </head>
 <body>
 	
-	<c:forEach items = "${searchresult}" var = "a">
-		<h1>${a.movie_name}</h1>
-	</c:forEach>
-	<form action="show_actor" method="get">
-	<input type="submit" value="tijiao">
-		
+	
+	<form action="change_movie_name" method="get">
+	<input type = "text" name = "id"/>
+	<input type = "text" name = "name"/>
+	<input type = "submit">
 	</form>
 	
 </body>
