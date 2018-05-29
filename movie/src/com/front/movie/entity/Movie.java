@@ -32,8 +32,18 @@ public class Movie {
 	
 	private String movie_pic;
 	
-	private Integer movie_type;
+	private Set<MovieType> movie_typeSet = new HashSet<MovieType>();
 	
+	@OneToMany(mappedBy="movie", targetEntity=MovieComment.class,
+			cascade=CascadeType.ALL)
+	public Set<MovieType> getMovie_typeSet() {
+		return movie_typeSet;
+	}
+
+
+	public void setMovie_typeSet(Set<MovieType> movie_typeSet) {
+		this.movie_typeSet = movie_typeSet;
+	}
 	private Set actor_movieSet = new HashSet<MovieAndActor>();
 	
 	private Date date;
@@ -41,23 +51,23 @@ public class Movie {
 	private Float rate;
 	
 	
-	private Set moviecCommentSet = new HashSet<MovieComment>();
+	private Set movieCommentSet = new HashSet<MovieComment>();
 	public Movie() {}
 	
 	
-	public Movie(int movie_id, String movie_name, String movie_summary, String movie_pic, Integer movie_type,
-			Set actor_movieSet, Date date, Integer time, Float rate, Set moviecCommentSet) {
+	public Movie(int movie_id, String movie_name, String movie_summary, String movie_pic, Set movie_type,
+			Set actor_movieSet, Date date, Integer time, Float rate, Set movieCommentSet) {
 		super();
 		this.movie_id = movie_id;
 		this.movie_name = movie_name;
 		this.movie_summary = movie_summary;
 		this.movie_pic = movie_pic;
-		this.movie_type = movie_type;
+		this.movie_typeSet = movie_type;
 		this.actor_movieSet = actor_movieSet;
 		this.date = date;
 		this.time = time;
 		this.rate = rate;
-		this.moviecCommentSet = moviecCommentSet;
+		this.movieCommentSet = movieCommentSet;
 	}
 
 
@@ -95,20 +105,13 @@ public class Movie {
 		this.movie_pic = movie_pic;
 	}
 	
-	@Column(name="movie_type")
-	public Integer getMovie_type() {
-		return movie_type;
-	}
-	public void setMovie_type(Integer movie_type) {
-		this.movie_type = movie_type;
-	}
 	@OneToMany(mappedBy="movie", targetEntity=MovieComment.class,
 			cascade=CascadeType.ALL)
 	public Set getMovieCommentSet() {
-		return moviecCommentSet;
+		return movieCommentSet;
 	}
 	public void setMovieCommentSet(Set movieSet) {
-		this.moviecCommentSet = movieSet;
+		this.movieCommentSet = movieSet;
 	}
 	@Column(name="date")
 	public Date getDate() {

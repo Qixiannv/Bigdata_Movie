@@ -340,7 +340,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="m-single-article">
 		<div class="article-left">
 			<h3>${movie.getMovie_name() } <span> <i class="fa fa-heart"></i> 99%</span></h3>
-			<p><a class="m-green" href="#">标签位置</a></p>
+			<p><a class="m-green" href="editmovietype?id=${movie.getMovie_id() }">添加标签</a></p>
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
 				<div class="article-time-strip-left">

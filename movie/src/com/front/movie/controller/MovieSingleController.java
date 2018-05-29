@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.front.actor.service.ActorServiceImpl;
+import com.front.movie.dao.MovieTypeDaoImpl;
 import com.front.movie.entity.Movie;
+import com.front.movie.entity.MovieComment;
+import com.front.movie.entity.MovieType;
 import com.front.movie.service.MovieServiceImpl;
 
 @Controller
@@ -18,6 +21,8 @@ public class MovieSingleController {
 	private MovieServiceImpl msi;
 	@Resource
 	private ActorServiceImpl asi;
+	@Resource
+	private MovieTypeDaoImpl mtsi;
 
 	
 	//跳转页面
@@ -35,4 +40,23 @@ public class MovieSingleController {
 			
 			return "movie-single";
 			}
+		
+		@GetMapping("editmovietype")
+		public String editMovieType(HttpServletRequest request,@RequestParam("id") int id){
+			
+			request.setAttribute("movie",this.msi.findMovieById(id));
+			return "editmovietype";
+			
+		}
+		
+		@GetMapping("/addtype")
+		public String LeaveComment(HttpServletRequest request,@RequestParam("movie_id") int movie_id,@RequestParam("typename") String typename) throws Exception {
+	   		 MovieType mt = new MovieType();
+			 mt.setType_name(typename);
+			 mt.setMovie(this.msi.findMovieById(movie_id));
+			 this.mtsi.savaMovieType(mt);
+			 
+			return "redirect:/gotosingle?id="+movie_id;
+		}
+		
 }
