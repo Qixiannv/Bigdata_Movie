@@ -335,66 +335,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="person-grids">
 			<br/>
 			<div class="col-md-6 person-grids-left" style="width: 65%">
+			
+			<c:forEach items = "${searchresult}" var = "a">
 				<div class="person-grid">
 					<div class="person-img">
-						<a href="#"><img src="images/75x75.jpg"style="width: 100px;height: 120px" ></a>
+						<a href="/movie/gotosingle?id=${a.movie_id }"><img src="${a.movie_pic}"style="width: 100px;height: 120px" ></a>
 					</div>
 					<div class="person-details">
-						<a href="#">Lorem Ipsum</a>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+						<a href="/movie/gotosingle?id=${a.movie_id }">${a.movie_name}</a>
+						<p>${a.movie_summary}</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
-				<div class="person-grid">
-					<div class="person-img">
-						<a href="#"><img src="images/75x75.jpg" style="width: 100px;height: 120px"></a>
-					</div>
-					<div class="person-details">
-						<a href="#">Lorem Ipsum</a>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="person-grid">
-					<div class="person-img">
-						<a href="#"><img src="images/75x75.jpg" style="width: 100px;height: 120px"></a>
-					</div>
-					<div class="person-details">
-						<a href="#">Lorem Ipsum</a>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="person-grid">
-					<div class="person-img">
-						<a href="#"><img src="images/75x75.jpg" style="width: 100px;height: 120px"></a>
-					</div>
-					<div class="person-details">
-						<a href="#">Lorem Ipsum</a>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="person-grid">
-					<div class="person-img">
-						<a href="#"><img src="images/75x75.jpg" style="width: 100px;height: 120px"></a>
-					</div>
-					<div class="person-details">
-						<a href="#">Lorem Ipsum</a>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="person-grid">
-					<div class="person-img">
-						<a href="#"><img src="images/75x75.jpg" style="width: 100px;height: 120px"></a>
-					</div>
-					<div class="person-details">
-						<a href="#">Lorem Ipsum</a>
-						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
+			</c:forEach>
+			
+				
+					
 			</div>
 			<div class="col-md-6 person-grids-right"style="width:35%; padding-left: 50px; padding-top: 50px;">
 				<div style="">

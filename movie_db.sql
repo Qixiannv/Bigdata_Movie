@@ -41,11 +41,11 @@ CREATE TABLE `user` (
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
   `birthday` date DEFAULT NULL,
-  `avatar` varchar(40) DEFAULT NULL,
+  `avatar` varchar(100) DEFAULT NULL,
   `gender` varchar(4) DEFAULT NULL,
   `signature` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 #
 # Structure for the `actor_comment` table : 
@@ -62,7 +62,7 @@ CREATE TABLE `actor_comment` (
   KEY `actor_id` (`actor_id`),
   CONSTRAINT `actor_comment_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `actor_comment_fk1` FOREIGN KEY (`actor_id`) REFERENCES `actor` (`actor_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 
 #
 # Structure for the `movie` table : 
@@ -78,7 +78,7 @@ CREATE TABLE `movie` (
   `time` int(5) DEFAULT NULL,
   `rate` float(9,3) DEFAULT NULL,
   PRIMARY KEY (`movie_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 #
 # Structure for the `actor_movie` table : 
@@ -150,7 +150,7 @@ CREATE TABLE `movie_comment` (
   KEY `movie_id` (`movie_id`) USING BTREE,
   CONSTRAINT `movie_comment_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `movie_comment_ibfk_2` FOREIGN KEY (`movie_id`) REFERENCES `movie` (`movie_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 #
 # Data for the `actor` table  (LIMIT 0,500)
@@ -167,11 +167,11 @@ COMMIT;
 #
 
 INSERT INTO `user` (`user_id`, `email`, `phone`, `username`, `password`, `birthday`, `avatar`, `gender`, `signature`) VALUES 
-  (1,'11',11,'侵权','11',NULL,NULL,NULL,NULL),
-  (2,'123',123,'啊啊啊','123',NULL,NULL,NULL,NULL),
-  (3,'222',222,'111','222',NULL,NULL,NULL,NULL),
-  (4,'123',1,'烧烧烧','111',NULL,NULL,NULL,NULL),
-  (5,'123',233,'爆炸','333',NULL,NULL,NULL,NULL);
+  (1,'11',11,'侵权','11',NULL,'images/152757423198376776740_cut.jpg',NULL,'握力高'),
+  (12,'12345@123.com',421,'卡布达','123',NULL,'images/152714592174442976578_cut.jpg',NULL,'爆炸'),
+  (14,'111',123,'我是谁','123123',NULL,'images/152714594252866023413_cut.jpg',NULL,'我是这个小区最牛逼的人'),
+  (15,'abc@123.com',123,'杨永信','123',NULL,'images/152714596938149370799_cut.jpg',NULL,'丶点点\r\n'),
+  (16,'111@123.com',858585,'闫相垠','yxy15032',NULL,'images/152714674559428625868_cut.jpg',NULL,'我是好人');
 COMMIT;
 
 #
@@ -179,29 +179,10 @@ COMMIT;
 #
 
 INSERT INTO `actor_comment` (`actorcomment_id`, `user_id`, `actor_id`, `comment_text`, `comment_time`) VALUES 
-  (13,1,1,'啊','2018-05-17 08:44:16'),
-  (14,1,1,'很好','2018-05-17 08:45:20'),
-  (15,1,1,'很好','2018-05-17 08:46:52'),
-  (16,1,1,'啊','2018-05-17 08:55:02'),
-  (17,1,1,'AA','2018-05-17 08:57:28'),
-  (18,1,1,'去','2018-05-17 09:06:50'),
-  (19,1,1,'啊','2018-05-17 09:46:54'),
-  (20,1,1,'1','2018-05-17 09:49:48'),
-  (21,1,1,'啊','2018-05-17 09:57:27'),
-  (22,1,1,'很好','2018-05-17 09:59:45'),
-  (23,1,1,'啊','2018-05-17 10:01:04'),
-  (24,1,1,'12','2018-05-17 10:03:56'),
-  (25,1,1,'啊','2018-05-17 10:04:24'),
-  (26,1,1,'啊','2018-05-17 10:05:58'),
-  (27,1,1,'啊','2018-05-17 10:33:52'),
-  (28,1,1,'啊','2018-05-17 14:53:16'),
-  (29,1,1,'啊','2018-05-17 15:00:34'),
-  (30,1,1,'去','2018-05-17 15:41:09'),
-  (31,1,1,'啊','2018-05-17 15:41:38'),
-  (32,1,1,'1','2018-05-17 15:43:07'),
-  (33,1,1,'这种','2018-05-17 15:45:03'),
-  (34,1,1,'啊','2018-05-21 10:04:55'),
-  (35,1,1,'q1','2018-05-21 10:12:21');
+  (42,1,1,'老婆','2018-05-24 09:30:57'),
+  (43,1,2,'沙发','2018-05-24 09:31:13'),
+  (44,15,1,'rua','2018-05-24 14:01:46'),
+  (45,16,1,'楼上真恶心','2018-05-24 15:27:28');
 COMMIT;
 
 #
@@ -230,26 +211,10 @@ COMMIT;
 #
 
 INSERT INTO `movie_comment` (`comment_id`, `user_id`, `movie_id`, `comment_text`, `comment_time`) VALUES 
-  (1,NULL,1,'aaa','2018-05-14 08:41:01'),
-  (2,NULL,1,'good','2018-05-14 08:45:31'),
-  (3,1,1,'娃娃','2018-05-14 09:22:04'),
-  (4,1,1,'111','2018-05-15 16:33:20'),
-  (5,1,1,'我','2018-05-15 16:44:34'),
-  (6,1,1,'啊','2018-05-16 08:38:56'),
-  (7,1,1,'可以','2018-05-16 09:14:13'),
-  (8,1,1,'好好好','2018-05-16 11:14:39'),
-  (9,1,1,'去','2018-05-16 14:38:33'),
-  (10,1,1,'啊','2018-05-16 14:47:17'),
-  (11,1,1,'啊','2018-05-16 14:51:45'),
-  (12,1,1,'a1','2018-05-16 15:08:27'),
-  (13,1,1,'啊','2018-05-16 16:13:03'),
-  (14,1,1,'AA','2018-05-16 17:00:02'),
-  (15,1,1,'去','2018-05-17 08:56:05'),
-  (16,1,1,'啊','2018-05-17 09:14:21'),
-  (17,1,1,'啊','2018-05-17 09:37:50'),
-  (18,1,1,'13','2018-05-17 15:45:42'),
-  (19,1,1,'很好','2018-05-21 08:55:51'),
-  (20,1,1,'aa1','2018-05-22 14:30:44');
+  (28,1,1,'AA','2018-05-24 08:35:04'),
+  (40,15,1,'我觉得不行','2018-05-24 14:29:06'),
+  (41,16,1,'我觉得很好','2018-05-24 15:27:05'),
+  (42,1,2,'bruh','2018-05-28 10:08:42');
 COMMIT;
 
 
