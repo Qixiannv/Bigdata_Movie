@@ -16,8 +16,11 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
 
+import com.front.movie.entity.MovieAndActor;
 import com.front.movie.entity.MovieComment;
 import com.front.movie.entity.MovieType;
+import com.front.movie.entity.MovieTypeAndMovie;
+import com.front.movie.entity.MovieTypeAndUser;
 
 @Entity
 @Table(name="user")
@@ -35,15 +38,10 @@ public class User {
 	private String gender;
 	private String signature;
 	
-	private Set type = new HashSet<MovieType>();
-	@OneToMany(mappedBy="user", targetEntity=MovieComment.class,
-			cascade=CascadeType.ALL)
-	public Set getType() {
-		return type;
-	}
-	public void setType(Set type) {
-		this.type = type;
-	}
+	
+	private Set type_userSet = new HashSet<MovieTypeAndUser>();
+	
+	
 	@Id
 	@GeneratedValue(generator="user_id")
 	@GenericGenerator(name="user_id",strategy="native")
@@ -112,6 +110,18 @@ public class User {
 		this.signature = signature;
 	}
 	
+	
+	
+	@OneToMany(mappedBy="user", targetEntity=MovieTypeAndUser.class,
+			cascade=CascadeType.ALL)
+	public Set getType_userSet() {
+		return type_userSet;
+	}
+
+
+	public void setType_userSet(Set type_userSet) {
+		this.type_userSet = type_userSet;
+	}
 	
 	
 }

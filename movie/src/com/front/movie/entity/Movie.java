@@ -31,20 +31,9 @@ public class Movie {
 	private String movie_summary;
 	
 	private String movie_pic;
-	
-	private Set<MovieType> movie_typeSet = new HashSet<MovieType>();
-	
-	@OneToMany(mappedBy="movie", targetEntity=MovieComment.class,
-			cascade=CascadeType.ALL)
-	public Set<MovieType> getMovie_typeSet() {
-		return movie_typeSet;
-	}
-
-
-	public void setMovie_typeSet(Set<MovieType> movie_typeSet) {
-		this.movie_typeSet = movie_typeSet;
-	}
 	private Set actor_movieSet = new HashSet<MovieAndActor>();
+	
+	private Set type_movieSet = new HashSet<MovieTypeAndMovie>();
 	
 	private Date date;
 	private Integer time;
@@ -55,14 +44,13 @@ public class Movie {
 	public Movie() {}
 	
 	
-	public Movie(int movie_id, String movie_name, String movie_summary, String movie_pic, Set movie_type,
+	public Movie(int movie_id, String movie_name, String movie_summary, String movie_pic, 
 			Set actor_movieSet, Date date, Integer time, Float rate, Set movieCommentSet) {
 		super();
 		this.movie_id = movie_id;
 		this.movie_name = movie_name;
 		this.movie_summary = movie_summary;
 		this.movie_pic = movie_pic;
-		this.movie_typeSet = movie_type;
 		this.actor_movieSet = actor_movieSet;
 		this.date = date;
 		this.time = time;
@@ -145,6 +133,17 @@ public class Movie {
 	}
 	public void setActor_movieSet(Set actor_movieSet) {
 		this.actor_movieSet = actor_movieSet;
+	}
+
+	@OneToMany(mappedBy="movie", targetEntity=MovieTypeAndMovie.class,
+			cascade=CascadeType.ALL)
+	public Set getType_movieSet() {
+		return type_movieSet;
+	}
+
+
+	public void setType_movieSet(Set type_movieSet) {
+		this.type_movieSet = type_movieSet;
 	}
 
 	
