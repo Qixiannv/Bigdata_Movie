@@ -41,7 +41,6 @@
 				<value>com.front.movie.entity</value>
 				<value>com.front.user.entity</value>
 				<value>com.front.actor.entity</value>
-				<value>com.front.backstage.entity</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

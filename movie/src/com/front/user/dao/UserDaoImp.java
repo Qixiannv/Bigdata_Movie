@@ -1,7 +1,5 @@
 package com.front.user.dao;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 
 import org.hibernate.Session;
@@ -98,10 +96,6 @@ public class UserDaoImp {
 		 query.executeUpdate(); 
         session.getTransaction().commit();    
 	}
-	
-	public List<User> searchAllUser()throws Exception{
-		Query<User> query =this.sessionFactory.getCurrentSession().createQuery("from User");
-		return query.list();
-	}
+
 	
 }

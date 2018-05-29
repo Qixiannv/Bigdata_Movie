@@ -48,6 +48,20 @@ public class UserController {
 	return this.userRegisterImp.UserLogin(email,password,request,session);
 	}
 	
+	public String UserChange(MultipartFile uploadFile,HttpSession session,User u)throws Exception{
+		this.userRegisterImp.UserChange(u);
+		if(uploadFile.getSize()>0){
+			String filename=uploadFile.getOriginalFilename();
+			if(filename.endsWith("jpg")||filename.endsWith("gif")||filename.endsWith("png")){
+				String leftPath=session.getServletContext().getRealPath("/images");
+				File file =new File(leftPath,filename);
+				uploadFile.transferTo(file);
+			}else{
+				return "error.jsp";
+			}
+		}
+		return "";
+	}
 	/**
 	 *更改用户信息跳转
 	 * @param session

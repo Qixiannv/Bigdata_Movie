@@ -1,7 +1,5 @@
 package com.front.user.service;
 
-import java.util.List;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -83,9 +81,5 @@ public class UserImp {
 	}
 	public void SignatureUpdate(String signature,int user_id)throws Exception{
 		this.userRegisterDaoImp.SignatureUpdate(signature, user_id);
-	}
-	
-	public List<User>  searchAllUser()throws Exception {
-		 return this.userRegisterDaoImp.searchAllUser();
 	}
 }
