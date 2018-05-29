@@ -564,7 +564,7 @@ $('#myModal').modal('no');
 						<a href="#"><img src="${a.movie_pic }"style="width: 100px;height: 120px" ></a>
 					</div>
 					<div class="person-details">
-						<a href="/gotosingle?id=${a.movie_id}">${a.movie_name }</a>
+						<a href="/movie/gotosingle?id=${a.movie_id}">${a.movie_name }</a>
 						<p>${a.movie_summary }</p>
 					</div>
 					<div class="clearfix"></div>
