@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.front.movie.service.MovieBackstageServiceImpl;
@@ -24,7 +25,7 @@ public class MovieBackstageController {
 	@GetMapping("delete_movie")
 	public String deleteMovie(@RequestParam("id") int movie_id) {
 		this.mbsi.deleteMovie(movie_id);
-		return "test";
+		return "redirect:/backstagemovielist";
 	}
 	
 	/**
@@ -36,10 +37,10 @@ public class MovieBackstageController {
 	 * @param time 电影时长
 	 * @param rate 电影评分
 	 */
-	@GetMapping("create_movie")
+	@RequestMapping("create_movie")
 	public String createMovie(@RequestParam("name") String movie_name,@RequestParam("summary") String movie_summary,@RequestParam("pic") String movie_pic,@RequestParam("time") Integer time,@RequestParam("rate") Float rate) {
 		this.mbsi.createMovie(movie_name, movie_summary, movie_pic, time, rate);
-		return "test";
+		return "redirect:/backstagemovielist";
 	}
 	
 	/**
