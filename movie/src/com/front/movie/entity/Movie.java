@@ -4,7 +4,6 @@ import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -17,6 +16,7 @@ import javax.persistence.Table;
 import javax.persistence.criteria.Order;
 
 import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.front.actor.entity.Actor;
@@ -94,8 +94,8 @@ public class Movie {
 		this.movie_pic = movie_pic;
 	}
 	
-	@OneToMany(mappedBy="movie", targetEntity=MovieComment.class,
-			cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="movie", targetEntity=MovieComment.class,fetch = FetchType.LAZY)
+	@Cascade(value = {CascadeType.SAVE_UPDATE, 	CascadeType.DELETE_ORPHAN,CascadeType.ALL})
 	public Set getMovieCommentSet() {
 		return movieCommentSet;
 	}
@@ -127,8 +127,8 @@ public class Movie {
 	public void setRate(Float rate) {
 		this.rate = rate;
 	}
-	@OneToMany(mappedBy="movie", targetEntity=MovieAndActor.class,
-			cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="movie", targetEntity=MovieAndActor.class,fetch = FetchType.LAZY)
+	@Cascade(value = {CascadeType.SAVE_UPDATE, 	CascadeType.DELETE_ORPHAN,CascadeType.ALL})
 	public Set getActor_movieSet() {
 		return actor_movieSet;
 	}
@@ -136,8 +136,8 @@ public class Movie {
 		this.actor_movieSet = actor_movieSet;
 	}
 
-	@OneToMany(mappedBy="movie", targetEntity=MovieTypeAndMovie.class,
-			cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="movie", targetEntity=MovieTypeAndMovie.class,fetch = FetchType.LAZY)
+	@Cascade(value = {CascadeType.SAVE_UPDATE, 	CascadeType.DELETE_ORPHAN,CascadeType.ALL})
 	public Set getType_movieSet() {
 		return type_movieSet;
 	}

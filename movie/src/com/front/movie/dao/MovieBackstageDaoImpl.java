@@ -27,7 +27,13 @@ public class MovieBackstageDaoImpl {
 	 * @param movie_id 需要删除的电影id
 	 */
 	public void deleteMovie(Integer movie_id) {
-		this.sessionFactory.openSession().createQuery("delete from Movie where movie_id ="+movie_id);
+		Session session = this.sessionFactory.openSession();
+		session.beginTransaction();
+		Query query = session.createQuery("delete Movie m where m.movie_id = ?");
+		query.setParameter(0, movie_id);
+		query.executeUpdate();
+		session.getTransaction().commit();
+		
 	}
 	
 	/**
@@ -63,6 +69,43 @@ public class MovieBackstageDaoImpl {
 		session.beginTransaction();
 		Query query = session.createQuery("update Movie m set m.movie_name = ? where m.movie_id = ?");
 		query.setParameter(0, name);
+		query.setParameter(1, movie.getMovie_id());
+		query.executeUpdate();
+		session.getTransaction().commit();
+		
+	}
+	
+	/**
+	 * 修改电影简介
+	 * @author 闫相垠
+	 * @param movie 电影
+	 * @param summary 简介
+	 */
+	@Transactional
+	public void changeMovieSummary(Movie movie,String summary) {
+		Session session = this.sessionFactory.openSession();
+		session.beginTransaction();
+		Query query = session.createQuery("update Movie m set m.movie_summary = ? where m.movie_id = ?");
+		query.setParameter(0, summary);
+		query.setParameter(1, movie.getMovie_id());
+		query.executeUpdate();
+		session.getTransaction().commit();
+		
+	}
+	
+	
+	/**
+	 * 修改电影时长
+	 * @author 闫相垠
+	 * @param movie 电影
+	 * @param time 时长
+	 */
+	@Transactional
+	public void changeMovieTime(Movie movie,Integer time) {
+		Session session = this.sessionFactory.openSession();
+		session.beginTransaction();
+		Query query = session.createQuery("update Movie m set m.time = ? where m.movie_id = ?");
+		query.setParameter(0, time);
 		query.setParameter(1, movie.getMovie_id());
 		query.executeUpdate();
 		session.getTransaction().commit();

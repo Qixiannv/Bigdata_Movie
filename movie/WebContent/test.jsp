@@ -12,7 +12,24 @@
 	<form action="change_movie_name" method="get">
 	<input type = "text" name = "id"/>
 	<input type = "text" name = "name"/>
-	<input type = "submit">
+	<input type = "submit" value = "改名">
+	</form>
+	
+	<form action="change_movie_summary" method="get">
+	<input type = "text" name = "id"/>
+	<input type = "text" name = "summary"/>
+	<input type = "submit" value = "改简介">
+	</form>
+	
+	<form action="change_movie_time" method="get">
+	<input type = "text" name = "id"/>
+	<input type = "text" name = "time"/>
+	<input type = "submit" value = "改时长">
+	</form>
+	
+	<form action="delete_movie" method="get">
+	<input type = "text" name = "id"/>
+	<input type = "submit" value = "删除电影">
 	</form>
 	
 </body>
