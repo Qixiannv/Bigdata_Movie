@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -100,20 +101,20 @@
     
     
     <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
-    <div class="sideMenu">
-      <h3 class="am-icon-flag"><em></em> <a href="#">商品管理</a></h3>
-        <ul>
-        <li><a href="productlist">商品列表</a></li>
-        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="">添加新商品</a></li>
-        <li><a href="">商品分类</a></li>
+     <div class="sideMenu">
+      <h3 class="am-icon-flag"><em></em> <a href="#">电影管理</a></h3>
+      <ul>
+        <li><a href="backstagemovielist">电影列表</a></li>
+        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="">添加新电影</a></li>
+        <li><a href="">电影分类</a></li>
       </ul>
       <h3 class="am-icon-cart-plus"><em></em> <a href="#"> 订单管理</a></h3>
-     <ul>
+      <ul>
         <li><a href="OD">订单列表</a></li>
       </ul>
       <h3 class="am-icon-users"><em></em> <a href="#">会员管理</a></h3>
       <ul>
-        <li><a href="userlist">会员列表 </a></li>
+        <li><a href="backstageuserlist">会员列表 </a></li>
       </ul>
       <h3 class="am-icon-volume-up"><em></em> <a href="#">信息通知</a></h3>
       <ul>
@@ -182,38 +183,107 @@
 <div class="admin-biaogelist">
 	
     <div class="listbiaoti am-cf">
-      <ul class="am-icon-flag on"> 演员：</ul>
+      <ul class="am-icon-flag on"> 演员列表</ul>
       
-      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">电影修改</a></dl>
-
+      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">演员列表</a></dl>
+      
+      <dl>
+        <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus"> <a href="addactor.jsp">新增演员</a></button>
+      </dl>
       
       
     </div>
 	
-    <div class="fbneirong">
-      <form class="am-form" action="create_movie" method="post" >
-        <div class="am-form-group am-cf">
-          <div class="zuo">演员：</div>
-          <div class="you">
-            <input type="text" name="name" class="am-input-sm" id="doc-ipt-email-1" style=" padding: 8px 12px;font-size: 14px;font-weight: 400;line-height: 1.66;border-radius: 3px;" placeholder="请输入电影名称">
-          </div>
-        </div>
-
+	<div class="am-btn-toolbars am-btn-toolbar am-kg am-cf">
+  <ul>
+    <li>
+      <div class="am-btn-group am-btn-group-xs">
+        <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
+          <option value="b">产品分类</option>
+          <option value="o">下架</option>
+        </select>
+      </div>
+    </li>
+    <li>
+      <div class="am-btn-group am-btn-group-xs">
+      <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
+        <option value="b">产品分类</option>
+        <option value="o">下架</option>
+      </select>
+      </div>
+    </li>
+    <li style="margin-right: 0;">
+    	<span class="tubiao am-icon-calendar"></span>
+      <input type="text" class="am-form-field am-input-sm am-input-zm  am-icon-calendar" placeholder="开始日期" data-am-datepicker="{theme: 'success',}"  readonly/>
+    </li>
+       <li style="margin-left: -4px;">
+    	<span class="tubiao am-icon-calendar"></span>
+      <input type="text" class="am-form-field am-input-sm am-input-zm  am-icon-calendar" placeholder="开始日期" data-am-datepicker="{theme: 'success',}"  readonly/>
+    </li>
     
-        
-        
-        
-        <div class="am-form-group am-cf">
-			<div style="min-height: 1px;    padding-left: 120px;">
-                 <button style=" padding: 8px 15px;  font-size: 13px;  background-color: #777; border-color: transparent; border-radius: 3px;"><font style="color:#fff;">取消</font></button>
-                 <button style=" background-color: #009688;    border-color: transparent;
-                 font-weight: 600;    text-align: center; padding: 8px 15px; font-size: 13px; line-height: 1.428571429;    border-radius: 3px;    vertical-align: middle;" type="submit"><font style="color:#fff;">提交</font></button>
-            </div>
-        </div>
-      </form>
-    </div>
+        <li style="margin-left: -10px;">
+      <div class="am-btn-group am-btn-group-xs">
+      <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
+        <option value="b">产品分类</option>
+        <option value="o">下架</option>
+      </select>
+      </div>
+    </li>
+    <li><input type="text" class="am-form-field am-input-sm am-input-xm" placeholder="关键词搜索" /></li>
+    <li><button type="button" class="am-btn am-radius am-btn-xs am-btn-success" style="margin-top: -1px;">搜索</button></li>
+  </ul>
+</div>
 
-  
+
+    <form class="am-form am-g">
+          <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
+            <thead>
+              <tr class="am-success">
+                <th class="table-check"><input type="checkbox" /></th>
+                <th class="table-id">ID</th>
+                <th class="table-author am-hide-sm-only">演员名称</th>
+                <th class="table-author am-hide-sm-only">简介</th>
+                <th width="163px" class="table-set">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${list }" var="p">
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>${p.actor_id}</td>
+                <td>${p.actor_name} <a href="re-actor_name.jsp?actor_id=${p.actor_id}"><span class="am-icon-pencil-square-o"></span></a></td>
+                <td>${p.actor_summary} <a href="re-actor_summary.jsp?actor_id=${p.actor_id}"><span class="am-icon-pencil-square-o"></span></a></td>
+                <td><div class="am-btn-toolbar">
+                    <div class="am-btn-group am-btn-group-xs">
+                      <a href="delete_actor?actor_id=${p.actor_id}"><span class="am-icon-trash-o"></span></a>
+                    </div>
+                  </div></td>
+              </tr>
+              	</c:forEach>
+            </tbody>
+          </table>
+          
+             
+          
+          <ul class="am-pagination am-fr">
+                <li class="am-disabled"><a href="#">«</a></li>
+                <li class="am-active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">»</a></li>
+              </ul>
+          
+          
+          
+      
+          <hr />
+          <p>注：.....</p>
+        </form>
+ 
+ 
+ 
  
  <div class="foods">
   <ul>

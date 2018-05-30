@@ -50,10 +50,10 @@ public class MovieBackstageController {
 	 * @param name 电影名字
 	 * @return
 	 */
-	@GetMapping("change_movie_name")
+	@RequestMapping("change_movie_name")
 	public String changeMovieName(@RequestParam("id") int movie_id,@RequestParam("name") String name) {
 		this.mbsi.changeMovieName(movie_id, name);
-		return "test";
+		return "redirect:/backstagemovielist";
 	}
 	
 	/**
@@ -63,11 +63,11 @@ public class MovieBackstageController {
 	 * @param summary 电影简介
 	 * @return
 	 */
-	@GetMapping("change_movie_summary")
+	@RequestMapping("change_movie_summary")
 	public String changeMovieSummary(@RequestParam("id") int movie_id,@RequestParam("summary") String summary) {
 		this.mbsi.changeMovieSummary(movie_id, summary);
 		
-		return "test";
+		return "redirect:/backstagemovielist";
 	}
 	
 	/**
@@ -76,10 +76,10 @@ public class MovieBackstageController {
 	 * @param movie 电影
 	 * @param time 时长
 	 */
-	@GetMapping("change_movie_time")
+	@RequestMapping("change_movie_time")
 	public String changeMovieTime(@RequestParam("id") int movie_id,@RequestParam("time") int time) {
 		this.mbsi.changeMovieTime(movie_id, time);
 		
-		return "test";
+		return "redirect:/backstagemovielist";
 	}
 }

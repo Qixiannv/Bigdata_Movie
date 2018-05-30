@@ -182,25 +182,28 @@
 <div class="admin-biaogelist">
 	
     <div class="listbiaoti am-cf">
-      <ul class="am-icon-flag on"> 电影时长</ul>
+      <ul class="am-icon-flag on"> 演员：</ul>
       
-      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">商品列表</a></dl>
+      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">电影修改</a></dl>
 
       
       
     </div>
 	
     <div class="fbneirong">
-      <form class="am-form" action="change_movie_time" method="post" >
-
+      <form class="am-form" action="change_actor_name" method="post" >
         <div class="am-form-group am-cf">
-          <div class="zuo">时长：</div>
+          <div class="zuo">演员：</div>
           <div class="you">
-            <input type="text"  name="time" class="am-input-sm" id="doc-ipt-pwd-1" style=" padding: 8px 12px;font-size: 14px;font-weight: 400;line-height: 1.66;border-radius: 3px;"placeholder="请输入电影时长">
+            <input type="text" name="actor_name" class="am-input-sm" id="doc-ipt-email-1" style=" padding: 8px 12px;font-size: 14px;font-weight: 400;line-height: 1.66;border-radius: 3px;" placeholder="请输入演员名称">
           </div>
-          	<input type="hidden" name="id" value="${param.id}">
+           <input type="hidden" name="actor_id" value="${param.actor_id}">
         </div>
 
+    
+        
+        
+        
         <div class="am-form-group am-cf">
 			<div style="min-height: 1px;    padding-left: 120px;">
                  <button style=" padding: 8px 15px;  font-size: 13px;  background-color: #777; border-color: transparent; border-radius: 3px;"><font style="color:#fff;">取消</font></button>
@@ -221,6 +224,9 @@
     <a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a>
   </dl>
 </div>
+
+
+
 
 </div>
 

@@ -182,33 +182,50 @@
 <div class="admin-biaogelist">
 	
     <div class="listbiaoti am-cf">
-      <ul class="am-icon-flag on"> 演员介绍</ul>
+      <ul class="am-icon-flag on"> 栏目名称</ul>
       
-      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">电影修改</a></dl>
+      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">商品列表</a></dl>
 
       
       
     </div>
 	
     <div class="fbneirong">
-      <form class="am-form" action="create_movie" method="post" >
+      <form class="am-form" action="create_actor" method="post" >
         <div class="am-form-group am-cf">
-          <div class="zuo">演员介绍：</div>
+          <div class="zuo">演员名称：</div>
           <div class="you">
-            <textarea class="form-control" id="textArea" rows="3"></textarea>
+            <input type="text" name="actor_name" class="am-input-sm" id="doc-ipt-email-1" placeholder="请输入电影名称">
           </div>
         </div>
-
-    
+        <div class="am-form-group am-cf">
+          <div class="zuo">简介：</div>
+          <div class="you">
+            <input type="text"  name="actor_summary"class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入简介">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="zuo">图片路径：</div>
+          <div class="you">
+            <input type="text"  name="actor_pic" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入图片路径">
+          </div>
+        </div>
+        
+        <!-- div class="am-form-group am-cf">
+          <div class="zuo">产品图片：</div>
+          <div class="you" style="height: 45px;">
+            <input type="file" name="listimg" id="doc-ipt-file-1">
+            <p class="am-form-help">请选择要上传的文件...</p>
+          </div>
+        </div-->
         
         
         
         <div class="am-form-group am-cf">
-			<div style="min-height: 1px;    padding-left: 120px;">
-                 <button style=" padding: 8px 15px;  font-size: 13px;  background-color: #777; border-color: transparent; border-radius: 3px;"><font style="color:#fff;">取消</font></button>
-                 <button style=" background-color: #009688;    border-color: transparent;
-                 font-weight: 600;    text-align: center; padding: 8px 15px; font-size: 13px; line-height: 1.428571429;    border-radius: 3px;    vertical-align: middle;" type="submit"><font style="color:#fff;">提交</font></button>
-            </div>
+          <div class="you" style="margin-left: 11%;">
+              <input type="submit" value="新增演员"> 
+
+          </div>
         </div>
       </form>
     </div>
