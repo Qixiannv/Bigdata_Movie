@@ -44,13 +44,14 @@ public class Movie {
 	public Movie() {}
 	
 	
-	public Movie(int movie_id, String movie_name, String movie_summary, String movie_pic, 
+	public Movie(int movie_id, String movie_name, String movie_summary, String movie_pic, Set type_movieSet,
 			Set actor_movieSet, Date date, Integer time, Float rate, Set movieCommentSet) {
 		super();
 		this.movie_id = movie_id;
 		this.movie_name = movie_name;
 		this.movie_summary = movie_summary;
 		this.movie_pic = movie_pic;
+		this.type_movieSet = type_movieSet;
 		this.actor_movieSet = actor_movieSet;
 		this.date = date;
 		this.time = time;

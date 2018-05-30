@@ -18,25 +18,7 @@ public class MovieType {
 	private Integer type_id;
 	private String type_name;
 	
-	private Movie movie;
-	private User user;
 	
-	@ManyToOne
-	@JoinColumn(name="movie_id")
-	public Movie getMovie() {
-		return movie;
-	}
-	public void setMovie(Movie movie) {
-		this.movie = movie;
-	}
-	@ManyToOne
-	@JoinColumn(name="user_id")
-	public User getUser() {
-		return user;
-	}
-	public void setUser(User user) {
-		this.user = user;
-	}
 	public MovieType(){}
 	public MovieType(String t_m){
 		super();

@@ -41,22 +41,6 @@ public class MovieSingleController {
 			return "movie-single";
 			}
 		
-		@GetMapping("editmovietype")
-		public String editMovieType(HttpServletRequest request,@RequestParam("id") int id){
-			
-			request.setAttribute("movie",this.msi.findMovieById(id));
-			return "editmovietype";
-			
-		}
 		
-		@GetMapping("/addtype")
-		public String LeaveComment(HttpServletRequest request,@RequestParam("movie_id") int movie_id,@RequestParam("typename") String typename) throws Exception {
-	   		 MovieType mt = new MovieType();
-			 mt.setType_name(typename);
-			 mt.setMovie(this.msi.findMovieById(movie_id));
-			 this.mtsi.savaMovieType(mt);
-			 
-			return "redirect:/gotosingle?id="+movie_id;
-		}
 		
 }
