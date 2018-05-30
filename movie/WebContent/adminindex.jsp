@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Amaze UI Admin index Examples</title>
+<title>首页-后台管理系统</title>
 <meta name="description" content="这是一个 index 页面">
 <meta name="keywords" content="index">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -55,29 +55,16 @@
 
  <li class="kuanjie">
  	
- 	<a href="#">会员管理</a>          
- 	<a href="#">奖金管理</a> 
- 	<a href="#">订单管理</a>   
- 	<a href="#">产品管理</a> 
- 	<a href="#">个人中心</a> 
- 	 <a href="#">系统设置</a>
+ 	
  </li>
 
  <li class="soso">
  	
 <p>   
 	
-	<select data-am-selected="{btnWidth: 70, btnSize: 'sm', btnStyle: 'default'}">
-          <option value="b">全部</option>
-          <option value="o">产品</option>
-          <option value="o">会员</option>
-          
-        </select>
 
 </p>
-
-<p class="ycfg"><input type="text" class="am-form-field am-input-sm" placeholder="圆角表单域" /></p>
-<p><button class="am-btn am-btn-xs am-btn-default am-xiao"><i class="am-icon-search"></i></button></p>
+<p></p>
  </li>
 
 
@@ -156,14 +143,7 @@
 <div class=" admin-content">
 	
 		<div class="daohang">
-			<ul>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs"> 首页 </li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">帮助中心<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">奖金管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">产品管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				
-				
-			</ul>
+		
 
        
 
@@ -182,35 +162,35 @@
    <div class="admin-index">
       <dl data-am-scrollspy="{animation: 'slide-right', delay: 100}">
         <dt class="qs"><i class="am-icon-users"></i></dt>
-        <dd>455</dd>
-        <dd class="f12">团队数量</dd>
+        <dd>666</dd>
+        <dd class="f12">用户数量</dd>
       </dl>
       <dl data-am-scrollspy="{animation: 'slide-right', delay: 300}">
         <dt class="cs"><i class="am-icon-area-chart"></i></dt>
-        <dd>455</dd>
-        <dd class="f12">今日收入</dd>
+        <dd>666</dd>
+        <dd class="f12">电影数量</dd>
       </dl>
       <dl data-am-scrollspy="{animation: 'slide-right', delay: 600}">
         <dt class="hs"><i class="am-icon-shopping-cart"></i></dt>
-        <dd>455</dd>
-        <dd class="f12">商品数量</dd>
+        <dd>666</dd>
+        <dd class="f12">演员数量</dd>
       </dl>
       <dl data-am-scrollspy="{animation: 'slide-right', delay: 900}">
         <dt class="ls"><i class="am-icon-cny"></i></dt>
-        <dd>455</dd>
-        <dd class="f12">全部收入</dd>
+        <dd>666</dd>
+        <dd class="f12">影评数量</dd>
       </dl>
     </div>
     <div class="admin-biaoge">
-      <div class="xinxitj">信息概况</div>
+      <div class="xinxitj">信息展示</div>
       <table class="am-table">
         <thead>
           <tr>
-            <th>团队统计</th>
-            <th>全部会员</th>
-            <th>全部未激活</th>
-            <th>今日新增</th>
-            <th>今日未激活</th>
+            <th>新增用户</th>
+            <th>用户email</th>
+            <th>用户phone</th>
+            <th>用户birthday</th>
+            <th>加入时间</th>
           </tr>
         </thead>
         <tbody>
@@ -254,11 +234,11 @@
       <table class="am-table">
         <thead>
           <tr>
-            <th>团队统计</th>
-            <th>全部会员</th>
-            <th>全部未激活</th>
-            <th>今日新增</th>
-            <th>今日未激活</th>
+            <th>新增电影</th>
+            <th>上映时间</th>
+            <th>播出时长</th>
+            <th>用户评分</th>
+            <th>添加时间</th>
           </tr>
         </thead>
         <tbody>
@@ -302,11 +282,11 @@
       <table class="am-table">
         <thead>
           <tr>
-            <th>资金统计</th>
-            <th>账户总收入</th>
-            <th>账户总支出</th>
-            <th>账户余额</th>
-            <th>今日收入</th>
+            <th>新增演员</th>
+            <th>主演电影</th>
+            <th>演员评价</th>
+            <th>。。。</th>
+            <th>。。。</th>
           </tr>
         </thead>
         <tbody>
@@ -357,7 +337,7 @@
         </dl>
         <ul>
           <h2>26.83%</h2>
-          <li>全盘拨出</li>
+          <li>数据展示</li>
         </ul>
       </div>
       <div class="shujutow">
@@ -368,7 +348,7 @@
         </dl>
         <ul>
           <h2>26.83%</h2>
-          <li>全盘拨出</li>
+          <li>数据展示</li>
         </ul>
       </div>
       <div class="slideTxtBox">
@@ -486,8 +466,12 @@
 </div>
 
     <div class="foods">
-    	<ul>版权所有@2015 .模板收集自 <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> -  More Templates<a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></ul>
-    	<dl><a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a></dl>
+    	<p>
+					唯一指定邮箱：248207330@qq.com
+			© 2018 My Show | Design by  <a
+				href="#">七仙女</a>
+				</p>
+				<dl><a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a></dl>
 
 
     	

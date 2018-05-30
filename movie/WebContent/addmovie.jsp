@@ -245,9 +245,11 @@
   
  
  <div class="foods">
-  <ul>
-    版权所有@2015. 模板收集自 <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> -  More Templates<a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-  </ul>
+  	<p>
+					唯一指定邮箱：248207330@qq.com
+			© 2018 My Show | Design by  <a
+				href="#">七仙女</a>
+				</p>
   <dl>
     <a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a>
   </dl>
