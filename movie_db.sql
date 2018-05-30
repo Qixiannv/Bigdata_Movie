@@ -78,6 +78,17 @@ CREATE TABLE `actor_movie` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 #
+# Structure for the `admin` table : 
+#
+
+CREATE TABLE `admin` (
+  `admin_id` int(11) NOT NULL AUTO_INCREMENT,
+  `admin_name` varchar(20) NOT NULL,
+  `admin_password` varchar(20) NOT NULL,
+  PRIMARY KEY (`admin_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+#
 # Structure for the `friend` table : 
 #
 
@@ -195,6 +206,14 @@ COMMIT;
 INSERT INTO `actor_movie` (`ac_id`, `actor_id`, `movie_id`) VALUES 
   (1,1,1),
   (2,1,2);
+COMMIT;
+
+#
+# Data for the `admin` table  (LIMIT 0,500)
+#
+
+INSERT INTO `admin` (`admin_id`, `admin_name`, `admin_password`) VALUES 
+  (1,'123','123');
 COMMIT;
 
 #
