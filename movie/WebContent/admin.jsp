@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Classic Login Form Responsive Widget Template :: w3layouts</title>
+<title>登录-后台管理系统</title>
 <!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -41,7 +41,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<h2>Login Here</h2>
 					</div>
 					<form action="AdminLogin" method="post">
-						<input placeholder="Username or E-mail" name="admin_name" class="user" type="text" required="">
+						<input placeholder="Username" name="admin_name" class="user" type="text" required="">
 						<span class="icon1"><i class="fa fa-user" ></i></span><br><br>
 						<input  placeholder="Password" name="admin_password" class="pass" type="password" required="">
 						<span class="icon2"><i class="fa fa-unlock"></i></span><br>
@@ -58,7 +58,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 			<!--footer-->
 			<div class="footer">
-				<p>&copy; 2017 Classic Login Form. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+				<p>
+					唯一指定邮箱：248207330@qq.com
+			© 2018 My Show | Design by  <a
+				href="#">七仙女</a>
+				</p>
 			</div>
 			<!--//footer-->
 		</div>
