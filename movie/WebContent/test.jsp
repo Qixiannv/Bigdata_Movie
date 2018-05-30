@@ -32,5 +32,14 @@
 	<input type = "submit" value = "删除电影">
 	</form>
 	
+	<form action="create_movie" method="get">
+	<input type = "text" name = "name"/>
+	<input type = "text" name = "summary"/>
+	<input type = "text" name = "pic"/>
+	<input type = "text" name = "time"/>
+	<input type = "text" name = "rate"/>
+	<input type = "submit" value = "加电影">
+	</form>
+	
 </body>
 </html>

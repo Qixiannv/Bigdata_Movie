@@ -28,6 +28,21 @@ public class MovieBackstageController {
 	}
 	
 	/**
+	 * 插入电影
+	 * @author 闫相垠
+	 * @param movie_name 电影名
+	 * @param movie_summary 电影简介
+	 * @param movie_pic 电影图片路径
+	 * @param time 电影时长
+	 * @param rate 电影评分
+	 */
+	@GetMapping("create_movie")
+	public String createMovie(@RequestParam("name") String movie_name,@RequestParam("summary") String movie_summary,@RequestParam("pic") String movie_pic,@RequestParam("time") Integer time,@RequestParam("rate") Float rate) {
+		this.mbsi.createMovie(movie_name, movie_summary, movie_pic, time, rate);
+		return "test";
+	}
+	
+	/**
 	 * 修改电影名字
 	 * @author 闫相垠
 	 * @param movie_id 电影id

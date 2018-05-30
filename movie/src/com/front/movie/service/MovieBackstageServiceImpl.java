@@ -26,6 +26,19 @@ public class MovieBackstageServiceImpl {
 	}
 	
 	/**
+	 * 插入电影
+	 * @author 闫相垠
+	 * @param movie_name 电影名
+	 * @param movie_summary 电影简介
+	 * @param movie_pic 电影图片路径
+	 * @param time 电影时长
+	 * @param rate 电影评分
+	 */
+	public void createMovie(String movie_name,String movie_summary,String movie_pic,Integer time,Float rate) {
+		this.mbdi.createMovie(movie_name, movie_summary, movie_pic, time, rate);
+	}
+	
+	/**
 	 * 修改电影名字
 	 * @author 闫相垠
 	 * @param movie_id 电影id

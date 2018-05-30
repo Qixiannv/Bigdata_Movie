@@ -53,9 +53,7 @@ public class MovieBackstageDaoImpl {
 		m.setTime(time);
 		m.setRate(rate);
 		
-		Transaction tran = this.sessionFactory.openSession().beginTransaction();
-		this.sessionFactory.openSession().update(m);
-		tran.commit();
+		this.sessionFactory.getCurrentSession().save(m);
 	}
 	/**
 	 * 修改电影名称
