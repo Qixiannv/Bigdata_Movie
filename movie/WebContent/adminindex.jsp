@@ -101,9 +101,9 @@
         <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="">添加新电影</a></li>
         <li><a href="">电影分类</a></li>
       </ul>
-      <h3 class="am-icon-cart-plus"><em></em> <a href="#"> 订单管理</a></h3>
+      <h3 class="am-icon-cart-plus"><em></em> <a href="#">演员管理</a></h3>
       <ul>
-        <li><a href="OD">订单列表</a></li>
+        <li><a href="backstageactorlist">演员列表</a></li>
       </ul>
       <h3 class="am-icon-users"><em></em> <a href="#">会员管理</a></h3>
       <ul>

@@ -191,12 +191,13 @@
     </div>
 	
     <div class="fbneirong">
-      <form class="am-form" action="create_movie" method="post" >
+      <form class="am-form" action="change_movie_name" >
         <div class="am-form-group am-cf">
           <div class="zuo">电影名称：</div>
           <div class="you">
             <input type="text" name="name" class="am-input-sm" id="doc-ipt-email-1" style=" padding: 8px 12px;font-size: 14px;font-weight: 400;line-height: 1.66;border-radius: 3px;" placeholder="请输入电影名称">
           </div>
+          	<input type="hidden" name="id" value="${param.id}">
         </div>
 
     

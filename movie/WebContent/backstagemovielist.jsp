@@ -183,12 +183,12 @@
 <div class="admin-biaogelist">
 	
     <div class="listbiaoti am-cf">
-      <ul class="am-icon-flag on"> 栏目名称</ul>
+      <ul class="am-icon-flag on"> 电影列表</ul>
       
-      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">商品列表</a></dl>
+      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">电影列表</a></dl>
       
       <dl>
-        <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus"> <a href="addproduct.jsp">添加产品</a></button>
+        <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus"> <a href="addmovie.jsp">新增电影</a></button>
       </dl>
       
       
@@ -240,7 +240,6 @@
             <thead>
               <tr class="am-success">
                 <th class="table-check"><input type="checkbox" /></th>
-                <th class="table-id">排序</th>
                 <th class="table-id">ID</th>
                 <th class="table-author am-hide-sm-only">电影</th>
                 <th class="table-author am-hide-sm-only">简介</th>
@@ -254,13 +253,12 @@
             <c:forEach items="${list }" var="p">
               <tr>
                 <td><input type="checkbox" /></td>
-                <td><input type="text" class="am-form-field am-radius am-input-sm"/></td>
                 <td>${p.movie_id}</td>
-                <td>${p.movie_name} <a href="ModProduct?id=${p.movie_id}?name=${p.movie_name}"><span class="am-icon-pencil-square-o"></span></a></td>
-                <td>${p.movie_summary} <a href="ModProduct?id=${p.movie_id}?summary=${p.movie_summary}"><span class="am-icon-pencil-square-o"></span></a></td>
-                <td>${p.date} <a href="ModProduct?id=${p.movie_id}?data=${p.date}"><span class="am-icon-pencil-square-o"></span></a></td>
-                <td >${p.time} <a href="ModProduct?id=${p.movie_id}?time=${p.time}"><span class="am-icon-pencil-square-o"></span></a></td>
-                <td >${p.rate} <a href="ModProduct?id=${p.movie_id}?rate=${p.rate}"><span class="am-icon-pencil-square-o"></span></a></td>
+                <td>${p.movie_name} <a href="re-moviename.jsp?id=${p.movie_id}"><span class="am-icon-pencil-square-o"></span></a></td>
+                <td>${p.movie_summary} <a href="re-introduction.jsp?id=${p.movie_id}"><span class="am-icon-pencil-square-o"></span></a></td>
+                <td>${p.date}</td>
+                <td >${p.time} <a href="re-time.jsp?id=${p.movie_id}"><span class="am-icon-pencil-square-o"></span></a></td>
+                <td >${p.rate} </td>
                 <td><div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
                       <a href="delete_movie?id=${p.movie_id}"><span class="am-icon-trash-o"></span></a>

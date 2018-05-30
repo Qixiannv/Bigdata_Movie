@@ -191,13 +191,14 @@
     </div>
 	
     <div class="fbneirong">
-      <form class="am-form" action="create_movie" method="post" >
+      <form class="am-form" action="change_movie_summary" method="post" >
 
         <div class="am-form-group am-cf">
           <div class="zuo">简介：</div>
           <div class="you">
             <input type="text"  name="summary"class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入简介"style=" padding: 8px 12px;font-size: 14px;font-weight: 400;line-height: 1.66;border-radius: 3px;">
           </div>
+          	<input type="hidden" name="id" value="${param.id}">
         </div>
         <div class="am-form-group am-cf">
 			<div style="min-height: 1px;    padding-left: 120px;">
