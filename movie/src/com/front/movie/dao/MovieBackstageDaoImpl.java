@@ -20,6 +20,8 @@ public class MovieBackstageDaoImpl {
 
 	@Autowired
 	private SessionFactory sessionFactory;
+	@Resource
+	private MovieDaoImpl mdi;
 	
 	/**
 	 * 删除电影
@@ -30,8 +32,11 @@ public class MovieBackstageDaoImpl {
 		Session session = this.sessionFactory.openSession();
 		session.beginTransaction();
 		Query query = session.createQuery("delete Movie m where m.movie_id = ?");
+		Query query1 = session.createQuery("delete MovieAndActor maa where maa.movie = ?");
 		query.setParameter(0, movie_id);
+		query1.setParameter(0, this.mdi.findMovieById(movie_id));
 		query.executeUpdate();
+		query1.executeUpdate();
 		session.getTransaction().commit();
 		
 	}

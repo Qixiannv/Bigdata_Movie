@@ -32,6 +32,11 @@
 	<input type = "submit" value = "删除电影">
 	</form>
 	
+	<form action="delete_user" method="get">
+	<input type = "text" name = "id"/>
+	<input type = "submit" value = "删除用户">
+	</form>
+	
 	<form action="create_movie" method="get">
 	<input type = "text" name = "name"/>
 	<input type = "text" name = "summary"/>
