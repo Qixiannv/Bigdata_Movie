@@ -363,7 +363,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="review-info">
 								<h6 class="span88">${movie.getMovie_name() }</h6>
-								<p class="dirctr" ><a href="">主演： </a>没有演员字段</p>								
+								<p class="dirctr" ><a href="">主演：
+			<c:forEach items = "${movie.actor_movieSet}" var = "a">
+				<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+					<a href="gotoactor?actor_id=${a.actor.actor_id}">${a.actor.actor_name}</a>
+				</div>
+			</c:forEach>
+							
 								<p class="ratingview">专家评价:</p>
 								<div class="rating">
 									<span>☆</span>
