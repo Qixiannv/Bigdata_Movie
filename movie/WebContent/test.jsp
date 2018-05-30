@@ -9,15 +9,15 @@
 <body>
 	
 	
-	<form action="change_movie_name" method="get">
-	<input type = "text" name = "id"/>
-	<input type = "text" name = "name"/>
+	<form action="change_actor_name" method="get">
+	<input type = "text" name = "actor_id"/>
+	<input type = "text" name = "actor_name"/>
 	<input type = "submit" value = "改名">
 	</form>
 	
-	<form action="change_movie_summary" method="get">
-	<input type = "text" name = "id"/>
-	<input type = "text" name = "summary"/>
+	<form action="change_actor_summary" method="get">
+	<input type = "text" name = "actor_id"/>
+	<input type = "text" name = "actor_summary"/>
 	<input type = "submit" value = "改简介">
 	</form>
 	
@@ -27,9 +27,9 @@
 	<input type = "submit" value = "改时长">
 	</form>
 	
-	<form action="delete_movie" method="get">
-	<input type = "text" name = "id"/>
-	<input type = "submit" value = "删除电影">
+	<form action="delete_actor" method="get">
+	<input type = "text" name = "actor_id"/>
+	<input type = "submit" value = "删除演员">
 	</form>
 	
 	<form action="delete_user" method="get">
@@ -37,13 +37,12 @@
 	<input type = "submit" value = "删除用户">
 	</form>
 	
-	<form action="create_movie" method="get">
-	<input type = "text" name = "name"/>
-	<input type = "text" name = "summary"/>
-	<input type = "text" name = "pic"/>
-	<input type = "text" name = "time"/>
-	<input type = "text" name = "rate"/>
-	<input type = "submit" value = "加电影">
+	<form action="create_actor" method="get">
+	<input type = "text" name = "actor_name"/>
+	<input type = "text" name = "actor_summary"/>
+	<input type = "text" name = "actor_pic"/>
+	
+	<input type = "submit" value = "加演员">
 	</form>
 	
 </body>
