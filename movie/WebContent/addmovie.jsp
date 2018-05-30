@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -101,20 +100,20 @@
     
     
     <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
-     <div class="sideMenu">
-      <h3 class="am-icon-flag"><em></em> <a href="#">电影管理</a></h3>
-      <ul>
-        <li><a href="backstagemovielist">电影列表</a></li>
-        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="">添加新电影</a></li>
-        <li><a href="">电影分类</a></li>
+    <div class="sideMenu">
+      <h3 class="am-icon-flag"><em></em> <a href="#">商品管理</a></h3>
+        <ul>
+        <li><a href="productlist">商品列表</a></li>
+        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="">添加新商品</a></li>
+        <li><a href="">商品分类</a></li>
       </ul>
       <h3 class="am-icon-cart-plus"><em></em> <a href="#"> 订单管理</a></h3>
-      <ul>
+     <ul>
         <li><a href="OD">订单列表</a></li>
       </ul>
       <h3 class="am-icon-users"><em></em> <a href="#">会员管理</a></h3>
       <ul>
-        <li><a href="backstageuserlist">会员列表 </a></li>
+        <li><a href="userlist">会员列表 </a></li>
       </ul>
       <h3 class="am-icon-volume-up"><em></em> <a href="#">信息通知</a></h3>
       <ul>
@@ -186,112 +185,64 @@
       <ul class="am-icon-flag on"> 栏目名称</ul>
       
       <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">商品列表</a></dl>
-      
-      <dl>
-        <button type="button" class="am-btn am-btn-danger am-round am-btn-xs am-icon-plus"> <a href="addproduct.jsp">添加产品</a></button>
-      </dl>
+
       
       
     </div>
 	
-	<div class="am-btn-toolbars am-btn-toolbar am-kg am-cf">
-  <ul>
-    <li>
-      <div class="am-btn-group am-btn-group-xs">
-        <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
-          <option value="b">产品分类</option>
-          <option value="o">下架</option>
-        </select>
-      </div>
-    </li>
-    <li>
-      <div class="am-btn-group am-btn-group-xs">
-      <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
-        <option value="b">产品分类</option>
-        <option value="o">下架</option>
-      </select>
-      </div>
-    </li>
-    <li style="margin-right: 0;">
-    	<span class="tubiao am-icon-calendar"></span>
-      <input type="text" class="am-form-field am-input-sm am-input-zm  am-icon-calendar" placeholder="开始日期" data-am-datepicker="{theme: 'success',}"  readonly/>
-    </li>
-       <li style="margin-left: -4px;">
-    	<span class="tubiao am-icon-calendar"></span>
-      <input type="text" class="am-form-field am-input-sm am-input-zm  am-icon-calendar" placeholder="开始日期" data-am-datepicker="{theme: 'success',}"  readonly/>
-    </li>
-    
-        <li style="margin-left: -10px;">
-      <div class="am-btn-group am-btn-group-xs">
-      <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
-        <option value="b">产品分类</option>
-        <option value="o">下架</option>
-      </select>
-      </div>
-    </li>
-    <li><input type="text" class="am-form-field am-input-sm am-input-xm" placeholder="关键词搜索" /></li>
-    <li><button type="button" class="am-btn am-radius am-btn-xs am-btn-success" style="margin-top: -1px;">搜索</button></li>
-  </ul>
-</div>
+    <div class="fbneirong">
+      <form class="am-form" action="create_movie" method="post" >
+        <div class="am-form-group am-cf">
+          <div class="zuo">电影名称：</div>
+          <div class="you">
+            <input type="text" name="name" class="am-input-sm" id="doc-ipt-email-1" placeholder="请输入电影名称">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="zuo">简介：</div>
+          <div class="you">
+            <input type="text"  name="summary"class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入简介">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="zuo">图片路径：</div>
+          <div class="you">
+            <input type="text"  name="pic" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入图片路径">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="zuo">时长：</div>
+          <div class="you">
+            <input type="text"  name="time" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入电影时长">
+          </div>
+        </div>
+        <div class="am-form-group am-cf">
+          <div class="zuo">评分：</div>
+          <div class="you">
+            <input type="text"  name="rate" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入电影评分">
+          </div>
+        </div>
+        
+        <!-- div class="am-form-group am-cf">
+          <div class="zuo">产品图片：</div>
+          <div class="you" style="height: 45px;">
+            <input type="file" name="listimg" id="doc-ipt-file-1">
+            <p class="am-form-help">请选择要上传的文件...</p>
+          </div>
+        </div-->
+        
+        
+        
+        <div class="am-form-group am-cf">
+          <div class="you" style="margin-left: 11%;">
+              <input type="submit" value="新增电影"> 
 
+          </div>
+        </div>
+      </form>
+    </div>
 
-    <form class="am-form am-g">
-          <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
-            <thead>
-              <tr class="am-success">
-                <th class="table-check"><input type="checkbox" /></th>
-                <th class="table-id">排序</th>
-                <th class="table-id">ID</th>
-                <th class="table-author am-hide-sm-only">电影</th>
-                <th class="table-author am-hide-sm-only">简介</th>
-                <th class="table-type">上映时间</th>
-                <th class="table-author am-hide-sm-only">时长</th>
-                <th class="table-date am-hide-sm-only">评分</th>
-                <th width="163px" class="table-set">操作</th>
-              </tr>
-            </thead>
-            <tbody>
-            <c:forEach items="${list }" var="p">
-              <tr>
-                <td><input type="checkbox" /></td>
-                <td><input type="text" class="am-form-field am-radius am-input-sm"/></td>
-                <td>${p.movie_id}</td>
-                <td>${p.movie_name} <a href="ModProduct?id=${p.movie_id}?name=${p.movie_name}"><span class="am-icon-pencil-square-o"></span></a></td>
-                <td>${p.movie_summary} <a href="ModProduct?id=${p.movie_id}?summary=${p.movie_summary}"><span class="am-icon-pencil-square-o"></span></a></td>
-                <td>${p.date} <a href="ModProduct?id=${p.movie_id}?data=${p.date}"><span class="am-icon-pencil-square-o"></span></a></td>
-                <td >${p.time} <a href="ModProduct?id=${p.movie_id}?time=${p.time}"><span class="am-icon-pencil-square-o"></span></a></td>
-                <td >${p.rate} <a href="ModProduct?id=${p.movie_id}?rate=${p.rate}"><span class="am-icon-pencil-square-o"></span></a></td>
-                <td><div class="am-btn-toolbar">
-                    <div class="am-btn-group am-btn-group-xs">
-                      <a href="delete_movie?id=${p.movie_id}"><span class="am-icon-trash-o"></span></a>
-                    </div>
-                  </div></td>
-              </tr>
-              	</c:forEach>
-            </tbody>
-          </table>
-          
-             
-          
-          <ul class="am-pagination am-fr">
-                <li class="am-disabled"><a href="#">«</a></li>
-                <li class="am-active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">»</a></li>
-              </ul>
-          
-          
-          
-      
-          <hr />
-          <p>注：.....</p>
-        </form>
- 
- 
- 
+  
  
  <div class="foods">
   <ul>
