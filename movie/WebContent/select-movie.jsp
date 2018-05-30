@@ -237,20 +237,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<!-- 搜索功能？ -->
 				<div class="search">
-					<div class="search2">
-						<form action = "search_movie">
-							<i class="fa fa-search"></i> 
-							<input type="text"
+					<div >
+						<form action = "search_movie"  >
+						    <div class="search2">
+							  <i class="fa fa-search"></i> 
+							  <input type="text"
 								   value="你可以查询电影、演员等"
 								   name = "name";
 								   onfocus="this.value = '';"
-								   onblur="if (this.value == '') {this.value = 'Search for a movie, play, event, sport or more';}" 
-						    />
-						    <input type="submit" value="搜索"/>
+								   onblur="if (this.value == '') {this.value = '你可以查询电影、演员等';}" 
+						     />
+						     </div>
+						     <input style="
+						     		height:35px;
+						     		background-image:url(../images/icon1.png);
+						     		position: relative;
+						     		left: 345px;
+						     		top:-35px;"
+						            type="submit" 
+    								value="搜索"/>
 						</form>
 					</div>
 				</div>
-				
 				<div class="clearfix"></div>
 			</div>
 			
