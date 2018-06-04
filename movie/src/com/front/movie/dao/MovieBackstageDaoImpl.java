@@ -50,12 +50,12 @@ public class MovieBackstageDaoImpl {
 	 * @param time 电影时长
 	 * @param rate 电影评分
 	 */
-	public void createMovie(String movie_name,String movie_summary,String movie_pic,Integer time,Float rate) {
+	public void createMovie(String movie_name,String movie_summary,String movie_pic,String time,Float rate) {
 		Movie m = new Movie();
 		m.setMovie_name(movie_name);
 		m.setMovie_summary(movie_summary);
 		m.setMovie_pic(movie_pic);
-		m.setTime(time);
+		m.setMovie_time(time);
 		m.setRate(rate);
 		
 		this.sessionFactory.getCurrentSession().save(m);
@@ -104,10 +104,10 @@ public class MovieBackstageDaoImpl {
 	 * @param time 时长
 	 */
 	@Transactional
-	public void changeMovieTime(Movie movie,Integer time) {
+	public void changeMovieTime(Movie movie,String time) {
 		Session session = this.sessionFactory.openSession();
 		session.beginTransaction();
-		Query query = session.createQuery("update Movie m set m.time = ? where m.movie_id = ?");
+		Query query = session.createQuery("update Movie m set m.movie_time = ? where m.movie_id = ?");
 		query.setParameter(0, time);
 		query.setParameter(1, movie.getMovie_id());
 		query.executeUpdate();

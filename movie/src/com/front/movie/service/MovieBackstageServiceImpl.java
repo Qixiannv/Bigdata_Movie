@@ -34,8 +34,8 @@ public class MovieBackstageServiceImpl {
 	 * @param time 电影时长
 	 * @param rate 电影评分
 	 */
-	public void createMovie(String movie_name,String movie_summary,String movie_pic,Integer time,Float rate) {
-		this.mbdi.createMovie(movie_name, movie_summary, movie_pic, time, rate);
+	public void createMovie(String movie_name,String movie_summary,String movie_pic,String movie_time,Float rate) {
+		this.mbdi.createMovie(movie_name, movie_summary, movie_pic, movie_time, rate);
 	}
 	
 	/**
@@ -68,7 +68,7 @@ public class MovieBackstageServiceImpl {
 	 * @param movie 电影
 	 * @param time 时长
 	 */
-	public void changeMovieTime(int movie_id,int time) {
+	public void changeMovieTime(int movie_id,String time) {
 		Movie movie = this.mdi.findMovieById(movie_id);
 		this.mbdi.changeMovieTime(movie, time);
 	}

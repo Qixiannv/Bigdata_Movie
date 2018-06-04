@@ -38,7 +38,7 @@ public class MovieBackstageController {
 	 * @param rate 电影评分
 	 */
 	@RequestMapping("create_movie")
-	public String createMovie(@RequestParam("name") String movie_name,@RequestParam("summary") String movie_summary,@RequestParam("pic") String movie_pic,@RequestParam("time") Integer time,@RequestParam("rate") Float rate) {
+	public String createMovie(@RequestParam("name") String movie_name,@RequestParam("summary") String movie_summary,@RequestParam("pic") String movie_pic,@RequestParam("time") String time,@RequestParam("rate") Float rate) {
 		this.mbsi.createMovie(movie_name, movie_summary, movie_pic, time, rate);
 		return "redirect:/backstagemovielist";
 	}

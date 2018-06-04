@@ -355,7 +355,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
 				<div class="article-time-strip-left">
-					<p>电影时长<span><i class="fa fa-clock-o"></i>${movie.getTime() }分钟</span>  &nbsp;&nbsp; 上映时间 <span><i class="fa fa-calendar"></i>${movie.getDate() }</span></p>
+					<p>电影时长<span><i class="fa fa-clock-o"></i>${movie.getMovie_time() }分钟</span>  &nbsp;&nbsp; 上映时间 <span><i class="fa fa-calendar"></i>${movie.getDate() }</span></p>
 				</div>
 				<div class="clearfix"></div>
 				<div class="article-img">
