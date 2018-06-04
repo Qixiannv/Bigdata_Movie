@@ -350,8 +350,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-8 blog-posts">
 			<h3 class="post">${movie.movie_name}</h3>
 				<div class="last-article">
-					<p class="artext">${movie.movie_summary}</p>
-					<h3>${movie.movie_name}</h3>
 					<img alt="" src="${movie.movie_pic}">
 					<p class="artext">${movie.movie_summary}</p>
 					<ul class="categories">

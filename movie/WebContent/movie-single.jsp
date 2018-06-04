@@ -355,7 +355,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
 				<div class="article-time-strip-left">
-					<p>电影时长<span><i class="fa fa-clock-o"></i>${movie.getMovie_time() }分钟</span>  &nbsp;&nbsp; 上映时间 <span><i class="fa fa-calendar"></i>${movie.getDate() }</span></p>
+					<p>电影时长<span><i class="fa fa-clock-o"></i>${movie.movie_time }分钟</span>  &nbsp;&nbsp; 上映时间 <span><i class="fa fa-calendar"></i>${movie.getDate() }</span></p>
 				</div>
 				<div class="clearfix"></div>
 				<div class="article-img">
@@ -415,7 +415,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<p class="info" ><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;没有字段</p>
 								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;</p>
 								<p class="info"><strong>简介</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${movie.getMovie_summary() }</p>
-								<p class="info"><strong>时长</strong>:&nbsp;&nbsp;&nbsp; &nbsp; ${movie.time}分钟</p>
+								<p class="info"><strong>时长</strong>:&nbsp;&nbsp;&nbsp; &nbsp; ${movie.movie_time}分钟</p>
 							</div>
 			</div>
 		</div>

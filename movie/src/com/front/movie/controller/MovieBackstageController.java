@@ -77,7 +77,7 @@ public class MovieBackstageController {
 	 * @param time 时长
 	 */
 	@RequestMapping("change_movie_time")
-	public String changeMovieTime(@RequestParam("id") int movie_id,@RequestParam("time") int time) {
+	public String changeMovieTime(@RequestParam("id") int movie_id,@RequestParam("time") String time) {
 		this.mbsi.changeMovieTime(movie_id, time);
 		
 		return "redirect:/backstagemovielist";
