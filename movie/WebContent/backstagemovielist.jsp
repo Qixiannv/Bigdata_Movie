@@ -234,14 +234,14 @@
               </tr>
             </thead>
             <tbody>
-            <c:forEach items="${list }" var="p">
+            <c:forEach items="${movies }" var="p">
               <tr>
                 <td><input type="checkbox" /></td>
                 <td>${p.movie_id}</td>
                 <td>${p.movie_name} <a href="re-moviename.jsp?id=${p.movie_id}"><span class="am-icon-pencil-square-o"></span></a></td>
                 <td>${p.movie_summary} <a href="re-introduction.jsp?id=${p.movie_id}"><span class="am-icon-pencil-square-o"></span></a></td>
                 <td>${p.date}</td>
-                <td >${p.time} <a href="re-time.jsp?id=${p.movie_id}"><span class="am-icon-pencil-square-o"></span></a></td>
+                <td >${p.movie_time} <a href="re-time.jsp?id=${p.movie_id}"><span class="am-icon-pencil-square-o"></span></a></td>
                 <td >${p.rate} </td>
                 <td><div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
@@ -252,18 +252,37 @@
               	</c:forEach>
             </tbody>
           </table>
-          
+          <tr>
+            <td colspan="6" align="center" bgcolor="#5BA8DE">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页<br>
+                
+                <a href="backstagemovielist?pageNo=${page.topPageNo }"><input type="button" name="fristPage" value="首页" /></a>
+                <c:choose>
+                  <c:when test="${page.pageNo!=1}">
+                    
+                      <a href="backstagemovielist?pageNo=${page.previousPageNo }"><input type="button" name="previousPage" value="上一页" /></a>
+                    
+                  </c:when>
+                  <c:otherwise>
+                    
+                      <input type="button" disabled="disabled" name="previousPage" value="上一页" />
+                    
+                  </c:otherwise>
+                </c:choose>
+                <c:choose>
+                  <c:when test="${page.pageNo != page.totalPages}">
+                    <a href="backstagemovielist?pageNo=${page.nextPageNo }"><input type="button" name="nextPage" value="下一页" /></a>
+                  </c:when>
+                  <c:otherwise>
+                    
+                      <input type="button" disabled="disabled" name="nextPage" value="下一页" />
+                    
+                  </c:otherwise>
+                </c:choose>
+                <a href="backstagemovielist?pageNo=${page.bottomPageNo }"><input type="button" name="lastPage" value="尾页" /></a>
+            </td>
+        </tr>
              
           
-          <ul class="am-pagination am-fr">
-                <li class="am-disabled"><a href="#">«</a></li>
-                <li class="am-active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">»</a></li>
-              </ul>
           
           
           

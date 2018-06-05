@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import com.front.actor.dao.ActorDaoImpl;
 import com.front.actor.entity.Actor;
 import com.front.actor.entity.ActorComment;
+import com.front.movie.dao.PageDao;
+import com.front.movie.entity.Movie;
+import com.front.movie.entity.Page;
 import com.front.user.dao.UserDaoImp;
 
 @Service(value = "AvtorServiceImpl")
@@ -20,6 +23,8 @@ public class ActorServiceImpl {
 	private ActorDaoImpl adi;
 	@Resource
 	private UserDaoImp udi;
+	@Resource
+	private PageDao PD;
 	
 	/**
 	 * 通过演员id查找演员
@@ -66,4 +71,27 @@ public class ActorServiceImpl {
 		List<Actor> la = this.adi.findAllActors();
 		return la;
 	}
+	
+	@SuppressWarnings("unchecked")
+	public Page queryActorForPage(int currentPage,int pageSize) {
+        // TODO Auto-generated method stub
+
+        Page page = new Page();        
+        //总记录数
+        
+        int allRow = PD.getActorAllRowCount();
+        System.out.println(allRow);
+        //当前页开始记录
+        int offset = page.countOffset(currentPage,pageSize);  
+        //分页查询结果集
+        List<Actor> list = PD.actorFroPage(offset, pageSize);
+
+        page.setPageNo(currentPage);
+        page.setPageSize(pageSize);
+       page.setTotalRecords(allRow);
+        page.setList(list);
+        
+        return page;
+    }
+	
 }

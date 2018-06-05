@@ -104,7 +104,7 @@
      <div class="sideMenu">
       <h3 class="am-icon-flag"><em></em> <a href="#">电影管理</a></h3>
       <ul>
-        <li><a href="backstagemovielist">电影列表</a></li>
+        <li><a href="backstageactorlist">电影列表</a></li>
         <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="">添加新电影</a></li>
         <li><a href="">电影分类</a></li>
       </ul>
@@ -247,7 +247,7 @@
               </tr>
             </thead>
             <tbody>
-            <c:forEach items="${list }" var="p">
+            <c:forEach items="${actorlist }" var="p">
               <tr>
                 <td><input type="checkbox" /></td>
                 <td>${p.actor_id}</td>
@@ -264,18 +264,35 @@
           </table>
           
              
-          
-          <ul class="am-pagination am-fr">
-                <li class="am-disabled"><a href="#">«</a></li>
-                <li class="am-active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">»</a></li>
-              </ul>
-          
-          
+         <tr>
+            <td colspan="6" align="center" bgcolor="#5BA8DE">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页<br>
+                
+                <a href="backstageactorlist?pageNo=${page.topPageNo }"><input type="button" name="fristPage" value="首页" /></a>
+                <c:choose>
+                  <c:when test="${page.pageNo!=1}">
+                    
+                      <a href="backstageactorlist?pageNo=${page.previousPageNo }"><input type="button" name="previousPage" value="上一页" /></a>
+                    
+                  </c:when>
+                  <c:otherwise>
+                    
+                      <input type="button" disabled="disabled" name="previousPage" value="上一页" />
+                    
+                  </c:otherwise>
+                </c:choose>
+                <c:choose>
+                  <c:when test="${page.pageNo != page.totalPages}">
+                    <a href="backstageactorlist?pageNo=${page.nextPageNo }"><input type="button" name="nextPage" value="下一页" /></a>
+                  </c:when>
+                  <c:otherwise>
+                    
+                      <input type="button" disabled="disabled" name="nextPage" value="下一页" />
+                    
+                  </c:otherwise>
+                </c:choose>
+                <a href="backstageactorlist?pageNo=${page.bottomPageNo }"><input type="button" name="lastPage" value="尾页" /></a>
+            </td>
+        </tr>
           
       
           <hr />

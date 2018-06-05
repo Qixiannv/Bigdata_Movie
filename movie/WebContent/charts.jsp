@@ -375,7 +375,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</ol>
 		<div class="featured">
 					<ul style="position: relative;left: 25px;top:-50px">
-					<c:forEach items="${movie }" var="m" varStatus="status">
+					<c:forEach items="${movie }" var="m" varStatus="status" begin="0" end="9" step="1">
 						<li>
 							<div class="f-movie">
 								<h4>[NO.${status.index+1 }</h4>

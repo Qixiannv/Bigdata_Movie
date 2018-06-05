@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.front.actor.entity.Actor;
 import com.front.actor.service.ActorServiceImpl;
+import com.front.movie.entity.Movie;
+import com.front.movie.entity.Page;
 
 @Controller
 public class ActorController {
@@ -57,9 +60,20 @@ public class ActorController {
 	 * @return
 	 */
 	@GetMapping("/show_actor")
-	public String showAllActors(HttpServletRequest request) {
-		List<Actor> la = this.asi.findActors();
-		request.setAttribute("actorlist", la);
+	public String showAllActors(HttpServletRequest request,
+            HttpServletResponse response) {
+		try {
+            String pageNo = request.getParameter("pageNo");
+            if (pageNo == null) {
+                pageNo = "1";
+            }
+            Page page = asi.queryActorForPage(Integer.valueOf(pageNo), 10);
+            request.setAttribute("page", page);
+            List<Actor> list = page.getList();
+    		request.setAttribute("actorlist", list);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 		
 		return "celebrities";
 	}
