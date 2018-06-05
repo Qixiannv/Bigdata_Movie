@@ -20,6 +20,9 @@ public class MovieTypeAndUser {
 	private MovieType type;
 	private User user;
 	
+	public MovieTypeAndUser(){
+		super();
+	}
 	public MovieTypeAndUser(MovieType type,User u){
 		super();
 		this.type = type;
@@ -27,8 +30,8 @@ public class MovieTypeAndUser {
 	}
 
 	@Id
-	@GeneratedValue(generator="uid")
-	@GenericGenerator(name="uid",strategy="native")
+	@GeneratedValue(generator="tid")
+	@GenericGenerator(name="tid",strategy="native")
 	@Column(name="tu_id")
 	public Integer getTu_id() {
 		return tu_id;

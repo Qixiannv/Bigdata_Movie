@@ -45,6 +45,24 @@ public class User {
 	private Set type_userSet = new HashSet<MovieTypeAndUser>();
 	
 	
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public User(int user_id, String email, int phone, String username, String password, Date birthday, String avatar,
+			String gender, String signature, Set type_userSet) {
+		super();
+		this.user_id = user_id;
+		this.email = email;
+		this.phone = phone;
+		this.username = username;
+		this.password = password;
+		this.birthday = birthday;
+		this.avatar = avatar;
+		this.gender = gender;
+		this.signature = signature;
+		this.type_userSet = type_userSet;
+	}
 	@Id
 	@GeneratedValue(generator="user_id")
 	@GenericGenerator(name="user_id",strategy="native")
@@ -115,8 +133,8 @@ public class User {
 	
 	
 	
-	@OneToMany(mappedBy="movietype", targetEntity=MovieTypeAndUser.class,fetch = FetchType.LAZY)
-	@Cascade(value = { CascadeType.SAVE_UPDATE , CascadeType.DELETE_ORPHAN,CascadeType.ALL})
+	@OneToMany(mappedBy="user", targetEntity=MovieTypeAndUser.class,fetch=FetchType.EAGER)
+	@Cascade(value = { CascadeType.ALL})
 	public Set getType_userSet() {
 		return type_userSet;
 	}

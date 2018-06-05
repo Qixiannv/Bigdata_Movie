@@ -148,7 +148,7 @@ public class Movie {
 		this.actor_movieSet = actor_movieSet;
 	}
 
-	@OneToMany(mappedBy="movie", targetEntity=MovieTypeAndMovie.class,fetch = FetchType.LAZY)
+	@OneToMany(mappedBy="movie", targetEntity=MovieTypeAndMovie.class,fetch = FetchType.EAGER)
 	@Cascade(value = {CascadeType.SAVE_UPDATE, 	CascadeType.DELETE_ORPHAN,CascadeType.ALL})
 	public Set getType_movieSet() {
 		return type_movieSet;

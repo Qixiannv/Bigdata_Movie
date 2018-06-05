@@ -26,9 +26,12 @@ public class MovieType {
 	private Set type_movie = new HashSet<MovieTypeAndMovie>();
 	
 	public MovieType(){}
-	public MovieType(String t_m){
+	public MovieType(String t_m,Set tus,Set tms){
 		super();
 		this.type_name=t_m;
+		this.type_userSet = tus;
+		this.type_movie = tms;
+		
 		
 	}
 	
@@ -52,7 +55,7 @@ public class MovieType {
 	}
 	
 	
-	@OneToMany(mappedBy="movietype", targetEntity=MovieTypeAndUser.class,
+	@OneToMany(mappedBy="type", targetEntity=MovieTypeAndUser.class,
 			cascade=CascadeType.ALL)
 	public Set getType_userSet() {
 		return type_userSet;
@@ -62,7 +65,7 @@ public class MovieType {
 	}
 	
 	
-	@OneToMany(mappedBy="movietype", targetEntity=MovieTypeAndMovie.class,
+	@OneToMany(mappedBy="type", targetEntity=MovieTypeAndMovie.class,
 			cascade=CascadeType.ALL)
 	public Set getType_movie() {
 		return type_movie;

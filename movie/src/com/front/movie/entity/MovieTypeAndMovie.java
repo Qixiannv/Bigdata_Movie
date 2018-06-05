@@ -17,7 +17,9 @@ public class MovieTypeAndMovie {
 	private MovieType type;
 	private Movie movie;
 	
-	public MovieTypeAndMovie(){}
+	public MovieTypeAndMovie(){
+		super();
+	}
 	
 	public MovieTypeAndMovie(MovieType type,Movie m){
 		super();

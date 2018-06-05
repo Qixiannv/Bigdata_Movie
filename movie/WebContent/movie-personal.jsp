@@ -379,7 +379,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 		<div class="article-left">
 			<h3>我的标签<span> <i class="fa fa-heart"></i> </span></h3>
-			<p><a class="m-green" href="#">奇幻</a><a class="m-green" href="#">文艺</a><a class="m-orange" href="#">美剧</a></p><a class="m-orange" href="addtypeforuser">添加标签</a></p>
+			<c:forEach items = "${user.getType_userSet() }" var = "t">
+			<p><a class="m-green" href="#">${t.type.getType_name() }</a></p>
+			</c:forEach>
+			<a class="m-orange" href="addtypeforuser">添加标签</a></p>
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
 

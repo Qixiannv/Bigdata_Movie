@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.front.movie.entity.MovieType;
+import com.front.movie.entity.MovieTypeAndUser;
 import com.front.movie.service.MovieTypeServiceImpl;
 import com.front.user.entity.User;
 
@@ -40,11 +41,21 @@ public class UserTypeController {
 	@GetMapping("addUserType")
 	public String addUserType(HttpServletRequest request,@RequestParam("tid") int tid){
 		
-		User u = (User) request.getAttribute("user");
+		User u = (User) request.getAttribute("user");		
+		try {
+			Set<MovieTypeAndUser> s = u.getType_userSet();
+			MovieTypeAndUser mau = new MovieTypeAndUser();
+			mau.setType(mtsi.findMovieTypeById(tid));
+			mau.setUser(u);
+			
+			System.out.println(s.size());
+			s.add(mau);
+			u.setType_userSet(s);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		Set s = u.getType_userSet();
-		s.add(mtsi.findMovieTypeById(tid));
-		u.setType_userSet(s);
 		
 		return "movie-personal";
 	}
