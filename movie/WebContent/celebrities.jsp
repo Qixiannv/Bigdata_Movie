@@ -360,35 +360,114 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"></div>
 				</div>
 				</c:forEach>
-			<tr>
-            <td colspan="6" align="center" bgcolor="#5BA8DE">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页<br>
-                
-                <a href="show_actor?pageNo=${page.topPageNo }"><input type="button" name="fristPage" value="首页" /></a>
+			<div style="width:1000px">
+            <div style=" font-family: tahoma, 黑体; 
+   						font-weight:700;font-size: 12px;" align="center">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页</div>
+   						<br>
+                <div align="center">
+                <a href="show_actor?pageNo=${page.topPageNo }">
+                <input
+                style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    					border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;"
+                 type="button" name="fristPage" value="首页" /></a>
                 <c:choose>
                   <c:when test="${page.pageNo!=1}">
                     
-                      <a href="show_actor?pageNo=${page.previousPageNo }"><input type="button" name="previousPage" value="上一页" /></a>
+                      <a href="show_actor?pageNo=${page.previousPageNo }">
+                      <input type="button"
+                      style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    					border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;" name="previousPage" value="上一页" /></a>
                     
                   </c:when>
                   <c:otherwise>
                     
-                      <input type="button" disabled="disabled" name="previousPage" value="上一页" />
+                      <input 
+                      style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    					border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;" type="button" disabled="disabled" name="previousPage" value="上一页" />
                     
                   </c:otherwise>
                 </c:choose>
                 <c:choose>
                   <c:when test="${page.pageNo != page.totalPages}">
-                    <a href="show_actor?pageNo=${page.nextPageNo }"><input type="button" name="nextPage" value="下一页" /></a>
+                    <a href="show_actor?pageNo=${page.nextPageNo }">
+                    <input
+                    style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    					border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;"
+                     type="button" name="nextPage" value="下一页" /></a>
                   </c:when>
                   <c:otherwise>
                     
-                      <input type="button" disabled="disabled" name="nextPage" value="下一页" />
+                      <input 
+                      style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    					border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;" type="button" disabled="disabled" name="nextPage" value="下一页" />
                     
                   </c:otherwise>
                 </c:choose>
-                <a href="show_actor?pageNo=${page.bottomPageNo }"><input type="button" name="lastPage" value="尾页" /></a>
-            </td>
-        </tr>
+                <a href="show_actor?pageNo=${page.bottomPageNo }"><input 
+                style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    					border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;" type="button" name="lastPage" value="尾页" /></a>
+            </div>
+        </div>
 				
 
 			</div>
@@ -402,7 +481,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"></div>
 		</div>
 			<div class="copy-rights text-center">
-				<p>© 2015 My Show. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+					<p>
+			唯一指定邮箱：248207330@qq.com
+			© 2018 My Show | Design by  <a
+				href="#">七仙女</a>
+		</p>
 			</div>
 	</div>
  <script src="js/responsive-tabs.js"></script>
