@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
+import com.front.actor.entity.Actor;
 import com.front.movie.entity.Movie;
 
 @Repository
@@ -39,4 +40,27 @@ public class PageDao {
 
 
 	 }
+	 
+	 public List<Actor> actorFroPage(int offset, int length){
+		// TODO Auto-generated method stub
+		 List<Actor> entitylist=null;
+		 try{
+			 Query query = sessionFactory.getCurrentSession().createQuery("from Actor");
+			 query.setFirstResult(offset);
+	            query.setMaxResults(length);
+	            entitylist = query.list();
+	            
+	        }catch(RuntimeException re){
+	            throw re;
+	        }
+	        
+	        return entitylist;
+	   }
+	 public int getActorAllRowCount(){
+		 Query query = sessionFactory.getCurrentSession().createQuery("select count(*) from Actor");
+			int i = ((Long) query.iterate().next()).intValue();
+			return i;
+
+	 }
+	 
 }

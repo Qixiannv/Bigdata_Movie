@@ -27,20 +27,18 @@ public class MovieListController {
     public String findAllCourse(HttpServletRequest request,
             HttpServletResponse response) {
 		
-        try {
-            String pageNo = request.getParameter("pageNo");
-            if (pageNo == null) {
-                pageNo = "1";
-            }
-            Page page = MP.queryForPage(Integer.valueOf(pageNo), 10);
-            request.setAttribute("page", page);
-            System.out.println("1111");
-            List<Movie> list = page.getList();
-    		request.setAttribute("movies", list);
-    		System.out.println("1213");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+		 try {
+	            String pageNo = request.getParameter("pageNo");
+	            if (pageNo == null) {
+	                pageNo = "1";
+	            }
+	            Page page = MP.queryForPage(Integer.valueOf(pageNo), 10);
+	            request.setAttribute("page", page);
+	            List<Movie> list = page.getList();
+	    		request.setAttribute("movies", list);
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
         
         return "movie-list";
     }
