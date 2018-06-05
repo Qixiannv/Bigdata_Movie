@@ -308,7 +308,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="active"><a href="indexshow">主页</a></li>
 							
 							<li class="dropdown w3_megamenu-fw">
-							<a href="movielist" >电影</a>
+							<a href="showAll.do" >电影</a>
 							</li>
 							
 							<li class="dropdown w3_megamenu-fw">
@@ -408,7 +408,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							data-example-id="togglable-tabs">
 							<div id="1" margin:20px>
 								<h4>本周耻辱柱</h4>
-								<c:forEach items="${movielist }" var="p">
+								<c:forEach items="${movielist }" var="p" begin="0" end="9" step="1">
 								<ul class="mov_list">
 									<li></li>
 									<li><a href="./gotosingle?id=${p.movie_id}">${p.movie_name}</a></li>
@@ -442,7 +442,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="resp-tabs-container">
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
 									<ul class="tab_img">
-									<c:forEach items="${movielist }" var="p">
+									<c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
 										<li>
 											<div class="view view-first">
 												<a href="./gotosingle?id=${p.movie_id }"> <img
@@ -467,7 +467,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
 									<ul class="tab_img">
-										<c:forEach items="${movielist }" var="p">
+										<c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
 										<li>
 											<div class="view view-first">
 												<a href="./gotosingle?id=${p.movie_id }"> <img
@@ -492,7 +492,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
 									<ul class="tab_img">
-									<c:forEach items="${movielist }" var="p">
+									<c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
 										<li>
 											<div class="view view-first">
 												<a href="./gotosingle?id=${p.movie_id }"> <img
@@ -566,7 +566,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="featured">
 					<h4>精选</h4>
 					<ul>
-					<c:forEach items="${movielist }" var="p">
+					<c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
@@ -591,7 +591,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="right-side-bar">
 				<div class="top-movies-in-india">
 					<h4>本周热映</h4>
-					<c:forEach items="${movielist }" var="p">
+					<c:forEach items="${movielist }" var="p" begin="0" end="9" step="1">
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>77%</li>
@@ -601,7 +601,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="our-blog">
 					<h5>演员推荐</h5>
-					<c:forEach items="${actorlist }" var="p">
+					<c:forEach items="${actorlist }" var="p" begin="0" end="9" step="1">
 					<ul class="mov_list">
 						<li>NO.1</li>
 						<li><a href="./gotoactor?actor_id=${p.actor_id }">${p.actor_name }</a></li>
@@ -611,7 +611,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<div class="our-blog">
 					<h5>佳片推荐</h5>
-					<c:forEach items="${movielist }" var="p">
+					<c:forEach items="${movielist }" var="p" begin="0" end="9" step="1">
 					<ul class="mov_list">
 						<li>NO.1</li>
 						<li><a href="./gotosingle?id=${p.movie_id }">${p.movie_name }</a></li>
