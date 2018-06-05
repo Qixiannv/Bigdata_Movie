@@ -281,7 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li class="active"><a href="indexshow">主页</a></li>
 							
 							<li class="dropdown w3_megamenu-fw">
-							<a href="movielist" >电影</a>
+							<a href="showAll.do" >电影</a>
 							</li>
 							
 							<li class="dropdown w3_megamenu-fw">
