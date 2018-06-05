@@ -4,14 +4,17 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
@@ -112,8 +115,8 @@ public class User {
 	
 	
 	
-	@OneToMany(mappedBy="user", targetEntity=MovieTypeAndUser.class,
-			cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="movietype", targetEntity=MovieTypeAndUser.class,fetch = FetchType.LAZY)
+	@Cascade(value = { CascadeType.SAVE_UPDATE , CascadeType.DELETE_ORPHAN,CascadeType.ALL})
 	public Set getType_userSet() {
 		return type_userSet;
 	}
