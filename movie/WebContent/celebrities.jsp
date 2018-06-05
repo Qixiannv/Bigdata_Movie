@@ -344,26 +344,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</ol>
 		<div class="person">
 		<h3>电影人</h3>
-		<div class="person-grids">
+		<div class="person-grids" style="width:1000px">
 
-			<div class="col-md-6 person-grids-left">
-				
-				<c:forEach items = "${actorlist}" var = "a" begin="0" end="9" step="1">
+			<div class="col-md-6 person-grids-left"style="width:1000px;">
+			<div style="width:1000px">
+				<c:forEach items = "${actorlist}" var = "a" begin="0" end="9" step="1">			
 					<div class="person-grid">
 						<div class="person-img">
 							<a href="gotoactor?actor_id=${a.actor_id}"><img src="${a.actor_pic}" title="actor"></a>
 						</div>
 					<div class="person-details">
 						<a href="gotoactor?actor_id=+${a.actor_id}">${a.actor_name}</a>
-						<p>${a.actor_summary}</p>
+						<p
+						style="overflow:hidden;text-overflow:ellipsis;
+								display:-webkit-box;
+								-webkit-box-orient:vertical;
+								-webkit-line-clamp:10 	;">${a.actor_summary}</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
 				</c:forEach>
+			</div>	
+			
 			<div style="width:1000px">
-            <div style=" font-family: tahoma, 黑体; 
+            <div style="height:50px; font-family: tahoma, 黑体; 
    						font-weight:700;font-size: 12px;" align="center">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页</div>
-   						<br>
+
                 <div align="center">
                 <a href="show_actor?pageNo=${page.topPageNo }">
                 <input
