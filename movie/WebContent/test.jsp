@@ -45,7 +45,7 @@
 	<input type = "submit" value = "加演员">
 	</form>
 	
-	<img src = "//imgwx3.2345.com/dypcimg/img/8/65/sup19" />
+	<img src = "//imgwx5.2345.com/dianyingimg/star/img/a/0/721/photo_192x262.jpg" />
 	 
 </body>
 </html>
