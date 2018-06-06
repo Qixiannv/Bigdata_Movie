@@ -9,6 +9,11 @@
 <body>
 	
 	<a href="addMovieTypeAndMovie">jiade</a>
+	<form action = 'addtype' method = 'get'>
+		<input type = 'text' name = "name"/>
+		<input type = "submit">
+	</form>
+	
 	
 </body>
 </html>
