@@ -6,6 +6,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.front.actor.entity.Actor;
 import com.front.movie.dao.MovieSearchDao;
 import com.front.movie.entity.Movie;
 
@@ -24,4 +25,14 @@ public class MovieSearchServiceImpl {
 	public List<Movie> movieSearch(String name){
 		return this.msd.searchMovie(name);
 	}
-}
+	
+	/**
+	 * 查找演员
+	 * @author 闫相垠
+	 * @param name 需要查找的字段
+	 * @return List<Actor> 返回的演员列表
+	 */
+	public List<Actor> actorSearch(String name){
+		return this.msd.searchActor(name);
+	}
+} 

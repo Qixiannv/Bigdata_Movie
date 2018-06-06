@@ -344,6 +344,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<br/>
 			<div class="col-md-6 person-grids-left" style="width: 65%">
 			
+			<c:forEach items = "${actorresult}" var = "a">
+				<div class="person-grid">
+					<div class="person-img">
+						<a href="/movie/gotoactor?id=${a.actor_id }"><img src="${a.actor_pic}"style="width: 100px;height: 120px" ></a>
+					</div>
+					<div class="person-details">
+						<a href="/movie/gotoactor?id=${a.actor_id }">${a.actor_name}</a>
+						<p>${a.actor_summary}</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</c:forEach>
 			<c:forEach items = "${searchresult}" var = "a">
 				<div class="person-grid">
 					<div class="person-img">

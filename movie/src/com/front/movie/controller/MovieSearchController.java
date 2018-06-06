@@ -17,6 +17,7 @@ public class MovieSearchController {
 	public String movieSearch(String name,HttpServletRequest request) {
 		
 		request.setAttribute("searchresult", this.mssi.movieSearch(name));
+		request.setAttribute("actorresult", this.mssi.actorSearch(name));
 		
 		return "select-movie";
 	}
