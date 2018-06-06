@@ -353,11 +353,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<img alt="" src="${movie.movie_pic}">
 					<p class="artext">${movie.movie_summary}</p>
 					<ul class="categories">
-						<li><a href="#">Markets</a></li>
-						<li><a href="#">Business</a></li>
-						<li><a href="#">Sport</a></li>
-						<li><a href="#">Special reports</a></li>
-						<li><a href="#">Culture</a></li>
+						<c:forEach items = "${movie.type_movieSet }" var = 'a'>
+							<li><a href = ''>${a.type.type_name}</a></li>
+						</c:forEach>
 					</ul>
 					<div class="clearfix"></div>
 					

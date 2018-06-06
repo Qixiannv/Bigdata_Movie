@@ -9,6 +9,6 @@
 <body>
 	
 	<a href="addMovieTypeAndMovie">jiade</a>
-	 
+	
 </body>
 </html>
