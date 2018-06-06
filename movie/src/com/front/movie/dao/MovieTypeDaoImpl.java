@@ -90,5 +90,17 @@ public class MovieTypeDaoImpl {
 		mam.setMovie(movie);
 	}
 	
+	public MovieType selectType_idByTypeName(String type_name){
+		String hql="from MovieType where type_name='"+type_name+"'";
+		Query query=sessionFactory.getCurrentSession().createQuery(hql);
+		MovieType mt=(MovieType)query.uniqueResult();
+		return mt;
+	}
+	
+	public List<MovieTypeAndMovie> selectMovie_idByType_id(int type_id){
+		 Query query = this.sessionFactory.getCurrentSession().createQuery("from MovieTypeAndMovie where type_id =?");
+		 query.setParameter(0, type_id);
+		 return query.list();
+	}
 	
 }

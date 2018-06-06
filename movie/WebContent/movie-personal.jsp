@@ -382,7 +382,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			
 			<c:forEach items = "${user.getType_userSet() }" var = "t">
-			<p><a class="m-green" href="#">${t.type.getType_name() }</a></p>
+			<p><a class="m-green" href="11111?type_name=${t.type.getType_name()}">${t.type.getType_name() }</a></p>
 			</c:forEach>
 			
 			
