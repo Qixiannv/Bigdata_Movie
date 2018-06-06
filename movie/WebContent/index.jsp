@@ -500,7 +500,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<div class="info1"></div>
 												<div class="mask"></div>
 												<div class="tab_desc">
-													<a href="./gotosingle?movie_id=${p.movie_id }">查看详情</a>
+									3				<a href="./gotosingle?movie_id=${p.movie_id }">查看详情</a>
 													<div class="percentage-w-t-s">
 														<h5>88</h5>
 														<p>

@@ -278,7 +278,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div id="defaultmenu" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
 						
-							<li class="active"><a href="indexshow">主页</a></li>
+							<li class="dropdown w3_megamenu-fw"><a href="showAll.do" >主页</a></li>
 							
 							<li class="dropdown w3_megamenu-fw">
 							<a href="showAll.do" >电影</a>
@@ -340,10 +340,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<div class="person">
 		<h3>搜索：<span style="color: #20B2AA">名字</span></h3>
+		</br>
+		<div>
+			<a href="#get-actors">
+				<button class="btn btn-primary" data-toggle="modal" ">  		           
+                	<li class="dropdown w3_megamenu-fw">包含关键字的演员</li>	
+                </button>
+			</a>
+			<a href="#get-movies">	
+        		<button class="btn btn-primary" data-toggle="modal" ">  		           
+                	<li class="dropdown w3_megamenu-fw">包含关键字的电影</li>	
+                </button>
+        	</a>
+        </div>
 		<div class="person-grids">
 			<br/>
 			<div class="col-md-6 person-grids-left" style="width: 65%">
-			
+			<div>
+			<a name="get-actors">演员</a>
 			<c:forEach items = "${actorresult}" var = "a">
 				<div class="person-grid">
 					<div class="person-img">
@@ -356,21 +370,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"></div>
 				</div>
 			</c:forEach>
+		    </div>
+			<div>
+			<a name="get-movies">电影</a>
 			<c:forEach items = "${searchresult}" var = "a">
+			
 				<div class="person-grid">
 					<div class="person-img">
 						<a href="/movie/gotosingle?id=${a.movie_id }"><img src="${a.movie_pic}"style="width: 100px;height: 120px" ></a>
 					</div>
+					
 					<div class="person-details">
 						<a href="/movie/gotosingle?id=${a.movie_id }">${a.movie_name}</a>
 						<p>${a.movie_summary}</p>
 					</div>
 					<div class="clearfix"></div>
-				</div>
+				</div>			
 			</c:forEach>
-			
-				
-					
+		    </div>
 			</div>
 			<div class="col-md-6 person-grids-right"style="width:35%; padding-left: 50px; padding-top: 50px;">
 				<div style="">
