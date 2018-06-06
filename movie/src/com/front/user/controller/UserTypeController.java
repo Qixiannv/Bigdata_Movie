@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,24 +41,13 @@ public class UserTypeController {
 	 */
 	@GetMapping("addUserType")
 	public String addUserType(HttpServletRequest request,@RequestParam("tid") int tid){
-		
-		User u = (User) request.getAttribute("user");		
-		try {
-			Set<MovieTypeAndUser> s = u.getType_userSet();
-			MovieTypeAndUser mau = new MovieTypeAndUser();
-			mau.setType(mtsi.findMovieTypeById(tid));
-			mau.setUser(u);
-			
-			System.out.println(s.size());
-			s.add(mau);
-			u.setType_userSet(s);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		HttpSession session = request.getSession();
+		User u = (User) session.getAttribute("user");
+		System.out.println(u.getUser_id());
+		mtsi.saveUserType(u, tid);
 		
 		
-		return "movie-personal";
+		return "redirect:/movie-personal.jsp";
 	}
 
 }
