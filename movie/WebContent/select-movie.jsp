@@ -365,7 +365,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="person-details">
 						<a href="/movie/gotoactor?actor_id=${a.actor_id }">${a.actor_name}</a>
-						<p>${a.actor_summary}</p>
+						<p style="overflow:hidden;text-overflow:ellipsis;
+								display:-webkit-box;
+								-webkit-box-orient:vertical;
+								-webkit-line-clamp:10 	;">${a.actor_summary}</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -382,7 +385,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					<div class="person-details">
 						<a href="/movie/gotosingle?id=${a.movie_id }">${a.movie_name}</a>
-						<p>${a.movie_summary}</p>
+						<p style="overflow:hidden;text-overflow:ellipsis;
+								display:-webkit-box;
+								-webkit-box-orient:vertical;
+								-webkit-line-clamp:10 	;">${a.movie_summary}</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>			
@@ -424,7 +430,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 
 			<div class="copy-rights text-center">
-				<p>© 2015 My Show. All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+				<p>
+			© 2018 My Show | Design by  <a
+				href="#">七仙女</a>
+		</p>
 			</div>
 	</div>
  <script src="js/responsive-tabs.js"></script>
