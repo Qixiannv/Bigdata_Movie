@@ -359,7 +359,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="clearfix"></div>
 				<div class="article-img">
-					<img href="${movie.getMovie_pic() } }">
+					<img src="${movie.getMovie_pic() }">
 				</div>
 				<div class="review-info">
 								<h6 class="span88">${movie.getMovie_name() }</h6>
