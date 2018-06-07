@@ -368,7 +368,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p style="overflow:hidden;text-overflow:ellipsis;
 								display:-webkit-box;
 								-webkit-box-orient:vertical;
-								-webkit-line-clamp:10 	;">${a.actor_summary}</p>
+								-webkit-line-clamp:5	;">${a.actor_summary}</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -388,7 +388,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<p style="overflow:hidden;text-overflow:ellipsis;
 								display:-webkit-box;
 								-webkit-box-orient:vertical;
-								-webkit-line-clamp:10 	;">${a.movie_summary}</p>
+								-webkit-line-clamp:5 	;">${a.movie_summary}</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>			
