@@ -354,7 +354,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<p class="artext">${movie.movie_summary}</p>
 					<ul class="categories">
 						<c:forEach items = "${movie.type_movieSet }" var = 'a'>
-							<li><a href = ''>${a.type.type_name}</a></li>
+							<li><a href = "showMovieByType?type_name=${a.type.getType_name()}">${a.type.type_name}</a></li>
 						</c:forEach>
 					</ul>
 					<div class="clearfix"></div>
