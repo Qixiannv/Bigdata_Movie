@@ -356,8 +356,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="person-details"style="width: 780px;">
 						<a href="moviesingle?id=${m.movie_id}">${m.movie_name}</a>
-							<p class="info"><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;张译，杜江，黄景瑜</p>
-								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;动作、剧情、战争</p>
+							<p class="info"><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;<c:forEach items = '${m.getActor_movieSet()}' var = 'a'>&nbsp;&nbsp;&nbsp;&nbsp;${a.actor.actor_name }</c:forEach></p>
+								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;<c:forEach items = '${m.getType_movieSet()}' var = 'a'>&nbsp;&nbsp;&nbsp;&nbsp;${a.type.type_name }</c:forEach></p>
 								<p class="info" style="overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:10 ;">
 									<strong>简介</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${m.movie_summary}
 								</p>
