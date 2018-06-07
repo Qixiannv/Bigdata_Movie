@@ -1,10 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% 
+        String path = request.getContextPath(); 
+        String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+        String name = request.getParameter("type_name");//用request得到 
+%> 
 <!DOCTYPE html>
 <html>
 <head>
-<title>电影搜素</title>
+<title>电影列表</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -47,7 +52,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 	<!-- header-section-starts -->
-	<div class="header-top-strip">
+		
+		<div class="header-top-strip">
 		<div class="container">
 	        <!--top的左侧选项-->
 			<div class="header-top-left">
@@ -90,8 +96,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						 <button class="btn btn-primary" data-toggle="modal" >  		            
                 			<td style="font-weight:900;font-size: 100%;color:white;"> ${user.username }  <td> 	 
                 		 </button>  
-                	     </a>
-                	     <a href = "remove_user">注销</a>      
+                	     </a>      
+                	     <a href = "remove_user">注销</a> 
                 		</c:if>              		
                	    	<c:if test="${empty  user.user_id }" >	
                	    	 <button class="btn btn-primary" data-toggle="modal" onclick="displayDate()">  		           
@@ -226,17 +232,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="clearfix"></div>
 		</div>
 	</div>
-	
-	<!-- 主体内容部分 -->
-	<div class="container">
-		<div class="main-content">
+		
+		<div class="container">
+		  <div class="main-content">
 			<div class="header">
 				<div class="logo">
 					<a href="#"><h1>My Show</h1></a>
 				</div>
 				
 				<!-- 搜索功能？ -->
-				<div class="search">
+			<div class="search">
 					<div >
 						<form action = "search_movie"  >
 						    <div class="search2">
@@ -259,11 +264,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</form>
 					</div>
 				</div>
+				
 				<div class="clearfix"></div>
 			</div>
 			
-			<!-- 导航栏 -->
-			<div class="bootstrap_container">
+	<div class="bootstrap_container">
 				<nav class="navbar navbar-default w3_megamenu" role="navigation">
 					<div class="navbar-header">
 						<button type="button" data-toggle="collapse" data-target="#defaultmenu" class="navbar-toggle">
@@ -277,10 +282,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 					<div id="defaultmenu" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-						
-							<li class="dropdown w3_megamenu-fw"><a href="showAll.do" >主页</a></li>
+						    <li class="dropdown w3_megamenu-fw">
+							<a href="indexshow">主页</a>
+							</li>
 							
-							<li class="dropdown w3_megamenu-fw">
+							<li class="active">
 							<a href="showAll.do" >电影</a>
 							</li>
 							
@@ -335,106 +341,163 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</nav>
 			<!-- 导航栏结束 -->
-			</div>		
+			</div>
 
+<!-- AddThis Smart Layers END -->
 
-	<div class="person">
-		<h3>搜索：<span style="color: #20B2AA">名字</span></h3>
-		</br>
-		<div>
-			<a href="#get-actors">
-				<button class="btn btn-primary" data-toggle="modal" ">  		           
-                	<li class="dropdown w3_megamenu-fw">包含关键字的演员</li>	
-                </button>
-			</a>
-			<a href="#get-movies">	
-        		<button class="btn btn-primary" data-toggle="modal" ">  		           
-                	<li class="dropdown w3_megamenu-fw">包含关键字的电影</li>	
-                </button>
-        	</a>
-        </div>
+	<ol class="breadcrumb">
+			  <li><a href="indexshow">主页</a></li>
+			  <li class="active">电影列表</li>
+			</ol>
+		<div class="person">
+		<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电影</h3>
 		<div class="person-grids">
-			<br/>
-			<div class="col-md-6 person-grids-left" style="width: 65%">
-			<div>
-			<a name="get-actors">演员</a>
-			<c:forEach items = "${actorresult}" var = "a">
-				<div class="person-grid">
-					<div class="person-img">
-						<a href="/movie/gotoactor?actor_id=${a.actor_id }"><img src="${a.actor_pic}"style="width: 100px;height: 120px" ></a>
+
+			<div class="col-md-6 person-grids-left" >
+				<c:forEach items = "${movies}" var = "m"  begin="0" end="9" step="1">
+					<div class="person-grid"style="width: 1080px;">
+					<div class="person-img"style="padding-left: 40px;padding-top: 15px;">
+						<a href="moviesingle?id=${m.movie_id}"><img src="${m.movie_pic}" title="actor"style="width: 130px;height: 165px"></a>
 					</div>
-					<div class="person-details">
-						<a href="/movie/gotoactor?actor_id=${a.actor_id }">${a.actor_name}</a>
-						<p style="overflow:hidden;text-overflow:ellipsis;
-								display:-webkit-box;
-								-webkit-box-orient:vertical;
-								-webkit-line-clamp:5	;">${a.actor_summary}</p>
+					<div class="person-details"style="width: 780px;">
+						<a href="moviesingle?id=${m.movie_id}">${m.movie_name}</a>
+							<p class="info"><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;张译，杜江，黄景瑜</p>
+								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;动作、剧情、战争</p>
+								<p class="info" style="overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:10 ;">
+									<strong>简介</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${m.movie_summary}
+								</p>
+								<p class="info"><strong>时长</strong>:&nbsp;&nbsp;&nbsp; &nbsp; ${m.movie_time}分钟</p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
-			</c:forEach>
-		    </div>
-			<div>
-			<a name="get-movies">电影</a>
-			<c:forEach items = "${searchresult}" var = "a">
-			
-				<div class="person-grid">
-					<div class="person-img">
-						<a href="/movie/gotosingle?id=${a.movie_id }"><img src="${a.movie_pic}"style="width: 100px;height: 120px" ></a>
-					</div>
-					
-					<div class="person-details">
-						<a href="/movie/gotosingle?id=${a.movie_id }">${a.movie_name}</a>
-						<p style="overflow:hidden;text-overflow:ellipsis;
-								display:-webkit-box;
-								-webkit-box-orient:vertical;
-								-webkit-line-clamp:5 	;">${a.movie_summary}</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>			
-			</c:forEach>
-		    </div>
-			</div>
-			<div class="col-md-6 person-grids-right"style="width:35%; padding-left: 50px; padding-top: 50px;">
-				<div style="">
-				<div style="color: #006400">添加网站没有的电影/电视剧· · · · · ·</div>
-					<div class="link"><a href="">&gt; 添加电影/电视剧 名字</a></div>
-					<div class="link"><a href="">&gt; 添加影人 名字</a></div></div>
-				<div class="sc-iwsKbI ckqOZf">
-					<div style="color: #006400">相关搜索· · · · · ·</div>
-					<div class="link"><a href="">&gt; 搜索"名字"的 电影</a></div><div class="link"><a href="">&gt; 搜索"名字"的 影评</a></div><div class="link"><a href="">&gt; 搜索"名字"的 演员</a></div></div>
-				<br/>
-				<div><a href="">&gt; 对搜索不满意？给我们反馈</a></div>
+				</c:forEach>
+		<div style="width:1000px">
+            <div style=" font-family: tahoma, 黑体; 
+   						font-weight:700;font-size: 12px;" align="center">共${page.totalRecords}条记录 共${page.totalPages}页 当前第${page.pageNo}页</div><br>
+                <div align="center">
+                <a href="showMovieByType?pageNo=${page.topPageNo }&type_name=${param.type_name}">
+                <input type="button" 
+                   style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    					border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;"
+                     name="fristPage"
+                     value="首页" />
+                   </a>
+                <c:choose>
+                  <c:when test="${page.pageNo!=1}">
+                    
+                      <a href="showMovieByType?pageNo=${page.previousPageNo }&type_name=${param.type_name}">
+                      <input
+                      style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    						border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;"
+    					type="button" name="previousPage" value="上一页" /></a>
+                    
+                  </c:when>
+                  <c:otherwise>
+                    
+                      <input
+                       style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    						border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;" type="button" disabled="disabled" name="previousPage" value="上一页" />
+                    
+                  </c:otherwise>
+                </c:choose>
+                <c:choose>
+                  <c:when test="${page.pageNo != page.totalPages}">
+                    <a href="showMovieByType?pageNo=${page.nextPageNo }&type_name=${param.type_name}">
+                    <input
+                    style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    						border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color: #333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;"
+                     type="button" name="nextPage" value="下一页" /></a>
+                  </c:when>
+                  <c:otherwise>
+                    
+                      <input 
+                      style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    						border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color: #333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;"
+                       type="button" disabled="disabled" name="nextPage" value="下一页" />
+                    
+                  </c:otherwise>
+                </c:choose>
+                <a href="showMovieByType?pageNo=${page.bottomPageNo }&type_name=${param.type_name}">
+                <input 
+                style=" font-family: tahoma, 黑体; 
+   						font-weight:900;font-size: 100%;
+    					color:white;
+    					border-bottom:  1px solid;
+    					border-left:  1px solid;
+    					border-right:  1px solid;
+    					border-top: 1px solid;
+   						background-color:#333;
+    					cursor: hand;
+    					font-style: normal ;
+    					width:74px;
+    					height:35px;" type="button" name="lastPage" value="尾页" /></a>
+            </div>
+        </div>
 				
-			</div>
+
 			<div class="clearfix"></div>
 		</div>
-
-	</div>
-	<div class="clearfix"></div>
-		
-		<div class="footer-top-strip">
-		<div style="align-content: center; padding-left: 500px; ">
-
-		  <a>&lt;前页</a>
-		  <a>1</a>
-		  <a href="">2</a>
-		  <a href="">3</a>
-		  <a href="">4</a>
-		  <a href="">5</a>
-		  <a href="">6</a>
-		  <a href="">7</a>
-		  <a href="">8</a>
-		  <a href="">后页&gt;</a></div>
 		</div>
-	</div>
-
+		</div>
+		
+			<div class="clearfix"></div>
+		</div>
 			<div class="copy-rights text-center">
-				<p>
+		<p>
 			© 2018 My Show | Design by  <a
 				href="#">七仙女</a>
 		</p>
-			</div>
+	</div>
 	</div>
  <script src="js/responsive-tabs.js"></script>
     <script type="text/javascript">
@@ -474,4 +537,4 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</script>
 				<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 </body>
-</html>
+

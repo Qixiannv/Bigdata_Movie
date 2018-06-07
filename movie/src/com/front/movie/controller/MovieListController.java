@@ -50,17 +50,28 @@ public class MovieListController {
         
         return "movie-list";
     }
-	@RequestMapping(value = "/11111")
-	public String findMovieByMovie_Type(@RequestParam("type_name") String type_name,HttpServletRequest request){
-		System.out.println(type_name);
+	@RequestMapping(value = "/showMovieByType")
+	public String findMovieByMovie_Type(String type_name,HttpServletRequest request){
+		System.out.println(type_name+"11");
 		MovieType mt=this.mtd.selectType_idByTypeName(type_name);
-		List<MovieTypeAndMovie> li= this.mtd.selectMovie_idByType_id(mt.getType_id());
+		System.out.println(mt.getType_name()+"111");
+		int type_id=mt.getType_id();
+		 try {
+	            String pageNo = request.getParameter("pageNo");
+	            if (pageNo == null) {
+	                pageNo = "1";
+	            }
+	            Page page = MP.queryForPage1(Integer.valueOf(pageNo), 10,type_id);
+	            request.setAttribute("page", page);
+	            List<MovieTypeAndMovie> li = page.getList();
 		List<Movie> list=new ArrayList<Movie>();
 		for(int i=0;i<li.size();i++){
 			list.add(li.get(i).getMovie());
 		}
-		System.out.println(list);
-		request.setAttribute("list", list);
-		return "";
+		request.setAttribute("movies", list);
+		 }catch(Exception e){
+			 e.printStackTrace();
+		 }
+		 return "movie-typelist";
 	}
 }
