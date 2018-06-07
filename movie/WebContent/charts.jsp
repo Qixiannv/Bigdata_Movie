@@ -378,7 +378,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<c:forEach items="${movie }" var="m" varStatus="status" begin="0" end="9" step="1">
 						<li>
 							<div class="f-movie">
-								<h4>[NO.${status.index+1 }</h4>
+								<h4>NO.${status.index+1 }</h4>
 								<div class="f-movie-img">
 									<a href="./moviesingle?id=${m.getMovie_id() }"><img src="${m.getMovie_pic() }" alt="${m.getMovie_name() }" /></a>
 								</div>
