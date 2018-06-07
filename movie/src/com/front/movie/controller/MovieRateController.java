@@ -32,7 +32,13 @@ public class MovieRateController {
 			public String ShowCharts(HttpServletRequest request) {
 				//通过调用movieServiceImpl中的方法在request里添加查询的电影
 				List<Movie> l = this.msi.searchAllMovie();
-				List<Movie> list = l;			
+				List<Movie> list = null;			
+				for(int i = 0;i < 10; i++){
+					list.add(l.get(i));
+				}
+					
+					
+					
 				Collections.sort(list,new Comparator<Movie>(){
 					public int compare(Movie o1, Movie o2) {
 						int i = o1.getRate().compareTo(o2.getRate());
