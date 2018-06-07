@@ -32,9 +32,7 @@ public class UserImp {
 	public String RegisterUser(User u,HttpSession session,HttpServletRequest request)throws Exception{
 		this.userRegisterDaoImp.UserRegister(u);
 		session.setAttribute("user", u);
-		request.setAttribute("movielist", this.msi.searchAllMovie());
-		request.setAttribute("actorlist", this.asi.findActors());
-		return "index";
+		return "redirect:/indexshow";
 	}
 	/**
 	 * 用户登录 同时把user 放进session 中
@@ -49,9 +47,7 @@ public class UserImp {
 		User u=this.userRegisterDaoImp.Userlogin(email);
 			if(password.equals(u.getPassword())){
 				session.setAttribute("user", u);
-				request.setAttribute("movielist", this.msi.searchAllMovie());
-				request.setAttribute("actorlist", this.asi.findActors());
-				return "index";
+				return "redirect:/indexshow";
 			}else{
 				return "cuowu";
 			}
