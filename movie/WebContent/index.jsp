@@ -611,10 +611,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 				<div class="our-blog">
 					<h5>佳片推荐</h5>
-					<c:forEach items="${movielist }" var="p" begin="0" end="9" step="1">
+					<c:forEach items="${typelist }" var="t" >
 					<ul class="mov_list">
-						<li>NO.1</li>
-						<li><a href="./gotosingle?id=${p.movie_id }">${p.movie_name }</a></li>
+						<li><a  href="11111?type_name=${t.getType_name()}">${t.getType_name() }</a></li>
+						
+							<ul>
+								<c:forEach items="${t.getType_movie() }" var="m" varStatus="status" begin="0" end="2" step="1">
+									<ul class="mov_list">
+										<li>NO.${status.index+1 }</li>
+										<li><a href="./gotosingle?id=${m.movie.getMovie_id() }">${m.movie.getMovie_name() }</a></li>
+									</ul>
+								</c:forEach>
+							</ul>
+						
 					</ul>
 					</c:forEach>
 				</div>
