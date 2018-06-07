@@ -362,39 +362,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<img src="${movie.getMovie_pic() }">
 				</div>
 				<div class="review-info">
-								<h6 class="span88">${movie.getMovie_name() }</h6>
-								<p class="dirctr" ><a href="">主演：
-			<c:forEach items = "${movie.actor_movieSet}" var = "a">
-				<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
-					<a href="gotoactor?actor_id=${a.actor.actor_id}">${a.actor.actor_name}</a>
-				</div>
-			</c:forEach>
-							
-								<p class="ratingview">专家评价:</p>
-								<div class="rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div>
-								<p class="ratingview">
-								&nbsp;3.5/5  
-								</p>
-								<div class="clearfix"></div>
-								<p class="ratingview c-rating">观众评价:</p>
-								<div class="rating c-rating">
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-									<span>☆</span>
-								</div> 	
-								<p class="ratingview c-rating">								
-								&nbsp; 3.3/5</p>
+
 								<div class="clearfix"></div>
 								<div class="yrw">
-									<div class="dropdown-button">           			
+									<div class="dropdown-button">         
+									<form action = "/movie/leave_comment" method = "get">  			
 										<select class="dropdown" tabindex="9" data-settings="{&quot;wrapperClass&quot;:&quot;flat&quot;}">
 										<option value="0">你的评分</option>	
 										<option value="1">1.（差）</option>
@@ -406,10 +378,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<option value="7">4.5(非常好)</option>
 										<option value="8">5.（很出色）</option>
 									  </select>
+									  &nbsp;&nbsp;
+									  <input type = "submit" value="提交">
+									 </form>
 									</div>
-									<div class="rtm text-center">
-										<a href="#">再看一遍</a>
-									</div>
+
 									<div class="clearfix"></div>
 								</div>
 								<p class="info" ><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;<c:forEach items = '${movie.getActor_movieSet()}' var = 'a'>&nbsp;&nbsp;&nbsp;&nbsp;${a.actor.actor_name }</c:forEach></p>
