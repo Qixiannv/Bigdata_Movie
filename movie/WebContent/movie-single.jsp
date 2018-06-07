@@ -412,8 +412,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="clearfix"></div>
 								</div>
-								<p class="info" ><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;没有字段</p>
-								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;</p>
+								<p class="info" ><strong>主演</strong>: &nbsp;&nbsp;&nbsp;&nbsp;<c:forEach items = '${movie.getActor_movieSet()}' var = 'a'>&nbsp;&nbsp;&nbsp;&nbsp;${a.actor.actor_name }</c:forEach></p>
+								<p class="info"><strong>类型</strong>: &nbsp;&nbsp;&nbsp;&nbsp;<c:forEach items = '${movie.getType_movieSet()}' var = 'a'>&nbsp;&nbsp;&nbsp;&nbsp;${a.type.type_name }</c:forEach></p>
 								<p class="info"><strong>简介</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${movie.getMovie_summary() }</p>
 								<p class="info"><strong>时长</strong>:&nbsp;&nbsp;&nbsp; &nbsp; ${movie.movie_time}分钟</p>
 							</div>
