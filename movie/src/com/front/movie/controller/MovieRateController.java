@@ -31,24 +31,25 @@ public class MovieRateController {
 			@GetMapping("charts/")
 			public String ShowCharts(HttpServletRequest request) {
 				//通过调用movieServiceImpl中的方法在request里添加查询的电影
-				List<Movie> l = this.msi.searchAllMovie();
-				List<Movie> list = l;			
-				Collections.sort(list,new Comparator<Movie>(){
-					public int compare(Movie o1, Movie o2) {
-						int i = o1.getRate().compareTo(o2.getRate());
-						if(i>0){
-							return -1;
-						}else if(i==0){
-							return 0;
-						}else{
-							return 1;
-						}
-						
-					}
-				});
-				for(int i = 10;i<list.size();i++){
-					list.remove(i);
-				}
+				//List<Movie> l = this.msi.searchAllMovie();
+				//List<Movie> list = l;			
+				//Collections.sort(list,new Comparator<Movie>(){
+				//	public int compare(Movie o1, Movie o2) {
+//						int i = o1.getRate().compareTo(o2.getRate());
+//						if(i>0){
+//							return -1;
+//						}else if(i==0){
+//							return 0;
+//						}else{
+//							return 1;
+//						}
+//						
+//					}
+//				});
+//				for(int i = 10;i<list.size();i++){
+//					list.remove(i);
+//				}
+				List<Movie> list = this.msi.top10Movies();
 				request.setAttribute("movie",list);
 				//返回跳转标识
 				

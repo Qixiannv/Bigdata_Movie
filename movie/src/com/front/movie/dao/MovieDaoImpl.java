@@ -27,4 +27,14 @@ public class MovieDaoImpl {
 		Query<Movie> query =this.sessionFactory.getCurrentSession().createQuery("from Movie");
 		return query.list();
 	}
+	//按评分查前十电影
+	public List<Movie> searchTop10(){
+		Query<Movie> query = this.sessionFactory.getCurrentSession().createQuery("from Movie as m order by rate desc");
+		List<Movie> list = query.list();
+		for(int i = 10; i<list.size();i++)
+		{
+			list.remove(i);
+		}
+		return query.list();
+	}
 }
