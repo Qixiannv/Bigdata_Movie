@@ -41,7 +41,7 @@ public class User {
 	private String gender;
 	private String signature;
 	
-	
+	private Set userlikemovie = new HashSet<UserLikeMovie>();
 	private Set type_userSet = new HashSet<MovieTypeAndUser>();
 	
 	
@@ -142,6 +142,15 @@ public class User {
 
 	public void setType_userSet(Set type_userSet) {
 		this.type_userSet = type_userSet;
+	}
+	
+	@OneToMany(mappedBy="user", targetEntity=UserLikeMovie.class,fetch = FetchType.EAGER)
+	@Cascade(value = {CascadeType.SAVE_UPDATE, 	CascadeType.DELETE_ORPHAN,CascadeType.ALL})
+	public Set getUserlikemovie() {
+		return userlikemovie;
+	}
+	public void setUserlikemovie(Set userlikemovie) {
+		this.userlikemovie = userlikemovie;
 	}
 	
 	

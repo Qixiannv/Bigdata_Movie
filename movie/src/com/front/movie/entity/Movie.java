@@ -20,6 +20,7 @@ import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.front.actor.entity.Actor;
+import com.front.user.entity.UserLikeMovie;
 @Entity
 @Table(name="movie")
 public class Movie {
@@ -39,9 +40,11 @@ public class Movie {
 	private String movie_time;
 	private Float rate;
 	
-	
+	private Set userlikemovie = new HashSet<UserLikeMovie>();
 	private Set movieCommentSet = new HashSet<MovieComment>();
 	public Movie() {}
+	
+	
 	
 	
 	
@@ -159,6 +162,21 @@ public class Movie {
 		this.type_movieSet = type_movieSet;
 	}
 
+
+
+
+
+	@OneToMany(mappedBy="movie", targetEntity=UserLikeMovie.class,
+			fetch = FetchType.EAGER)
+	@Cascade(value = {CascadeType.ALL})
+	public Set getUserlikemovie() {
+		return userlikemovie;
+	}
+	public void setUserlikemovie(Set userlikemovie) {
+		this.userlikemovie = userlikemovie;
+	}
+
+	
 	
 	
 	

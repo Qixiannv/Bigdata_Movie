@@ -103,8 +103,14 @@ public class UserDaoImp {
 		Query<User> query =this.sessionFactory.getCurrentSession().createQuery("from User");
 		return query.list();
 	}
-	
-	
+	//返回user个数
+	public int getUserCount(){
+		Long count = (Long) this.sessionFactory.getCurrentSession()
+                .createQuery("select count(*) from Employee")
+                .uniqueResult();
+		return count.intValue();
+				
+	}
 	
 	
 }
