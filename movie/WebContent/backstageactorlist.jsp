@@ -46,13 +46,8 @@
     <li class="am-dropdown-header">所有消息都在这里</li>
 
     
-
-    <li><a href="#">未激活会员 <span class="am-badge am-badge-danger am-round">556</span></a></li>
-    <li><a href="#">未激活代理 <span class="am-badge am-badge-danger am-round">69</span></a></a></li>
-    <li><a href="#">未处理汇款</a></li>
-    <li><a href="#">未发放提现</a></li>
-    <li><a href="#">未发货订单</a></li>
-    <li><a href="#">低库存产品</a></li>
+    <li><a href="#">新增用户 <span class="am-badge am-badge-danger am-round">6</span></a></li>
+    <li><a href="#">新增电影 <span class="am-badge am-badge-danger am-round">9</span></a></a></li>
     <li><a href="#">信息反馈</a></li>
     
     
@@ -102,39 +97,22 @@
     
     <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
      <div class="sideMenu">
-      <h3 class="am-icon-flag"><em></em> <a href="#">电影管理</a></h3>
+     <h3 class="am-icon-flag"><em></em> <a href="./adminindex">电影管理</a></h3>
       <ul>
-        <li><a href="backstageactorlist">电影列表</a></li>
-        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="">添加新电影</a></li>
-        <li><a href="">电影分类</a></li>
+        <li><a href="./backstagemovielist">电影列表</a></li>
+        <li><a href="./addmovie">添加电影</a></li>
+        <li><a href="./editmovietype">添加电影类型</a></li>
       </ul>
-      <h3 class="am-icon-cart-plus"><em></em> <a href="#"> 订单管理</a></h3>
+      
+      <h3 class="am-icon-cart-plus"><em></em> <a href="./backstageactorlist">演员管理</a></h3>
       <ul>
-        <li><a href="OD">订单列表</a></li>
+        <li><a href="./backstageactorlist">演员列表</a></li>
+        <li><a href="./addactor">添加演员</a></li>
       </ul>
-      <h3 class="am-icon-users"><em></em> <a href="#">会员管理</a></h3>
+      
+      <h3 class="am-icon-users"><em></em> <a href="./backstageuserlist">用户管理</a></h3>
       <ul>
-        <li><a href="backstageuserlist">会员列表 </a></li>
-      </ul>
-      <h3 class="am-icon-volume-up"><em></em> <a href="#">信息通知</a></h3>
-      <ul>
-        <li>站内消息 /留言 </li>
-        <li>短信</li>
-        <li>邮件</li>
-        <li>微信</li>
-        <li>客服</li>
-      </ul>
-      <h3 class="am-icon-gears"><em></em> <a href="#">系统设置</a></h3>
-      <ul>
-        <li>数据备份</li>
-        <li>邮件/短信管理</li>
-        <li>上传/下载</li>
-        <li>权限</li>
-        <li>网站设置</li>
-        <li>第三方支付</li>
-        <li>提现 /转账 出入账汇率</li>
-        <li>平台设置</li>
-        <li>声音文件</li>
+        <li><a href="./backstageuserlist">用户列表 </a></li>
       </ul>
     </div>
     <!-- sideMenu End --> 
@@ -304,8 +282,11 @@
  
  <div class="foods">
   <ul>
-    版权所有@2015. 模板收集自 <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> -  More Templates<a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-  </ul>
+<p>
+					唯一指定邮箱：248207330@qq.com
+			© 2018 My Show | Design by  <a
+				href="#">七仙女</a>
+				</p>  </ul>
   <dl>
     <a href="" title="返回头部" class="am-icon-btn am-icon-arrow-up"></a>
   </dl>

@@ -46,12 +46,8 @@
 
     
 
-    <li><a href="#">未激活会员 <span class="am-badge am-badge-danger am-round">556</span></a></li>
-    <li><a href="#">未激活代理 <span class="am-badge am-badge-danger am-round">69</span></a></a></li>
-    <li><a href="#">未处理汇款</a></li>
-    <li><a href="#">未发放提现</a></li>
-    <li><a href="#">未发货订单</a></li>
-    <li><a href="#">低库存产品</a></li>
+    <li><a href="#">新增用户 <span class="am-badge am-badge-danger am-round">6</span></a></li>
+    <li><a href="#">新增电影 <span class="am-badge am-badge-danger am-round">9</span></a></a></li>
     <li><a href="#">信息反馈</a></li>
     
     
@@ -61,29 +57,16 @@
 
  <li class="kuanjie">
  	
- 	<a href="#">会员管理</a>          
- 	<a href="#">奖金管理</a> 
- 	<a href="#">订单管理</a>   
- 	<a href="#">产品管理</a> 
- 	<a href="#">个人中心</a> 
- 	 <a href="#">系统设置</a>
  </li>
 
  <li class="soso">
  	
 <p>   
 	
-	<select data-am-selected="{btnWidth: 70, btnSize: 'sm', btnStyle: 'default'}">
-          <option value="b">全部</option>
-          <option value="o">产品</option>
-          <option value="o">会员</option>
-          
-        </select>
 
 </p>
 
-<p class="ycfg"><input type="text" class="am-form-field am-input-sm" placeholder="圆角表单域" /></p>
-<p><button class="am-btn am-btn-xs am-btn-default am-xiao"><i class="am-icon-search"></i></button></p>
+
  </li>
 
 
@@ -101,39 +84,22 @@
     
     <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
     <div class="sideMenu">
-      <h3 class="am-icon-flag"><em></em> <a href="#">商品管理</a></h3>
-        <ul>
-        <li><a href="productlist">商品列表</a></li>
-        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="">添加新商品</a></li>
-        <li><a href="">商品分类</a></li>
-      </ul>
-      <h3 class="am-icon-cart-plus"><em></em> <a href="#"> 订单管理</a></h3>
-     <ul>
-        <li><a href="OD">订单列表</a></li>
-      </ul>
-      <h3 class="am-icon-users"><em></em> <a href="#">会员管理</a></h3>
+     <h3 class="am-icon-flag"><em></em> <a href="./adminindex">电影管理</a></h3>
       <ul>
-        <li><a href="userlist">会员列表 </a></li>
+        <li><a href="./backstagemovielist">电影列表</a></li>
+        <li><a href="./addmovie">添加电影</a></li>
+        <li><a href="./editmovietype">添加电影类型</a></li>
       </ul>
-      <h3 class="am-icon-volume-up"><em></em> <a href="#">信息通知</a></h3>
+      
+      <h3 class="am-icon-cart-plus"><em></em> <a href="./backstageactorlist">演员管理</a></h3>
       <ul>
-        <li>站内消息 /留言 </li>
-        <li>短信</li>
-        <li>邮件</li>
-        <li>微信</li>
-        <li>客服</li>
+        <li><a href="./backstageactorlist">演员列表</a></li>
+        <li><a href="./addactor">添加演员</a></li>
       </ul>
-      <h3 class="am-icon-gears"><em></em> <a href="#">系统设置</a></h3>
+      
+      <h3 class="am-icon-users"><em></em> <a href="./backstageuserlist">用户管理</a></h3>
       <ul>
-        <li>数据备份</li>
-        <li>邮件/短信管理</li>
-        <li>上传/下载</li>
-        <li>权限</li>
-        <li>网站设置</li>
-        <li>第三方支付</li>
-        <li>提现 /转账 出入账汇率</li>
-        <li>平台设置</li>
-        <li>声音文件</li>
+        <li><a href="./backstageuserlist">用户列表 </a></li>
       </ul>
     </div>
     <!-- sideMenu End --> 
@@ -163,11 +129,7 @@
 	
 		<div class="daohang">
 			<ul>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs"> 首页 </li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">帮助中心<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">奖金管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">产品管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				
+			
 				
 			</ul>
 
@@ -184,7 +146,7 @@
     <div class="listbiaoti am-cf">
       <ul class="am-icon-flag on"> 栏目名称</ul>
       
-      <dl class="am-icon-home" style="float: right;"> 当前位置： 首页 > <a href="#">商品列表</a></dl>
+      <dl class="am-icon-home" style="float: right;"> 当前位置： 添加电影 </dl>
 
       
       

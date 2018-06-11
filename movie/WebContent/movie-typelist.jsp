@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>电影列表</title>
+<title>电影类型列表</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />

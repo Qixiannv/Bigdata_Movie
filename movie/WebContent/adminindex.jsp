@@ -40,12 +40,8 @@
 
     
 
-    <li><a href="#">未激活会员 <span class="am-badge am-badge-danger am-round">556</span></a></li>
-    <li><a href="#">未激活代理 <span class="am-badge am-badge-danger am-round">69</span></a></a></li>
-    <li><a href="#">未处理汇款</a></li>
-    <li><a href="#">未发放提现</a></li>
-    <li><a href="#">未发货订单</a></li>
-    <li><a href="#">低库存产品</a></li>
+    <li><a href="#">新增用户 <span class="am-badge am-badge-danger am-round">6</span></a></li>
+    <li><a href="#">新增电影 <span class="am-badge am-badge-danger am-round">9</span></a></a></li>
     <li><a href="#">信息反馈</a></li>
     
     
@@ -82,40 +78,24 @@
     
     <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
     <div class="sideMenu">
-      <h3 class="am-icon-flag"><em></em> <a href="#">电影管理</a></h3>
+    
+      <h3 class="am-icon-flag"><em></em> <a href="AdminLogin">电影管理</a></h3>
       <ul>
-        <li><a href="backstagemovielist">电影列表</a></li>
-        <li class="func" dataType='html' dataLink='msn.htm' iconImg='images/msn.gif'><a href="">添加新电影</a></li>
-        <li><a href="">电影分类</a></li>
+        <li><a href="./backstagemovielist">电影列表</a></li>
+        <li><a href="addmovie.jsp">添加电影</a></li>
       </ul>
-      <h3 class="am-icon-cart-plus"><em></em> <a href="#">演员管理</a></h3>
+      
+      <h3 class="am-icon-cart-plus"><em></em> <a href="./backstageactorlist">演员管理</a></h3>
       <ul>
-        <li><a href="backstageactorlist">演员列表</a></li>
+        <li><a href="./backstageactorlist">演员列表</a></li>
+        <li><a href="addactor.jsp">添加演员</a></li>
       </ul>
-      <h3 class="am-icon-users"><em></em> <a href="#">会员管理</a></h3>
+      
+      <h3 class="am-icon-users"><em></em> <a href="./backstageuserlist">用户管理</a></h3>
       <ul>
-        <li><a href="backstageuserlist">会员列表 </a></li>
+        <li><a href="./backstageuserlist">用户列表 </a></li>
       </ul>
-      <h3 class="am-icon-volume-up"><em></em> <a href="#">信息通知</a></h3>
-      <ul>
-        <li>站内消息 /留言 </li>
-        <li>短信</li>
-        <li>邮件</li>
-        <li>微信</li>
-        <li>客服</li>
-      </ul>
-      <h3 class="am-icon-gears"><em></em> <a href="#">系统设置</a></h3>
-      <ul>
-        <li>数据备份</li>
-        <li>邮件/短信管理</li>
-        <li>上传/下载</li>
-        <li>权限</li>
-        <li>网站设置</li>
-        <li>第三方支付</li>
-        <li>提现 /转账 出入账汇率</li>
-        <li>平台设置</li>
-        <li>声音文件</li>
-      </ul>
+      
     </div>
     <!-- sideMenu End --> 
     
@@ -331,9 +311,9 @@
     <div class="shuju">
       <div class="shujuone">
         <dl>
-          <dt>全盘收入：  1356666</dt>
-          <dt>全盘支出：   5646465.98</dt>
-          <dt>全盘利润：  546464</dt>
+          <dt>今日上映电影数量：  13</dt>
+          <dt>本周上映电影数量：   56</dt>
+          <dt>统计电影数量：  546</dt>
         </dl>
         <ul>
           <h2>26.83%</h2>
@@ -342,9 +322,9 @@
       </div>
       <div class="shujutow">
         <dl>
-          <dt>全盘收入：  1356666</dt>
-          <dt>全盘支出：   5646465.98</dt>
-          <dt>全盘利润：  546464</dt>
+          <dt>今日新增用户数量：  1</dt>
+          <dt>本周新增用户数量：   5</dt>
+          <dt>统计用户数量：  54</dt>
         </dl>
         <ul>
           <h2>26.83%</h2>
@@ -354,8 +334,7 @@
       <div class="slideTxtBox">
         <div class="hd">
           <ul>
-            <li>其他信息</li>
-            <li>工作进度表</li>
+            <li>电影排名</li>
           </ul>
         </div>
         <div class="bd">
@@ -364,41 +343,41 @@
               <tbody>
                 <tr>
                   <td width="7%"  align="center">1 </td>
-                  <td width="83%" >工作进度名称</td>
-                  <td width="10%"  align="center"><a href="#">10%</a></td>
+                  <td width="83%" >红海行动</td>
+                  <td width="10%"  align="center"><a href="#">9.8</a></td>
                 </tr>
                 <tr>
-                  <td align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
+                  <td align="center">2 </td>
+                  <td>红海行动</td>
+                  <td  align="center"><a href="#">9.8</a></td>
                 </tr>
                 <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
+                  <td  align="center">3 </td>
+                  <td>红海行动</td>
+                  <td  align="center"><a href="#">9.8</a></td>
                 </tr>
                 <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
-                </tr>
-                
-                <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
+                  <td  align="center">4 </td>
+                  <td>红海行动</td>
+                  <td  align="center"><a href="#">9.8</a></td>
                 </tr>
                 
                 <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
+                  <td  align="center">5 </td>
+                  <td>红海行动</td>
+                  <td  align="center"><a href="#">9.8</a></td>
                 </tr>
                 
                 <tr>
-                  <td  align="center">1 </td>
-                  <td>工作进度名称</td>
-                  <td  align="center"><a href="#">10%</a></td>
+                  <td  align="center">6 </td>
+                  <td>红海行动</td>
+                  <td  align="center"><a href="#">9.8</a></td>
+                </tr>
+                
+                <tr>
+                  <td  align="center">7 </td>
+                  <td>红海行动</td>
+                  <td  align="center"><a href="#">9.8</a></td>
                 </tr>
                 
                 
@@ -411,47 +390,7 @@
               </tbody>
             </table>
           </ul>
-          <ul>
-            <table class="am-table">
-              <tbody>
-                <tr>
-                  <td>普卡</td>
-                  <td>普卡</td>
-                  <td><a href="#">4534</a></td>
-                  <td>+20</td>
-                  <td> 4534 </td>
-                </tr>
-                <tr>
-                  <td>银卡</td>
-                  <td>银卡</td>
-                  <td>4534</td>
-                  <td>+2</td>
-                  <td> 4534 </td>
-                </tr>
-                <tr>
-                  <td>金卡</td>
-                  <td>金卡</td>
-                  <td>4534</td>
-                  <td>+10</td>
-                  <td> 4534 </td>
-                </tr>
-                <tr>
-                  <td>钻卡</td>
-                  <td>钻卡</td>
-                  <td>4534</td>
-                  <td>+50</td>
-                  <td> 4534 </td>
-                </tr>
-                <tr>
-                  <td>合计</td>
-                  <td>合计</td>
-                  <td>4534</td>
-                  <td>+50</td>
-                  <td> 4534 </td>
-                </tr>
-              </tbody>
-            </table>
-          </ul>
+         
         </div>
       </div>
       <script type="text/javascript">jQuery(".slideTxtBox").slide();</script> 
