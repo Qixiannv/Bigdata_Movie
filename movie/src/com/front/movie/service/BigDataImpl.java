@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Service;
 
 import com.front.movie.dao.MovieBigDataDao;
+import com.front.user.entity.User;
 
 @Service
 public class BigDataImpl {
@@ -15,8 +16,8 @@ public class BigDataImpl {
 	@Resource
 	private MovieBigDataDao mbgd;
 	
-	public Map getUserRecommend(HttpServletRequest request){
-		return mbgd.getRecommend(request);
+	public Map getUserRecommend(User recuser) throws Exception{
+		return mbgd.getRecommend(recuser);
 	}
 	
 	

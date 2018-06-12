@@ -84,4 +84,8 @@ public class UserImp {
 	public List<User>  searchAllUser()throws Exception {
 		 return this.userRegisterDaoImp.searchAllUser();
 	}
+	
+	
+	
+	
 }

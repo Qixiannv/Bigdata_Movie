@@ -375,23 +375,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</ol>
 		<div class="featured">
 					<ul style="position: relative;left: 25px;top:-50px">
-					<c:forEach items="${movie }" var="m" varStatus="status" begin="0" end="9" step="1">
+					<c:forEach items="${user.getUserlikemovie() }" var="m" varStatus="status" begin="0" end="9" step="1">
 						<li>
 							<div class="f-movie">
 								<h4>NO.${status.index+1 }</h4>
 								<div class="f-movie-img">
-									<a href="./moviesingle?id=${m.getMovie_id() }"><img src="${m.getMovie_pic() }" alt="${m.getMovie_name() }" /></a>
+									<a href="./moviesingle?id=${m.key.getMovie().getMovie_id() }"><img src="${m.key.getMovie().getMovie_pic() }" alt="${m.key.getMovie().getMovie_name() }" /></a>
 								</div>
 								<div class="f-movie-name">
-									<a>${m.getMovie_name() }</a>
-									<p>评分：${m.getRate() }</p>
+									<a>${m.key.getMovie().getMovie_name() }</a>
+									<p>评分：${m.key.get().getRate() }</p>
 								</div>
 								<div class="f-buy-tickets">
-									<a href="./moviesingle?id=${m.getMovie_id() }">查看详情</a>
+									<a href="./moviesingle?id=${m.key.getMovie().getMovie_id() }">查看详情</a>
 								</div>
 							</div>
 						</li>
 					</c:forEach>
+					
+					<c:forEach items="${user.getUserlikemovie() }" var="m" varStatus="status" begin="0" end="9" step="1">
+						<li>
+							<div class="f-movie">
+								<h4>NO.${status.index+1 }</h4>
+								<div class="f-movie-img">
+									<a href="./moviesingle?id=${m.getMovie().getMovie_id() }"><img src="${m.getMovie().getMovie_pic() }" alt="${m.getMovie().getMovie_name() }" /></a>
+								</div>
+								<div class="f-movie-name">
+									<a>${m.getMovie().getMovie_name() }</a>
+									<p>评分：${m.get().getRate() }</p>
+								</div>
+								<div class="f-buy-tickets">
+									<a href="./moviesingle?id=${m.getMovie().getMovie_id() }">查看详情</a>
+								</div>
+							</div>
+						</li>
+					</c:forEach>
+					
 						<div class="clearfix"></div>
 					</ul>
 				</div>

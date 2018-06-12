@@ -388,6 +388,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			
 			<a class="m-orange" href="addtypeforuser">添加标签</a>
+			<a href="userrecommend">我的推荐</a>
 			<div class="clearfix"></div>
 			<div class="article-time-strip">
 

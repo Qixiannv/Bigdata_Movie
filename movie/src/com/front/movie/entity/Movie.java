@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.criteria.Order;
@@ -42,16 +43,21 @@ public class Movie {
 	
 	private Set userlikemovie = new HashSet<UserLikeMovie>();
 	private Set movieCommentSet = new HashSet<MovieComment>();
-	public Movie() {}
-	
-	
-	
-	
-	
 
 
+
+
+
+
+	public Movie() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
 	public Movie(int movie_id, String movie_name, String movie_summary, String movie_pic, Set actor_movieSet,
-			Set type_movieSet, Date date, String movie_time, Float rate, Set movieCommentSet) {
+			Set type_movieSet, Date date, String movie_time, Float rate, Set userlikemovie, Set movieCommentSet) {
 		super();
 		this.movie_id = movie_id;
 		this.movie_name = movie_name;
@@ -62,10 +68,9 @@ public class Movie {
 		this.date = date;
 		this.movie_time = movie_time;
 		this.rate = rate;
+		this.userlikemovie = userlikemovie;
 		this.movieCommentSet = movieCommentSet;
 	}
-
-
 
 
 
@@ -162,13 +167,8 @@ public class Movie {
 		this.type_movieSet = type_movieSet;
 	}
 
-
-
-
-
-	@OneToMany(mappedBy="movie", targetEntity=UserLikeMovie.class,
-			fetch = FetchType.EAGER)
-	@Cascade(value = {CascadeType.ALL})
+	@OneToMany(mappedBy="type", targetEntity=UserLikeMovie.class,
+			cascade=javax.persistence.CascadeType.ALL,fetch = FetchType.EAGER)
 	public Set getUserlikemovie() {
 		return userlikemovie;
 	}

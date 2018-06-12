@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.front.movie.service.BigDataImpl;
 import com.front.user.entity.User;
 import com.front.user.service.UserImp;
 
@@ -24,6 +25,8 @@ public class UserController {
 	
 	@Resource
 	private UserImp userRegisterImp;
+	@Resource
+	private BigDataImpl bdi;
 	/**
 	 * 用户注册跳转 
 	 * @param u   
@@ -82,6 +85,11 @@ public class UserController {
 		return "redirect:/indexshow";
 	}
 	
-	
+	@GetMapping("userrecommend")
+	public String getRecommend(HttpServletRequest request) throws Exception{
+		User u = (User)request.getSession().getAttribute("user");
+		request.setAttribute("map", bdi.getUserRecommend(u));
+		return "recommend";
+	}
 	
 }

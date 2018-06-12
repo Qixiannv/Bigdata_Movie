@@ -106,7 +106,7 @@ public class UserDaoImp {
 	//返回user个数
 	public int getUserCount(){
 		Long count = (Long) this.sessionFactory.getCurrentSession()
-                .createQuery("select count(*) from Employee")
+                .createQuery("select count(*) from User")
                 .uniqueResult();
 		return count.intValue();
 				
