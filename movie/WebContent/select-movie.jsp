@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>电影搜素</title>
+<title>电影搜索</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -243,7 +243,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							  <i class="fa fa-search"></i> 
 							  <input type="text"
 								   value="你可以查询电影、演员等"
-								   name = "name";
+								   name = "name"
 								   onfocus="this.value = '';"
 								   onblur="if (this.value == '') {this.value = '你可以查询电影、演员等';}" 
 						     />

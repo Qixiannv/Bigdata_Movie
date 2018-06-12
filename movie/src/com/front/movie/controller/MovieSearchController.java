@@ -28,7 +28,14 @@ public class MovieSearchController {
 		request.setAttribute("searchresult", this.mssi.movieSearch(name));
 		request.setAttribute("actorresult", this.mssi.actorSearch(name));
 		
-		return "backstagemovielist";
+		return "select-backstagemovielist";
 	}
-	
+	@GetMapping("back_search_actor")
+	public String movieSearch2(String name,HttpServletRequest request) {
+		
+		request.setAttribute("searchresult", this.mssi.movieSearch(name));
+		request.setAttribute("actorresult", this.mssi.actorSearch(name));
+		
+		return "select-backstageactorlist";
+	}
 }

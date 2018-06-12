@@ -154,41 +154,10 @@
 	
 	<div class="am-btn-toolbars am-btn-toolbar am-kg am-cf">
   <ul>
-    <li>
-      <div class="am-btn-group am-btn-group-xs">
-        <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
-          <option value="b">产品分类</option>
-          <option value="o">下架</option>
-        </select>
-      </div>
-    </li>
-    <li>
-      <div class="am-btn-group am-btn-group-xs">
-      <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
-        <option value="b">产品分类</option>
-        <option value="o">下架</option>
-      </select>
-      </div>
-    </li>
-    <li style="margin-right: 0;">
-    	<span class="tubiao am-icon-calendar"></span>
-      <input type="text" class="am-form-field am-input-sm am-input-zm  am-icon-calendar" placeholder="开始日期" data-am-datepicker="{theme: 'success',}"  readonly/>
-    </li>
-       <li style="margin-left: -4px;">
-    	<span class="tubiao am-icon-calendar"></span>
-      <input type="text" class="am-form-field am-input-sm am-input-zm  am-icon-calendar" placeholder="开始日期" data-am-datepicker="{theme: 'success',}"  readonly/>
-    </li>
-    
-        <li style="margin-left: -10px;">
-      <div class="am-btn-group am-btn-group-xs">
-      <select data-am-selected="{btnWidth: 90, btnSize: 'sm', btnStyle: 'default'}">
-        <option value="b">产品分类</option>
-        <option value="o">下架</option>
-      </select>
-      </div>
-    </li>
-    <li><input type="text" class="am-form-field am-input-sm am-input-xm" placeholder="关键词搜索" /></li>
-    <li><button type="button" class="am-btn am-radius am-btn-xs am-btn-success" style="margin-top: -1px;">搜索</button></li>
+    <form action = "back_search_actor"  >  
+    <li><input type="text" class="am-form-field am-input-sm am-input-xm" name = "name" placeholder="关键词搜索" /></li>
+    <li><button  class="am-btn am-radius am-btn-xs am-btn-success" style="margin-top: -1px;">搜索</button></li>
+  </form>
   </ul>
 </div>
 
