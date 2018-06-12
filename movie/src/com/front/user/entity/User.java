@@ -49,26 +49,30 @@ public class User {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public User(int user_id, String email, int phone, String username, String password, Date birthday, String avatar,
-			String gender, String signature, Set type_userSet) {
-		super();
-		this.user_id = user_id;
-		this.email = email;
-		this.phone = phone;
-		this.username = username;
-		this.password = password;
-		this.birthday = birthday;
-		this.avatar = avatar;
-		this.gender = gender;
-		this.signature = signature;
-		this.type_userSet = type_userSet;
-	}
+		public User(int user_id, String email, int phone, String username, String password, Date birthday,
+				String avatar, String gender, String signature, Set userlikemovie, Set type_userSet) {
+			super();
+			this.user_id = user_id;
+			this.email = email;
+			this.phone = phone;
+			this.username = username;
+			this.password = password;
+			this.birthday = birthday;
+			this.avatar = avatar;
+			this.gender = gender;
+			this.signature = signature;
+			this.userlikemovie = userlikemovie;
+			this.type_userSet = type_userSet;
+		}
+		
 	@Id
 	@GeneratedValue(generator="user_id")
 	@GenericGenerator(name="user_id",strategy="native")
 	public int getUser_id() {
 		return user_id;
 	}
+	
+
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
 	}
