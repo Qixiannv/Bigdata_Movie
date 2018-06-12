@@ -56,30 +56,16 @@
 </li>
 
  <li class="kuanjie">
- 	
- 	<a href="#">会员管理</a>          
- 	<a href="#">奖金管理</a> 
- 	<a href="#">订单管理</a>   
- 	<a href="#">产品管理</a> 
- 	<a href="#">个人中心</a> 
- 	 <a href="#">系统设置</a>
  </li>
 
  <li class="soso">
  	
 <p>   
 	
-	<select data-am-selected="{btnWidth: 70, btnSize: 'sm', btnStyle: 'default'}">
-          <option value="b">全部</option>
-          <option value="o">产品</option>
-          <option value="o">会员</option>
-          
-        </select>
+
 
 </p>
 
-<p class="ycfg"><input type="text" class="am-form-field am-input-sm" placeholder="圆角表单域" /></p>
-<p><button class="am-btn am-btn-xs am-btn-default am-xiao"><i class="am-icon-search"></i></button></p>
  </li>
 
 
@@ -97,17 +83,16 @@
     
     <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
      <div class="sideMenu">
-     <h3 class="am-icon-flag"><em></em> <a href="./adminindex">电影管理</a></h3>
+      <h3 class="am-icon-flag"><em></em> <a href="./backstagemovielist">电影管理</a></h3>
       <ul>
         <li><a href="./backstagemovielist">电影列表</a></li>
-        <li><a href="./addmovie">添加电影</a></li>
-        <li><a href="./editmovietype">添加电影类型</a></li>
+        <li><a href="addmovie.jsp">添加电影</a></li>
       </ul>
       
       <h3 class="am-icon-cart-plus"><em></em> <a href="./backstageactorlist">演员管理</a></h3>
       <ul>
         <li><a href="./backstageactorlist">演员列表</a></li>
-        <li><a href="./addactor">添加演员</a></li>
+        <li><a href="addactor.jsp">添加演员</a></li>
       </ul>
       
       <h3 class="am-icon-users"><em></em> <a href="./backstageuserlist">用户管理</a></h3>
@@ -142,12 +127,7 @@
 	
 		<div class="daohang">
 			<ul>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs"> 首页 </li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">帮助中心<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">奖金管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				<li><button type="button" class="am-btn am-btn-default am-radius am-btn-xs">产品管理<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close="">×</a></button></li>
-				
-				
+			
 			</ul>
 
        

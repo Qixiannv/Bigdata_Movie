@@ -85,11 +85,10 @@
     
     <div class="sideMenu am-icon-dashboard" style="color:#aeb2b7; margin: 10px 0 0 0;"> 欢迎系统管理员：清风抚雪</div>
     <div class="sideMenu">
-     <h3 class="am-icon-flag"><em></em> <a>电影管理</a></h3>
+      <h3 class="am-icon-flag"><em></em> <a href="./backstagemovielist">电影管理</a></h3>
       <ul>
         <li><a href="./backstagemovielist">电影列表</a></li>
         <li><a href="addmovie.jsp">添加电影</a></li>
-        <li><a href="./editmovietype">添加电影类型</a></li>
       </ul>
       
       <h3 class="am-icon-cart-plus"><em></em> <a href="./backstageactorlist">演员管理</a></h3>
