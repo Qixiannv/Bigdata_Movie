@@ -631,7 +631,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<c:if test="${!empty user.user_id }">
 					<c:forEach items="${user.getType_userSet() }" var="t" >
 					<ul class="mov_list">
-						<li><a  href="11111?type_name=${t.type.getType_name()}">${t.type.getType_name() }</a></li>
+						<li><a  href="showMovieByType?type_name=${t.type.getType_name()}">${t.type.getType_name() }</a></li>
 						
 							<ul>
 								<c:forEach items="${t.type.getType_movie() }" var="m" varStatus="status" begin="0" end="2" step="1">
