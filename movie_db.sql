@@ -332,7 +332,7 @@ CREATE TABLE `user_movie` (
 
 LOCK TABLES `user_movie` WRITE;
 /*!40000 ALTER TABLE `user_movie` DISABLE KEYS */;
-INSERT INTO `user_movie` VALUES (1,1,1),(2,1,2),(3,1,3),(4,2,1),(5,2,5),(6,2,2),(7,3,3),(8,3,2),(9,3,5);
+INSERT INTO `user_movie` VALUES (1,1,1),(2,1,2),(3,1,3),(4,12,1),(5,12,5),(6,12,2),(7,14,3),(8,14,2),(9,14,5);
 /*!40000 ALTER TABLE `user_movie` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -345,4 +345,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-12 14:06:02
+-- Dump completed on 2018-06-12 14:20:31
