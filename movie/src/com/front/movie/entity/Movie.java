@@ -167,7 +167,7 @@ public class Movie {
 		this.type_movieSet = type_movieSet;
 	}
 
-	@OneToMany(mappedBy="type", targetEntity=UserLikeMovie.class,
+	@OneToMany(mappedBy="movie", targetEntity=UserLikeMovie.class,
 			cascade=javax.persistence.CascadeType.ALL,fetch = FetchType.EAGER)
 	public Set getUserlikemovie() {
 		return userlikemovie;
