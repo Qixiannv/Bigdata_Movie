@@ -11535,3 +11535,20 @@ INSERT INTO `user` (`user_id`, `email`, `phone`, `username`, `password`, `birthd
 
 COMMIT;
 
+#
+# Data for the `user_movie` table  (LIMIT 0,500)
+#
+
+INSERT INTO `user_movie` (`um_id`, `user_id`, `movie_id`) VALUES 
+  (1,1,1),
+  (2,1,2),
+  (3,1,3),
+  (4,12,1),
+  (5,12,5),
+  (6,12,3),
+  (7,14,5),
+  (8,14,3),
+  (9,14,7);
+
+COMMIT;
+

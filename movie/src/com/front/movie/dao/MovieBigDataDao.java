@@ -44,9 +44,6 @@ public class MovieBigDataDao {
 		return query.list();
 	}
 	
-	
-	
-	
     public Map getRecommend(User recuser) throws Exception {  
         /** 
          * 输入用户-->物品条目  一个用户对应多个物品 
@@ -77,11 +74,9 @@ public class MovieBigDataDao {
         				}
         			}
         			
-    				System.out.println("like个数"+um.size());
+    				
     				userItemLength.put(u.getUser_id(),um.size());//eg: A 3
-    				System.out.println("看看有没有值"+userItemLength.get(u.getUser_id()));
-    				System.out.println("userid"+u.getUser_id());
-    				System.out.println("useremail"+u.getEmail());
+    				
     				userID.put(u.getEmail(), u.getUser_id());//用户ID与稀疏矩阵建立对应关系
     				
     				
@@ -134,37 +129,21 @@ public class MovieBigDataDao {
 
         
         
-        for(int i :userItemLength.keySet()){
-        	System.out.println("物品key"+i);
-        }
+
         
         
-        System.out.println(userItemLength.toString());  
-        System.out.println("Input the user for recommendation:<eg:A>");  
+
+
         User recommendUser = recuser;
         //System.out.println(userID.get(recommendUser.getEmail()));  
         //计算用户之间的相似度【余弦相似性】  
         int recommendUserId = recommendUser.getUser_id(); 
-        System.out.println("推荐email"+idUser.get(recommendUserId));
         List<Integer> uid = new ArrayList<Integer>();
         for(User u : userlist){
         	uid.add(u.getUser_id());
         }
         
-        for (int j:uid) {  
-                if(j != recommendUserId){  
-                	System.out.println(idUser.get(recommendUserId));
-                	System.out.println(idUser.get(j));
-                	System.out.println("一部分"+sparseMatrix[recommendUserId][j]);
-                	System.out.println(userItemLength.get(recommendUserId));
-                    System.out.println(idUser.get(recommendUserId)+"--"+idUser.get(j)+"相似度:"+sparseMatrix[recommendUserId][j]/Math.sqrt(userItemLength.get(recommendUserId)*userItemLength.get(j)));  
-                }  
-        }  
-        
-        
-        
-        
-        
+
         
         Map<Movie, Double> urec = new HashMap<Movie,Double>();
         //计算指定用户recommendUser的物品推荐度  
@@ -198,7 +177,7 @@ public class MovieBigDataDao {
         for(Map.Entry<Movie,Double> mapping:list){ 
             map.put(mapping.getKey(), mapping.getValue());
         } 
-        System.out.println(map.isEmpty());
+        System.out.println(map.size());
         
         
         return map;
