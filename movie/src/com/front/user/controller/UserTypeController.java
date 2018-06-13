@@ -14,11 +14,14 @@ import com.front.movie.entity.MovieType;
 import com.front.movie.entity.MovieTypeAndUser;
 import com.front.movie.service.MovieTypeServiceImpl;
 import com.front.user.entity.User;
+import com.front.user.service.UserImp;
 
 @Controller
 public class UserTypeController {
 	@Resource
 	private MovieTypeServiceImpl mtsi;
+	@Resource
+	private UserImp ui;
 	
 	
 	/**
@@ -38,13 +41,18 @@ public class UserTypeController {
 	 * @author 李孟明
 	 * @param user_id 用户id，type_id 标签id
 	 * @return
+	 * @throws Exception 
 	 */
 	@GetMapping("addUserType")
-	public String addUserType(HttpServletRequest request,@RequestParam("tid") int tid){
+	public String addUserType(HttpServletRequest request,@RequestParam("tid") int tid) throws Exception{
 		HttpSession session = request.getSession();
 		User u = (User) session.getAttribute("user");
 		System.out.println(u.getUser_id());
 		mtsi.saveUserType(u, tid);
+		Integer user_id = u.getUser_id();
+		User user = this.ui.UserSelect(user_id);
+		session.setAttribute("user", user);
+		
 		
 		
 		return "redirect:/movie-personal.jsp";
