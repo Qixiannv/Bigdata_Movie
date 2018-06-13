@@ -9,18 +9,12 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.criteria.Order;
-
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.GenericGenerator;
 
-import com.front.actor.entity.Actor;
 import com.front.user.entity.UserLikeMovie;
 @Entity
 @Table(name="movie")
@@ -156,7 +150,7 @@ public class Movie {
 		this.actor_movieSet = actor_movieSet;
 	}
 
-	@OneToMany(mappedBy="movie", targetEntity=MovieTypeAndMovie.class,fetch = FetchType.EAGER)
+	@OneToMany(mappedBy="movie", targetEntity=MovieTypeAndMovie.class,fetch = FetchType.LAZY)
 	@Cascade(value = {CascadeType.SAVE_UPDATE, 	CascadeType.DELETE_ORPHAN,CascadeType.ALL})
 	public Set getType_movieSet() {
 		return type_movieSet;
@@ -168,7 +162,7 @@ public class Movie {
 	}
 
 	@OneToMany(mappedBy="movie", targetEntity=UserLikeMovie.class,
-			cascade=javax.persistence.CascadeType.ALL,fetch = FetchType.EAGER)
+			cascade=javax.persistence.CascadeType.ALL,fetch = FetchType.LAZY)
 	public Set getUserlikemovie() {
 		return userlikemovie;
 	}
