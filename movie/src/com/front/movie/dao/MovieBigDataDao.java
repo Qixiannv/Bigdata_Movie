@@ -159,10 +159,8 @@ public class MovieBigDataDao {
                 urec.put(item, itemRecommendDegree );
             }  
         }
-		 System.out.println(urec.isEmpty());
         
         List<Map.Entry<Movie,Double>> list = new ArrayList<Map.Entry<Movie,Double>>(urec.entrySet());
-        System.out.println(list.isEmpty());
         
         Collections.sort(list,new Comparator<Map.Entry<Movie,Double>>() {
             //升序排序
@@ -174,8 +172,25 @@ public class MovieBigDataDao {
         
         
         Map<Movie, Double> map = new HashMap<Movie,Double>();
+        List<Movie> finallist = new ArrayList<Movie>();
+        for( UserLikeMovie ulm :likelist ){
+        	if(ulm.getUser().getUser_id() == recuser.getUser_id()){
+        		finallist.add(ulm.getMovie());
+        	}else{
+        		continue;
+        	}
+        }
         for(Map.Entry<Movie,Double> mapping:list){ 
-            map.put(mapping.getKey(), mapping.getValue());
+        	
+        	for(Movie m : finallist){
+        		if(m == mapping.getKey()){
+        			continue;
+        		}else{
+        			map.put(mapping.getKey(), mapping.getValue());
+        		}
+        	}
+        	
+            
         } 
         System.out.println(map.size());
         
