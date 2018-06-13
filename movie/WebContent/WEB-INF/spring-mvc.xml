@@ -47,4 +47,12 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	
 	<mvc:view-controller path="/" view-name="index1"/>
+	<!-- 拦截器配置--> <mvc:interceptors> 
+	<!-- SQL注入拦截--> 
+	<mvc:interceptor> 
+	<mvc:mapping path="/**"/> 
+	<bean class="com.springjcrop.demo.SqlInjectInterceptor"></bean> 
+	</mvc:interceptor> 
+	</mvc:interceptors>
+
 </beans>
