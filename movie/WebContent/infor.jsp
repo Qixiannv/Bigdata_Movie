@@ -43,6 +43,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				});
 			});
 		</script>
+<script language="javascript" type="text/javascript"> 
+function check_phone(a)
+{
+	if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(a)))   
+    {  
+        alert("不是完整的11位手机号或者正确的手机号前七位");  
+    }  
+}
+</script>
 <!---- start-smoth-scrolling---->
 </head>
 <body>
@@ -376,7 +385,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <label for="phone" class="col-sm-2 control-label">
                                         手机</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="phone" placeholder="手机" />
+                                        <input type="text" class="form-control" name="phone" placeholder="手机" onblur="check_phone(document.getElementsByName('phone')[0].value)"/>
                                     </div>
                                 </div>
 

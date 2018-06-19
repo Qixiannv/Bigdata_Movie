@@ -68,6 +68,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		});
 	});
 </script>
+<script language="javascript" type="text/javascript">  
+function check_mail(e){  
+    if(!/(\S)+[@]{1}(\S)+[.]{1}(\w)+/.test(e))   
+{  
+    alert("请输入格式正确的 e-mail 地址！");  
+}  
+}
+function check_phone(a)
+{
+	if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(a)))   
+    {  
+        alert("不是完整的11位手机号或者正确的手机号前七位");  
+    }  
+}
+</script>  
 <!---- start-smoth-scrolling---->
 
 </head>
@@ -148,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="form-group">
 														<label for="email" class="col-sm-2 control-label">Email</label>
 														<div class="col-sm-10">
-															<input type="text" class="form-control" id="email" name="email" placeholder="email" />
+															<input type="text" class="form-control" id="email" name="email" placeholder="email"  onblur="check_mail(document.getElementsByName('email')[0].value)"/>
 														</div>
 													</div>
 													<div class="form-group">
@@ -192,8 +207,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<label for="email" class="col-sm-2 control-label">
 															Email</label>
 														<div class="col-sm-10">
-															<input type="text" id="email" name="email"
-																 />
+															<input type="text" id="email" name="email1"
+																 onblur="check_mail(document.getElementsByName('email1')[0].value)"/>
 														</div>
 													</div>
 													<div class="form-group">
@@ -201,7 +216,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 															Mobile</label>
 														<div class="col-sm-10">
 															<input type="text" id="phone"  name="phone"
-																 />
+															onblur="check_phone(document.getElementsByName('phone')[0].value)"	 />
 														</div>
 													</div>
 													<div class="form-group">
