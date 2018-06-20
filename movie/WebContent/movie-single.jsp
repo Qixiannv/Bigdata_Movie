@@ -366,8 +366,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="clearfix"></div>
 								<div class="yrw">
 									<div class="dropdown-button">         
-									<form action = "/movie/leave_comment" method = "get">  			
-										<select class="dropdown" tabindex="9" data-settings="{&quot;wrapperClass&quot;:&quot;flat&quot;}">
+									<form action = "insertrate"  method = "get"> 
+									    <input type="hidden"  name="movie_id" id="doc-ipt-pwd-1" value="${movie.getMovie_id() }">
+									    <input type="hidden"  name="user_id" id="doc-ipt-pwd-1" value="${user.user_id }"> 			
+										<select name="rate" class="dropdown" tabindex="9" data-settings="{&quot;wrapperClass&quot;:&quot;flat&quot;}">
 										<option value="0">你的评分</option>	
 										<option value="1">1.（差）</option>
 										<option value="2">1.5(平均较差)</option>

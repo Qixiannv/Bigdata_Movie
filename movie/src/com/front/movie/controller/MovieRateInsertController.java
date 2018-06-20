@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.front.movie.service.MovieRateInsertServiceImpl;
 
@@ -21,12 +22,11 @@ public class MovieRateInsertController {
 	 * @return
 	 */
 	@GetMapping("/insertrate")
-	public String insertMovieRate(Integer movie_id,Integer user_id,float rate) {
-		
+	public String insertMovieRate(Integer movie_id,Integer user_id,@RequestParam("rate")  float rate) {
 		this.mris.insertMovieRateAndNumber(movie_id, rate);
-		if(rate >= 6)
+		if(rate >= 6 )
 			this.mris.insertMovieRate(movie_id, user_id, rate);
 		
-		return "";
+		return "redirect:/moviesingle?id="+movie_id ;
 	} 
 }

@@ -174,16 +174,7 @@
         <div class="am-form-group am-cf">
           <div class="zuo">时长：</div>
           <div class="you">
-            <select name="rate" class="am-input-sm" id="doc-ipt-pwd-1"">
-										<option value="0">选择时长</option>	
-										<option value="1">60-99</option>
-										<option value="1">100-110</option>
-										<option value="2">111-120</option>
-										<option value="3">121-130</option>
-										<option value="4">131-140</option>
-										<option value="5">141-150</option>
-										<option value="6">>150</option>
-			</select>
+           <input type="text"  name="time" class="am-input-sm" id="doc-ipt-pwd-1" placeholder="请输入时长">
           </div>
         </div>
         <div class="am-form-group am-cf">
@@ -191,16 +182,17 @@
           <div class="you">
           <select name="rate" class="am-input-sm" id="doc-ipt-pwd-1"">
 										<option value="0">你的评分</option>	
-										<option value="1">1.（差）</option>
-										<option value="2">1.5(平均较差)</option>
-										<option value="3">2.（平均）</option>
-										<option value="4">2.5(中档)</option>
-										<option value="5">3.（可看）</option>
-										<option value="6">3.5(好)</option>
-										<option value="7">4.5(非常好)</option>
-										<option value="8">5.（很出色）</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
 			</select>
           </div>
+            
         </div>
         
         <!-- div class="am-form-group am-cf">

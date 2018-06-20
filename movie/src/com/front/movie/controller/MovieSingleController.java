@@ -33,7 +33,7 @@ public class MovieSingleController {
 	 * @return jsp跳转标识符
 	 **/
 		@GetMapping("/moviesingle")
-		public String ShowMovieSingle(HttpServletRequest request,@RequestParam("id") int id) {
+		public String ShowMovieSingle(HttpServletRequest request,int id) {
 			//通过调用movieServiceImpl中的方法在request里添加查询的电影
 			request.setAttribute("movie",this.msi.findMovieById(id));
 			//返回跳转标识
