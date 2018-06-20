@@ -40,7 +40,7 @@ public class MovieBigDataDao {
 	
 	
 	public List searchUserLikeMovie(){
-		Query<User> query =this.sessionFactory.getCurrentSession().createQuery("from UserLikeMovie");
+		Query<User> query =this.sessionFactory.getCurrentSession().createQuery("from UserLikeMovie where rate>=5");
 		return query.list();
 	}
 	
