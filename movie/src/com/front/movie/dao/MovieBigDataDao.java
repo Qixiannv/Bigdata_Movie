@@ -155,7 +155,7 @@ public class MovieBigDataDao {
                 	
                     itemRecommendDegree += sparseMatrix[userID.get(recommendUser.getEmail())][userID.get(user.getEmail())]/Math.sqrt(userItemLength.get(recommendUserId)*userItemLength.get(user.getUser_id()));//推荐度计算  
                 }  
-                System.out.println("The item "+item+" for "+recommendUser +"'s recommended degree:"+itemRecommendDegree); 
+                //System.out.println("The item "+item+" for "+recommendUser +"'s recommended degree:"+itemRecommendDegree); 
                 urec.put(item, itemRecommendDegree );
             }  
         }
