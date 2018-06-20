@@ -19,7 +19,7 @@ public class UserLikeMovie {
 	private Integer um_id;
 	private User user;
 	private Movie movie;
-	private int rate;
+	private float rate;
 	
 	public UserLikeMovie() {
 		super();
@@ -72,13 +72,15 @@ public class UserLikeMovie {
 	}
 
 	@Column(name = "rate")
-	public int getRate() {
+	public float getRate() {
 		return rate;
 	}
 
-	public void setRate(int rate) {
+	public void setRate(float rate) {
 		this.rate = rate;
 	}
+	
+	
 	
 	
 

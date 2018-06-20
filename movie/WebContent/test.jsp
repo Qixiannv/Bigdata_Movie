@@ -8,9 +8,11 @@
 </head>
 <body>
 	
-	<a href="addMovieTypeAndMovie">jiade</a>
-	<form action = 'addtype' method = 'get'>
-		<input type = 'text' name = "name"/>
+	
+	<form action = 'insertrate' method = 'get'>
+		<input type = 'text' name = "movie_id"/>
+		<input type = 'text' name = "user_id"/>
+		<input type = 'text' name = "rate"/>
 		<input type = "submit">
 	</form>
 	
