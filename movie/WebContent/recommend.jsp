@@ -384,7 +384,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="f-movie-name">
 									<a>${m.getKey().getMovie_name() }</a>
-									<p>评分：${m.getKey().getRate()/${m.getKey().getRate_number() }</p>
+									<p>评分：${m.getKey().getRate()/m.getKey().getRate_number() }</p>
 								</div>
 								<div class="f-buy-tickets">
 									<a href="./moviesingle?id=${m.getKey().getMovie_id() }">查看详情</a>

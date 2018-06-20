@@ -168,7 +168,6 @@
           <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
             <thead>
               <tr class="am-success">
-                <th class="table-check"><input type="checkbox" /></th>
                 <th class="table-id">ID</th>
                 <th class="table-author am-hide-sm-only">电影</th>
                 <th class="table-author am-hide-sm-only">简介</th>
@@ -181,7 +180,6 @@
             <tbody>
             <c:forEach items="${movies }" var="p">
               <tr>
-                <td><input type="checkbox" /></td>
                 <td>${p.movie_id}</td>
                 <td>${p.movie_name} <a href="re-moviename.jsp?id=${p.movie_id}"><span class="am-icon-pencil-square-o"></span></a></td>
                 <td>${p.movie_summary} <a href="re-introduction.jsp?id=${p.movie_id}"><span class="am-icon-pencil-square-o"></span></a></td>
