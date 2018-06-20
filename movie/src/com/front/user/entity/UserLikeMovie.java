@@ -19,17 +19,19 @@ public class UserLikeMovie {
 	private Integer um_id;
 	private User user;
 	private Movie movie;
+	private int rate;
 	
 	public UserLikeMovie() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public UserLikeMovie(int um_id, User user, Movie movie) {
+	public UserLikeMovie(int um_id, User user, Movie movie,int rate) {
 		super();
 		this.um_id = um_id;
 		this.user = user;
 		this.movie = movie;
+		this.rate = rate;
 	}
 
 
@@ -68,6 +70,17 @@ public class UserLikeMovie {
 	public void setMovie(Movie movie) {
 		this.movie = movie;
 	}
+
+	@Column(name = "rate")
+	public int getRate() {
+		return rate;
+	}
+
+	public void setRate(int rate) {
+		this.rate = rate;
+	}
+	
+	
 
 	
 }
