@@ -166,7 +166,7 @@
           <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
             <thead>
               <tr class="am-success">
-                <th class="table-check"><input type="checkbox" /></th>
+                
                 <th class="table-id">ID</th>
                 <th class="table-author am-hide-sm-only">演员名称</th>
                 <th class="table-author am-hide-sm-only">简介</th>
@@ -176,7 +176,7 @@
             <tbody>
             <c:forEach items="${actorlist }" var="p">
               <tr>
-                <td><input type="checkbox" /></td>
+               
                 <td>${p.actor_id}</td>
                 <td>${p.actor_name} <a href="re-actor_name.jsp?actor_id=${p.actor_id}"><span class="am-icon-pencil-square-o"></span></a></td>
                 <td>${p.actor_summary} <a href="re-actor_summary.jsp?actor_id=${p.actor_id}"><span class="am-icon-pencil-square-o"></span></a></td>

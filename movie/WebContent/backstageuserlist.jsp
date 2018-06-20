@@ -354,7 +354,6 @@
           <table width="100%" class="am-table am-table-bordered am-table-radius am-table-striped">
             <thead>
               <tr class="am-success">
-                <th class="table-check"><input type="checkbox" /></th>
 
                 <th class="table-id">ID</th>
                 <th class="table-title">用户名称</th>
@@ -368,7 +367,6 @@
             <tbody>
               <c:forEach items="${list }" var="p">
               <tr>
-                <td><input type="checkbox" /></td>
                 
                 <td>${p.user_id}</td>
                 <td>${p.username}</td>
@@ -388,26 +386,6 @@
             </tbody>
           </table>
           
-                 <div class="am-btn-group am-btn-group-xs">
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 删除</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 上架</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 下架</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 移动</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 移动</button>
-              <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
-            </div>
-          
-          <ul class="am-pagination am-fr">
-                <li class="am-disabled"><a href="#">«</a></li>
-                <li class="am-active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">»</a></li>
-              </ul>
           
           
           
