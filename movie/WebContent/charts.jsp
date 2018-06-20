@@ -1,3 +1,4 @@
+<%@page import="com.sun.mail.handlers.message_rfc822"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -384,7 +385,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="f-movie-name">
 									<a>${m.getMovie_name() }</a>
-									<p>评分：${m.getRate()/${m.getRate_number() }</p>
+									
+									<p>评分：${m.getRate()/m.getRate_number() }</p>
 								</div>
 								<div class="f-buy-tickets">
 									<a href="./moviesingle?id=${m.getMovie_id() }">查看详情</a>
