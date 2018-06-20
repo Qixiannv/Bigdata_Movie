@@ -34,6 +34,7 @@ public class Movie {
 	private Date date;
 	private String movie_time;
 	private Float rate;
+	private int rate_number;
 	
 	private Set userlikemovie = new HashSet<UserLikeMovie>();
 	private Set movieCommentSet = new HashSet<MovieComment>();
@@ -51,7 +52,7 @@ public class Movie {
 	
 	
 	public Movie(int movie_id, String movie_name, String movie_summary, String movie_pic, Set actor_movieSet,
-			Set type_movieSet, Date date, String movie_time, Float rate, Set userlikemovie, Set movieCommentSet) {
+			Set type_movieSet, Date date, String movie_time, Float rate,int rate_number, Set userlikemovie, Set movieCommentSet) {
 		super();
 		this.movie_id = movie_id;
 		this.movie_name = movie_name;
@@ -64,6 +65,7 @@ public class Movie {
 		this.rate = rate;
 		this.userlikemovie = userlikemovie;
 		this.movieCommentSet = movieCommentSet;
+		this.rate_number = rate_number;
 	}
 
 
@@ -168,6 +170,18 @@ public class Movie {
 	}
 	public void setUserlikemovie(Set userlikemovie) {
 		this.userlikemovie = userlikemovie;
+	}
+
+
+	@Column(name="rate_number")
+	public int getRate_number() {
+		return rate_number;
+	}
+
+
+
+	public void setRate_number(int rate_number) {
+		this.rate_number = rate_number;
 	}
 
 	
