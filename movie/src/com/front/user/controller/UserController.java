@@ -58,6 +58,11 @@ public class UserController {
 	return this.userRegisterImp.UserLogin1(email,password,request,session);
 	
 	}
+	@RequestMapping("/UserLoginController2")
+	public String Userlogin2(String email,String password,HttpServletRequest request,HttpSession session){
+	return this.userRegisterImp.UserLogin2(email,password,request,session);
+	
+	}
 
 	/**
 	 *更改用户信息跳转
