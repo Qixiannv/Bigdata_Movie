@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!--
 Author: W3layouts
@@ -384,7 +385,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="f-movie-name">
 									<a>${m.getMovie_name() }</a>
-									<p>评分：${m.getRate()/m.getRate_number() }</p>
+									
+									<p>评分：<fmt:formatNumber type="number" value="${m.getRate()/m.getRate_number() }" maxFractionDigits="1"/></p>
 								</div>
 								<div class="f-buy-tickets">
 									<a href="./moviesingle?id=${m.getMovie_id() }">查看详情</a>
