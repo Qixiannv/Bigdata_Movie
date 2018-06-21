@@ -207,8 +207,8 @@ function check_phone(a)
 														<label for="email" class="col-sm-2 control-label">
 															Email</label>
 														<div class="col-sm-10">
-															<input type="text" id="email" name="email1"
-																 onblur="check_mail(document.getElementsByName('email1')[0].value)"/>
+															<input type="text" id="email" name="email"
+																 onblur="check_mail(document.getElementById('email').value)"/>
 														</div>
 													</div>
 													<div class="form-group">
