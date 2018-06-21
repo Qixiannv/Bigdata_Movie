@@ -15,7 +15,7 @@
 <body>
 	
 			<div class="wrap">
-				<a href="index.jsp" class="a1">返回主页</a>
+				<a href="indexshow" class="a1">返回主页</a>
 				<div class="banner"><img src="./images/fuel-404-logo.png" alt="" /></div>
 				<div class="search">
 					<form>
