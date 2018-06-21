@@ -67,6 +67,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			}, 1200);
 		});
 	});
+</script>
+
+<!---- start-smoth-scrolling---->
+
+</head>
+
 <script type="text/javascript">
 	//查看用户名是否被注册   ajax
 	function checkName(str) {
@@ -154,9 +160,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         return validateName()&&validatePassword()&&validateRePassword()&&validatemail();
     }
 </script>
-<!---- start-smoth-scrolling---->
-
-</head>
 <body>
 	<!-- header-section-starts -->
 	<div class="header-top-strip">
@@ -275,17 +278,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														</div>
 													</div>
 													<div class="form-group">
-														<label for="email" class="col-sm-2 control-label">
-															Email</label>
-														<div class="col-sm-10">
-															<input type="text" id="mail" value="E-Mail" name="mail"
-							onfocus="this.value = '';"
-							onblur="if (this.value == '') {this.value = 'E-Mail';}validatemail()">
+														<label for="email" class="col-sm-2 control-label">Email</label>
+															<div class="col-sm-10" >
+																<input type="text" id="mail" value="E-Mail" name="mail"
+																					onfocus="this.value = '';"
+																					onblur="if (this.value == '') {this.value = 'E-Mail';}validatemail()">
+															</div>
+														<div >
+											            	<span id="mailMessage"></span>
 														</div>
-														<div style="width:80px;height:35px;
-														">
-											<span id="mailMessage"></span>
-										</div>
 													</div>
 													<div class="form-group">
 														<label for="mobile" class="col-sm-2 control-label">
