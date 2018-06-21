@@ -67,22 +67,93 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			}, 1200);
 		});
 	});
+<script type="text/javascript">
+	//查看用户名是否被注册   ajax
+	function checkName(str) {
+		var xmlhttp;
+		if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		} else {// code for IE6, IE5
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				var i = xmlhttp.responseText;
+				if (i == "1") {//用户名没有被注册
+
+					document.getElementById("emailMessage").innerHTML = "<span style='color:green'>邮箱可以使用!</span>";
+
+				} else {
+
+					document.getElementById("emailMessage").innerHTML = "<span style='color:red'>邮箱已经注册!</span>";
+				}
+			}
+		}
+
+		xmlhttp.open("GET", "registCheck?email=" + str, true);
+		xmlhttp.send();
+	}
+	//邮箱格式验证
+	function validatemail() {
+		var mailElement = document.getElementById("mail");
+		var msgElement = document.getElementById("mailMessage");
+		if (mailElement.value == "") {
+
+			msgElement.innerHTML = "<span style='color:red'>邮箱不能为空!</span>";
+			return false;
+		}
+		if (/^\w+@\w+\.\w+$/.test(mailElement.value)) {
+
+			msgElement.innerHTML = "<span style='color:green'>邮箱格式正确!</span>";
+			return true;
+		} else {
+
+			msgElement.innerHTML = "<span style='color:red'>邮箱输入格式错误!</span>";
+			return false;
+		}
+	}
+	function validatphone() {
+		var mailElement = document.getElementById("phone");
+		var msgElement = document.getElementById("phoneMessage");
+		if (mailElement.value == "") {
+
+			msgElement.innerHTML = "<span style='color:red'>手机号不能为空!</span>";
+			return false;
+		}
+		if (/^1[3|4|5|8][0-9]\d{4,8}$/.test(mailElement.value)) {
+
+			msgElement.innerHTML = "<span style='color:green'>手机号格式正确!</span>";
+			return true;
+		} else {
+
+			msgElement.innerHTML = "<span style='color:red'>手机号输入格式错误!</span>";
+			return false;
+		}
+	}
+	
+
+	//第一次输入密码时验证,非空，长度
+	function validatePassword() {
+		var msgElement = document.getElementById("passMessage");
+		var passElement = document.getElementById("pass");
+		if (passElement.value == "") {
+			msgElement.innerHTML = "<span style='color:red'>密码不能为空!</span>";
+			return false;
+		}
+		if (/^\w{6,20}$/.test(passElement.value)) {
+			msgElement.innerHTML = "<span style='color:green'>密码格式正确!</span>";
+			return true;
+		} else {
+			msgElement.innerHTML = "<span style='color:red'>密码长度应该在6-20之间!</span>";
+			return false;
+		}
+	}
+
+	
+	function validate() {
+        return validateName()&&validatePassword()&&validateRePassword()&&validatemail();
+    }
 </script>
-<script language="javascript" type="text/javascript">  
-function check_mail(e){  
-    if(!/(\S)+[@]{1}(\S)+[.]{1}(\w)+/.test(e))   
-{  
-    alert("请输入格式正确的 e-mail 地址！");  
-}  
-}
-function check_phone(a)
-{
-	if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(a)))   
-    {  
-        alert("不是完整的11位手机号或者正确的手机号前七位");  
-    }  
-}
-</script>  
 <!---- start-smoth-scrolling---->
 
 </head>
@@ -207,25 +278,39 @@ function check_phone(a)
 														<label for="email" class="col-sm-2 control-label">
 															Email</label>
 														<div class="col-sm-10">
-															<input type="text" id="email" name="email"
-																 onblur="check_mail(document.getElementById('email').value)"/>
+															<input type="text" id="mail" value="E-Mail" name="mail"
+							onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'E-Mail';}validatemail()">
 														</div>
+														<div style="width:80px;height:35px;
+														">
+											<span id="mailMessage"></span>
+										</div>
 													</div>
 													<div class="form-group">
 														<label for="mobile" class="col-sm-2 control-label">
 															Mobile</label>
 														<div class="col-sm-10">
-															<input type="text" id="phone"  name="phone"
-															onblur="check_phone(document.getElementsByName('phone')[0].value)"	 />
+															<input type="text" id="phone" value="Phone" name="phone"
+							onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Phone';}validatphone()">
 														</div>
+														<div >
+											<span id="phoneMessage"></span>
+										</div>
 													</div>
 													<div class="form-group">
 														<label for="password" class="col-sm-2 control-label">
 															Password</label>
 														<div class="col-sm-10">
 															<input type="password" id="password"  name="password"
-																 />
+																value="6-20个字符" 
+							onfocus="this.value = '';this.type='password'"
+							onblur="if (this.value == '') {this.value = '6-20个字符';this.type='text'}validatePassword();"> 
 														</div>
+														<div>
+											<span id="passMessage"></span>
+										</div>
 													</div>
 													<div class="row">
 														<div class="col-sm-2"></div>
