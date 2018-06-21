@@ -112,7 +112,7 @@ CREATE TABLE `movie_comment` (
   PRIMARY KEY (`comment_id`) USING BTREE,
   KEY `user_id` (`user_id`) USING BTREE,
   KEY `movie_id` (`movie_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 #
 # Structure for the `type` table : 
@@ -152,7 +152,7 @@ CREATE TABLE `type_user` (
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL DEFAULT '123456@qq.com',
   `phone` varchar(20) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
@@ -5597,7 +5597,8 @@ INSERT INTO `movie_comment` (`comment_id`, `user_id`, `movie_id`, `comment_text`
   (28,1,1,'AA','2018-05-24 08:35:04'),
   (40,15,1,'我觉得不行','2018-05-24 14:29:06'),
   (41,16,1,'我觉得很好','2018-05-24 15:27:05'),
-  (42,1,2,'bruh','2018-05-28 10:08:42');
+  (42,1,2,'bruh','2018-05-28 10:08:42'),
+  (43,1,1,'打','2018-06-21 16:11:57');
 COMMIT;
 
 #

@@ -63,6 +63,9 @@ public class SingleController {
 	@GetMapping("/leave_comment")
 	public String LeaveComment(HttpServletRequest request,@RequestParam("movie_id") int movie_id,@RequestParam("user_id") int user_id,
 			@RequestParam("comment_text") String comment_text,HttpSession session) throws Exception {
+		
+		
+		
    		 MovieComment mc = new MovieComment();
 		 mc.setComment_text(comment_text);
 		 mc.setUser(this.ui.UserSelect(user_id));
@@ -70,6 +73,7 @@ public class SingleController {
 		 this.mcsi.saveMovieComment(mc);
 		 
 		return "redirect:/gotosingle?id="+movie_id;
+		
 	}
 	
 	
