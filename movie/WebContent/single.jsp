@@ -411,9 +411,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3 class="post">主演名单</h3>
 			<c:forEach items = "${movie.actor_movieSet}" var = "a">
 				<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
+				
 					<p><a href="gotoactor?actor_id=${a.actor.actor_id}">${a.actor.actor_name}</a></p>
 					<img src="${a.actor.actor_pic}"width="70"height="100"></div>
-				</div>
+				
 			</c:forEach>
 			
 		
