@@ -394,8 +394,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 							
 						</c:forEach>
-						
-						
+
 						<c:if test="${! empty  user.user_id }" >
 						 <form action = "/movie/leave_comment" method = "get">
 							<input type = "text" style="display:none" name = "user_id" value = "${user.user_id}">
@@ -404,12 +403,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<input type = "submit" value="提交">
 						</form>
                 		</c:if>              		
-               	    	<c:if test="${empty  user.user_id }" >	
-               	    	<p>请先登录！</p>       
+               	    	<c:if test="${empty  user.user_id }" >
+               	    	
+               	    	
+							<textarea type="text" name = "comment_text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your comment...';}" required="">请在登录后评论。</textarea>
+							<button class="btn btn-primary" data-toggle="modal" onclick="displayDate()">  		           
+                			<td  style="font-weight:900;font-size: 100%;color:white;">登录</td> 	
+                		 	</button> 
+     
                 		</c:if>
-						
-						
-						
+	
 				</div>
 				<div class="clearfix"></div>
 			</div>
