@@ -57,6 +57,24 @@ public class UserImp {
 			return "cuowu";
 		}
 	}
+	
+	public String UserLogin1(String email,String password,HttpServletRequest request,HttpSession session){
+		try{
+			int id=Integer.parseInt(request.getParameter("id"));
+		User u=this.userRegisterDaoImp.Userlogin(email);
+			if(password.equals(u.getPassword())){
+				session.setAttribute("user", u);
+				return "redirect:/gotosingle?id="+id;
+			}else{
+				return "cuowu";
+			}
+		
+		}catch(Exception e){
+			e.printStackTrace();
+			return "cuowu";
+		}
+	}
+	
 	/**
 	 * 根据user_id 查询出user
 	 * @param user_id   用户ID

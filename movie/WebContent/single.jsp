@@ -118,7 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<!--登录 -->
 										<div class="tab-content">
 											<div class="tab-pane active" id="Login">
-												<form role="form" class="form-horizontal" action="./UserLoginController" method="post">
+												<form role="form" class="form-horizontal" action="./UserLoginController1" method="post">
 													<div class="form-group">
 														<label for="email" class="col-sm-2 control-label">Email</label>
 														<div class="col-sm-10">
@@ -131,6 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 															<input type="password" class="form-control" id="password" name="password" placeholder="password" />
 														</div>
 													</div>
+													<input type="hidden"  name="id" value="${movie.movie_id}">
 													<div class="row">
 														<div class="col-sm-2"></div>
 														<div class="col-sm-10">
