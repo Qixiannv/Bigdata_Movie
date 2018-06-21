@@ -36,6 +36,7 @@ public class UserController {
 	 */
 	@RequestMapping("/UserRegisterController")
 	public String UserRegister(User u,HttpSession session,HttpServletRequest request)throws Exception{
+		System.out.println(u);
 		return this.userRegisterImp.RegisterUser(u,session,request);
 		
 	}

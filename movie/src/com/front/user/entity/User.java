@@ -33,7 +33,7 @@ import com.front.movie.entity.MovieTypeAndUser;
 public class User {
 	private int user_id;
 	private String email;
-	private int phone;
+	private String phone;
 	private String username;
 	private String password;
 	private Date birthday;
@@ -56,7 +56,7 @@ public class User {
 	
 
 
-	public User(int user_id, String email, int phone, String username, String password, Date birthday, String avatar,
+	public User(int user_id, String email, String phone, String username, String password, Date birthday, String avatar,
 			String gender, String signature, Set userlikemovie, Set type_userSet) {
 		super();
 		this.user_id = user_id;
@@ -94,10 +94,10 @@ public class User {
 		this.email = email;
 	}
 	@Column(name="phone")
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	@Column(name="username")
