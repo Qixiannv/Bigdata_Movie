@@ -37,22 +37,7 @@
     <ul class="am-nav am-nav-pills am-topbar-nav admin-header-list">
 
    <li class="am-dropdown tognzhi" data-am-dropdown>
-  <button class="am-btn am-btn-primary am-dropdown-toggle am-btn-xs am-radius am-icon-bell-o" data-am-dropdown-toggle> 消息管理<span class="am-badge am-badge-danger am-round">6</span></button>
-  <ul class="am-dropdown-content">
-  	
-  	
-  	
-    <li class="am-dropdown-header">所有消息都在这里</li>
 
-    
-
-      <li><a href="#">新增用户 <span class="am-badge am-badge-danger am-round">6</span></a></li>
-    <li><a href="#">新增电影 <span class="am-badge am-badge-danger am-round">9</span></a></a></li>
-    <li><a href="#">信息反馈</a></li>
-    
-    
-    
-  </ul>
 </li>
 
  <li class="kuanjie">
