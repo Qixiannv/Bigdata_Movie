@@ -20,5 +20,9 @@ public class BigDataImpl {
 		return mbgd.getRecommend(recuser);
 	}
 	
+	public Map getHateRecommend(User recuser) throws Exception{
+		return mbgd.getHateRecommend(recuser);
+	}
+	
 	
 }
