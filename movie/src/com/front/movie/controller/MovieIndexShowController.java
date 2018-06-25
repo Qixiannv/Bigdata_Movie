@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.front.actor.entity.Actor;
 import com.front.actor.service.ActorServiceImpl;
 import com.front.movie.service.BigDataImpl;
 import com.front.movie.service.MovieServiceImpl;
@@ -40,7 +41,14 @@ public class MovieIndexShowController {
 		}
 		
 		request.setAttribute("movielist", this.msi.searchAllMovie());
-		request.setAttribute("actorlist", this.asi.findActors());
+		List<Actor> al=this.asi.findActors();
+		
+		List<Actor> ac=new ArrayList<Actor>();
+		for(int i=0;i<9;i++){
+			int ran = (int) (Math.random() * al.size());
+			ac.add(al.get(ran));
+		}
+		request.setAttribute("actorlist", ac);
 		
 		List l = mtsi.searchAllMovieType();
 		Map map = new HashMap();
