@@ -11,12 +11,17 @@ import org.springframework.stereotype.Repository;
 import com.front.actor.entity.Actor;
 import com.front.actor.entity.ActorComment;
 import com.front.movie.entity.Movie;
+import com.front.user.dao.UserDaoImp;
 import com.front.user.entity.User;
 
 @Repository
 public class ActorDaoImpl {
 	@Resource
 	private SessionFactory sessionFactory;
+	@Resource
+	private UserDaoImp udi;
+	@Resource
+	private ActorDaoImpl adi;
 	
 	/**
 	 * 通过演员id查找演员
@@ -47,15 +52,19 @@ public class ActorDaoImpl {
 	 * @param Actor 被评论演员
 	 * @param User 评论用户
 	 * @return
+	 * @throws Exception 
 	 */
-	public void saveActorComment(String comment_text,Actor actor,User user) {
+	public void saveActorComment(String comment_text,int actor_id,int user_id) throws Exception {
 		ActorComment ac = new ActorComment();
-		ac.setActor(actor);
+		ac.setActor(this.adi.findActorById(actor_id));
 		ac.setComment_text(comment_text);
-		ac.setUser(user);
+		ac.setUser(this.udi.UserSelect(user_id));
 		
-		this.sessionFactory.openSession().save(ac);
+		System.out.println(ac.getComment_text());
+		System.out.println(ac.getActor().getActor_id());
+		System.out.println(ac.getUser().getUser_id());
 		
+		this.sessionFactory.getCurrentSession().save(ac);
 	}
 	
 	/**

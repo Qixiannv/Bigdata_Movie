@@ -55,7 +55,7 @@ public class ActorServiceImpl {
 	 */
 	public void saveActorComment(String comment_text,Integer actor_id,Integer user_id) {
 		try {
-			this.adi.saveActorComment(comment_text, this.adi.findActorById(actor_id), this.udi.UserSelect(user_id));
+			this.adi.saveActorComment(comment_text, actor_id, user_id);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

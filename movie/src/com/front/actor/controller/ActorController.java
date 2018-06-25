@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import com.front.actor.entity.Actor;
 import com.front.actor.service.ActorServiceImpl;
 import com.front.movie.entity.Movie;
 import com.front.movie.entity.Page;
+import com.front.user.entity.User;
 
 @Controller
 public class ActorController {
@@ -45,10 +47,13 @@ public class ActorController {
 	 * @return
 	 */
 	@GetMapping("/actor_comment")
-	public String leaveComment(HttpServletRequest request,@RequestParam("actor_id") int actor_id,@RequestParam("user_id") int user_id,
+	public String leaveComment(HttpServletRequest request,@RequestParam("actor_id") int actor_id,HttpSession session,
 			@RequestParam("comment_text") String comment_text) {
 		
-		this.asi.saveActorComment(comment_text, actor_id, user_id);
+		User u = (User) session.getAttribute("user");
+		Integer user_id = u.getUser_id();
+		
+		this.asi.saveActorComment(comment_text, actor_id,user_id);
 		
 		return "redirect:/gotoactor?actor_id="+actor_id;
 	}
