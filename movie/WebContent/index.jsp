@@ -667,7 +667,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="featured">
 					<h4>精选</h4>
 					<ul>
-					<c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
+					
+					<c:if test="${! empty  user.user_id }" >
+						 <a href="movie-personal.jsp">
+						 <c:forEach items="${map }" var="m" varStatus="status" begin="0" end="9" step="1">
+						<li>
+							<div class="f-movie">
+								<h4>NO.${status.index+1 }</h4>
+								<div class="f-movie-img">
+									<a href="./moviesingle?id=${m.getKey().getMovie_id() }"><img src="${m.getKey().getMovie_pic() }" alt="${m.getKey().getMovie_name() }" /></a>
+								</div>
+								<div class="f-movie-name">
+									<a>${m.getKey().getMovie_name() }</a>
+									
+									<p>评分：<fmt:formatNumber type="number" value="${m.getKey().getRate()/m.getKey().getRate_number() }" maxFractionDigits="1"/></p>
+								</div>
+								<div class="f-buy-tickets">
+									<a href="./moviesingle?id=${m.getKey().getMovie_id() }">查看详情</a>
+								</div>
+							</div>
+						</li>
+					</c:forEach>      
+                		</c:if>              		
+               	    	<c:if test="${empty  user.user_id }" >	
+               	    	 <c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
 						<li>
 							<div class="f-movie">
 								<div class="f-movie-img">
@@ -682,7 +705,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</div>
 						</li>
-						</c:forEach>
+						</c:forEach>        
+                		</c:if>
+					
+					
 						<div class="clearfix"></div>
 					</ul>
 				</div>

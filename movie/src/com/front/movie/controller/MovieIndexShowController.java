@@ -12,8 +12,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.front.actor.service.ActorServiceImpl;
+import com.front.movie.service.BigDataImpl;
 import com.front.movie.service.MovieServiceImpl;
 import com.front.movie.service.MovieTypeServiceImpl;
+import com.front.user.entity.User;
 
 
 @Controller
@@ -25,9 +27,18 @@ public class MovieIndexShowController {
 	private ActorServiceImpl asi;
 	@Resource
 	private MovieTypeServiceImpl mtsi;
+	@Resource
+	private BigDataImpl bdi;
+	
+	
 	//主页轮播图
 	@GetMapping("/indexshow")
-	public String IndexShow(HttpServletRequest request) {
+	public String IndexShow(HttpServletRequest request) throws Exception {
+		User u = (User)request.getSession().getAttribute("user");
+		if(u!=null){
+			request.setAttribute("map", bdi.getUserRecommend(u));
+		}
+		
 		request.setAttribute("movielist", this.msi.searchAllMovie());
 		request.setAttribute("actorlist", this.asi.findActors());
 		
