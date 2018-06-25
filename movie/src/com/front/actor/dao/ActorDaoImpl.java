@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
@@ -59,12 +60,13 @@ public class ActorDaoImpl {
 		ac.setActor(this.adi.findActorById(actor_id));
 		ac.setComment_text(comment_text);
 		ac.setUser(this.udi.UserSelect(user_id));
-		
+	
 		System.out.println(ac.getComment_text());
 		System.out.println(ac.getActor().getActor_id());
 		System.out.println(ac.getUser().getUser_id());
 		
 		this.sessionFactory.getCurrentSession().save(ac);
+	
 	}
 	
 	/**

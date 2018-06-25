@@ -21,7 +21,7 @@ import com.front.user.entity.User;
 @Table(name="actor_comment")
 public class ActorComment {
 
-	private Integer actorComment_id;
+	private int actorComment_id;
 	private User user;
 	private Actor actor;
 	private String comment_time;
@@ -32,9 +32,14 @@ public class ActorComment {
 	@Id
 	@GeneratedValue(generator="acid")
 	@GenericGenerator(name="acid",strategy="native")
-	public Integer getActorComment_id() {
+	public int getActorComment_id() {
 		return actorComment_id;
 	}
+	
+	public void setActorComment_id(int actorComment_id) {
+		this.actorComment_id = actorComment_id;
+	}
+
 	
 	public ActorComment() {
 		
@@ -47,9 +52,10 @@ public class ActorComment {
 		this.actor = actor;
 		this.comment_text = comment_text;
 	}
-	public void setActorComment_id(Integer actorComment_id) {
-		actorComment_id = actorComment_id;
-	}
+	
+	
+	
+	
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="user_id")
 	public User getUser() {
