@@ -374,24 +374,35 @@ function check_phone(a)
                                         <input type="text" class="form-control" name="username" placeholder="用户名" />
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="password" class="col-sm-2 control-label">
-                                        密码</label>
-                                    <div class="col-sm-10">
-                                        <input type="password" class="form-control" name="password" placeholder="password" />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone" class="col-sm-2 control-label">
-                                        手机</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="phone" placeholder="手机" onblur="check_phone(document.getElementsByName('phone')[0].value)"/>
-                                    </div>
-                                </div>
-
                                 <div class="row">
                              
                                     <div class="col-sm-2">
+                                    <input type="hidden" name="password" value="user.password">
+                                    <input type="hidden" name="phone" value="${user.phone }">
+                                    <input type="hidden" name="user_id" value="${user.user_id}" />
+                                    <input type="hidden" name="email" value="${user.email}" />
+                                    </div>
+                                 
+                                    <div class="col-sm-10">
+                                        <input type="submit" value="提交">
+                                        
+                                    </div>
+                                </div>
+                                </form>
+                                <form role="form" class="form-horizontal" action="ChangeController" method="post">
+                                
+                                <div class="form-group">
+                                    <label for="username" class="col-sm-2 control-label">
+                                        密码</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" name="password" placeholder="密码" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                             
+                                    <div class="col-sm-2">
+                                    <input type="hidden" name="username" value="${user.username}">
+                                    <input type="hidden" name="phone" value="${user.phone }">
                                     <input type="hidden" name="user_id" value="${user.user_id}" />
                                     <input type="hidden" name="email" value="${user.email}" />
                                     </div>

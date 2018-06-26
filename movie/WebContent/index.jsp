@@ -280,7 +280,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<div class="form-group">
 														<label for="email" class="col-sm-2 control-label">Email</label>
 															<div class="col-sm-10" >
-																<input type="text" id="mail" value="E-Mail" name="mail"
+																<input type="text" id="mail" value="E-Mail" name="email"
 																					onfocus="this.value = '';"
 																					onblur="if (this.value == '') {this.value = 'E-Mail';}validatemail()">
 															</div>
@@ -670,52 +670,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					<c:if test="${! empty  user.user_id }" >
 						 <a href="movie-personal.jsp">
-						 <c:if test="${empty map } }">  
-						 
 						 <c:forEach items="${map }" var="m" varStatus="status" begin="0" end="9" step="1">
-							<li>
-								<div class="f-movie">
-									<h4>NO.${status.index+1 }</h4>
-									<div class="f-movie-img">
-										<a href="./moviesingle?id=${m.getKey().getMovie_id() }"><img src="${m.getKey().getMovie_pic() }" alt="${m.getKey().getMovie_name() }" /></a>
-									</div>
-									<div class="f-movie-name">
-										<a>${m.getKey().getMovie_name() }</a>
-									
-										<p>评分：<fmt:formatNumber type="number" value="${m.getKey().getRate()/m.getKey().getRate_number() }" maxFractionDigits="1"/></p>
-									</div>
-									<div class="f-buy-tickets">
-										<a href="./moviesingle?id=${m.getKey().getMovie_id() }">查看详情</a>
-									</div>
-								</div>
-							</li>
-						</c:forEach>
-						</c:if>
-						
-						     
-                		</c:if> 
-                		
-                		<c:if test="${!empty map } }">
-                		
-                		<c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
 						<li>
 							<div class="f-movie">
+								<h4>NO.${status.index+1 }</h4>
 								<div class="f-movie-img">
-									<a href="./gotosingle?id=${p.movie_id }"><img src="${p.movie_pic }" alt="" /></a>
+									<a href="./moviesingle?id=${m.getKey().getMovie_id() }"><img src="${m.getKey().getMovie_pic() }" alt="${m.getKey().getMovie_name() }" /></a>
 								</div>
 								<div class="f-movie-name">
-									<a>${p.movie_name }</a>
-									<p>全国</p>
+									<a>${m.getKey().getMovie_name() }</a>
+									
+									<p>评分：<fmt:formatNumber type="number" value="${m.getKey().getRate()/m.getKey().getRate_number() }" maxFractionDigits="1"/></p>
 								</div>
 								<div class="f-buy-tickets">
-									<a href="./gotosingle?id=${p.movie_id }">查看详情</a>
+									<a href="./moviesingle?id=${m.getKey().getMovie_id() }">查看详情</a>
 								</div>
 							</div>
 						</li>
-						</c:forEach>
-                		
-                		</c:if>
-                		             		
+					</c:forEach>      
+                		</c:if>              		
                	    	<c:if test="${empty  user.user_id }" >	
                	    	 <c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
 						<li>
