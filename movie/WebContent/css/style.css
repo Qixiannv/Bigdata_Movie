@@ -836,6 +836,7 @@ ul.tab_img li.last{
 }
 .f-movie img {
 	width:100%;
+	height:200px;
 }
 .f-movie-name a {
 	 color: #000;

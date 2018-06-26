@@ -381,7 +381,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="f-movie">
 								<h4>NO.${status.index+1 }</h4>
 								<div class="f-movie-img">
-									<a href="./moviesingle?id=${m.getMovie_id() }"><img src="${m.getMovie_pic() }" alt="${m.getMovie_name() }" /></a>
+									<a href="./moviesingle?id=${m.getMovie_id() }"><img src="${m.getMovie_pic() }" alt="${m.getMovie_name() }" style="height:380px" /></a>
 								</div>
 								<div class="f-movie-name">
 									<a>${m.getMovie_name() }</a>
