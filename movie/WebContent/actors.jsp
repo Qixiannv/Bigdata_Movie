@@ -421,7 +421,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 			<c:forEach items = "${actor.actor_movieSet}" var = "a">
 				<div style="border-style: solid none;border-color: #f5f5dc;border-width: 1px ;padding:10px 20px;">
-					<p><a href="./gotosingle?id=${a.movie.movie_id}">${a.movie.movie_name}</a></p>
+					<p><a href="./moviesingle?id=${a.movie.movie_id}">${a.movie.movie_name}</a></p>
 					<img src="${a.movie.movie_pic}"width="70"height="100">
 				</div>
 			</c:forEach>
