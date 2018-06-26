@@ -745,6 +745,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-movies-in-india">
 					<h4>您可能不喜欢这些电影</h4> 
 					<c:if test="${! empty  user.user_id }" >
+					<c:if test="${! empty hatemap }">
+					
 					<c:forEach items="${hatemap }" var="p" begin="0" end="9" step="1">
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
@@ -752,6 +754,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="./gotosingle?id=${p.getKey().getMovie_id() }">${p.getKey().getMovie_name() }</a></li>
 					</ul>
 					</c:forEach>
+					
+					</c:if>
+					<c:if test="${empty hatemap }">
+					
+					<c:forEach items="${sucklist }" var="p" begin="0" end="9" step="1">
+					<ul class="mov_list">
+						<li><i class="fa fa-star"></i></li>
+						<li>77%</li>
+						<li><a href="./gotosingle?id=${p.movie_id }">${p.movie_name }</a></li>
+					</ul>
+					</c:forEach>
+					
+					</c:if>
+					
 					</c:if>
 					<c:if test="${empty  user.user_id }" >
 					
