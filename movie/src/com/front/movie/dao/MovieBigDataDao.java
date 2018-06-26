@@ -179,23 +179,19 @@ public class MovieBigDataDao {
         	}else{
         		continue;
         	}
-        }
+        }  
         for(Map.Entry<Movie,Double> mapping:list){ 
-        	
-        	for(Movie m : finallist){
-        		if(m == mapping.getKey()){
-        			continue;
-        		}else{
-        			map.put(mapping.getKey(), mapping.getValue());
+        	map.put(mapping.getKey(), mapping.getValue());		
+        }
+        
+        for(Map.Entry<Movie,Double> mapping:list){ 
+        	for(Movie m:finallist){
+        		if(m==mapping.getKey()){
+        			map.remove(m);
+        			
         		}
-        	}
-        	
-            
-        } 
-        System.out.println(map.size());
-        
-        
-       
+        	}		
+        }
         	return map;
         
         
@@ -341,22 +337,19 @@ public class MovieBigDataDao {
         		continue;
         	}
         }
-        System.out.println("finallist:"+finallist.size());
+
         for(Map.Entry<Movie,Double> mapping:list){ 
-        	
-        	for(Movie m : finallist){
-        		if(m == mapping.getKey()){
-        			continue;
-        		}else{
-        			map.put(mapping.getKey(), mapping.getValue());
+        	map.put(mapping.getKey(), mapping.getValue());		
+        }
+        
+        for(Map.Entry<Movie,Double> mapping:list){ 
+        	for(Movie m:finallist){
+        		if(m==mapping.getKey()){
+        			map.remove(m);
+        			
         		}
-        	}
-        	
-            
-        } 
-        System.out.println(map.size());
-        
-        
+        	}		
+        }
         	return map;
         
        
