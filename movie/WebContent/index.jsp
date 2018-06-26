@@ -670,6 +670,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					<c:if test="${! empty  user.user_id }" >
 						 <a href="movie-personal.jsp">
+						 
+						<c:if test="${empty map }">
+						
+						<c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
+						<li>
+							<div class="f-movie">
+								<div class="f-movie-img">
+									<a href="./gotosingle?id=${p.movie_id }"><img src="${p.movie_pic }" alt="" /></a>
+								</div>
+								<div class="f-movie-name">
+									<a>${p.movie_name }</a>
+									<p>全国</p>
+								</div>
+								<div class="f-buy-tickets">
+									<a href="./gotosingle?id=${p.movie_id }">查看详情</a>
+								</div>
+							</div>
+						</li>
+						</c:forEach>   
+						
+						</c:if>
+						 <c:if test="${!empty map  }">
+						 
 						 <c:forEach items="${map }" var="m" varStatus="status" begin="0" end="9" step="1">
 						<li>
 							<div class="f-movie">
@@ -687,7 +710,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</div>
 						</li>
-					</c:forEach>      
+					</c:forEach>
+						 
+						 </c:if>
+						       
                 		</c:if>              		
                	    	<c:if test="${empty  user.user_id }" >	
                	    	 <c:forEach items="${movielist }" var="p" begin="0" end="5" step="1">
@@ -756,12 +782,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</c:forEach>
 					</c:if>
 					<c:if test="${!empty user.user_id }">
-					<c:forEach items="${user.getType_userSet() }" var="t" >
+						
+	
+					
+						<c:forEach items="${typelist }" var="t" >
 					<ul class="mov_list">
-						<li><a  href="showMovieByType?type_name=${t.type.getType_name()}">${t.type.getType_name() }</a></li>
+						<li><a  href="11111?type_name=${t.getType_name()}">${t.getType_name() }</a></li>
 						
 							<ul>
-								<c:forEach items="${t.type.getType_movie() }" var="m" varStatus="status" begin="0" end="2" step="1">
+								<c:forEach items="${t.getType_movie() }" var="m" varStatus="status" begin="0" end="2" step="1">
 									<ul class="mov_list">
 										<li>NO.${status.index+1 }</li>
 										<li><a href="./gotosingle?id=${m.movie.getMovie_id() }">${m.movie.getMovie_name() }</a></li>
@@ -771,6 +800,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 					</ul>
 					</c:forEach>
+
+					
+					
 					</c:if>
 				</div>
 			</div>
