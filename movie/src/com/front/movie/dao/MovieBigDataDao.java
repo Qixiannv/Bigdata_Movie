@@ -195,7 +195,9 @@ public class MovieBigDataDao {
         System.out.println(map.size());
         
         
-        return map;
+       
+        	return map;
+        
         
     }
     public List searchUserHateMovie(){
@@ -339,6 +341,7 @@ public class MovieBigDataDao {
         		continue;
         	}
         }
+        System.out.println("finallist:"+finallist.size());
         for(Map.Entry<Movie,Double> mapping:list){ 
         	
         	for(Movie m : finallist){
@@ -354,7 +357,9 @@ public class MovieBigDataDao {
         System.out.println(map.size());
         
         
-        return map;
+        	return map;
+        
+       
         
     }
     
