@@ -223,6 +223,7 @@ public class MovieBigDataDao {
         Map<Integer, String> idUser = new HashMap<Integer, String>();//辅助存储每一个ID对应的用户映射 
         List<User> userlist = ui.searchAllUser();
         List<UserLikeMovie> likelist = this.searchUserHateMovie();
+        System.out.println("likelist:"+likelist.size());
         for(User u :userlist){
         			Set um = new HashSet<Movie>();
         			for(UserLikeMovie ml:likelist){
@@ -337,7 +338,7 @@ public class MovieBigDataDao {
         		continue;
         	}
         }
-
+        System.out.println("listsize:"+list.size());
         for(Map.Entry<Movie,Double> mapping:list){ 
         	map.put(mapping.getKey(), mapping.getValue());		
         }
@@ -350,6 +351,7 @@ public class MovieBigDataDao {
         		}
         	}		
         }
+        System.out.println("hatemap:"+map.size());
         	return map;
         
        

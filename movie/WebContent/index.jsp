@@ -743,14 +743,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- 主体内容下层部分【右侧  排行 部分】 -->
 			<div class="right-side-bar">
 				<div class="top-movies-in-india">
-					<h4>本周热映</h4>
-					<c:forEach items="${movielist }" var="p" begin="0" end="9" step="1">
+					<h4>您可能不喜欢这些电影</h4> 
+					<c:if test="${! empty  user.user_id }" >
+					<c:forEach items="${hatemap }" var="p" begin="0" end="9" step="1">
+					<ul class="mov_list">
+						<li><i class="fa fa-star"></i></li>
+						<li>77%</li>
+						<li><a href="./gotosingle?id=${p.getKey().getMovie_id() }">${p.getKey().getMovie_name() }</a></li>
+					</ul>
+					</c:forEach>
+					</c:if>
+					<c:if test="${empty  user.user_id }" >
+					
+					<c:forEach items="${sucklist }" var="p" begin="0" end="9" step="1">
 					<ul class="mov_list">
 						<li><i class="fa fa-star"></i></li>
 						<li>77%</li>
 						<li><a href="./gotosingle?id=${p.movie_id }">${p.movie_name }</a></li>
 					</ul>
 					</c:forEach>
+					
+					</c:if>
+
 				</div>
 				<div class="our-blog">
 					<h5>演员推荐</h5>

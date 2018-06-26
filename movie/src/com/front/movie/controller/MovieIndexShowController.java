@@ -38,6 +38,7 @@ public class MovieIndexShowController {
 		User u = (User)request.getSession().getAttribute("user");
 		if(u!=null){
 			request.setAttribute("map", bdi.getUserRecommend(u));
+			request.setAttribute("hatemap", bdi.getHateRecommend(u));
 		}
 		
 		request.setAttribute("movielist", this.msi.searchAllMovie());
@@ -57,11 +58,30 @@ public class MovieIndexShowController {
             int random = (int) (Math.random() * l.size());
             if (!map.containsKey(random)) {
                 map.put(random, "");
-                System.out.println(random + "===========" + l.get(random));
+                //System.out.println(random + "===========" + l.get(random));
                 listNew.add(l.get(random));
             }
         }
         request.setAttribute("typelist", listNew);
+        
+        List suckl = msi.searchSuck();
+        
+        
+        
+        Map suckmap = new HashMap();
+        List listSuck = new ArrayList();
+        
+        while(suckmap.size()<6){
+        	int random = (int) (Math.random()*suckl.size());
+        	if(!suckmap.containsKey(random)){
+        		suckmap.put(random,"");
+        		listSuck.add(suckl.get(random));
+        	}
+        }
+        
+
+        request.setAttribute("sucklist", listSuck);
+        
 		
 		return "/index";
 	}

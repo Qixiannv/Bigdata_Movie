@@ -31,4 +31,8 @@ public class MovieServiceImpl {
 	public List<Movie> top10Movies(){
 		return this.mdi.searchTop10();
 	}
+	//suck
+	public List<Movie> searchSuck(){
+		return this.mdi.searchSuck();
+	}
 }
