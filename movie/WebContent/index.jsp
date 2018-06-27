@@ -693,7 +693,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</c:if>
 						 <c:if test="${!empty map  }">
 						 
-						 <c:forEach items="${map }" var="m" varStatus="status" begin="0" end="9" step="1">
+						 <c:forEach items="${map }" var="m" varStatus="status" begin="0" end="5" step="1">
 						<li>
 							<div class="f-movie">
 								<h4>NO.${status.index+1 }</h4>
