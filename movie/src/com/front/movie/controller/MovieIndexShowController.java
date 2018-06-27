@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.front.actor.entity.Actor;
 import com.front.actor.service.ActorServiceImpl;
+import com.front.movie.entity.Movie;
 import com.front.movie.service.BigDataImpl;
 import com.front.movie.service.MovieServiceImpl;
 import com.front.movie.service.MovieTypeServiceImpl;
@@ -40,8 +41,14 @@ public class MovieIndexShowController {
 			request.setAttribute("map", bdi.getUserRecommend(u));
 			request.setAttribute("hatemap", bdi.getHateRecommend(u));
 		}
+		List<Movie> mov=this.msi.searchAllMovie();
+		List<Movie>  mo=new ArrayList<Movie>();
+		for(int i=0;i<9;i++){
+			int rm = (int) (Math.random() * mov.size());
+			mo.add(mov.get(rm));
+		}
 		
-		request.setAttribute("movielist", this.msi.searchAllMovie());
+		request.setAttribute("movielist", mo);
 		List<Actor> al=this.asi.findActors();
 		
 		List<Actor> ac=new ArrayList<Actor>();
