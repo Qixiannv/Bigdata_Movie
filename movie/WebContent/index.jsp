@@ -815,12 +815,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 	
 					
-						<c:forEach items="${typelist }" var="t" >
+						<c:forEach items="${user.getType_userSet() }" var="t" >
 					<ul class="mov_list">
-						<li><a  href="11111?type_name=${t.getType_name()}">${t.getType_name() }</a></li>
+						<li><a  href="11111?type_name=${t.getType().getType_name()}">${t.getType().getType_name() }</a></li>
 						
 							<ul>
-								<c:forEach items="${t.getType_movie() }" var="m" varStatus="status" begin="0" end="2" step="1">
+								<c:forEach items="${t.getType().getType_movie() }" var="m" varStatus="status" begin="0" end="2" step="1">
 									<ul class="mov_list">
 										<li>NO.${status.index+1 }</li>
 										<li><a href="./gotosingle?id=${m.movie.getMovie_id() }">${m.movie.getMovie_name() }</a></li>
