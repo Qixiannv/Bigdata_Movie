@@ -476,7 +476,7 @@ function check_phone(a)
                                 <div class="row">
                              
                                     <div class="col-sm-2">
-                                    <input type="hidden" name="password" value="user.password">
+                                    <input type="hidden" name="password" value="${user.password}">
                                     <input type="hidden" name="phone" value="${user.phone }">
                                     <input type="hidden" name="user_id" value="${user.user_id}" />
                                     <input type="hidden" name="email" value="${user.email}" />

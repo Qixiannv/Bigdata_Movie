@@ -508,11 +508,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="bs-example bs-example-tabs" role="tabpanel"
 							data-example-id="togglable-tabs">
 							<div id="1" margin:20px>
-								<h4>本周耻辱柱</h4>
+								<h4>您不妨试试这些电影</h4>
 								<c:forEach items="${movielist }" var="p" begin="0" end="9" step="1">
 								<ul class="mov_list">
 									<li></li>
-									<li><a href="./gotosingle?id=${p.movie_id}">${p.movie_name}</a></li>
+									<li><a href="./moviesingle?id=${p.movie_id}">${p.movie_name}</a></li>
 								</ul>
 								</c:forEach>
 							</div>
@@ -665,7 +665,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- 精选 -->
 				<div class="clearfix"></div>
 				<div class="featured">
-					<h4>精选</h4>
+					<h4>您可能会喜欢</h4>
 					<ul>
 					
 					<c:if test="${! empty  user.user_id }" >
