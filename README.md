@@ -1,3 +1,4 @@
+
 # Bigdata_Movie
 ### 项目简介
    电影网站是一个专业推荐电影的网站，它囊括了大多数电影，给用户一个较为全面的推荐，也给用户提供了一个优秀的分析电影的平台。
@@ -22,4 +23,14 @@
 * Email: 1661960733@q.com
 * Github : https://github.com/suncheng2017</br>
 ### 运行效果
-<img src="../Bigdata_Movie/image/1.png " width=250 height=400 />
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/1.png)
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/2.png)
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/3.png)
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/4.png)
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/5.png)
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/6.png)
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/7.png)
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/8.png)
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/9.png)
+![Image text](https://github.com/Qixiannv/Bigdata_Movie/blob/master/image/10.png)
+
