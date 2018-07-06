@@ -1,6 +1,6 @@
 
 # Bigdata_Movie
-### git地址
+### Github地址
 https://github.com/Qixiannv/Bigdata_Movie
 ### 项目简介
    电影网站是一个专业推荐电影的网站，它囊括了大多数电影，给用户一个较为全面的推荐，也给用户提供了一个优秀的分析电影的平台。
