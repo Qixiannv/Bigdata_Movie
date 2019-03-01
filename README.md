@@ -21,7 +21,7 @@ https://github.com/Qixiannv/Bigdata_Movie
  王琪 (前端代码开发) 
 * Email: 394332003@qq.com
 * Github : https://github.com/kiki-qi</br>
- 常丛丛 (前端代码开发) 
+ 常丛丛 (前端代码开发，代码开发) 
 * Email: 1661960733@q.com
 * Github : https://github.com/suncheng2017</br>
 ### 运行效果
